@@ -1,0 +1,50 @@
+Quartus II Archive log --	C:/Users/vdi/Downloads/project-checkers-master/ESDC-Project-Checkers.qarlog
+
+Archive:	C:/Users/vdi/Downloads/project-checkers-master/ESDC-Project-Checkers.qar
+Date:		Sun Jan 01 23:52:11 2023
+Quartus II		9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
+
+	=========== Files Selected: ===========
+C:/Users/vdi/Downloads/project-checkers-master/CLK_5HZ.vhd
+C:/Users/vdi/Downloads/project-checkers-master/ESDC-Project-Checkers.qpf
+C:/Users/vdi/Downloads/project-checkers-master/ESDC-Project-Checkers.qsf
+C:/Users/vdi/Downloads/project-checkers-master/Game.vhd
+C:/Users/vdi/Downloads/project-checkers-master/Main.vhd
+C:/Users/vdi/Downloads/project-checkers-master/RAM64.bsf
+C:/Users/vdi/Downloads/project-checkers-master/RAM64.cmp
+C:/Users/vdi/Downloads/project-checkers-master/RAM64.qip
+C:/Users/vdi/Downloads/project-checkers-master/RAM64.vhd
+C:/Users/vdi/Downloads/project-checkers-master/VGA_blocks.bdf
+C:/Users/vdi/Downloads/project-checkers-master/assignment_defaults.qdf
+C:/Users/vdi/Downloads/project-checkers-master/bloc_1.bdf
+C:/Users/vdi/Downloads/project-checkers-master/bloc_2.bdf
+C:/Users/vdi/Downloads/project-checkers-master/bloc_tx_rx.bdf
+C:/Users/vdi/Downloads/project-checkers-master/count4b.vhd
+C:/Users/vdi/Downloads/project-checkers-master/db/ESDC-Project-Checkers.sim.vwf
+C:/Users/vdi/Downloads/project-checkers-master/kb_module.vhd
+C:/Users/vdi/Downloads/project-checkers-master/kb_xy_module.vhd
+C:/Users/vdi/Downloads/project-checkers-master/keypad.vhd
+C:/Users/vdi/Downloads/project-checkers-master/mux_address.vhd
+C:/Users/vdi/Downloads/project-checkers-master/mux_piece.vhd
+C:/Users/vdi/Downloads/project-checkers-master/mux_write.vhd
+C:/Users/vdi/Downloads/project-checkers-master/protocol_rx.vhd
+C:/Users/vdi/Downloads/project-checkers-master/protocol_tx.vhd
+C:/Users/vdi/Downloads/project-checkers-master/ram_init.mif
+C:/Users/vdi/Downloads/project-checkers-master/rx_module.vhd
+C:/Users/vdi/Downloads/project-checkers-master/sender_ram.bdf
+C:/Users/vdi/Downloads/project-checkers-master/signalprobe_qsf.tcl
+C:/Users/vdi/Downloads/project-checkers-master/test.vhd
+C:/Users/vdi/Downloads/project-checkers-master/tx_module.vhd
+C:/Users/vdi/Downloads/project-checkers-master/wb_xy.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_RAM.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_kb.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_main.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_players.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_sender_ram.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wf_tx_rx.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wv_bloc1.vwf
+C:/Users/vdi/Downloads/project-checkers-master/wv_game.vwf
+	======= Total: 39 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
