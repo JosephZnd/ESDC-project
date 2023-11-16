@@ -1,0 +1,57 @@
+TempPiece = 0) then
+				if(((OldSelectY - SelectY) = (SelectX - OldSelectX)) and SelectY < OldSelectY and SelectX > OldSelectX) then --Quad1
+					Distance :=  OldSelectY - SelectY;
+					for i in 1 to 7 loop
+							if(i = Distance) then
+								if(Board(SelectY,SelectX) > 6) then
+									Board(SelectY,SelectX) <= TempPiece;
+									SelectMode <= '0';
+									TempPiece <= 7;
+								end if;
+								exit;
+							elsif(Board(OldSelectY-i,OldSelectX+i) /= 7) then
+								exit;
+							end if;
+					end loop;
+				elsif(((OldSelectY - SelectY) = (OldSelectX - SelectX)) and SelectY < OldSelectY and SelectX < OldSelectX) then --Quad2
+					Distance := OldSelectY - SelectY;
+					for i in 1 to 7 loop
+							if(i = Distance) then
+								if(Board(SelectY,SelectX) > 6) then
+									Board(SelectY,SelectX) <= TempPiece;
+									SelectMode <= '0';
+									TempPiece <= 7;
+								end if;
+								exit;
+							elsif(Board(OldSelectY-i,OldSelectX-i) /= 7) then
+								exit;
+							end if;
+					end loop;
+				elsif(((SelectY - OldSelectY) = (OldSelectX - SelectX)) and SelectY > OldSelectY and SelectX < OldSelectX) then --Quad3
+					Distance := SelectY - OldSelectY;
+					for i in 1 to 7 loop
+							if(i = Distance) then
+								if(Board(SelectY,SelectX) > 6) then
+									Board(SelectY,SelectX) <= TempPiece;
+									SelectMode <= '0';
+									TempPiece <= 7;
+								end if;
+								exit;
+							elsif(Board(OldSelectY+i,OldSelectX-i) /= 7) then
+								exit;
+							end if;
+					end loop;
+				elsif(((SelectY - OldSelectY) = (SelectX - OldSelectX)) and SelectY > OldSelectY and SelectX > OldSelectX) then --Quad4
+					Distance :=  SelectY - OldSelectY;
+					for i in 1 to 7 loop
+							if(i = Distance) then
+								if(Board(SelectY,SelectX) > 6) then
+									Board(SelectY,SelectX) <= TempPiece;
+									SelectMode <= '0';
+									TempPiece <= 7;
+								end if;
+								exit;
+							elsif(Board(OldSelectY+i,OldSelectX+i) /= 7) then
+								exit;
+							end if;
+					end loop;
