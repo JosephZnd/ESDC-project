@@ -1,0 +1,109 @@
+Restore Archived Project report for Design1
+Thu Nov 23 16:25:35 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Restore Archived Project Summary
+  3. Restore Archived Project Messages
+  4. Files Restored
+  5. Files Not Restored
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------+
+; Restore Archived Project Summary                                        ;
++---------------------------------+---------------------------------------+
+; Restore Archived Project Status ; Successful - Thu Nov 23 16:25:35 2023 ;
+; Revision Name                   ; Design1                               ;
+; Top-level Entity Name           ; P1_BOARD_vga                          ;
+; Family                          ; Cyclone II                            ;
++---------------------------------+---------------------------------------+
+
+
++-----------------------------------+
+; Restore Archived Project Messages ;
++-----------------------------------+
+Info: Successfully restored 'C:/Users/joseph.zandueta/Downloads/Design1.qar' into the 'C:/Users/joseph.zandueta/Downloads/Design1_restored/' directory
+Info: Generated report 'Design1.restore.rpt'
+Info: Evaluation of Tcl script c:/altera/91sp2/quartus/common/tcl/apps/qpm/qar.tcl was successful
+Info: Quartus II Shell was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 128 megabytes
+    Info: Processing ended: Thu Nov 23 16:25:35 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------+
+; Files Restored ;
++----------------+
+; File Name      ;
++----------------+
+
+
++-------------------------+
+; Files Not Restored      ;
++-------------------------+
+; File Name               ;
++-------------------------+
+; Design1.qpf             ;
+; Design1.qsf             ;
+; Design1.vhd             ;
+; Design1_1.vwf           ;
+; Design1_2.vwf           ;
+; GAME.vhd                ;
+; MAIN.vhd                ;
+; RegisterBank.vhd        ;
+; big_block.vhd           ;
+; db/Design1.sim.cvwf     ;
+; main_entity.vhd         ;
+; rx_block.vhd            ;
+; tx_block.vhd            ;
+; P1_BOARD_vga.bdf        ;
+; VGA_SYNC.VHD            ;
+; VGA_TEST_BOARD.bdf      ;
+; VGA_visualisation.bdf   ;
+; Video_Memory.vhd        ;
+; add_generator.vhd       ;
+; bcd7seg.vhd             ;
+; clk_div_two.vhd         ;
+; clk_video.vhd           ;
+; count4b.vhd             ;
+; f_div.vhd               ;
+; hex_disps.vhd           ;
+; i_o_manager_vga.vhd     ;
+; keyboard.bdf            ;
+; keypad.vhd              ;
+; keytest_h_v2.vhd        ;
+; protocol_rx.vhd         ;
+; protocol_tx.vhd         ;
+; rx_module2.vhd          ;
+; square.vhd              ;
+; tx_module.vhd           ;
+; wr_memory.vhd           ;
+; assignment_defaults.qdf ;
++-------------------------+
+
+

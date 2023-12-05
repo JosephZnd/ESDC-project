@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Design1">
+		<CBX_INST_ENTRY INSTANCE_NAME="|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4jk1.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
