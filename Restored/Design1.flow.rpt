@@ -1,5 +1,5 @@
 Flow report for Design1
-Tue Dec 05 20:06:14 2023
+Wed Dec 13 17:09:54 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec 05 20:06:14 2023        ;
+; Flow Status                        ; Successful - Wed Dec 13 17:09:54 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/05/2023 20:05:37 ;
+; Start date & time ; 12/13/2023 17:09:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Design1             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------+--------------------------------+---------------+--------------+------------+
 ; Assignment Name        ; Value                          ; Default Value ; Entity Name  ; Section Id ;
 +------------------------+--------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID  ; 18587647032645.170180313701424 ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID  ; 49410869306002.170248375709524 ; --            ; --           ; --         ;
 ; MAX_CORE_JUNCTION_TEMP ; 85                             ; --            ; --           ; --         ;
 ; MIN_CORE_JUNCTION_TEMP ; 0                              ; --            ; --           ; --         ;
 ; PARTITION_COLOR        ; 16764057                       ; --            ; P1_BOARD_vga ; Top        ;
@@ -88,11 +88,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:28     ; 1.0                     ; 262 MB              ; 00:00:29                           ;
-; Fitter                  ; 00:00:05     ; 1.0                     ; 285 MB              ; 00:00:06                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 257 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 169 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:34     ; --                      ; --                  ; 00:00:36                           ;
+; Analysis & Synthesis    ; 00:00:27     ; 1.0                     ; 269 MB              ; 00:00:27                           ;
+; Fitter                  ; 00:00:05     ; 1.0                     ; 292 MB              ; 00:00:05                           ;
+; Assembler               ; 00:00:01     ; 1.0                     ; 264 MB              ; 00:00:01                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 176 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:33     ; --                      ; --                  ; 00:00:33                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -101,10 +101,10 @@ applicable agreement for further details.
 +-------------------------+------------------+---------------+------------+----------------+
 ; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
 +-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
-; Fitter                  ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
-; Assembler               ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
-; Classic Timing Analyzer ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
+; Analysis & Synthesis    ; c4a4             ; Windows Vista ; 6.2        ; x86_64         ;
+; Fitter                  ; c4a4             ; Windows Vista ; 6.2        ; x86_64         ;
+; Assembler               ; c4a4             ; Windows Vista ; 6.2        ; x86_64         ;
+; Classic Timing Analyzer ; c4a4             ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
 
 

@@ -114,10 +114,7 @@ architecture functional of square is
 				when s00a =>
 					st_square <= s00b;
 					x_t <= X0; y_t <= Y0;
-					if (x_in = 0 and y_in= 0) then 
-						color_t <= input_color
-						else
-						color_t <= GREEN;
+					color_t <= GREEN;
 				when s00b =>
 					st_square <= s00c;
 				when s00c =>
