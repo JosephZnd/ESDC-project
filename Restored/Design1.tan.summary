@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 7.114 ns
+Actual Time    : 6.488 ns
 From           : KEY[0]
-To             : i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[6]
+To             : i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[0]
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.582 ns
-From           : register_bank2:GUESS_CODE|DataU[1]
-To             : HEX1[5]
+Actual Time    : 16.655 ns
+From           : keytest_h_v2:inst7|keycode_int[0]
+To             : HEX0[3]
 From Clock     : OSC_50
 To Clock       : --
 Failed Paths   : 0
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -1.791 ns
-From           : COL[0]
-To             : keypad:inst2|colq[0]
+Actual Time    : 1.788 ns
+From           : COL[3]
+To             : keypad:inst2|colq[3]
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -35,7 +35,7 @@ Failed Paths   : 0
 Type           : Clock Setup: 'OSC_50'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 165.34 MHz ( period = 6.048 ns )
+Actual Time    : 176.12 MHz ( period = 5.678 ns )
 From           : keypad:inst2|colq[3]
 To             : keytest_h_v2:inst7|keycode_int[2]
 From Clock     : OSC_50

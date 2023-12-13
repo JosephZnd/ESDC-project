@@ -30,7 +30,7 @@ end wr_memory;
 
 architecture functional of wr_memory is
   -- Size of the square
-  constant SQUARE_WIDTH : integer := 15; --25<<4 = 100.
+  constant SQUARE_WIDTH : integer := 14; --25<<4 = 100.
   -- State definition:
   type state_memo is (s0, s1, s2, s3, s4, s5, s6);
   -- Internal signals
@@ -50,7 +50,7 @@ Begin
 -- Process Unit: Blocks that process data (counters, registers).
 -- Control signals: they are not specified in the VHDL description, but they will be in the final implemented design. 
 -- Only output control signals are presented.
-	process(clk_d1, nrst)
+	process(clk_d1, nrst, x, y)
 	Begin
 		if (nrst = '0') then
 			st_write <= s0;
