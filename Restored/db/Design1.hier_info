@@ -2423,6 +2423,14 @@ adr_memo[14] <= address_t[14].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8
+clk_d1 => t_x[0].CLK
+clk_d1 => t_x[1].CLK
+clk_d1 => t_x[2].CLK
+clk_d1 => t_x[3].CLK
+clk_d1 => t_x[4].CLK
+clk_d1 => t_x[5].CLK
+clk_d1 => t_x[6].CLK
+clk_d1 => t_x[7].CLK
 clk_d1 => color_t[0]~reg0.CLK
 clk_d1 => color_t[1]~reg0.CLK
 clk_d1 => color_t[2]~reg0.CLK
@@ -2461,6 +2469,14 @@ nrst => y_t[0]~reg0.ENA
 nrst => color_t[2]~reg0.ENA
 nrst => color_t[1]~reg0.ENA
 nrst => color_t[0]~reg0.ENA
+nrst => t_x[7].ENA
+nrst => t_x[6].ENA
+nrst => t_x[5].ENA
+nrst => t_x[4].ENA
+nrst => t_x[3].ENA
+nrst => t_x[2].ENA
+nrst => t_x[1].ENA
+nrst => t_x[0].ENA
 LG7 => ~NO_FANOUT~
 LG6 => ~NO_FANOUT~
 LG2 => ~NO_FANOUT~

@@ -20,26 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-P1_BOARD_vga
-# storage
-db|Design1.(0).cnf
-db|Design1.(0).cnf
-# case_insensitive
-# source_file
-p1_board_vga.bdf
-a59eeb283a393f397d6c15eca1da2456
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
 tx_module
 # storage
 db|Design1.(1).cnf
@@ -176,6 +156,39 @@ ON
 }
 # hierarchies {
 f_div:inst1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+i_o_manager_vga
+# storage
+db|Design1.(5).cnf
+db|Design1.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+i_o_manager_vga.vhd
+d8bdd08891f73902c358acd3f853e7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+i_o_manager_vga:inst9
 }
 # lmf
 |altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1293,6 +1306,39 @@ i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:a
 
 # end
 # entity
+wr_memory
+# storage
+db|Design1.(18).cnf
+db|Design1.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+wr_memory.vhd
+84a261573f4a5b14130debcc4c852b0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1
+}
+# lmf
+|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 add_generator
 # storage
 db|Design1.(20).cnf
@@ -1624,98 +1670,39 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-wr_memory
+VGA
 # storage
-db|Design1.(18).cnf
-db|Design1.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
+db|Design1.(0).cnf
+db|Design1.(0).cnf
 # case_insensitive
 # source_file
-wr_memory.vhd
-84a261573f4a5b14130debcc4c852b0
-5
+vga.bdf
+75316ef3414f118aa1f98511c574ff57
+26
 # internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
+BLOCK_DESIGN_NAMING
+AUTO
 }
-# hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
 # entity
-square_map
+P1_BOARD_vga
 # storage
 db|Design1.(30).cnf
 db|Design1.(30).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
 # case_insensitive
 # source_file
-square_map.vhd
-ece40faabc4afcb7ff19d4e3755739
-5
+p1_board_vga.bdf
+a59eeb283a393f397d6c15eca1da2456
+26
 # internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-i_o_manager_vga
-# storage
-db|Design1.(5).cnf
-db|Design1.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-i_o_manager_vga.vhd
-d8bdd08891f73902c358acd3f853e7
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
+BLOCK_DESIGN_NAMING
+AUTO
 }
 # hierarchies {
-i_o_manager_vga:inst9
+|
 }
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
@@ -1731,7 +1718,7 @@ ON
 # case_insensitive
 # source_file
 square.vhd
-143b243becfbec1dc9123157505a35ff
+2ad52980dd4469b011261fbc27bc459
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
