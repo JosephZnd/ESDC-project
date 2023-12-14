@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 State Machine - |P1_BOARD_vga|protocol_tx:inst3|state
 Name state.pr_set_TX state.pr_w5 state.pr_s5 state.pr_w4 state.pr_s4 state.pr_w3 state.pr_s3 state.pr_check_data state.pr_w2 state.pr_s2 state.pr_w1 state.pr_s1 state.pr_dt state.pr_eq state.pr_sm state.pr_gr state.pr_rdy state.pr_wait 
 state.pr_wait 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -312,3 +313,13 @@ state.tx_idle 0 0 0 0
 state.tx_start 0 0 1 1 
 state.tx_shift 0 1 0 1 
 state.tx_stop 1 0 0 1 
+=======
+State Machine - |square|st_square
+Name st_square.s_cursor_c st_square.s_cursor_b st_square.s_cursor_a st_square.s00c st_square.s00b st_square.s00a 
+st_square.s00a 0 0 0 0 0 0 
+st_square.s00b 0 0 0 0 1 1 
+st_square.s00c 0 0 0 1 0 1 
+st_square.s_cursor_a 0 0 1 0 0 1 
+st_square.s_cursor_b 0 1 0 0 0 1 
+st_square.s_cursor_c 1 0 0 0 0 1 
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd

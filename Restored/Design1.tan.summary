@@ -5,41 +5,68 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
+<<<<<<< HEAD
 Actual Time    : 6.629 ns
 From           : KEY[0]
 To             : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[6]
+=======
+Actual Time    : 3.206 ns
+From           : done
+To             : st_square.s_cursor_a
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 From Clock     : --
-To Clock       : OSC_50
+To Clock       : clk_d1
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
+<<<<<<< HEAD
 Actual Time    : 11.122 ns
 From           : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|video_on_v
 To             : VGA_SYNC
 From Clock     : OSC_50
+=======
+Actual Time    : 7.373 ns
+From           : x_t[3]~reg0
+To             : x_t[3]
+From Clock     : clk_d1
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
+<<<<<<< HEAD
 Actual Time    : 2.401 ns
 From           : pin_name14
 To             : register_bank2:GUESS_CODE|state.st_end
+=======
+Actual Time    : -0.830 ns
+From           : nrst
+To             : t_x[4]
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 From Clock     : --
-To Clock       : OSC_50
+To Clock       : clk_d1
 Failed Paths   : 0
 
-Type           : Clock Setup: 'OSC_50'
+Type           : Clock Setup: 'clk_d1'
 Slack          : N/A
 Required Time  : None
+<<<<<<< HEAD
 Actual Time    : 148.54 MHz ( period = 6.732 ns )
 From           : keypad:inst2|colq[0]
 To             : keytest_h_v2:inst7|keycode_int[3]
 From Clock     : OSC_50
 To Clock       : OSC_50
+=======
+Actual Time    : 340.02 MHz ( period = 2.941 ns )
+From           : i[0]
+To             : x_t[7]~reg0
+From Clock     : clk_d1
+To Clock       : clk_d1
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 Failed Paths   : 0
 
 Type           : Total number of failed paths

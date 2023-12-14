@@ -18,7 +18,12 @@ use ieee.std_logic_unsigned.all;
 
 
 entity square is
+<<<<<<< HEAD
   port( clk_d1, nrst		: in std_logic;
+=======
+  port( clk_d1, nrst, LG7, LG6, LG2, LG1, LG0  : in std_logic;
+			LR2, LR1, LR0 	: in std_logic;
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
 		start			: out std_logic;
@@ -52,13 +57,21 @@ architecture functional of square is
   constant Y6 : integer := 85;
   constant Y7 : integer := 99;
   
+  constant SIZE : integer :=14;
+  
   -- Possible colors of the squares.
   -- Precondition: memory is created blank (remaining color = 000).
   constant RED : integer := 4;
   --constant BLUE : integer := 1;
+<<<<<<< HEAD
   --constant WHITE : integer := 2;
   --constant GREEN : integer := 3; sky blue
   --constant WHITE : integer := 5; MAGENTA
+=======
+  --constant GREEN : integer := 2;
+  --constant BLUE : integer := 3; sky blue
+  --constant GREEN : integer := 5; MAGENTA
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
   constant GREEN : integer := 0; --VERDE-NEGRO
   constant WHITE : integer := 7; --BLANCO
 
@@ -66,37 +79,23 @@ architecture functional of square is
 
   -- State definition:
   type state_type is (
-    s00a, s00b, s00c, s10a, s10b, s10c, s20a, s20b, s20c,
-    s30a, s30b, s30c, s40a, s40b, s40c, s50a, s50b, s50c,
-    s60a, s60b, s60c, s70a, s70b, s70c, s01a, s01b, s01c,
-    s11a, s11b, s11c, s21a, s21b, s21c, s31a, s31b, s31c,
-    s41a, s41b, s41c, s51a, s51b, s51c, s61a, s61b, s61c,
-    s71a, s71b, s71c, s02a, s02b, s02c, s12a, s12b, s12c,
-    s22a, s22b, s22c, s32a, s32b, s32c, s42a, s42b, s42c,
-    s52a, s52b, s52c, s62a, s62b, s62c, s72a, s72b, s72c,
-    s03a, s03b, s03c, s13a, s13b, s13c, s23a, s23b, s23c,
-    s33a, s33b, s33c, s43a, s43b, s43c, s53a, s53b, s53c,
-    s63a, s63b, s63c, s73a, s73b, s73c, s04a, s04b, s04c,
-    s14a, s14b, s14c, s24a, s24b, s24c, s34a, s34b, s34c,
-    s44a, s44b, s44c, s54a, s54b, s54c, s64a, s64b, s64c,
-    s74a, s74b, s74c, s05a, s05b, s05c, s15a, s15b, s15c,
-    s25a, s25b, s25c, s35a, s35b, s35c, s45a, s45b, s45c,
-    s55a, s55b, s55c, s65a, s65b, s65c, s75a, s75b, s75c,
-    s06a, s06b, s06c, s16a, s16b, s16c, s26a, s26b, s26c,
-    s36a, s36b, s36c, s46a, s46b, s46c, s56a, s56b, s56c,
-    s66a, s66b, s66c, s76a, s76b, s76c, s07a, s07b, s07c,
-    s17a, s17b, s17c, s27a, s27b, s27c, s37a, s37b, s37c,
-    s47a, s47b, s47c, s57a, s57b, s57c, s67a, s67b, s67c,
-    s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c
-);
+    s00a, s00b, s00c, s_cursor_a,s_cursor_b,s_cursor_c);
   
   -- Internal signals
+<<<<<<< HEAD
 
   signal c_x	: integer range 0 to 160:=67;
   signal c_y	: integer range 0 to 120:=57;
+=======
+	
+  signal c_x	: integer range 0 to 160:=11;
+  signal c_y	: integer range 0 to 120:=1;
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
   signal t_x  	: integer range 0 to 160:=25;
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
+  signal i, j : integer range 0 to 7:=0;
+  signal color_index : std_logic;
   -- Internal address memory bus
   
   Begin
@@ -112,19 +111,34 @@ architecture functional of square is
 	Begin
 		if (nrst = '0') then
 			st_square <= s00a;
+			color_index <= '0';
 		elsif rising_edge(clk_d1) then
 			case st_square is
 					-- Row 1
 					when s00a =>
 						st_square <= s00b;
+<<<<<<< HEAD
 						x_t <= X0; y_t <= Y0;
 						color_t <= WHITE;
+=======
+						x_t <= (X0+SIZE*i); y_t <= (Y0+SIZE*j);
+						if color_index = '0' then color_t <= WHITE; 
+							else color_t <= GREEN; 
+						end if;
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 					when s00b =>
+						i <= i+1;
+						color_index <= not color_index;
+						if i=0 then
+							j <= j+1;
+							color_index <= not color_index;
+						end if;
 						st_square <= s00c;
 					when s00c =>
-						if done = '1' then st_square <= s10a; end if;
+						if done = '1' then st_square <= s_cursor_a; end if;
 
 					-- Row 2
+<<<<<<< HEAD
 					when s10a =>
 						st_square <= s10b;
 						x_t <= X1; y_t <= Y0;
@@ -741,6 +755,8 @@ architecture functional of square is
 						st_square <= s77c;
 					when s77c =>
 						if done = '1' then st_square <= s_cursor_a; end if;	
+=======
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 						
 					when s_cursor_a =>
 						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
@@ -761,22 +777,6 @@ architecture functional of square is
 			End Case;
 		End If;
 	End Process;
-	
-Start <= '1' when st_square = s00b or st_square = s10b or st_square = s20b or st_square = s30b or
-               st_square = s40b or st_square = s50b or st_square = s60b or st_square = s70b or
-               st_square = s01b or st_square = s11b or st_square = s21b or st_square = s31b or
-               st_square = s41b or st_square = s51b or st_square = s61b or st_square = s71b or
-               st_square = s02b or st_square = s12b or st_square = s22b or st_square = s32b or
-               st_square = s42b or st_square = s52b or st_square = s62b or st_square = s72b or
-               st_square = s03b or st_square = s13b or st_square = s23b or st_square = s33b or
-               st_square = s43b or st_square = s53b or st_square = s63b or st_square = s73b or
-               st_square = s04b or st_square = s14b or st_square = s24b or st_square = s34b or
-               st_square = s44b or st_square = s54b or st_square = s64b or st_square = s74b or
-               st_square = s05b or st_square = s15b or st_square = s25b or st_square = s35b or
-               st_square = s45b or st_square = s55b or st_square = s65b or st_square = s75b or
-               st_square = s06b or st_square = s16b or st_square = s26b or st_square = s36b or
-               st_square = s46b or st_square = s56b or st_square = s66b or st_square = s76b or
-               st_square = s07b or st_square = s17b or st_square = s27b or st_square = s37b or
-               st_square = s47b or st_square = s57b or st_square = s67b or st_square = s77b or
-               st_square = s_cursor_b else '0';
+
+Start <= '1' when st_square = s00b or st_square = s_cursor_b else '0';
 End Functional;
