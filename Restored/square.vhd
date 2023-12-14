@@ -57,11 +57,11 @@ architecture functional of square is
   -- Precondition: memory is created blank (remaining color = 000).
   constant RED : integer := 4;
   --constant BLUE : integer := 1;
-  --constant GREEN : integer := 2;
-  --constant BLUE : integer := 3; sky blue
-  --constant GREEN : integer := 5; MAGENTA
-  constant BLUE : integer := 0; --VERDE-NEGRO
-  constant GREEN : integer := 7; --BLANCO
+  --constant WHITE : integer := 2;
+  --constant GREEN : integer := 3; sky blue
+  --constant WHITE : integer := 5; MAGENTA
+  constant GREEN : integer := 0; --VERDE-NEGRO
+  constant WHITE : integer := 7; --BLANCO
 
    
 
@@ -117,7 +117,7 @@ architecture functional of square is
 					when s00a =>
 						st_square <= s00b;
 						x_t <= X0; y_t <= Y0;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s00b =>
 						st_square <= s00c;
 					when s00c =>
@@ -127,7 +127,7 @@ architecture functional of square is
 					when s10a =>
 						st_square <= s10b;
 						x_t <= X1; y_t <= Y0;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s10b =>
 						st_square <= s10c;
 					when s10c =>
@@ -137,7 +137,7 @@ architecture functional of square is
 					when s20a =>
 						st_square <= s20b;
 						x_t <= X2; y_t <= Y0;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s20b =>
 						st_square <= s20c;
 					when s20c =>
@@ -147,7 +147,7 @@ architecture functional of square is
 					when s30a =>
 						st_square <= s30b;
 						x_t <= X3; y_t <= Y0;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s30b =>
 						st_square <= s30c;
 					when s30c =>
@@ -157,7 +157,7 @@ architecture functional of square is
 					when s40a =>
 						st_square <= s40b;
 						x_t <= X4; y_t <= Y0;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s40b =>
 						st_square <= s40c;
 					when s40c =>
@@ -167,7 +167,7 @@ architecture functional of square is
 					when s50a =>
 						st_square <= s50b;
 						x_t <= X5; y_t <= Y0;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s50b =>
 						st_square <= s50c;
 					when s50c =>
@@ -177,7 +177,7 @@ architecture functional of square is
 					when s60a =>
 						st_square <= s60b;
 						x_t <= X6; y_t <= Y0;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s60b =>
 						st_square <= s60c;
 					when s60c =>
@@ -187,7 +187,7 @@ architecture functional of square is
 					when s70a =>
 						st_square <= s70b;
 						x_t <= X7; y_t <= Y0;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s70b =>
 						st_square <= s70c;
 					when s70c =>
@@ -199,7 +199,7 @@ architecture functional of square is
 					when s01a =>
 						st_square <= s01b;
 						x_t <= X0; y_t <= Y1;
-						color_t <= BLUE; -- Swapped color
+						color_t <= GREEN; -- Swapped color
 					when s01b =>
 						st_square <= s01c;
 					when s01c =>
@@ -209,7 +209,7 @@ architecture functional of square is
 					when s11a =>
 						st_square <= s11b;
 						x_t <= X1; y_t <= Y1;
-						color_t <= GREEN; -- Swapped color
+						color_t <= WHITE; -- Swapped color
 					when s11b =>
 						st_square <= s11c;
 					when s11c =>
@@ -219,7 +219,7 @@ architecture functional of square is
 					when s21a =>
 						st_square <= s21b;
 						x_t <= X2; y_t <= Y1;
-						color_t <= BLUE; -- Swapped color
+						color_t <= GREEN; -- Swapped color
 					when s21b =>
 						st_square <= s21c;
 					when s21c =>
@@ -229,7 +229,7 @@ architecture functional of square is
 					when s31a =>
 						st_square <= s31b;
 						x_t <= X3; y_t <= Y1;
-						color_t <= GREEN; -- Swapped color
+						color_t <= WHITE; -- Swapped color
 					when s31b =>
 						st_square <= s31c;
 					when s31c =>
@@ -239,7 +239,7 @@ architecture functional of square is
 					when s41a =>
 						st_square <= s41b;
 						x_t <= X4; y_t <= Y1;
-						color_t <= BLUE; -- Swapped color
+						color_t <= GREEN; -- Swapped color
 					when s41b =>
 						st_square <= s41c;
 					when s41c =>
@@ -249,7 +249,7 @@ architecture functional of square is
 					when s51a =>
 						st_square <= s51b;
 						x_t <= X5; y_t <= Y1;
-						color_t <= GREEN; -- Swapped color
+						color_t <= WHITE; -- Swapped color
 					when s51b =>
 						st_square <= s51c;
 					when s51c =>
@@ -259,7 +259,7 @@ architecture functional of square is
 					when s61a =>
 						st_square <= s61b;
 						x_t <= X6; y_t <= Y1;
-						color_t <= BLUE; -- Swapped color
+						color_t <= GREEN; -- Swapped color
 					when s61b =>
 						st_square <= s61c;
 					when s61c =>
@@ -269,7 +269,7 @@ architecture functional of square is
 					when s71a =>
 						st_square <= s71b;
 						x_t <= X7; y_t <= Y1;
-						color_t <= GREEN; -- Swapped color
+						color_t <= WHITE; -- Swapped color
 					when s71b =>
 						st_square <= s71c;
 					when s71c =>
@@ -279,7 +279,7 @@ architecture functional of square is
 					when s02a =>
 						st_square <= s02b;
 						x_t <= X0; y_t <= Y2;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s02b =>
 						st_square <= s02c;
 					when s02c =>
@@ -289,7 +289,7 @@ architecture functional of square is
 					when s12a =>
 						st_square <= s12b;
 						x_t <= X1; y_t <= Y2;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s12b =>
 						st_square <= s12c;
 					when s12c =>
@@ -299,7 +299,7 @@ architecture functional of square is
 					when s22a =>
 						st_square <= s22b;
 						x_t <= X2; y_t <= Y2;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s22b =>
 						st_square <= s22c;
 					when s22c =>
@@ -309,7 +309,7 @@ architecture functional of square is
 					when s32a =>
 						st_square <= s32b;
 						x_t <= X3; y_t <= Y2;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s32b =>
 						st_square <= s32c;
 					when s32c =>
@@ -319,7 +319,7 @@ architecture functional of square is
 					when s42a =>
 						st_square <= s42b;
 						x_t <= X4; y_t <= Y2;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s42b =>
 						st_square <= s42c;
 					when s42c =>
@@ -329,7 +329,7 @@ architecture functional of square is
 					when s52a =>
 						st_square <= s52b;
 						x_t <= X5; y_t <= Y2;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s52b =>
 						st_square <= s52c;
 					when s52c =>
@@ -339,7 +339,7 @@ architecture functional of square is
 					when s62a =>
 						st_square <= s62b;
 						x_t <= X6; y_t <= Y2;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s62b =>
 						st_square <= s62c;
 					when s62c =>
@@ -349,7 +349,7 @@ architecture functional of square is
 					when s72a =>
 						st_square <= s72b;
 						x_t <= X7; y_t <= Y2;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s72b =>
 						st_square <= s72c;
 					when s72c =>
@@ -359,7 +359,7 @@ architecture functional of square is
 					when s03a =>
 						st_square <= s03b;
 						x_t <= X0; y_t <= Y3;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s03b =>
 						st_square <= s03c;
 					when s03c =>
@@ -369,7 +369,7 @@ architecture functional of square is
 					when s13a =>
 						st_square <= s13b;
 						x_t <= X1; y_t <= Y3;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s13b =>
 						st_square <= s13c;
 					when s13c =>
@@ -379,7 +379,7 @@ architecture functional of square is
 					when s23a =>
 						st_square <= s23b;
 						x_t <= X2; y_t <= Y3;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s23b =>
 						st_square <= s23c;
 					when s23c =>
@@ -389,7 +389,7 @@ architecture functional of square is
 					when s33a =>
 						st_square <= s33b;
 						x_t <= X3; y_t <= Y3;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s33b =>
 						st_square <= s33c;
 					when s33c =>
@@ -399,7 +399,7 @@ architecture functional of square is
 					when s43a =>
 						st_square <= s43b;
 						x_t <= X4; y_t <= Y3;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s43b =>
 						st_square <= s43c;
 					when s43c =>
@@ -409,7 +409,7 @@ architecture functional of square is
 					when s53a =>
 						st_square <= s53b;
 						x_t <= X5; y_t <= Y3;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s53b =>
 						st_square <= s53c;
 					when s53c =>
@@ -419,7 +419,7 @@ architecture functional of square is
 					when s63a =>
 						st_square <= s63b;
 						x_t <= X6; y_t <= Y3;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s63b =>
 						st_square <= s63c;
 					when s63c =>
@@ -429,7 +429,7 @@ architecture functional of square is
 					when s73a =>
 						st_square <= s73b;
 						x_t <= X7; y_t <= Y3;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s73b =>
 						st_square <= s73c;
 					when s73c =>
@@ -440,7 +440,7 @@ architecture functional of square is
 					when s04a =>
 						st_square <= s04b;
 						x_t <= X0; y_t <= Y4;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s04b =>
 						st_square <= s04c;
 					when s04c =>
@@ -450,7 +450,7 @@ architecture functional of square is
 					when s14a =>
 						st_square <= s14b;
 						x_t <= X1; y_t <= Y4;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s14b =>
 						st_square <= s14c;
 					when s14c =>
@@ -460,7 +460,7 @@ architecture functional of square is
 					when s24a =>
 						st_square <= s24b;
 						x_t <= X2; y_t <= Y4;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s24b =>
 						st_square <= s24c;
 					when s24c =>
@@ -470,7 +470,7 @@ architecture functional of square is
 					when s34a =>
 						st_square <= s34b;
 						x_t <= X3; y_t <= Y4;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s34b =>
 						st_square <= s34c;
 					when s34c =>
@@ -480,7 +480,7 @@ architecture functional of square is
 					when s44a =>
 						st_square <= s44b;
 						x_t <= X4; y_t <= Y4;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s44b =>
 						st_square <= s44c;
 					when s44c =>
@@ -490,7 +490,7 @@ architecture functional of square is
 					when s54a =>
 						st_square <= s54b;
 						x_t <= X5; y_t <= Y4;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s54b =>
 						st_square <= s54c;
 					when s54c =>
@@ -500,7 +500,7 @@ architecture functional of square is
 					when s64a =>
 						st_square <= s64b;
 						x_t <= X6; y_t <= Y4;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s64b =>
 						st_square <= s64c;
 					when s64c =>
@@ -510,7 +510,7 @@ architecture functional of square is
 					when s74a =>
 						st_square <= s74b;
 						x_t <= X7; y_t <= Y4;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s74b =>
 						st_square <= s74c;
 					when s74c =>
@@ -520,7 +520,7 @@ architecture functional of square is
 					when s05a =>
 						st_square <= s05b;
 						x_t <= X0; y_t <= Y5;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s05b =>
 						st_square <= s05c;
 					when s05c =>
@@ -529,7 +529,7 @@ architecture functional of square is
 					when s15a =>
 						st_square <= s15b;
 						x_t <= X1; y_t <= Y5;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s15b =>
 						st_square <= s15c;
 					when s15c =>
@@ -538,7 +538,7 @@ architecture functional of square is
 					when s25a =>
 						st_square <= s25b;
 						x_t <= X2; y_t <= Y5;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s25b =>
 						st_square <= s25c;
 					when s25c =>
@@ -547,7 +547,7 @@ architecture functional of square is
 					when s35a =>
 						st_square <= s35b;
 						x_t <= X3; y_t <= Y5;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s35b =>
 						st_square <= s35c;
 					when s35c =>
@@ -556,7 +556,7 @@ architecture functional of square is
 					when s45a =>
 						st_square <= s45b;
 						x_t <= X4; y_t <= Y5;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s45b =>
 						st_square <= s45c;
 					when s45c =>
@@ -565,7 +565,7 @@ architecture functional of square is
 					when s55a =>
 						st_square <= s55b;
 						x_t <= X5; y_t <= Y5;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s55b =>
 						st_square <= s55c;
 					when s55c =>
@@ -574,7 +574,7 @@ architecture functional of square is
 					when s65a =>
 						st_square <= s65b;
 						x_t <= X6; y_t <= Y5;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s65b =>
 						st_square <= s65c;
 					when s65c =>
@@ -583,7 +583,7 @@ architecture functional of square is
 					when s75a =>
 						st_square <= s75b;
 						x_t <= X7; y_t <= Y5;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s75b =>
 						st_square <= s75c;
 					when s75c =>
@@ -592,7 +592,7 @@ architecture functional of square is
 					when s06a =>
 						st_square <= s06b;
 						x_t <= X0; y_t <= Y6;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s06b =>
 						st_square <= s06c;
 					when s06c =>
@@ -601,7 +601,7 @@ architecture functional of square is
 					when s16a =>
 						st_square <= s16b;
 						x_t <= X1; y_t <= Y6;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s16b =>
 						st_square <= s16c;
 					when s16c =>
@@ -610,7 +610,7 @@ architecture functional of square is
 					when s26a =>
 						st_square <= s26b;
 						x_t <= X2; y_t <= Y6;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s26b =>
 						st_square <= s26c;
 					when s26c =>
@@ -619,7 +619,7 @@ architecture functional of square is
 					when s36a =>
 						st_square <= s36b;
 						x_t <= X3; y_t <= Y6;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s36b =>
 						st_square <= s36c;
 					when s36c =>
@@ -628,7 +628,7 @@ architecture functional of square is
 					when s46a =>
 						st_square <= s46b;
 						x_t <= X4; y_t <= Y6;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s46b =>
 						st_square <= s46c;
 					when s46c =>
@@ -637,7 +637,7 @@ architecture functional of square is
 					when s56a =>
 						st_square <= s56b;
 						x_t <= X5; y_t <= Y6;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s56b =>
 						st_square <= s56c;
 					when s56c =>
@@ -646,7 +646,7 @@ architecture functional of square is
 					when s66a =>
 						st_square <= s66b;
 						x_t <= X6; y_t <= Y6;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s66b =>
 						st_square <= s66c;
 					when s66c =>
@@ -655,7 +655,7 @@ architecture functional of square is
 					when s76a =>
 						st_square <= s76b;
 						x_t <= X7; y_t <= Y6;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s76b =>
 						st_square <= s76c;
 					when s76c =>
@@ -665,7 +665,7 @@ architecture functional of square is
 					when s07a =>
 						st_square <= s07b;
 						x_t <= X0; y_t <= Y7;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s07b =>
 						st_square <= s07c;
 					when s07c =>
@@ -675,7 +675,7 @@ architecture functional of square is
 					when s17a =>
 						st_square <= s17b;
 						x_t <= X1; y_t <= Y7;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s17b =>
 						st_square <= s17c;
 					when s17c =>
@@ -685,7 +685,7 @@ architecture functional of square is
 					when s27a =>
 						st_square <= s27b;
 						x_t <= X2; y_t <= Y7;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s27b =>
 						st_square <= s27c;
 					when s27c =>
@@ -695,7 +695,7 @@ architecture functional of square is
 					when s37a =>
 						st_square <= s37b;
 						x_t <= X3; y_t <= Y7;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s37b =>
 						st_square <= s37c;
 					when s37c =>
@@ -705,7 +705,7 @@ architecture functional of square is
 					when s47a =>
 						st_square <= s47b;
 						x_t <= X4; y_t <= Y7;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s47b =>
 						st_square <= s47c;
 					when s47c =>
@@ -715,7 +715,7 @@ architecture functional of square is
 					when s57a =>
 						st_square <= s57b;
 						x_t <= X5; y_t <= Y7;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s57b =>
 						st_square <= s57c;
 					when s57c =>
@@ -725,7 +725,7 @@ architecture functional of square is
 					when s67a =>
 						st_square <= s67b;
 						x_t <= X6; y_t <= Y7;
-						color_t <= BLUE;
+						color_t <= GREEN;
 					when s67b =>
 						st_square <= s67c;
 					when s67c =>
@@ -735,7 +735,7 @@ architecture functional of square is
 					when s77a =>
 						st_square <= s77b;
 						x_t <= X7; y_t <= Y7;
-						color_t <= GREEN;
+						color_t <= WHITE;
 					when s77b =>
 						st_square <= s77c;
 					when s77c =>

@@ -743,7 +743,7 @@ architecture functional of square is
 						
 					when s_cursor_a =>
 						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
---aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
+						--aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
 						if (c_x /= t_x) or (c_x /= t_x) then
 							t_x <= c_x; 
 							t_y <= c_y;

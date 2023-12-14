@@ -1,5 +1,5 @@
 Fitter report for Design1
-Thu Dec 14 12:04:15 2023
+Thu Dec 14 15:13:03 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -63,17 +63,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Dec 14 12:04:15 2023        ;
+; Fitter Status                      ; Successful - Thu Dec 14 15:13:03 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Total logic elements               ; 891 / 33,216 ( 3 % )                         ;
-;     Total combinational functions  ; 767 / 33,216 ( 2 % )                         ;
-;     Dedicated logic registers      ; 555 / 33,216 ( 2 % )                         ;
-; Total registers                    ; 555                                          ;
+; Total logic elements               ; 898 / 33,216 ( 3 % )                         ;
+;     Total combinational functions  ; 774 / 33,216 ( 2 % )                         ;
+;     Dedicated logic registers      ; 554 / 33,216 ( 2 % )                         ;
+; Total registers                    ; 554                                          ;
 ; Total pins                         ; 111 / 475 ( 23 % )                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,304 / 483,840 ( 20 % )                    ;
@@ -474,8 +474,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value               ;
 +-------------------------+---------------------+
 ; Placement               ;                     ;
-;     -- Requested        ; 0 / 1464 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 1464 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 1470 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 1470 ( 0.00 % ) ;
 ;                         ;                     ;
 ; Routing (by Connection) ;                     ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
@@ -497,14 +497,14 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 1464    ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 1470    ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.pin.
+The pin-out file can be found in L:/Documentos/Github/Restored/Design1.pin.
 
 
 +--------------------------------------------------------------------------+
@@ -512,23 +512,23 @@ The pin-out file can be found in C:/Users/joseph.zandueta/Documents/Project ESDC
 +---------------------------------------------+----------------------------+
 ; Resource                                    ; Usage                      ;
 +---------------------------------------------+----------------------------+
-; Total logic elements                        ; 891 / 33,216 ( 3 % )       ;
-;     -- Combinational with no register       ; 336                        ;
+; Total logic elements                        ; 898 / 33,216 ( 3 % )       ;
+;     -- Combinational with no register       ; 344                        ;
 ;     -- Register only                        ; 124                        ;
-;     -- Combinational with a register        ; 431                        ;
+;     -- Combinational with a register        ; 430                        ;
 ;                                             ;                            ;
 ; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 350                        ;
-;     -- 3 input functions                    ; 198                        ;
-;     -- <=2 input functions                  ; 219                        ;
+;     -- 4 input functions                    ; 360                        ;
+;     -- 3 input functions                    ; 202                        ;
+;     -- <=2 input functions                  ; 212                        ;
 ;     -- Register only                        ; 124                        ;
 ;                                             ;                            ;
 ; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 714                        ;
+;     -- normal mode                          ; 721                        ;
 ;     -- arithmetic mode                      ; 53                         ;
 ;                                             ;                            ;
-; Total registers*                            ; 555 / 34,593 ( 2 % )       ;
-;     -- Dedicated logic registers            ; 555 / 33,216 ( 2 % )       ;
+; Total registers*                            ; 554 / 34,593 ( 2 % )       ;
+;     -- Dedicated logic registers            ; 554 / 33,216 ( 2 % )       ;
 ;     -- I/O registers                        ; 0 / 1,377 ( 0 % )          ;
 ;                                             ;                            ;
 ; Total LABs:  partially or completely used   ; 66 / 2,076 ( 3 % )         ;
@@ -547,13 +547,13 @@ The pin-out file can be found in C:/Users/joseph.zandueta/Documents/Project ESDC
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )              ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )              ;
 ; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%               ;
-; Peak interconnect usage (total/H/V)         ; 4% / 5% / 4%               ;
+; Peak interconnect usage (total/H/V)         ; 9% / 8% / 9%               ;
 ; Maximum fan-out node                        ; KEY[0]                     ;
 ; Maximum fan-out                             ; 406                        ;
 ; Highest non-global fan-out signal           ; KEY[0]                     ;
 ; Highest non-global fan-out                  ; 406                        ;
-; Total fan-out                               ; 5009                       ;
-; Average fan-out                             ; 3.22                       ;
+; Total fan-out                               ; 5042                       ;
+; Average fan-out                             ; 3.24                       ;
 +---------------------------------------------+----------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -1425,35 +1425,35 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                                                                              ; Library Name ;
 +---------------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                             ; 891 (0)     ; 555 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 111  ; 0            ; 336 (0)      ; 124 (0)           ; 431 (0)          ; |P1_BOARD_vga                                                                                                                                                                                    ; work         ;
+; |P1_BOARD_vga                                                             ; 898 (0)     ; 554 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 111  ; 0            ; 344 (0)      ; 124 (0)           ; 430 (0)          ; |P1_BOARD_vga                                                                                                                                                                                    ; work         ;
 ;    |clk_video:inst10|                                                     ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|clk_video:inst10                                                                                                                                                                   ;              ;
 ;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component|       ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                                                                       ;              ;
 ;    |f_div:inst1|                                                          ; 22 (22)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 17 (17)          ; |P1_BOARD_vga|f_div:inst1                                                                                                                                                                        ;              ;
-;    |game:GAME|                                                            ; 51 (51)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 0 (0)             ; 27 (27)          ; |P1_BOARD_vga|game:GAME                                                                                                                                                                          ;              ;
-;    |i_o_manager_vga:inst9|                                                ; 520 (0)     ; 325 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 189 (0)      ; 97 (0)            ; 234 (0)          ; |P1_BOARD_vga|i_o_manager_vga:inst9                                                                                                                                                              ;              ;
-;       |VGA_visualisation:b2v_inst1|                                       ; 471 (0)     ; 325 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 146 (0)      ; 97 (0)            ; 228 (0)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
-;          |VGA_SYNC:inst2|                                                 ; 93 (93)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 19 (19)      ; 44 (44)           ; 30 (30)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2                                                                                                                   ;              ;
-;          |Video_Memory:inst|                                              ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 4 (0)             ; 4 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst                                                                                                                ;              ;
-;             |altsyncram:altsyncram_component|                             ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 4 (0)             ; 4 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component                                                                                ;              ;
-;                |altsyncram_4jk1:auto_generated|                           ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 4 (0)             ; 4 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
-;                   |altsyncram_fes1:altsyncram1|                           ; 40 (6)      ; 6 (6)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 4 (4)             ; 4 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
+;    |game:GAME|                                                            ; 51 (51)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 26 (26)      ; 0 (0)             ; 25 (25)          ; |P1_BOARD_vga|game:GAME                                                                                                                                                                          ;              ;
+;    |i_o_manager_vga:inst9|                                                ; 527 (0)     ; 324 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 195 (0)      ; 97 (0)            ; 235 (0)          ; |P1_BOARD_vga|i_o_manager_vga:inst9                                                                                                                                                              ;              ;
+;       |VGA_visualisation:b2v_inst1|                                       ; 478 (0)     ; 324 (0)                   ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 154 (0)      ; 97 (0)            ; 227 (0)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
+;          |VGA_SYNC:inst2|                                                 ; 92 (92)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 18 (18)      ; 44 (44)           ; 30 (30)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2                                                                                                                   ;              ;
+;          |Video_Memory:inst|                                              ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 4 (0)             ; 3 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst                                                                                                                ;              ;
+;             |altsyncram:altsyncram_component|                             ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 4 (0)             ; 3 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component                                                                                ;              ;
+;                |altsyncram_4jk1:auto_generated|                           ; 40 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 4 (0)             ; 3 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
+;                   |altsyncram_fes1:altsyncram1|                           ; 40 (6)      ; 6 (6)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 33 (0)       ; 4 (4)             ; 3 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
 ;                      |decode_9oa:decode4|                                 ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4  ;              ;
-;                      |decode_9oa:decode_a|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 2 (2)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
+;                      |decode_9oa:decode_a|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 1 (1)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
 ;                      |decode_9oa:decode_b|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b ;              ;
 ;                      |mux_kib:mux5|                                       ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5        ;              ;
 ;          |clk_div_two:inst9|                                              ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9                                                                                                                ;              ;
 ;          |clk_video:inst3|                                                ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3                                                                                                                  ;              ;
 ;             |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                      ;              ;
-;          |square:inst8|                                                   ; 276 (276)   ; 212 (212)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 64 (64)      ; 47 (47)           ; 165 (165)        ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
-;          |wr_memory:inst1|                                                ; 64 (64)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (31)      ; 2 (2)             ; 31 (31)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
-;       |hex_disps:b2v_inst|                                                ; 49 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 43 (0)       ; 0 (0)             ; 6 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst                                                                                                                                           ;              ;
+;          |square:inst8|                                                   ; 282 (282)   ; 211 (211)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 71 (71)      ; 47 (47)           ; 164 (164)        ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
+;          |wr_memory:inst1|                                                ; 64 (64)     ; 32 (32)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (32)      ; 2 (2)             ; 30 (30)          ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
+;       |hex_disps:b2v_inst|                                                ; 49 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 41 (0)       ; 0 (0)             ; 8 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst                                                                                                                                           ;              ;
 ;          |BCD7seg:display0|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0                                                                                                                          ;              ;
 ;          |BCD7seg:display1|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display1                                                                                                                          ;              ;
 ;          |BCD7seg:display2|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display2                                                                                                                          ;              ;
 ;          |BCD7seg:display3|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display3                                                                                                                          ;              ;
 ;          |BCD7seg:display5|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display5                                                                                                                          ;              ;
-;          |BCD7seg:display6|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6                                                                                                                          ;              ;
-;          |BCD7seg:display7|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 3 (3)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7                                                                                                                          ;              ;
+;          |BCD7seg:display6|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 1 (1)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6                                                                                                                          ;              ;
+;          |BCD7seg:display7|                                               ; 7 (7)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 4 (4)            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7                                                                                                                          ;              ;
 ;    |keypad:inst2|                                                         ; 47 (43)     ; 16 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 20 (16)          ; |P1_BOARD_vga|keypad:inst2                                                                                                                                                                       ;              ;
 ;       |count4b:counter|                                                   ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                                                                       ;              ;
 ;    |keytest_h_v2:inst7|                                                   ; 10 (10)     ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 6 (6)            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                                                                 ;              ;
@@ -1785,13 +1785,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[4]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|color_t[1]           ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0]~0         ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[0]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[1]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[2]               ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[3]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[4]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[5]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[6]               ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[0]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[1]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[2]               ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[3]               ; 1                 ; 6       ;
@@ -1866,144 +1865,145 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s77b       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s0       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|i[0]              ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s13a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s02a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s12a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s03a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s33a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s22a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s32a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s23a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s53a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s42a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s52a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s43a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s73a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s62a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s72a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s63a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s17a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s06a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s16a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s07a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s37a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s26a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s36a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s27a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s57a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s46a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s56a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s47a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s77a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s66a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s76a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s27a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s67a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s11a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s57a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s47a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s53a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s44a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s43a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s54a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s13a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s04a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s03a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s14a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s33a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s73a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s23a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s63a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s24a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s64a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s74a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s34a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s31a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s51a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s71a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s15a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s35a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s11a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s51a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s15a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s55a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s71a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s75a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s02a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s22a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s26a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s62a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s66a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s06a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s46a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s42a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s00a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s20a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s40a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s60a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s04a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s24a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s44a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s64a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s21a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s25a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s61a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s65a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s01a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s41a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s05a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s45a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s70a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s72a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s76a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s12a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s32a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s36a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s52a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s16a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s10a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s30a       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s50a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s70a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s14a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s34a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s54a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s74a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s01a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s21a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s41a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s61a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s05a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s25a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s45a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s65a       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[3]~0             ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s56a       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[0]~0             ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[0]~1             ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s_cursor_a ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s6       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s03c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s71c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s02c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s72c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s23c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s12c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s22c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s13c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s43c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s32c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s42c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s33c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s63c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s52c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s62c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s53c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s07c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s75c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s06c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s76c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s27c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s16c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s26c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s17c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s47c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s36c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s46c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s37c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s67c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s56c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s66c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s17c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s57c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s01c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s47c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s37c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s43c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s34c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s33c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s44c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s03c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s73c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s72c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s04c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s23c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s63c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s13c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s53c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s14c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s54c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s64c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s24c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s21c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s41c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s61c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s05c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s25c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s01c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s41c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s05c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s45c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s61c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s65c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s71c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s12c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s16c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s52c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s56c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s75c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s36c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s32c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s10c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s30c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s50c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s73c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s14c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s34c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s54c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s11c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s15c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s51c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s55c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s70c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s31c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s74c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s35c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s60c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s62c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s66c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s02c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s22c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s26c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s42c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s06c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s00c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s20c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s40c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s60c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s04c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s24c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s44c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s64c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s70c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s11c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s31c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s51c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s74c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s15c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s35c       ; 1                 ; 6       ;
-;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s55c       ; 1                 ; 6       ;
+;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s46c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[4]~0             ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s77c       ; 1                 ; 6       ;
 ;      - i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s_cursor_c ; 1                 ; 6       ;
 ; OSC_50                                                                                     ;                   ;         ;
 ; COL[3]                                                                                     ;                   ;         ;
-;      - keypad:inst2|colq[3]                                                                ; 1                 ; 6       ;
+;      - keypad:inst2|colq[3]                                                                ; 0                 ; 6       ;
 ; COL[1]                                                                                     ;                   ;         ;
-;      - keypad:inst2|colq[1]                                                                ; 0                 ; 6       ;
+;      - keypad:inst2|colq[1]                                                                ; 1                 ; 6       ;
 ; COL[2]                                                                                     ;                   ;         ;
 ;      - keypad:inst2|colq[2]                                                                ; 1                 ; 6       ;
 ; COL[0]                                                                                     ;                   ;         ;
@@ -2033,59 +2033,59 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; KEY[0]                                                                                                                                                                                              ; PIN_G26            ; 406     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 ; OSC_50                                                                                                                                                                                              ; PIN_N2             ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
-; OSC_50                                                                                                                                                                                              ; PIN_N2             ; 284     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; OSC_50                                                                                                                                                                                              ; PIN_N2             ; 283     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
 ; f_div:inst1|LessThan0~4                                                                                                                                                                             ; LCCOMB_X1_Y18_N14  ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
 ; f_div:inst1|clkout                                                                                                                                                                                  ; LCFF_X1_Y18_N21    ; 213     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; VCC                       ;
-; game:GAME|frame_received~0                                                                                                                                                                          ; LCCOMB_X45_Y26_N14 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|state.st_W_FR2                                                                                                                                                                            ; LCFF_X47_Y26_N7    ; 11      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|LessThan6~0                                                                                                                        ; LCCOMB_X22_Y22_N24 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|LessThan7~1                                                                                                                        ; LCCOMB_X25_Y22_N22 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|process_0~11                                                                                                                       ; LCCOMB_X24_Y22_N6  ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode367w[3]    ; LCCOMB_X20_Y21_N12 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode384w[3]    ; LCCOMB_X20_Y21_N20 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode394w[3]    ; LCCOMB_X20_Y21_N16 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode404w[3]    ; LCCOMB_X20_Y21_N8  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode414w[3]    ; LCCOMB_X43_Y24_N0  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode424w[3]    ; LCCOMB_X20_Y21_N4  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode434w[3]    ; LCCOMB_X20_Y21_N0  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode444w[3]    ; LCCOMB_X20_Y21_N24 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode367w[3]   ; LCCOMB_X25_Y20_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode384w[3]~0 ; LCCOMB_X25_Y22_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode394w[3]~0 ; LCCOMB_X25_Y22_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode404w[3]~0 ; LCCOMB_X25_Y22_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode414w[3]~0 ; LCCOMB_X25_Y22_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode424w[3]~0 ; LCCOMB_X25_Y22_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode434w[3]~0 ; LCCOMB_X25_Y22_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode444w[3]~0 ; LCCOMB_X25_Y20_N28 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode367w[3]   ; LCCOMB_X20_Y21_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode384w[3]~0 ; LCCOMB_X20_Y21_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode394w[3]~0 ; LCCOMB_X20_Y21_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode404w[3]~0 ; LCCOMB_X20_Y21_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode414w[3]~0 ; LCCOMB_X43_Y24_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode424w[3]~0 ; LCCOMB_X20_Y21_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode434w[3]~0 ; LCCOMB_X20_Y21_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode444w[3]~0 ; LCCOMB_X20_Y21_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|frame_received~0                                                                                                                                                                          ; LCCOMB_X47_Y21_N14 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|state.st_W_FR2                                                                                                                                                                            ; LCFF_X50_Y21_N19   ; 11      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|LessThan6~0                                                                                                                        ; LCCOMB_X45_Y25_N24 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|LessThan7~1                                                                                                                        ; LCCOMB_X42_Y25_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|process_0~11                                                                                                                       ; LCCOMB_X43_Y25_N30 ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode367w[3]    ; LCCOMB_X27_Y31_N20 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode384w[3]    ; LCCOMB_X29_Y31_N28 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode394w[3]    ; LCCOMB_X28_Y30_N24 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode404w[3]    ; LCCOMB_X27_Y31_N16 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode414w[3]    ; LCCOMB_X29_Y31_N0  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode424w[3]    ; LCCOMB_X28_Y30_N8  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode434w[3]    ; LCCOMB_X28_Y30_N16 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode444w[3]    ; LCCOMB_X28_Y30_N20 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode367w[3]   ; LCCOMB_X41_Y25_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode384w[3]~0 ; LCCOMB_X42_Y25_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode394w[3]~0 ; LCCOMB_X42_Y25_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode404w[3]~0 ; LCCOMB_X42_Y25_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode414w[3]~0 ; LCCOMB_X42_Y25_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode424w[3]~0 ; LCCOMB_X42_Y25_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode434w[3]~0 ; LCCOMB_X42_Y25_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode444w[3]~0 ; LCCOMB_X41_Y25_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode367w[3]   ; LCCOMB_X27_Y31_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode384w[3]~0 ; LCCOMB_X27_Y31_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode394w[3]~0 ; LCCOMB_X27_Y29_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode404w[3]~0 ; LCCOMB_X27_Y31_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode414w[3]~0 ; LCCOMB_X29_Y31_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode424w[3]~0 ; LCCOMB_X28_Y30_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode434w[3]~0 ; LCCOMB_X28_Y30_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode444w[3]~0 ; LCCOMB_X28_Y30_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 ; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9|clk_int                                                                                                                         ; LCFF_X1_Y18_N29    ; 105     ; Clock                      ; yes    ; Global Clock         ; GCLK1            ; VCC                       ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[0]~22                                                                                                                   ; LCCOMB_X40_Y24_N10 ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14]~19                                                                                                                  ; LCCOMB_X40_Y24_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0]~0                                                                                                                         ; LCCOMB_X42_Y29_N28 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s5                                                                                                                       ; LCFF_X40_Y24_N3    ; 12      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; keypad:inst2|key~1                                                                                                                                                                                  ; LCCOMB_X55_Y28_N8  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|Selector8~2                                                                                                                                                                       ; LCCOMB_X44_Y26_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|dataH[3]~0                                                                                                                                                                        ; LCCOMB_X43_Y26_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|dataT[3]~0                                                                                                                                                                        ; LCCOMB_X43_Y23_N0  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|dataU[3]~0                                                                                                                                                                        ; LCCOMB_X43_Y23_N2  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|frame_type[7]~0                                                                                                                                                                   ; LCCOMB_X43_Y26_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_tx:inst3|dataH_i[3]~0                                                                                                                                                                      ; LCCOMB_X51_Y26_N14 ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_tx:inst3|state.pr_w4                                                                                                                                                                       ; LCFF_X50_Y28_N9    ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; protocol_tx:inst3|tx_data[3]~7                                                                                                                                                                      ; LCCOMB_X49_Y26_N6  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_tx:inst3|tx_data[7]~9                                                                                                                                                                      ; LCCOMB_X49_Y26_N20 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; register_bank2:GUESS_CODE|DataU[0]~0                                                                                                                                                                ; LCCOMB_X48_Y25_N8  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; register_bank2:GUESS_CODE|s_DataU[3]~0                                                                                                                                                              ; LCCOMB_X51_Y26_N12 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; register_bank2:USER_CODE|DataH[2]~0                                                                                                                                                                 ; LCCOMB_X48_Y25_N2  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; register_bank2:USER_CODE|s_DataT[3]~0                                                                                                                                                               ; LCCOMB_X44_Y25_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; rx_module2:inst5|baud[2]~1                                                                                                                                                                          ; LCCOMB_X45_Y23_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; rx_module2:inst5|bit_count[2]~2                                                                                                                                                                     ; LCCOMB_X42_Y23_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[0]~22                                                                                                                   ; LCCOMB_X27_Y30_N6  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14]~19                                                                                                                  ; LCCOMB_X27_Y30_N26 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0]~0                                                                                                                         ; LCCOMB_X27_Y31_N28 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s5                                                                                                                       ; LCFF_X27_Y30_N25   ; 12      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; keypad:inst2|key~1                                                                                                                                                                                  ; LCCOMB_X61_Y23_N0  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|Selector8~2                                                                                                                                                                       ; LCCOMB_X43_Y21_N4  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataH[3]~0                                                                                                                                                                        ; LCCOMB_X44_Y21_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataT[3]~0                                                                                                                                                                        ; LCCOMB_X36_Y21_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataU[3]~0                                                                                                                                                                        ; LCCOMB_X36_Y21_N30 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|frame_type[7]~0                                                                                                                                                                   ; LCCOMB_X44_Y21_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|dataH_i[3]~0                                                                                                                                                                      ; LCCOMB_X46_Y21_N6  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|state.pr_w4                                                                                                                                                                       ; LCFF_X54_Y21_N31   ; 8       ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|tx_data[3]~7                                                                                                                                                                      ; LCCOMB_X51_Y21_N22 ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|tx_data[7]~9                                                                                                                                                                      ; LCCOMB_X51_Y21_N28 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; register_bank2:GUESS_CODE|DataU[0]~0                                                                                                                                                                ; LCCOMB_X53_Y20_N6  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; register_bank2:GUESS_CODE|s_DataU[3]~0                                                                                                                                                              ; LCCOMB_X54_Y21_N6  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; register_bank2:USER_CODE|DataH[2]~0                                                                                                                                                                 ; LCCOMB_X50_Y21_N2  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; register_bank2:USER_CODE|s_DataT[3]~0                                                                                                                                                               ; LCCOMB_X41_Y21_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; rx_module2:inst5|baud[2]~1                                                                                                                                                                          ; LCCOMB_X36_Y22_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; rx_module2:inst5|bit_count[2]~2                                                                                                                                                                     ; LCCOMB_X34_Y22_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
@@ -2094,68 +2094,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 ; Name                                                                        ; Location        ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
-; OSC_50                                                                      ; PIN_N2          ; 284     ; Global Clock         ; GCLK2            ; --                        ;
+; OSC_50                                                                      ; PIN_N2          ; 283     ; Global Clock         ; GCLK2            ; --                        ;
 ; f_div:inst1|clkout                                                          ; LCFF_X1_Y18_N21 ; 213     ; Global Clock         ; GCLK0            ; VCC                       ;
 ; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9|clk_int ; LCFF_X1_Y18_N29 ; 105     ; Global Clock         ; GCLK1            ; VCC                       ;
 +-----------------------------------------------------------------------------+-----------------+---------+----------------------+------------------+---------------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Non-Global High Fan-Out Signals                                                               ;
-+-------------------------------------------------------------------------------------+---------+
-; Name                                                                                ; Fan-Out ;
-+-------------------------------------------------------------------------------------+---------+
-; KEY[0]                                                                              ; 406     ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s6       ; 130     ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[7]      ; 26      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[11]     ; 26      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[10]     ; 26      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[9]      ; 26      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[8]      ; 26      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[6]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[5]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[4]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[3]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[2]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[1]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[0]      ; 25      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[5]       ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[4]       ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[3]       ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[2]       ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[9]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[8]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[7]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[6]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[5]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[4]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[3]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[2]    ; 24      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square.s_cursor_b ; 22      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s3       ; 19      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[12]     ; 18      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14]     ; 18      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[13]     ; 18      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|WideOr133~14         ; 16      ;
-; f_div:inst1|LessThan0~4                                                             ; 16      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0]           ; 16      ;
-; register_bank2:USER_CODE|state.st_Get_Key                                           ; 16      ;
-; register_bank2:GUESS_CODE|state.st_Get_Key                                          ; 16      ;
-; UART_RXD                                                                            ; 14      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s2       ; 14      ;
-; tx_module:inst6|tx_empty                                                            ; 14      ;
-; keytest_h_v2:inst7|keycode_int[3]                                                   ; 14      ;
-; keytest_h_v2:inst7|keycode_int[2]                                                   ; 14      ;
-; keytest_h_v2:inst7|keycode_int[1]                                                   ; 14      ;
-; rx_module2:inst5|bit_count[0]                                                       ; 13      ;
-; keytest_h_v2:inst7|keycode_int[0]                                                   ; 13      ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s5       ; 12      ;
-; register_bank2:USER_CODE|DataH[2]~0                                                 ; 12      ;
-; protocol_tx:inst3|dataH_i[3]~0                                                      ; 12      ;
-; rx_module2:inst5|bit_count[1]                                                       ; 12      ;
-; register_bank2:GUESS_CODE|DataU[0]~0                                                ; 12      ;
-; rx_module2:inst5|rx_new_internal                                                    ; 11      ;
-+-------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------+
+; Non-Global High Fan-Out Signals                                                            ;
++----------------------------------------------------------------------------------+---------+
+; Name                                                                             ; Fan-Out ;
++----------------------------------------------------------------------------------+---------+
+; KEY[0]                                                                           ; 406     ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s6    ; 130     ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[7]   ; 26      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[11]  ; 26      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[10]  ; 26      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[9]   ; 26      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[8]   ; 26      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[6]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[5]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[4]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[3]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[2]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[1]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[0]   ; 25      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[5]    ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[4]    ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[3]    ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_row[2]    ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[9] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[8] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[7] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[6] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[5] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[4] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[3] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|pixel_column[2] ; 24      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s3    ; 19      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[12]  ; 18      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14]  ; 18      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[13]  ; 18      ;
+; f_div:inst1|LessThan0~4                                                          ; 16      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0]        ; 16      ;
+; register_bank2:USER_CODE|state.st_Get_Key                                        ; 16      ;
+; register_bank2:GUESS_CODE|state.st_Get_Key                                       ; 16      ;
+; UART_RXD                                                                         ; 14      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|Selector196~1     ; 14      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s2    ; 14      ;
+; tx_module:inst6|tx_empty                                                         ; 14      ;
+; keytest_h_v2:inst7|keycode_int[3]                                                ; 14      ;
+; keytest_h_v2:inst7|keycode_int[2]                                                ; 14      ;
+; keytest_h_v2:inst7|keycode_int[1]                                                ; 14      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|WideOr133~4       ; 13      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|Selector206~8     ; 13      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|WideOr133~0       ; 13      ;
+; rx_module2:inst5|bit_count[0]                                                    ; 13      ;
+; keytest_h_v2:inst7|keycode_int[0]                                                ; 13      ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write.s5    ; 12      ;
+; register_bank2:USER_CODE|DataH[2]~0                                              ; 12      ;
+; protocol_tx:inst3|dataH_i[3]~0                                                   ; 12      ;
+; rx_module2:inst5|bit_count[1]                                                    ; 12      ;
++----------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -2163,7 +2163,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Name                                                                                                                                                                      ; Type ; Mode           ; Clock Mode  ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF  ; Location                                                                                                                                                                                                                                                                                                               ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 32768        ; 3            ; 32768        ; 3            ; yes                    ; yes                     ; yes                    ; no                      ; 98304 ; 32768                       ; 3                           ; 32768                       ; 3                           ; 98304               ; 24   ; None ; M4K_X13_Y21, M4K_X26_Y18, M4K_X52_Y22, M4K_X13_Y20, M4K_X13_Y15, M4K_X26_Y15, M4K_X26_Y21, M4K_X13_Y24, M4K_X13_Y22, M4K_X26_Y19, M4K_X52_Y21, M4K_X13_Y17, M4K_X13_Y18, M4K_X26_Y20, M4K_X26_Y24, M4K_X13_Y23, M4K_X13_Y19, M4K_X26_Y16, M4K_X26_Y25, M4K_X26_Y17, M4K_X13_Y16, M4K_X26_Y22, M4K_X26_Y23, M4K_X13_Y25 ;
+; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks ; 32768        ; 3            ; 32768        ; 3            ; yes                    ; yes                     ; yes                    ; no                      ; 98304 ; 32768                       ; 3                           ; 32768                       ; 3                           ; 98304               ; 24   ; None ; M4K_X26_Y28, M4K_X13_Y30, M4K_X26_Y31, M4K_X52_Y24, M4K_X13_Y29, M4K_X13_Y23, M4K_X26_Y23, M4K_X52_Y28, M4K_X13_Y26, M4K_X13_Y31, M4K_X26_Y29, M4K_X52_Y25, M4K_X13_Y27, M4K_X13_Y24, M4K_X26_Y24, M4K_X52_Y29, M4K_X13_Y28, M4K_X26_Y26, M4K_X26_Y30, M4K_X52_Y26, M4K_X26_Y27, M4K_X13_Y25, M4K_X26_Y25, M4K_X52_Y27 ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+-------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -2173,93 +2173,93 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 1,637 / 94,460 ( 2 % ) ;
-; C16 interconnects          ; 58 / 3,315 ( 2 % )     ;
-; C4 interconnects           ; 809 / 60,840 ( 1 % )   ;
-; Direct links               ; 306 / 94,460 ( < 1 % ) ;
+; Block interconnects        ; 1,677 / 94,460 ( 2 % ) ;
+; C16 interconnects          ; 47 / 3,315 ( 1 % )     ;
+; C4 interconnects           ; 884 / 60,840 ( 1 % )   ;
+; Direct links               ; 245 / 94,460 ( < 1 % ) ;
 ; Global clocks              ; 3 / 16 ( 19 % )        ;
-; Local interconnects        ; 494 / 33,216 ( 1 % )   ;
-; R24 interconnects          ; 100 / 3,091 ( 3 % )    ;
-; R4 interconnects           ; 1,062 / 81,294 ( 1 % ) ;
+; Local interconnects        ; 507 / 33,216 ( 2 % )   ;
+; R24 interconnects          ; 107 / 3,091 ( 3 % )    ;
+; R4 interconnects           ; 1,213 / 81,294 ( 1 % ) ;
 +----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 13.50) ; Number of LABs  (Total = 66) ;
+; Number of Logic Elements  (Average = 13.61) ; Number of LABs  (Total = 66) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 4                            ;
-; 2                                           ; 0                            ;
+; 2                                           ; 1                            ;
 ; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
 ; 5                                           ; 2                            ;
-; 6                                           ; 1                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 3                            ;
-; 9                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 3                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 0                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 1                            ;
 ; 13                                          ; 0                            ;
-; 14                                          ; 2                            ;
+; 14                                          ; 1                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 48                           ;
+; 16                                          ; 49                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.91) ; Number of LABs  (Total = 66) ;
+; LAB-wide Signals  (Average = 1.94) ; Number of LABs  (Total = 66) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 37                           ;
-; 1 Clock                            ; 62                           ;
+; 1 Async. clear                     ; 40                           ;
+; 1 Clock                            ; 63                           ;
 ; 1 Clock enable                     ; 17                           ;
 ; 1 Sync. clear                      ; 2                            ;
 ; 1 Sync. load                       ; 2                            ;
-; 2 Clock enables                    ; 6                            ;
+; 2 Clock enables                    ; 4                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 21.41) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced  (Average = 21.47) ; Number of LABs  (Total = 66) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 1                            ;
 ; 2                                            ; 3                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 0                            ;
-; 5                                            ; 1                            ;
-; 6                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 2                            ;
-; 8                                            ; 1                            ;
+; 8                                            ; 0                            ;
 ; 9                                            ; 1                            ;
-; 10                                           ; 1                            ;
+; 10                                           ; 0                            ;
 ; 11                                           ; 0                            ;
 ; 12                                           ; 1                            ;
 ; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 1                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 0                            ;
 ; 16                                           ; 1                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 4                            ;
-; 21                                           ; 4                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 4                            ;
-; 24                                           ; 6                            ;
-; 25                                           ; 3                            ;
-; 26                                           ; 6                            ;
-; 27                                           ; 5                            ;
-; 28                                           ; 4                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 3                            ;
-; 31                                           ; 3                            ;
-; 32                                           ; 3                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 3                            ;
+; 21                                           ; 7                            ;
+; 22                                           ; 6                            ;
+; 23                                           ; 6                            ;
+; 24                                           ; 4                            ;
+; 25                                           ; 2                            ;
+; 26                                           ; 5                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 8                            ;
+; 29                                           ; 3                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 2                            ;
+; 32                                           ; 4                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2270,62 +2270,61 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
 ; 1                                               ; 4                            ;
-; 2                                               ; 0                            ;
+; 2                                               ; 1                            ;
 ; 3                                               ; 2                            ;
 ; 4                                               ; 1                            ;
 ; 5                                               ; 3                            ;
-; 6                                               ; 3                            ;
-; 7                                               ; 7                            ;
+; 6                                               ; 2                            ;
+; 7                                               ; 3                            ;
 ; 8                                               ; 4                            ;
-; 9                                               ; 10                           ;
-; 10                                              ; 7                            ;
-; 11                                              ; 3                            ;
-; 12                                              ; 7                            ;
-; 13                                              ; 3                            ;
-; 14                                              ; 3                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 6                            ;
-; 17                                              ; 2                            ;
+; 9                                               ; 7                            ;
+; 10                                              ; 11                           ;
+; 11                                              ; 9                            ;
+; 12                                              ; 6                            ;
+; 13                                              ; 4                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 3                            ;
+; 16                                              ; 5                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 12.14) ; Number of LABs  (Total = 66) ;
+; Number of Distinct Inputs  (Average = 13.08) ; Number of LABs  (Total = 66) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 4                            ;
 ; 3                                            ; 3                            ;
-; 4                                            ; 6                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 6                            ;
+; 4                                            ; 3                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 4                            ;
+; 7                                            ; 3                            ;
 ; 8                                            ; 2                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 0                            ;
-; 11                                           ; 6                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 5                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 6                            ;
+; 9                                            ; 4                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 7                            ;
+; 12                                           ; 3                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 2                            ;
+; 15                                           ; 5                            ;
 ; 16                                           ; 1                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 4                            ;
+; 17                                           ; 1                            ;
+; 18                                           ; 5                            ;
 ; 19                                           ; 2                            ;
-; 20                                           ; 2                            ;
+; 20                                           ; 3                            ;
 ; 21                                           ; 1                            ;
 ; 22                                           ; 1                            ;
 ; 23                                           ; 0                            ;
 ; 24                                           ; 1                            ;
 ; 25                                           ; 0                            ;
-; 26                                           ; 1                            ;
+; 26                                           ; 0                            ;
 ; 27                                           ; 0                            ;
-; 28                                           ; 1                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 1                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 3                            ;
+; 30                                           ; 1                            ;
+; 31                                           ; 2                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2371,7 +2370,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 14 12:04:10 2023
+    Info: Processing started: Thu Dec 14 15:12:57 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Design1 -c Design1
 Info: Selected device EP2C35F672C6 for design "Design1"
 Info: Low junction temperature is 0 degrees C
@@ -2729,31 +2728,25 @@ Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:00
-Info: Estimated most critical path is register to register delay of 4.326 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X41_Y24; Fanout = 5; REG Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|i[1]'
-    Info: 2: + IC(0.664 ns) + CELL(0.150 ns) = 0.814 ns; Loc. = LAB_X42_Y24; Fanout = 3; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|LessThan0~0'
-    Info: 3: + IC(0.397 ns) + CELL(0.414 ns) = 1.625 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~1'
-    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.696 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~3'
-    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.767 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~5'
-    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.838 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~7'
-    Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.909 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~9'
-    Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.980 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~11'
-    Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 2.051 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~13'
-    Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 2.122 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~15'
-    Info: 11: + IC(0.000 ns) + CELL(0.071 ns) = 2.193 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~17'
-    Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 2.264 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~19'
-    Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 2.335 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~21'
-    Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 2.406 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~23'
-    Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 2.477 ns; Loc. = LAB_X42_Y24; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~25'
-    Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 2.548 ns; Loc. = LAB_X42_Y24; Fanout = 1; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~27'
-    Info: 17: + IC(0.000 ns) + CELL(0.410 ns) = 2.958 ns; Loc. = LAB_X42_Y24; Fanout = 1; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~29'
-    Info: 18: + IC(0.318 ns) + CELL(0.437 ns) = 3.713 ns; Loc. = LAB_X43_Y24; Fanout = 1; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~31'
-    Info: 19: + IC(0.247 ns) + CELL(0.366 ns) = 4.326 ns; Loc. = LAB_X43_Y24; Fanout = 18; REG Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14]'
-    Info: Total cell delay = 2.700 ns ( 62.41 % )
-    Info: Total interconnect delay = 1.626 ns ( 37.59 % )
+Info: Estimated most critical path is register to register delay of 4.660 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X27_Y28; Fanout = 5; REG Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|i[1]'
+    Info: 2: + IC(0.964 ns) + CELL(0.150 ns) = 1.114 ns; Loc. = LAB_X28_Y31; Fanout = 3; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|LessThan0~0'
+    Info: 3: + IC(0.397 ns) + CELL(0.414 ns) = 1.925 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~1'
+    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.996 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~3'
+    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 2.067 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~5'
+    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 2.138 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~7'
+    Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 2.209 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~9'
+    Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 2.280 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~11'
+    Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 2.351 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~13'
+    Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 2.422 ns; Loc. = LAB_X28_Y31; Fanout = 2; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~15'
+    Info: 11: + IC(0.000 ns) + CELL(0.410 ns) = 2.832 ns; Loc. = LAB_X28_Y31; Fanout = 1; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~16'
+    Info: 12: + IC(0.587 ns) + CELL(0.437 ns) = 3.856 ns; Loc. = LAB_X30_Y31; Fanout = 1; COMB Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|Add1~40'
+    Info: 13: + IC(0.438 ns) + CELL(0.366 ns) = 4.660 ns; Loc. = LAB_X29_Y31; Fanout = 28; REG Node = 'i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[8]'
+    Info: Total cell delay = 2.274 ns ( 48.80 % )
+    Info: Total interconnect delay = 2.386 ns ( 51.20 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 1% of the available device resources
-    Info: Peak interconnect usage is 4% of the available device resources in the region that extends from location X22_Y12 to location X32_Y23
+    Info: Peak interconnect usage is 8% of the available device resources in the region that extends from location X22_Y24 to location X32_Y36
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -2870,8 +2863,8 @@ Warning: Found invalid Fitter assignments. See the Ignored Assignments panel in 
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 319 warnings
     Info: Peak virtual memory: 285 megabytes
-    Info: Processing ended: Thu Dec 14 12:04:15 2023
-    Info: Elapsed time: 00:00:05
+    Info: Processing ended: Thu Dec 14 15:13:04 2023
+    Info: Elapsed time: 00:00:07
     Info: Total CPU time (on all processors): 00:00:06
 
 
