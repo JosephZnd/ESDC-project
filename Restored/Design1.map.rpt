@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Thu Dec 14 15:12:56 2023
+Thu Dec 14 15:02:23 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,25 +15,26 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. State Machine - |P1_BOARD_vga|protocol_tx:inst3|state
- 10. State Machine - |P1_BOARD_vga|rx_module2:inst5|state
- 11. State Machine - |P1_BOARD_vga|protocol_rx:inst4|state
- 12. State Machine - |P1_BOARD_vga|game:GAME|state
- 13. State Machine - |P1_BOARD_vga|register_bank2:GUESS_CODE|state
- 14. State Machine - |P1_BOARD_vga|register_bank2:USER_CODE|state
- 15. State Machine - |P1_BOARD_vga|keypad:inst2|current_state
- 16. State Machine - |P1_BOARD_vga|main_control:inst|state
- 17. State Machine - |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square
- 18. State Machine - |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write
+ 10. State Machine - |P1_BOARD_vga|register_bank2:GUESS_CODE|state
+ 11. State Machine - |P1_BOARD_vga|rx_module2:inst5|state
+ 12. State Machine - |P1_BOARD_vga|protocol_rx:inst4|state
+ 13. State Machine - |P1_BOARD_vga|game:GAME|state
+ 14. State Machine - |P1_BOARD_vga|main_control:inst|state
+ 15. State Machine - |P1_BOARD_vga|register_bank2:USER_CODE|state
+ 16. State Machine - |P1_BOARD_vga|keypad:inst2|current_state
+ 17. State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|st_square
+ 18. State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write
  19. State Machine - |P1_BOARD_vga|tx_module:inst6|state
  20. Registers Removed During Synthesis
- 21. General Register Statistics
- 22. Inverted Register Statistics
- 23. Multiplexer Restructuring Statistics (Restructuring Performed)
- 24. Source assignments for i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
- 25. Source assignments for i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
- 26. Parameter Settings for User Entity Instance: i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Analysis & Synthesis Messages
+ 21. Removed Registers Triggering Further Register Optimizations
+ 22. General Register Statistics
+ 23. Inverted Register Statistics
+ 24. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 25. Source assignments for i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
+ 26. Source assignments for i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
+ 27. Parameter Settings for User Entity Instance: i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
+ 28. altsyncram Parameter Settings by Entity Instance
+ 29. Analysis & Synthesis Messages
 
 
 
@@ -59,16 +60,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 14 15:12:56 2023        ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 14 15:02:23 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 947                                          ;
-;     Total combinational functions  ; 774                                          ;
-;     Dedicated logic registers      ; 554                                          ;
-; Total registers                    ; 554                                          ;
-; Total pins                         ; 111                                          ;
+; Total logic elements               ; 826                                          ;
+;     Total combinational functions  ; 675                                          ;
+;     Dedicated logic registers      ; 498                                          ;
+; Total registers                    ; 498                                          ;
+; Total pins                         ; 113                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,304                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -160,7 +161,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 6      ;
+; Number detected on machine ; 4      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -193,6 +194,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; RegisterBank.vhd                 ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/RegisterBank.vhd                 ;
 ; MAIN.vhd                         ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/MAIN.vhd                         ;
 ; GAME.vhd                         ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/GAME.vhd                         ;
+; square_map.vhd                   ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/square_map.vhd                   ;
+; kb_xy_module.vhd                 ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/kb_xy_module.vhd                 ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
 ; db/altsyncram_4jk1.tdf           ; yes             ; Auto-Generated Megafunction        ; L:/Documentos/Github/Restored/db/altsyncram_4jk1.tdf           ;
 ; db/altsyncram_fes1.tdf           ; yes             ; Auto-Generated Megafunction        ; L:/Documentos/Github/Restored/db/altsyncram_fes1.tdf           ;
@@ -206,86 +209,79 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 947    ;
+; Estimated Total logic elements              ; 826    ;
 ;                                             ;        ;
-; Total combinational functions               ; 774    ;
+; Total combinational functions               ; 675    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 360    ;
-;     -- 3 input functions                    ; 202    ;
-;     -- <=2 input functions                  ; 212    ;
+;     -- 4 input functions                    ; 290    ;
+;     -- 3 input functions                    ; 201    ;
+;     -- <=2 input functions                  ; 184    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 721    ;
+;     -- normal mode                          ; 622    ;
 ;     -- arithmetic mode                      ; 53     ;
 ;                                             ;        ;
-; Total registers                             ; 554    ;
-;     -- Dedicated logic registers            ; 554    ;
+; Total registers                             ; 498    ;
+;     -- Dedicated logic registers            ; 498    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 111    ;
+; I/O pins                                    ; 113    ;
 ; Total memory bits                           ; 98304  ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 406    ;
-; Total fan-out                               ; 4952   ;
-; Average fan-out                             ; 3.38   ;
+; Maximum fan-out                             ; 364    ;
+; Total fan-out                               ; 4356   ;
+; Average fan-out                             ; 3.32   ;
 +---------------------------------------------+--------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                     ;
-+---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                              ; Library Name ;
-+---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                             ; 774 (0)           ; 554 (0)      ; 98304       ; 0            ; 0       ; 0         ; 111  ; 0            ; |P1_BOARD_vga                                                                                                                                                                                    ; work         ;
-;    |clk_video:inst10|                                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10                                                                                                                                                                   ;              ;
-;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                                                                       ;              ;
-;    |f_div:inst1|                                                          ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|f_div:inst1                                                                                                                                                                        ;              ;
-;    |game:GAME|                                                            ; 51 (51)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                                                                          ;              ;
-;    |i_o_manager_vga:inst9|                                                ; 430 (0)           ; 324 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9                                                                                                                                                              ;              ;
-;       |VGA_visualisation:b2v_inst1|                                       ; 381 (0)           ; 324 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
-;          |VGA_SYNC:inst2|                                                 ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2                                                                                                                   ;              ;
-;          |Video_Memory:inst|                                              ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst                                                                                                                ;              ;
-;             |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component                                                                                ;              ;
-;                |altsyncram_4jk1:auto_generated|                           ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
-;                   |altsyncram_fes1:altsyncram1|                           ; 36 (0)            ; 6 (6)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
-;                      |decode_9oa:decode4|                                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4  ;              ;
-;                      |decode_9oa:decode_a|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
-;                      |decode_9oa:decode_b|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b ;              ;
-;                      |mux_kib:mux5|                                       ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5        ;              ;
-;          |clk_div_two:inst9|                                              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9                                                                                                                ;              ;
-;          |clk_video:inst3|                                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3                                                                                                                  ;              ;
-;             |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                      ;              ;
-;          |square:inst8|                                                   ; 235 (235)         ; 211 (211)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
-;          |wr_memory:inst1|                                                ; 62 (62)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
-;       |hex_disps:b2v_inst|                                                ; 49 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst                                                                                                                                           ;              ;
-;          |BCD7seg:display0|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0                                                                                                                          ;              ;
-;          |BCD7seg:display1|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display1                                                                                                                          ;              ;
-;          |BCD7seg:display2|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display2                                                                                                                          ;              ;
-;          |BCD7seg:display3|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display3                                                                                                                          ;              ;
-;          |BCD7seg:display5|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display5                                                                                                                          ;              ;
-;          |BCD7seg:display6|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6                                                                                                                          ;              ;
-;          |BCD7seg:display7|                                               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7                                                                                                                          ;              ;
-;    |keypad:inst2|                                                         ; 46 (42)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                                                                       ;              ;
-;       |count4b:counter|                                                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                                                                       ;              ;
-;    |keytest_h_v2:inst7|                                                   ; 6 (6)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                                                                 ;              ;
-;    |main_control:inst|                                                    ; 14 (14)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|main_control:inst                                                                                                                                                                  ;              ;
-;    |protocol_rx:inst4|                                                    ; 36 (36)           ; 42 (42)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                                                                  ;              ;
-;    |protocol_tx:inst3|                                                    ; 51 (51)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                                                                  ;              ;
-;    |register_bank2:GUESS_CODE|                                            ; 23 (23)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:GUESS_CODE                                                                                                                                                          ;              ;
-;    |register_bank2:USER_CODE|                                             ; 22 (22)           ; 25 (25)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:USER_CODE                                                                                                                                                           ;              ;
-;    |rx_module2:inst5|                                                     ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                                                                   ;              ;
-;    |tx_module:inst6|                                                      ; 27 (27)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                                                                    ;              ;
-+---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                                                                      ;
++---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                               ; Library Name ;
++---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
+; |P1_BOARD_vga                                                             ; 675 (1)           ; 498 (0)      ; 98304       ; 0            ; 0       ; 0         ; 113  ; 0            ; |P1_BOARD_vga                                                                                                                                                                                     ; work         ;
+;    |clk_video:inst10|                                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10                                                                                                                                                                    ;              ;
+;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                                                                        ;              ;
+;    |f_div:inst1|                                                          ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|f_div:inst1                                                                                                                                                                         ;              ;
+;    |game:GAME|                                                            ; 28 (28)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                                                                           ;              ;
+;    |i_o_manager_vga:inst13|                                               ; 396 (0)           ; 335 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13                                                                                                                                                              ;              ;
+;       |VGA_visualisation:b2v_inst1|                                       ; 396 (0)           ; 335 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
+;          |VGA_SYNC:inst2|                                                 ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2                                                                                                                   ;              ;
+;          |Video_Memory:inst|                                              ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst                                                                                                                ;              ;
+;             |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component                                                                                ;              ;
+;                |altsyncram_4jk1:auto_generated|                           ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
+;                   |altsyncram_fes1:altsyncram1|                           ; 36 (0)            ; 6 (6)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
+;                      |decode_9oa:decode4|                                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4  ;              ;
+;                      |decode_9oa:decode_a|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
+;                      |decode_9oa:decode_b|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b ;              ;
+;                      |mux_kib:mux5|                                       ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5        ;              ;
+;          |clk_div_two:inst9|                                              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_div_two:inst9                                                                                                                ;              ;
+;          |clk_video:inst3|                                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3                                                                                                                  ;              ;
+;             |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                      ;              ;
+;          |square:inst8|                                                   ; 250 (250)         ; 222 (222)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
+;          |wr_memory:inst1|                                                ; 62 (62)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
+;    |kb_xy_module:inst8|                                                   ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                                                                  ;              ;
+;    |keypad:inst2|                                                         ; 47 (43)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                                                                        ;              ;
+;       |count4b:counter|                                                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                                                                        ;              ;
+;    |keytest_h_v2:inst7|                                                   ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                                                                  ;              ;
+;    |protocol_rx:inst4|                                                    ; 35 (35)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                                                                   ;              ;
+;    |protocol_tx:inst3|                                                    ; 36 (36)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                                                                   ;              ;
+;    |register_bank2:GUESS_CODE|                                            ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:GUESS_CODE                                                                                                                                                           ;              ;
+;    |register_bank2:USER_CODE|                                             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:USER_CODE                                                                                                                                                            ;              ;
+;    |rx_module2:inst5|                                                     ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                                                                    ;              ;
+;    |square_map:inst12|                                                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square_map:inst12                                                                                                                                                                   ;              ;
+;    |tx_module:inst6|                                                      ; 27 (27)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                                                                     ;              ;
++---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                             ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
-; Name                                                                                                                                                                      ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32768        ; 3            ; 32768        ; 3            ; 98304 ; None ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                              ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
+; Name                                                                                                                                                                       ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF  ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32768        ; 3            ; 32768        ; 3            ; 98304 ; None ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+------+
 
 
 Encoding Type:  One-Hot
@@ -313,6 +309,19 @@ Encoding Type:  One-Hot
 ; state.pr_w5         ; 0               ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
 ; state.pr_set_TX     ; 1               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
 +---------------------+-----------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+---------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|register_bank2:GUESS_CODE|state                               ;
++---------------------+--------------+------------------+---------------------+---------------+
+; Name                ; state.st_end ; state.st_Get_Key ; state.st_W_Keypress ; state.st_wait ;
++---------------------+--------------+------------------+---------------------+---------------+
+; state.st_wait       ; 0            ; 0                ; 0                   ; 0             ;
+; state.st_W_Keypress ; 0            ; 0                ; 1                   ; 1             ;
+; state.st_Get_Key    ; 0            ; 1                ; 0                   ; 1             ;
+; state.st_end        ; 1            ; 0                ; 0                   ; 1             ;
++---------------------+--------------+------------------+---------------------+---------------+
 
 
 Encoding Type:  One-Hot
@@ -379,16 +388,17 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|register_bank2:GUESS_CODE|state                               ;
-+---------------------+--------------+------------------+---------------------+---------------+
-; Name                ; state.st_end ; state.st_Get_Key ; state.st_W_Keypress ; state.st_wait ;
-+---------------------+--------------+------------------+---------------------+---------------+
-; state.st_wait       ; 0            ; 0                ; 0                   ; 0             ;
-; state.st_W_Keypress ; 0            ; 0                ; 1                   ; 1             ;
-; state.st_Get_Key    ; 0            ; 1                ; 0                   ; 1             ;
-; state.st_end        ; 1            ; 0                ; 0                   ; 1             ;
-+---------------------+--------------+------------------+---------------------+---------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                    ;
++---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
+; Name                ; state.st_w_game ; state.st_start_game ; state.st_w_code ; state.st_enter_code ; state.st_wait_hash ;
++---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
+; state.st_wait_hash  ; 0               ; 0                   ; 0               ; 0                   ; 0                  ;
+; state.st_enter_code ; 0               ; 0                   ; 0               ; 1                   ; 1                  ;
+; state.st_w_code     ; 0               ; 0                   ; 1               ; 0                   ; 1                  ;
+; state.st_start_game ; 0               ; 1                   ; 0               ; 0                   ; 1                  ;
+; state.st_w_game     ; 1               ; 0                   ; 0               ; 0                   ; 1                  ;
++---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -422,22 +432,8 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+--------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                    ;
-+---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
-; Name                ; state.st_w_game ; state.st_start_game ; state.st_w_code ; state.st_enter_code ; state.st_wait_hash ;
-+---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
-; state.st_wait_hash  ; 0               ; 0                   ; 0               ; 0                   ; 0                  ;
-; state.st_enter_code ; 0               ; 0                   ; 0               ; 1                   ; 1                  ;
-; state.st_w_code     ; 0               ; 0                   ; 1               ; 0                   ; 1                  ;
-; state.st_start_game ; 0               ; 1                   ; 0               ; 0                   ; 1                  ;
-; state.st_w_game     ; 1               ; 0                   ; 0               ; 0                   ; 1                  ;
-+---------------------+-----------------+---------------------+-----------------+---------------------+--------------------+
-
-
-Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|st_square                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ;
+; State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|st_square                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ;
 +----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
 ; Name                 ; st_square.s_cursor_c ; st_square.s_cursor_b ; st_square.s_cursor_a ; st_square.s77c ; st_square.s77b ; st_square.s77a ; st_square.s67c ; st_square.s67b ; st_square.s67a ; st_square.s57c ; st_square.s57b ; st_square.s57a ; st_square.s47c ; st_square.s47b ; st_square.s47a ; st_square.s37c ; st_square.s37b ; st_square.s37a ; st_square.s27c ; st_square.s27b ; st_square.s27a ; st_square.s17c ; st_square.s17b ; st_square.s17a ; st_square.s07c ; st_square.s07b ; st_square.s07a ; st_square.s76c ; st_square.s76b ; st_square.s76a ; st_square.s66c ; st_square.s66b ; st_square.s66a ; st_square.s56c ; st_square.s56b ; st_square.s56a ; st_square.s46c ; st_square.s46b ; st_square.s46a ; st_square.s36c ; st_square.s36b ; st_square.s36a ; st_square.s26c ; st_square.s26b ; st_square.s26a ; st_square.s16c ; st_square.s16b ; st_square.s16a ; st_square.s06c ; st_square.s06b ; st_square.s06a ; st_square.s75c ; st_square.s75b ; st_square.s75a ; st_square.s65c ; st_square.s65b ; st_square.s65a ; st_square.s55c ; st_square.s55b ; st_square.s55a ; st_square.s45c ; st_square.s45b ; st_square.s45a ; st_square.s35c ; st_square.s35b ; st_square.s35a ; st_square.s25c ; st_square.s25b ; st_square.s25a ; st_square.s15c ; st_square.s15b ; st_square.s15a ; st_square.s05c ; st_square.s05b ; st_square.s05a ; st_square.s74c ; st_square.s74b ; st_square.s74a ; st_square.s64c ; st_square.s64b ; st_square.s64a ; st_square.s54c ; st_square.s54b ; st_square.s54a ; st_square.s44c ; st_square.s44b ; st_square.s44a ; st_square.s34c ; st_square.s34b ; st_square.s34a ; st_square.s24c ; st_square.s24b ; st_square.s24a ; st_square.s14c ; st_square.s14b ; st_square.s14a ; st_square.s04c ; st_square.s04b ; st_square.s04a ; st_square.s73c ; st_square.s73b ; st_square.s73a ; st_square.s63c ; st_square.s63b ; st_square.s63a ; st_square.s53c ; st_square.s53b ; st_square.s53a ; st_square.s43c ; st_square.s43b ; st_square.s43a ; st_square.s33c ; st_square.s33b ; st_square.s33a ; st_square.s23c ; st_square.s23b ; st_square.s23a ; st_square.s13c ; st_square.s13b ; st_square.s13a ; st_square.s03c ; st_square.s03b ; st_square.s03a ; st_square.s72c ; st_square.s72b ; st_square.s72a ; st_square.s62c ; st_square.s62b ; st_square.s62a ; st_square.s52c ; st_square.s52b ; st_square.s52a ; st_square.s42c ; st_square.s42b ; st_square.s42a ; st_square.s32c ; st_square.s32b ; st_square.s32a ; st_square.s22c ; st_square.s22b ; st_square.s22a ; st_square.s12c ; st_square.s12b ; st_square.s12a ; st_square.s02c ; st_square.s02b ; st_square.s02a ; st_square.s71c ; st_square.s71b ; st_square.s71a ; st_square.s61c ; st_square.s61b ; st_square.s61a ; st_square.s51c ; st_square.s51b ; st_square.s51a ; st_square.s41c ; st_square.s41b ; st_square.s41a ; st_square.s31c ; st_square.s31b ; st_square.s31a ; st_square.s21c ; st_square.s21b ; st_square.s21a ; st_square.s11c ; st_square.s11b ; st_square.s11a ; st_square.s01c ; st_square.s01b ; st_square.s01a ; st_square.s70c ; st_square.s70b ; st_square.s70a ; st_square.s60c ; st_square.s60b ; st_square.s60a ; st_square.s50c ; st_square.s50b ; st_square.s50a ; st_square.s40c ; st_square.s40b ; st_square.s40a ; st_square.s30c ; st_square.s30b ; st_square.s30a ; st_square.s20c ; st_square.s20b ; st_square.s20a ; st_square.s10c ; st_square.s10b ; st_square.s10a ; st_square.s00c ; st_square.s00b ; st_square.s00a ;
 +----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+----------------+
@@ -641,7 +637,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write      ;
+; State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write     ;
 +-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 ; Name        ; st_write.s6 ; st_write.s5 ; st_write.s4 ; st_write.s3 ; st_write.s2 ; st_write.s1 ; st_write.s0 ;
 +-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
@@ -668,28 +664,99 @@ Encoding Type:  One-Hot
 +----------------+---------------+----------------+----------------+---------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                                ;
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
-; Register name                                                             ; Reason for Removal                                                                    ;
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
-; protocol_tx:inst3|frame_type[3]                                           ; Stuck at GND due to stuck port data_in                                                ;
-; protocol_tx:inst3|frame_type[0]                                           ; Stuck at VCC due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[7]     ; Stuck at GND due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[5..7]  ; Stuck at GND due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[3]     ; Stuck at VCC due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[2]     ; Stuck at GND due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[0]     ; Stuck at VCC due to stuck port data_in                                                ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|y_t[0]     ; Merged with i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|x_t[0]     ;
-; protocol_tx:inst3|frame_type[5]                                           ; Merged with protocol_tx:inst3|frame_type[7]                                           ;
-; protocol_tx:inst3|frame_type[4]                                           ; Merged with protocol_tx:inst3|frame_type[6]                                           ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|color_t[0] ; Merged with i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|color_t[1] ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[1]     ; Merged with i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[4]     ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[1] ; Merged with i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0] ;
-; protocol_tx:inst3|tx_data[5]                                              ; Merged with protocol_tx:inst3|tx_data[7]                                              ;
-; protocol_tx:inst3|tx_data[4]                                              ; Merged with protocol_tx:inst3|tx_data[6]                                              ;
-; Total Number of Removed Registers = 17                                    ;                                                                                       ;
-+---------------------------------------------------------------------------+---------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                                                  ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+; Register name                                                              ; Reason for Removal                                                                     ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+; protocol_tx:inst3|frame_type[3]                                            ; Stuck at GND due to stuck port data_in                                                 ;
+; protocol_tx:inst3|frame_type[0]                                            ; Stuck at VCC due to stuck port data_in                                                 ;
+; register_bank2:GUESS_CODE|s_DataU[0..3]                                    ; Stuck at GND due to stuck port data_in                                                 ;
+; register_bank2:GUESS_CODE|s_DataT[1..3]                                    ; Stuck at GND due to stuck port data_in                                                 ;
+; register_bank2:USER_CODE|s_DataU[0..3]                                     ; Stuck at GND due to stuck port data_in                                                 ;
+; register_bank2:USER_CODE|s_DataT[1..3]                                     ; Stuck at GND due to stuck port data_in                                                 ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[7]     ; Stuck at GND due to stuck port data_in                                                 ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[0]     ; Stuck at VCC due to stuck port data_in                                                 ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[0]     ; Stuck at VCC due to stuck port data_in                                                 ;
+; register_bank2:GUESS_CODE|s_DataT[0]                                       ; Stuck at GND due to stuck port data_in                                                 ;
+; register_bank2:USER_CODE|s_DataT[0]                                        ; Stuck at GND due to stuck port data_in                                                 ;
+; kb_xy_module:inst8|\ControlXY:x_cnt[0]                                     ; Merged with kb_xy_module:inst8|x_int[0]                                                ;
+; kb_xy_module:inst8|y_int[2]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[2]                                     ;
+; kb_xy_module:inst8|y_int[1]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[1]                                     ;
+; kb_xy_module:inst8|y_int[0]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[0]                                     ;
+; kb_xy_module:inst8|x_int[2]                                                ; Merged with kb_xy_module:inst8|\ControlXY:x_cnt[2]                                     ;
+; kb_xy_module:inst8|x_int[1]                                                ; Merged with kb_xy_module:inst8|\ControlXY:x_cnt[1]                                     ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|x_t[7]     ; Stuck at GND due to stuck port data_in                                                 ;
+; protocol_tx:inst3|frame_type[5]                                            ; Merged with protocol_tx:inst3|frame_type[7]                                            ;
+; protocol_tx:inst3|frame_type[4]                                            ; Merged with protocol_tx:inst3|frame_type[6]                                            ;
+; register_bank2:GUESS_CODE|DataH[0..1]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataT[0..3]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataU[0..3]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataH[2]                                         ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:USER_CODE|DataH[0..2]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
+; register_bank2:USER_CODE|DataT[0..3]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
+; register_bank2:USER_CODE|DataU[0..3]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|y_t[0]     ; Merged with i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|x_t[0]     ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|color_t[0] ; Merged with i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|color_t[1] ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[1] ; Merged with i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|data[0] ;
+; protocol_tx:inst3|dataH_i[0..2]                                            ; Merged with protocol_tx:inst3|dataH_i[3]                                               ;
+; protocol_tx:inst3|dataT_i[0..3]                                            ; Merged with protocol_tx:inst3|dataH_i[3]                                               ;
+; protocol_tx:inst3|dataU_i[0..3]                                            ; Merged with protocol_tx:inst3|dataH_i[3]                                               ;
+; protocol_tx:inst3|tx_data[5]                                               ; Merged with protocol_tx:inst3|tx_data[7]                                               ;
+; protocol_tx:inst3|tx_data[4]                                               ; Merged with protocol_tx:inst3|tx_data[6]                                               ;
+; register_bank2:USER_CODE|DataH[3]                                          ; Stuck at GND due to stuck port data_in                                                 ;
+; register_bank2:USER_CODE|bank_ready                                        ; Stuck at VCC due to stuck port data_in                                                 ;
+; main_control:inst|state.st_enter_code                                      ; Lost fanout                                                                            ;
+; main_control:inst|state.st_w_code                                          ; Stuck at GND due to stuck port data_in                                                 ;
+; game:GAME|Light_WIN                                                        ; Lost fanout                                                                            ;
+; game:GAME|Light_Loose                                                      ; Lost fanout                                                                            ;
+; game:GAME|Light_Tie                                                        ; Lost fanout                                                                            ;
+; main_control:inst|state.st_wait_hash                                       ; Lost fanout                                                                            ;
+; main_control:inst|state.st_w_game                                          ; Lost fanout                                                                            ;
+; register_bank2:USER_CODE|state.st_wait                                     ; Lost fanout                                                                            ;
+; main_control:inst|state.st_start_game                                      ; Stuck at GND due to stuck port data_in                                                 ;
+; game:GAME|state.st_W_TX1                                                   ; Stuck at GND due to stuck port data_in                                                 ;
+; game:GAME|state.st_S_RDY                                                   ; Stuck at GND due to stuck port data_in                                                 ;
+; protocol_tx:inst3|state.pr_rdy                                             ; Stuck at GND due to stuck port data_in                                                 ;
+; game:GAME|state.st_W_RDY                                                   ; Stuck at GND due to stuck port data_in                                                 ;
+; game:GAME|state.st_wait_game                                               ; Lost fanout                                                                            ;
+; protocol_rx:inst4|RDY_RECEIVED                                             ; Lost fanout                                                                            ;
+; register_bank2:GUESS_CODE|DataH[3]                                         ; Stuck at GND due to stuck port data_in                                                 ;
+; protocol_tx:inst3|dataH_i[3]                                               ; Stuck at GND due to stuck port data_in                                                 ;
+; Total Number of Removed Registers = 87                                     ;                                                                                        ;
++----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                                             ;
++------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; Register name                                                          ; Reason for Removal        ; Registers Removed due to This Register                                             ;
++------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; register_bank2:USER_CODE|bank_ready                                    ; Stuck at VCC              ; game:GAME|Light_WIN, game:GAME|Light_Loose, game:GAME|Light_Tie                    ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; game:GAME|state.st_W_TX1                                               ; Stuck at GND              ; game:GAME|state.st_S_RDY, protocol_tx:inst3|state.pr_rdy, game:GAME|state.st_W_RDY ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[3]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[3], register_bank2:GUESS_CODE|DataH[3]           ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[3]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[3], register_bank2:USER_CODE|DataH[3]             ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[2]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[2]                                               ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[1]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[1]                                               ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[0]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[0]                                               ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[2]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[2]                                                ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[1]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[1]                                                ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[0]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[0]                                                ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[7] ; Stuck at GND              ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|x_t[7]             ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
+; main_control:inst|state.st_start_game                                  ; Stuck at GND              ; game:GAME|state.st_wait_game                                                       ;
+;                                                                        ; due to stuck port data_in ;                                                                                    ;
++------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -697,168 +764,164 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 554   ;
-; Number of registers using Synchronous Clear  ; 28    ;
+; Total registers                              ; 498   ;
+; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 361   ;
+; Number of registers using Asynchronous Clear ; 316   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 158   ;
+; Number of registers using Clock Enable       ; 119   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------+
-; Inverted Register Statistics                                                    ;
-+-----------------------------------------------------------------------+---------+
-; Inverted Register                                                     ; Fan out ;
-+-----------------------------------------------------------------------+---------+
-; tx_module:inst6|tx                                                    ; 1       ;
-; main_control:inst|game_over                                           ; 3       ;
-; register_bank2:GUESS_CODE|bank_ready                                  ; 4       ;
-; tx_module:inst6|tx_empty                                              ; 14      ;
-; protocol_tx:inst3|ready_to_TX                                         ; 7       ;
-; register_bank2:USER_CODE|bank_ready                                   ; 4       ;
-; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|t_x[4] ; 3       ;
-; Total number of inverted registers = 7                                ;         ;
-+-----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------+
+; Inverted Register Statistics                                                     ;
++------------------------------------------------------------------------+---------+
+; Inverted Register                                                      ; Fan out ;
++------------------------------------------------------------------------+---------+
+; tx_module:inst6|tx                                                     ; 1       ;
+; tx_module:inst6|tx_empty                                               ; 13      ;
+; protocol_tx:inst3|ready_to_TX                                          ; 6       ;
+; register_bank2:GUESS_CODE|bank_ready                                   ; 4       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[5] ; 1       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[4] ; 1       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[1] ; 2       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[6] ; 2       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[3] ; 1       ;
+; kb_xy_module:inst8|\ControlXY:x_cnt[2]                                 ; 10      ;
+; kb_xy_module:inst8|\ControlXY:y_cnt[2]                                 ; 6       ;
+; Total number of inverted registers = 11                                ;         ;
++------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|register_bank2:GUESS_CODE|DataU[0]                                              ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|register_bank2:USER_CODE|DataH[2]                                               ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[13] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[3]  ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[2]                                                        ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; Yes        ; |P1_BOARD_vga|game:GAME|Light_Tie                                                             ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[7]                                                    ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[2]                                                   ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[0]                                                    ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[2]                                                    ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[3]                                               ;
-; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:USER_CODE|state                                                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count                                                       ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0|HEX[6]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display1|HEX[6]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display2|HEX[6]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display3|HEX[5]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display5|HEX[6]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6|HEX[6]                ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7|HEX[6]                ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|Selector13                                            ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:USER_CODE|Selector13                                             ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.wait0                                                   ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector3                                                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector4                                                     ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector8                                                       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector7                                                      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector8                                                      ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector9                                                       ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector8                                                     ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector1                                                             ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector11                                                            ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8|Selector0        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14] ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[5]  ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[0]                                                         ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|game:GAME|Light_Loose                                                            ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[6]                                                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[0]                                                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[1]                                                     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[0]                                                    ;
+; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[3]                                                ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|state                                                  ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count                                                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|square_map:inst12|x_t[1]                                                         ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector1                                                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|Selector13                                             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:USER_CODE|Selector14                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector4                                                      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.check1                                                   ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector10                                                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector9                                                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector6                                                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector9                                                        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector7                                                      ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector6                                                              ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector13                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|Selector0        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                                          ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                           ;
-+---------------------------------+--------------------+------+---------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                           ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                            ;
++---------------------------------+--------------------+------+----------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1 ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                                                                      ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                       ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1 ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                       ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                        ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+--------------------------------------------------------------------------------------+
-; Parameter Name                     ; Value                ; Type                                                                                 ;
-+------------------------------------+----------------------+--------------------------------------------------------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                              ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                           ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                                         ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                                         ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                                       ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                              ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                                              ;
-; WIDTH_A                            ; 3                    ; Signed Integer                                                                       ;
-; WIDTHAD_A                          ; 15                   ; Signed Integer                                                                       ;
-; NUMWORDS_A                         ; 32768                ; Signed Integer                                                                       ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                              ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                              ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                              ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                              ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                              ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                              ;
-; WIDTH_B                            ; 3                    ; Signed Integer                                                                       ;
-; WIDTHAD_B                          ; 15                   ; Signed Integer                                                                       ;
-; NUMWORDS_B                         ; 32768                ; Signed Integer                                                                       ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                              ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                              ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                              ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                              ;
-; OUTDATA_REG_B                      ; CLOCK1               ; Untyped                                                                              ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                              ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                              ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                              ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                              ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                              ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                              ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                              ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                                       ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                              ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                              ;
-; BYTE_SIZE                          ; 8                    ; Untyped                                                                              ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                              ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                              ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                              ;
-; INIT_FILE                          ; UNUSED               ; Untyped                                                                              ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                              ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                              ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                              ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                                              ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                              ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                                              ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                              ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                              ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                                                                              ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                              ;
-; CBXI_PARAMETER                     ; altsyncram_4jk1      ; Untyped                                                                              ;
-+------------------------------------+----------------------+--------------------------------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+---------------------------------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                                                  ;
++------------------------------------+----------------------+---------------------------------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                                               ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                                            ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                                                          ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                                                          ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                                                        ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                                               ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                                               ;
+; WIDTH_A                            ; 3                    ; Signed Integer                                                                        ;
+; WIDTHAD_A                          ; 15                   ; Signed Integer                                                                        ;
+; NUMWORDS_A                         ; 32768                ; Signed Integer                                                                        ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                                               ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                                               ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                                               ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                                               ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                                               ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                                               ;
+; WIDTH_B                            ; 3                    ; Signed Integer                                                                        ;
+; WIDTHAD_B                          ; 15                   ; Signed Integer                                                                        ;
+; NUMWORDS_B                         ; 32768                ; Signed Integer                                                                        ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                                               ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                                               ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                                               ;
+; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                                                                               ;
+; OUTDATA_REG_B                      ; CLOCK1               ; Untyped                                                                               ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                                               ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                                               ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                               ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                                               ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                                               ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                                               ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                                               ;
+; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                                                                        ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                                               ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                                               ;
+; BYTE_SIZE                          ; 8                    ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                               ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                                               ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                                               ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                                               ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                                               ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                                               ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                                               ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                                                                               ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                                               ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                                               ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                                               ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                                               ;
+; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                                                                               ;
+; CBXI_PARAMETER                     ; altsyncram_4jk1      ; Untyped                                                                               ;
++------------------------------------+----------------------+---------------------------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                                                                ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-; Name                                      ; Value                                                                                               ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-; Number of entity instances                ; 1                                                                                                   ;
-; Entity Instance                           ; i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                           ;
-;     -- WIDTH_A                            ; 3                                                                                                   ;
-;     -- NUMWORDS_A                         ; 32768                                                                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                        ;
-;     -- WIDTH_B                            ; 3                                                                                                   ;
-;     -- NUMWORDS_B                         ; 32768                                                                                               ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                              ;
-;     -- OUTDATA_REG_B                      ; CLOCK1                                                                                              ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                           ;
-+-------------------------------------------+-----------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                                                 ;
++-------------------------------------------+------------------------------------------------------------------------------------------------------+
+; Name                                      ; Value                                                                                                ;
++-------------------------------------------+------------------------------------------------------------------------------------------------------+
+; Number of entity instances                ; 1                                                                                                    ;
+; Entity Instance                           ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                                            ;
+;     -- WIDTH_A                            ; 3                                                                                                    ;
+;     -- NUMWORDS_A                         ; 32768                                                                                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                                                         ;
+;     -- WIDTH_B                            ; 3                                                                                                    ;
+;     -- NUMWORDS_B                         ; 32768                                                                                                ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                                               ;
+;     -- OUTDATA_REG_B                      ; CLOCK1                                                                                               ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                                            ;
++-------------------------------------------+------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -867,7 +930,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 14 15:12:16 2023
+    Info: Processing started: Thu Dec 14 15:01:40 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -960,23 +1023,39 @@ Info: Found 2 design units, including 1 entities, in source file main_entity.vhd
 Info: Found 2 design units, including 1 entities, in source file square_map.vhd
     Info: Found design unit 1: square_map-functional
     Info: Found entity 1: square_map
+Info: Found 2 design units, including 1 entities, in source file kb_xy_module.vhd
+    Info: Found design unit 1: kb_xy_module-main
+    Info: Found entity 1: kb_xy_module
 Info: Elaborating entity "P1_BOARD_vga" for the top level hierarchy
-Warning: Block or symbol "I_O_Manager_VGA" of instance "inst9" overlaps another block or symbol
 Warning: Not all bits in bus "LED_GREEN[7..0]" are used
+Warning: Pin "HEX0[6..0]" is missing source
+Warning: Pin "HEX1[6..0]" is missing source
+Warning: Pin "HEX2[6..0]" is missing source
+Warning: Pin "HEX3[6..0]" is missing source
+Warning: Pin "HEX4[6..0]" is missing source
+Warning: Pin "HEX5[6..0]" is missing source
+Warning: Pin "HEX6[6..0]" is missing source
+Warning: Pin "HEX7[6..0]" is missing source
+Warning: Pin "LED_GREEN[0]" is missing source
+Warning: Pin "LED_GREEN[1]" is missing source
+Warning: Pin "LED_GREEN[2]" is missing source
+Warning: Pin "LED_GREEN[7]" is missing source
+Warning: Pin "LED_GREEN[6]" is missing source
+Warning: Pin "LED_RED[2..0]" is missing source
 Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
 Info: Elaborating entity "clk_video" for hierarchy "clk_video:inst10"
 Info: Elaborating entity "clk_video_altclkctrl_6df" for hierarchy "clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component"
 Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
-Info: Elaborating entity "i_o_manager_vga" for hierarchy "i_o_manager_vga:inst9"
-Info: Elaborating entity "hex_disps" for hierarchy "i_o_manager_vga:inst9|hex_disps:b2v_inst"
-Info: Elaborating entity "BCD7seg" for hierarchy "i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0"
-Info: Elaborating entity "VGA_visualisation" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1"
-Info: Elaborating entity "VGA_SYNC" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2"
-Info: Elaborating entity "clk_div_two" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9"
-Info: Elaborating entity "Video_Memory" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst"
-Info: Elaborating entity "altsyncram" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component"
-Info: Elaborated megafunction instantiation "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component"
-Info: Instantiated megafunction "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component" with the following parameter:
+Info: Elaborating entity "i_o_manager_vga" for hierarchy "i_o_manager_vga:inst13"
+Info: Elaborating entity "hex_disps" for hierarchy "i_o_manager_vga:inst13|hex_disps:b2v_inst"
+Info: Elaborating entity "BCD7seg" for hierarchy "i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display0"
+Info: Elaborating entity "VGA_visualisation" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1"
+Info: Elaborating entity "VGA_SYNC" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2"
+Info: Elaborating entity "clk_div_two" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_div_two:inst9"
+Info: Elaborating entity "Video_Memory" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst"
+Info: Elaborating entity "altsyncram" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component"
+Info: Elaborated megafunction instantiation "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component"
+Info: Instantiated megafunction "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component" with the following parameter:
     Info: Parameter "address_reg_b" = "CLOCK1"
     Info: Parameter "clock_enable_input_a" = "BYPASS"
     Info: Parameter "clock_enable_input_b" = "BYPASS"
@@ -997,29 +1076,45 @@ Info: Instantiated megafunction "i_o_manager_vga:inst9|VGA_visualisation:b2v_ins
     Info: Parameter "width_byteena_a" = "1"
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4jk1.tdf
     Info: Found entity 1: altsyncram_4jk1
-Info: Elaborating entity "altsyncram_4jk1" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated"
+Info: Elaborating entity "altsyncram_4jk1" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated"
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_fes1.tdf
     Info: Found entity 1: altsyncram_fes1
-Info: Elaborating entity "altsyncram_fes1" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1"
+Info: Elaborating entity "altsyncram_fes1" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1"
 Warning: Variable or input pin "clocken1" is defined but never used
 Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
     Info: Found entity 1: decode_9oa
-Info: Elaborating entity "decode_9oa" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3"
-Info: Elaborating entity "decode_9oa" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a"
+Info: Elaborating entity "decode_9oa" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3"
+Info: Elaborating entity "decode_9oa" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a"
 Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
     Info: Found entity 1: mux_kib
-Info: Elaborating entity "mux_kib" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5"
-Info: Elaborating entity "wr_memory" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1"
-Info: Elaborating entity "square" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8"
-Warning (10540): VHDL Signal Declaration warning at square.vhd(96): used explicit default value for signal "c_x" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at square.vhd(97): used explicit default value for signal "c_y" because signal was never assigned a value
-Warning (10036): Verilog HDL or VHDL warning at square.vhd(99): object "t_y" assigned a value but never read
-Info: Elaborating entity "add_generator" for hierarchy "i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|add_generator:inst7"
-Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
+Info: Elaborating entity "mux_kib" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5"
+Info: Elaborating entity "wr_memory" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1"
+Info: Elaborating entity "square" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8"
+Info: Elaborating entity "add_generator" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|add_generator:inst7"
+Info: Elaborating entity "square_map" for hierarchy "square_map:inst12"
+Warning (10631): VHDL Process Statement warning at square_map.vhd(41): inferring latch(es) for signal or variable "x_t", which holds its previous value in one or more paths through the process
+Warning (10631): VHDL Process Statement warning at square_map.vhd(41): inferring latch(es) for signal or variable "y_t", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "y_t[0]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[1]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[2]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[3]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[4]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[5]" at square_map.vhd(41)
+Info (10041): Inferred latch for "y_t[6]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[0]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[1]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[2]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[3]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[4]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[5]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[6]" at square_map.vhd(41)
+Info (10041): Inferred latch for "x_t[7]" at square_map.vhd(41)
+Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
 Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
 Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
 Info: Elaborating entity "count4b" for hierarchy "keypad:inst2|count4b:counter"
 Info: Elaborating entity "register_bank2" for hierarchy "register_bank2:USER_CODE"
+Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
 Info: Elaborating entity "game" for hierarchy "game:GAME"
 Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
 Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
@@ -1028,22 +1123,89 @@ Info: Registers with preset signals will power-up high
 Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK" is stuck at VCC
-    Warning (13410): Pin "HEX4[6]" is stuck at VCC
+    Warning (13410): Pin "HEX0[6]" is stuck at GND
+    Warning (13410): Pin "HEX0[5]" is stuck at GND
+    Warning (13410): Pin "HEX0[4]" is stuck at GND
+    Warning (13410): Pin "HEX0[3]" is stuck at GND
+    Warning (13410): Pin "HEX0[2]" is stuck at GND
+    Warning (13410): Pin "HEX0[1]" is stuck at GND
+    Warning (13410): Pin "HEX0[0]" is stuck at GND
+    Warning (13410): Pin "HEX1[6]" is stuck at GND
+    Warning (13410): Pin "HEX1[5]" is stuck at GND
+    Warning (13410): Pin "HEX1[4]" is stuck at GND
+    Warning (13410): Pin "HEX1[3]" is stuck at GND
+    Warning (13410): Pin "HEX1[2]" is stuck at GND
+    Warning (13410): Pin "HEX1[1]" is stuck at GND
+    Warning (13410): Pin "HEX1[0]" is stuck at GND
+    Warning (13410): Pin "HEX2[6]" is stuck at GND
+    Warning (13410): Pin "HEX2[5]" is stuck at GND
+    Warning (13410): Pin "HEX2[4]" is stuck at GND
+    Warning (13410): Pin "HEX2[3]" is stuck at GND
+    Warning (13410): Pin "HEX2[2]" is stuck at GND
+    Warning (13410): Pin "HEX2[1]" is stuck at GND
+    Warning (13410): Pin "HEX2[0]" is stuck at GND
+    Warning (13410): Pin "HEX3[6]" is stuck at GND
+    Warning (13410): Pin "HEX3[5]" is stuck at GND
+    Warning (13410): Pin "HEX3[4]" is stuck at GND
+    Warning (13410): Pin "HEX3[3]" is stuck at GND
+    Warning (13410): Pin "HEX3[2]" is stuck at GND
+    Warning (13410): Pin "HEX3[1]" is stuck at GND
+    Warning (13410): Pin "HEX3[0]" is stuck at GND
+    Warning (13410): Pin "HEX4[6]" is stuck at GND
     Warning (13410): Pin "HEX4[5]" is stuck at GND
     Warning (13410): Pin "HEX4[4]" is stuck at GND
     Warning (13410): Pin "HEX4[3]" is stuck at GND
     Warning (13410): Pin "HEX4[2]" is stuck at GND
     Warning (13410): Pin "HEX4[1]" is stuck at GND
     Warning (13410): Pin "HEX4[0]" is stuck at GND
-Info: Implemented 1088 device resources after synthesis - the final resource count might be different
-    Info: Implemented 7 input pins
+    Warning (13410): Pin "HEX5[6]" is stuck at GND
+    Warning (13410): Pin "HEX5[5]" is stuck at GND
+    Warning (13410): Pin "HEX5[4]" is stuck at GND
+    Warning (13410): Pin "HEX5[3]" is stuck at GND
+    Warning (13410): Pin "HEX5[2]" is stuck at GND
+    Warning (13410): Pin "HEX5[1]" is stuck at GND
+    Warning (13410): Pin "HEX5[0]" is stuck at GND
+    Warning (13410): Pin "HEX6[6]" is stuck at GND
+    Warning (13410): Pin "HEX6[5]" is stuck at GND
+    Warning (13410): Pin "HEX6[4]" is stuck at GND
+    Warning (13410): Pin "HEX6[3]" is stuck at GND
+    Warning (13410): Pin "HEX6[2]" is stuck at GND
+    Warning (13410): Pin "HEX6[1]" is stuck at GND
+    Warning (13410): Pin "HEX6[0]" is stuck at GND
+    Warning (13410): Pin "HEX7[6]" is stuck at GND
+    Warning (13410): Pin "HEX7[5]" is stuck at GND
+    Warning (13410): Pin "HEX7[4]" is stuck at GND
+    Warning (13410): Pin "HEX7[3]" is stuck at GND
+    Warning (13410): Pin "HEX7[2]" is stuck at GND
+    Warning (13410): Pin "HEX7[1]" is stuck at GND
+    Warning (13410): Pin "HEX7[0]" is stuck at GND
+    Warning (13410): Pin "LED_GREEN[0]" is stuck at GND
+    Warning (13410): Pin "LED_GREEN[1]" is stuck at GND
+    Warning (13410): Pin "LED_GREEN[2]" is stuck at GND
+    Warning (13410): Pin "LED_GREEN[7]" is stuck at GND
+    Warning (13410): Pin "LED_GREEN[6]" is stuck at GND
+    Warning (13410): Pin "LED_RED[2]" is stuck at GND
+    Warning (13410): Pin "LED_RED[1]" is stuck at GND
+    Warning (13410): Pin "LED_RED[0]" is stuck at GND
+Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
+    Info: Register "main_control:inst|state.st_enter_code" lost all its fanouts during netlist optimizations.
+    Info: Register "game:GAME|Light_WIN" lost all its fanouts during netlist optimizations.
+    Info: Register "game:GAME|Light_Loose" lost all its fanouts during netlist optimizations.
+    Info: Register "game:GAME|Light_Tie" lost all its fanouts during netlist optimizations.
+    Info: Register "main_control:inst|state.st_wait_hash" lost all its fanouts during netlist optimizations.
+    Info: Register "main_control:inst|state.st_w_game" lost all its fanouts during netlist optimizations.
+    Info: Register "register_bank2:USER_CODE|state.st_wait" lost all its fanouts during netlist optimizations.
+    Info: Register "game:GAME|state.st_wait_game" lost all its fanouts during netlist optimizations.
+    Info: Register "protocol_rx:inst4|RDY_RECEIVED" lost all its fanouts during netlist optimizations.
+Info: Implemented 968 device resources after synthesis - the final resource count might be different
+    Info: Implemented 9 input pins
     Info: Implemented 104 output pins
-    Info: Implemented 951 logic cells
+    Info: Implemented 829 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
-    Info: Peak virtual memory: 262 megabytes
-    Info: Processing ended: Thu Dec 14 15:12:56 2023
-    Info: Elapsed time: 00:00:40
-    Info: Total CPU time (on all processors): 00:00:37
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 84 warnings
+    Info: Peak virtual memory: 270 megabytes
+    Info: Processing ended: Thu Dec 14 15:02:23 2023
+    Info: Elapsed time: 00:00:43
+    Info: Total CPU time (on all processors): 00:00:38
 
 

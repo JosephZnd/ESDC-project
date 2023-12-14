@@ -287,7 +287,7 @@ VGA_R[4]                     : C9        : output : 3.3-V LVTTL       :         
 VGA_G[2]                     : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_B[6]                     : C11       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_B[8]                     : C12       : output : 3.3-V LVTTL       :         : 3         : Y              
-GND+                         : C13       :        :                   :         : 3         :                
+pin_name                     : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -313,7 +313,7 @@ VGA_R[3]                     : D9        : output : 3.3-V LVTTL       :         
 VGA_G[3]                     : D10       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_G[7]                     : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_G[9]                     : D12       : output : 3.3-V LVTTL       :         : 3         : Y              
-GND+                         : D13       :        :                   :         : 3         :                
+pin_name14                   : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                

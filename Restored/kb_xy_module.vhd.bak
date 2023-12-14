@@ -12,6 +12,7 @@ end kb_xy_module;
 
 architecture main of kb_xy_module is
 	signal y_int, x_int: std_logic_vector(2 downto 0):= "100";
+	signal fr : std_logic;
 	--constant position_default	: unsigned(2 downto 0) := "100";	
 begin
 

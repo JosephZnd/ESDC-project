@@ -18,8 +18,7 @@ use ieee.std_logic_unsigned.all;
 
 
 entity square is
-  port( clk_d1, nrst, LG7, LG6, LG2, LG1, LG0   	 	: in std_logic;
-			LR2, LR1, LR0 	: in std_logic;
+  port( clk_d1, nrst		: in std_logic;
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
 		start			: out std_logic;
@@ -93,8 +92,8 @@ architecture functional of square is
   
   -- Internal signals
 
-  signal c_x	: integer range 0 to 160:=11;
-  signal c_y	: integer range 0 to 120:=1;
+  signal c_x	: integer range 0 to 160:=67;
+  signal c_y	: integer range 0 to 120:=57;
   signal t_x  	: integer range 0 to 160:=25;
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
@@ -107,6 +106,8 @@ architecture functional of square is
 -- Process Unit: Blocks that process data (counters, registers).
 -- Control signals: they are not specified in the VHDL description, but they will be in the final implemented design. 
 -- Only output control signals are presented.
+	t_x <= x_in;
+	t_y <= y_in;
 	process(clk_d1, nrst, x_in, y_in)
 	Begin
 		if (nrst = '0') then
@@ -745,13 +746,14 @@ architecture functional of square is
 						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
 						--aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
 						if (c_x /= t_x) or (c_x /= t_x) then
-							t_x <= c_x; 
-							t_y <= c_y;
+							c_x<= t_x ; 
+							c_y<= t_y ; 
 							st_square <= s00a;
 						else st_square <= s_cursor_b;
 						end if;
 					when s_cursor_b =>
-						x_t <= c_x; y_t <= c_y;
+						x_t <= c_x; y_t <= c_y; --ESTO NO CONSIGO QUE FUNCIONE
+						--x_t <= 53; y_t <= 43; --ESTO es para ver si lo sigue printeando bien, y si
 						color_t <= RED;
 						st_square <= s_cursor_c;
 					when s_cursor_c =>

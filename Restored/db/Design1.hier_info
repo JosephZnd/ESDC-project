@@ -1,116 +1,120 @@
 |P1_BOARD_vga
 UART_TXD <= tx_module:inst6.tx
+KEY[0] => i_o_manager_vga:inst13.BTN0
+OSC_50 => i_o_manager_vga:inst13.CLK_50
+OSC_50 => f_div:inst1.clkin
 COL[0] => keypad:inst2.col[0]
 COL[1] => keypad:inst2.col[1]
 COL[2] => keypad:inst2.col[2]
 COL[3] => keypad:inst2.col[3]
 UART_RXD => rx_module2:inst5.rx
-KEY[0] => I_O_Manager_VGA:inst9.BTN0
-OSC_50 => I_O_Manager_VGA:inst9.CLK_50
-OSC_50 => f_div:inst1.clkin
-VGA_HS <= I_O_Manager_VGA:inst9.vga_hs
-VGA_VS <= I_O_Manager_VGA:inst9.bga_vs
-VGA_BLANK <= I_O_Manager_VGA:inst9.Vga_blank
-VGA_SYNC <= I_O_Manager_VGA:inst9.Vga_Sync
-VGA_CLK <= I_O_Manager_VGA:inst9.VGA_Clock
-HEX0[0] <= I_O_Manager_VGA:inst9.H0[0]
-HEX0[1] <= I_O_Manager_VGA:inst9.H0[1]
-HEX0[2] <= I_O_Manager_VGA:inst9.H0[2]
-HEX0[3] <= I_O_Manager_VGA:inst9.H0[3]
-HEX0[4] <= I_O_Manager_VGA:inst9.H0[4]
-HEX0[5] <= I_O_Manager_VGA:inst9.H0[5]
-HEX0[6] <= I_O_Manager_VGA:inst9.H0[6]
-HEX1[0] <= I_O_Manager_VGA:inst9.H1[0]
-HEX1[1] <= I_O_Manager_VGA:inst9.H1[1]
-HEX1[2] <= I_O_Manager_VGA:inst9.H1[2]
-HEX1[3] <= I_O_Manager_VGA:inst9.H1[3]
-HEX1[4] <= I_O_Manager_VGA:inst9.H1[4]
-HEX1[5] <= I_O_Manager_VGA:inst9.H1[5]
-HEX1[6] <= I_O_Manager_VGA:inst9.H1[6]
-HEX2[0] <= I_O_Manager_VGA:inst9.H2[0]
-HEX2[1] <= I_O_Manager_VGA:inst9.H2[1]
-HEX2[2] <= I_O_Manager_VGA:inst9.H2[2]
-HEX2[3] <= I_O_Manager_VGA:inst9.H2[3]
-HEX2[4] <= I_O_Manager_VGA:inst9.H2[4]
-HEX2[5] <= I_O_Manager_VGA:inst9.H2[5]
-HEX2[6] <= I_O_Manager_VGA:inst9.H2[6]
-HEX3[0] <= I_O_Manager_VGA:inst9.H3[0]
-HEX3[1] <= I_O_Manager_VGA:inst9.H3[1]
-HEX3[2] <= I_O_Manager_VGA:inst9.H3[2]
-HEX3[3] <= I_O_Manager_VGA:inst9.H3[3]
-HEX3[4] <= I_O_Manager_VGA:inst9.H3[4]
-HEX3[5] <= I_O_Manager_VGA:inst9.H3[5]
-HEX3[6] <= I_O_Manager_VGA:inst9.H3[6]
-HEX4[0] <= I_O_Manager_VGA:inst9.H4[0]
-HEX4[1] <= I_O_Manager_VGA:inst9.H4[1]
-HEX4[2] <= I_O_Manager_VGA:inst9.H4[2]
-HEX4[3] <= I_O_Manager_VGA:inst9.H4[3]
-HEX4[4] <= I_O_Manager_VGA:inst9.H4[4]
-HEX4[5] <= I_O_Manager_VGA:inst9.H4[5]
-HEX4[6] <= I_O_Manager_VGA:inst9.H4[6]
-HEX5[0] <= I_O_Manager_VGA:inst9.H5[0]
-HEX5[1] <= I_O_Manager_VGA:inst9.H5[1]
-HEX5[2] <= I_O_Manager_VGA:inst9.H5[2]
-HEX5[3] <= I_O_Manager_VGA:inst9.H5[3]
-HEX5[4] <= I_O_Manager_VGA:inst9.H5[4]
-HEX5[5] <= I_O_Manager_VGA:inst9.H5[5]
-HEX5[6] <= I_O_Manager_VGA:inst9.H5[6]
-HEX6[0] <= I_O_Manager_VGA:inst9.H6[0]
-HEX6[1] <= I_O_Manager_VGA:inst9.H6[1]
-HEX6[2] <= I_O_Manager_VGA:inst9.H6[2]
-HEX6[3] <= I_O_Manager_VGA:inst9.H6[3]
-HEX6[4] <= I_O_Manager_VGA:inst9.H6[4]
-HEX6[5] <= I_O_Manager_VGA:inst9.H6[5]
-HEX6[6] <= I_O_Manager_VGA:inst9.H6[6]
-HEX7[0] <= I_O_Manager_VGA:inst9.H7[0]
-HEX7[1] <= I_O_Manager_VGA:inst9.H7[1]
-HEX7[2] <= I_O_Manager_VGA:inst9.H7[2]
-HEX7[3] <= I_O_Manager_VGA:inst9.H7[3]
-HEX7[4] <= I_O_Manager_VGA:inst9.H7[4]
-HEX7[5] <= I_O_Manager_VGA:inst9.H7[5]
-HEX7[6] <= I_O_Manager_VGA:inst9.H7[6]
-LED_GREEN[0] <= I_O_Manager_VGA:inst9.G0
-LED_GREEN[1] <= I_O_Manager_VGA:inst9.G1
-LED_GREEN[2] <= I_O_Manager_VGA:inst9.G2
-LED_GREEN[7] <= I_O_Manager_VGA:inst9.G7
-LED_GREEN[6] <= I_O_Manager_VGA:inst9.G6
-LED_RED[0] <= I_O_Manager_VGA:inst9.R0
-LED_RED[1] <= I_O_Manager_VGA:inst9.R1
-LED_RED[2] <= I_O_Manager_VGA:inst9.R2
+pin_name => register_bank2:GUESS_CODE.bcd
+pin_name => register_bank2:USER_CODE.bcd
+pin_name14 => register_bank2:GUESS_CODE.ast
+pin_name14 => register_bank2:USER_CODE.ast
+VGA_HS <= i_o_manager_vga:inst13.vga_hs
+VGA_VS <= i_o_manager_vga:inst13.bga_vs
+VGA_BLANK <= i_o_manager_vga:inst13.Vga_blank
+VGA_SYNC <= i_o_manager_vga:inst13.Vga_Sync
+VGA_CLK <= i_o_manager_vga:inst13.VGA_Clock
+HEX0[0] <= <GND>
+HEX0[1] <= <GND>
+HEX0[2] <= <GND>
+HEX0[3] <= <GND>
+HEX0[4] <= <GND>
+HEX0[5] <= <GND>
+HEX0[6] <= <GND>
+HEX1[0] <= <GND>
+HEX1[1] <= <GND>
+HEX1[2] <= <GND>
+HEX1[3] <= <GND>
+HEX1[4] <= <GND>
+HEX1[5] <= <GND>
+HEX1[6] <= <GND>
+HEX2[0] <= <GND>
+HEX2[1] <= <GND>
+HEX2[2] <= <GND>
+HEX2[3] <= <GND>
+HEX2[4] <= <GND>
+HEX2[5] <= <GND>
+HEX2[6] <= <GND>
+HEX3[0] <= <GND>
+HEX3[1] <= <GND>
+HEX3[2] <= <GND>
+HEX3[3] <= <GND>
+HEX3[4] <= <GND>
+HEX3[5] <= <GND>
+HEX3[6] <= <GND>
+HEX4[0] <= <GND>
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
+HEX6[0] <= <GND>
+HEX6[1] <= <GND>
+HEX6[2] <= <GND>
+HEX6[3] <= <GND>
+HEX6[4] <= <GND>
+HEX6[5] <= <GND>
+HEX6[6] <= <GND>
+HEX7[0] <= <GND>
+HEX7[1] <= <GND>
+HEX7[2] <= <GND>
+HEX7[3] <= <GND>
+HEX7[4] <= <GND>
+HEX7[5] <= <GND>
+HEX7[6] <= <GND>
+LED_GREEN[0] <= <GND>
+LED_GREEN[1] <= <GND>
+LED_GREEN[2] <= <GND>
+LED_GREEN[7] <= <GND>
+LED_GREEN[6] <= <GND>
+LED_RED[0] <= <GND>
+LED_RED[1] <= <GND>
+LED_RED[2] <= <GND>
 ROW[0] <= keypad:inst2.row[0]
 ROW[1] <= keypad:inst2.row[1]
 ROW[2] <= keypad:inst2.row[2]
 ROW[3] <= keypad:inst2.row[3]
-VGA_B[0] <= I_O_Manager_VGA:inst9.B[0]
-VGA_B[1] <= I_O_Manager_VGA:inst9.B[1]
-VGA_B[2] <= I_O_Manager_VGA:inst9.B[2]
-VGA_B[3] <= I_O_Manager_VGA:inst9.B[3]
-VGA_B[4] <= I_O_Manager_VGA:inst9.B[4]
-VGA_B[5] <= I_O_Manager_VGA:inst9.B[5]
-VGA_B[6] <= I_O_Manager_VGA:inst9.B[6]
-VGA_B[7] <= I_O_Manager_VGA:inst9.B[7]
-VGA_B[8] <= I_O_Manager_VGA:inst9.B[8]
-VGA_B[9] <= I_O_Manager_VGA:inst9.B[9]
-VGA_G[0] <= I_O_Manager_VGA:inst9.G[0]
-VGA_G[1] <= I_O_Manager_VGA:inst9.G[1]
-VGA_G[2] <= I_O_Manager_VGA:inst9.G[2]
-VGA_G[3] <= I_O_Manager_VGA:inst9.G[3]
-VGA_G[4] <= I_O_Manager_VGA:inst9.G[4]
-VGA_G[5] <= I_O_Manager_VGA:inst9.G[5]
-VGA_G[6] <= I_O_Manager_VGA:inst9.G[6]
-VGA_G[7] <= I_O_Manager_VGA:inst9.G[7]
-VGA_G[8] <= I_O_Manager_VGA:inst9.G[8]
-VGA_G[9] <= I_O_Manager_VGA:inst9.G[9]
-VGA_R[0] <= I_O_Manager_VGA:inst9.R[0]
-VGA_R[1] <= I_O_Manager_VGA:inst9.R[1]
-VGA_R[2] <= I_O_Manager_VGA:inst9.R[2]
-VGA_R[3] <= I_O_Manager_VGA:inst9.R[3]
-VGA_R[4] <= I_O_Manager_VGA:inst9.R[4]
-VGA_R[5] <= I_O_Manager_VGA:inst9.R[5]
-VGA_R[6] <= I_O_Manager_VGA:inst9.R[6]
-VGA_R[7] <= I_O_Manager_VGA:inst9.R[7]
-VGA_R[8] <= I_O_Manager_VGA:inst9.R[8]
-VGA_R[9] <= I_O_Manager_VGA:inst9.R[9]
+VGA_B[0] <= i_o_manager_vga:inst13.B[0]
+VGA_B[1] <= i_o_manager_vga:inst13.B[1]
+VGA_B[2] <= i_o_manager_vga:inst13.B[2]
+VGA_B[3] <= i_o_manager_vga:inst13.B[3]
+VGA_B[4] <= i_o_manager_vga:inst13.B[4]
+VGA_B[5] <= i_o_manager_vga:inst13.B[5]
+VGA_B[6] <= i_o_manager_vga:inst13.B[6]
+VGA_B[7] <= i_o_manager_vga:inst13.B[7]
+VGA_B[8] <= i_o_manager_vga:inst13.B[8]
+VGA_B[9] <= i_o_manager_vga:inst13.B[9]
+VGA_G[0] <= i_o_manager_vga:inst13.G[0]
+VGA_G[1] <= i_o_manager_vga:inst13.G[1]
+VGA_G[2] <= i_o_manager_vga:inst13.G[2]
+VGA_G[3] <= i_o_manager_vga:inst13.G[3]
+VGA_G[4] <= i_o_manager_vga:inst13.G[4]
+VGA_G[5] <= i_o_manager_vga:inst13.G[5]
+VGA_G[6] <= i_o_manager_vga:inst13.G[6]
+VGA_G[7] <= i_o_manager_vga:inst13.G[7]
+VGA_G[8] <= i_o_manager_vga:inst13.G[8]
+VGA_G[9] <= i_o_manager_vga:inst13.G[9]
+VGA_R[0] <= i_o_manager_vga:inst13.R[0]
+VGA_R[1] <= i_o_manager_vga:inst13.R[1]
+VGA_R[2] <= i_o_manager_vga:inst13.R[2]
+VGA_R[3] <= i_o_manager_vga:inst13.R[3]
+VGA_R[4] <= i_o_manager_vga:inst13.R[4]
+VGA_R[5] <= i_o_manager_vga:inst13.R[5]
+VGA_R[6] <= i_o_manager_vga:inst13.R[6]
+VGA_R[7] <= i_o_manager_vga:inst13.R[7]
+VGA_R[8] <= i_o_manager_vga:inst13.R[8]
+VGA_R[9] <= i_o_manager_vga:inst13.R[9]
 
 
 |P1_BOARD_vga|tx_module:inst6
@@ -203,24 +207,16 @@ clkin => clkout~reg0.CLK
 clkout <= clkout~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9
+|P1_BOARD_vga|i_o_manager_vga:inst13
 BTN0 => vga_visualisation:b2v_inst1.n_RST
 BTN0 => nrst.DATAIN
-GAME_OVER => vga_visualisation:b2v_inst1.LR0
 GAME_OVER => R0.DATAIN
-USER_CODE => vga_visualisation:b2v_inst1.LR1
 USER_CODE => R1.DATAIN
-GUES_CODE => vga_visualisation:b2v_inst1.LR2
 GUES_CODE => R2.DATAIN
-GREATHER => vga_visualisation:b2v_inst1.LG7
 GREATHER => G7.DATAIN
-SMALLER => vga_visualisation:b2v_inst1.LG6
 SMALLER => G6.DATAIN
-WINER => vga_visualisation:b2v_inst1.LG0
 WINER => G0.DATAIN
-LOSER => vga_visualisation:b2v_inst1.LG1
 LOSER => G1.DATAIN
-TIE => vga_visualisation:b2v_inst1.LG2
 TIE => G2.DATAIN
 CLK_50 => vga_visualisation:b2v_inst1.CLK_50
 Gues_CodeD[0] => hex_disps:b2v_inst.num2[0]
@@ -264,11 +260,16 @@ G1 <= LOSER.DB_MAX_OUTPUT_PORT_TYPE
 G2 <= TIE.DB_MAX_OUTPUT_PORT_TYPE
 G7 <= GREATHER.DB_MAX_OUTPUT_PORT_TYPE
 G6 <= SMALLER.DB_MAX_OUTPUT_PORT_TYPE
-vga_hs <= vga_visualisation:b2v_inst1.vga_hs
-bga_vs <= vga_visualisation:b2v_inst1.vga_vs
-Vga_blank <= vga_visualisation:b2v_inst1.vga_blank
-Vga_Sync <= vga_visualisation:b2v_inst1.vga_syn1
-VGA_Clock <= vga_visualisation:b2v_inst1.VGA_CLK
+R[0] <= vga_visualisation:b2v_inst1.R[0]
+R[1] <= vga_visualisation:b2v_inst1.R[1]
+R[2] <= vga_visualisation:b2v_inst1.R[2]
+R[3] <= vga_visualisation:b2v_inst1.R[3]
+R[4] <= vga_visualisation:b2v_inst1.R[4]
+R[5] <= vga_visualisation:b2v_inst1.R[5]
+R[6] <= vga_visualisation:b2v_inst1.R[6]
+R[7] <= vga_visualisation:b2v_inst1.R[7]
+R[8] <= vga_visualisation:b2v_inst1.R[8]
+R[9] <= vga_visualisation:b2v_inst1.R[9]
 B[0] <= vga_visualisation:b2v_inst1.B[0]
 B[1] <= vga_visualisation:b2v_inst1.B[1]
 B[2] <= vga_visualisation:b2v_inst1.B[2]
@@ -289,6 +290,11 @@ G[6] <= vga_visualisation:b2v_inst1.G[6]
 G[7] <= vga_visualisation:b2v_inst1.G[7]
 G[8] <= vga_visualisation:b2v_inst1.G[8]
 G[9] <= vga_visualisation:b2v_inst1.G[9]
+vga_hs <= vga_visualisation:b2v_inst1.vga_hs
+bga_vs <= vga_visualisation:b2v_inst1.vga_vs
+Vga_blank <= vga_visualisation:b2v_inst1.vga_blank
+Vga_Sync <= vga_visualisation:b2v_inst1.vga_syn1
+VGA_Clock <= vga_visualisation:b2v_inst1.VGA_CLK
 H0[0] <= hex_disps:b2v_inst.HEX0[0]
 H0[1] <= hex_disps:b2v_inst.HEX0[1]
 H0[2] <= hex_disps:b2v_inst.HEX0[2]
@@ -345,19 +351,24 @@ H7[3] <= hex_disps:b2v_inst.HEX7[3]
 H7[4] <= hex_disps:b2v_inst.HEX7[4]
 H7[5] <= hex_disps:b2v_inst.HEX7[5]
 H7[6] <= hex_disps:b2v_inst.HEX7[6]
-R[0] <= vga_visualisation:b2v_inst1.R[0]
-R[1] <= vga_visualisation:b2v_inst1.R[1]
-R[2] <= vga_visualisation:b2v_inst1.R[2]
-R[3] <= vga_visualisation:b2v_inst1.R[3]
-R[4] <= vga_visualisation:b2v_inst1.R[4]
-R[5] <= vga_visualisation:b2v_inst1.R[5]
-R[6] <= vga_visualisation:b2v_inst1.R[6]
-R[7] <= vga_visualisation:b2v_inst1.R[7]
-R[8] <= vga_visualisation:b2v_inst1.R[8]
-R[9] <= vga_visualisation:b2v_inst1.R[9]
+CURSx[0] => vga_visualisation:b2v_inst1.cursor_x[0]
+CURSx[1] => vga_visualisation:b2v_inst1.cursor_x[1]
+CURSx[2] => vga_visualisation:b2v_inst1.cursor_x[2]
+CURSx[3] => vga_visualisation:b2v_inst1.cursor_x[3]
+CURSx[4] => vga_visualisation:b2v_inst1.cursor_x[4]
+CURSx[5] => vga_visualisation:b2v_inst1.cursor_x[5]
+CURSx[6] => vga_visualisation:b2v_inst1.cursor_x[6]
+CURSx[7] => vga_visualisation:b2v_inst1.cursor_x[7]
+CURSy[0] => vga_visualisation:b2v_inst1.cursor_y[0]
+CURSy[1] => vga_visualisation:b2v_inst1.cursor_y[1]
+CURSy[2] => vga_visualisation:b2v_inst1.cursor_y[2]
+CURSy[3] => vga_visualisation:b2v_inst1.cursor_y[3]
+CURSy[4] => vga_visualisation:b2v_inst1.cursor_y[4]
+CURSy[5] => vga_visualisation:b2v_inst1.cursor_y[5]
+CURSy[6] => vga_visualisation:b2v_inst1.cursor_y[6]
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst
 num0[0] => BCD7seg:display0.num[0]
 num0[1] => BCD7seg:display0.num[1]
 num0[2] => BCD7seg:display0.num[2]
@@ -448,7 +459,7 @@ HEX7[5] <= BCD7seg:display7.HEX[5]
 HEX7[6] <= BCD7seg:display7.HEX[6]
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display0
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -498,7 +509,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display1
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display1
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -548,7 +559,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display2
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display2
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -598,7 +609,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display3
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display3
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -648,7 +659,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display4
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display4
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -698,7 +709,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display5
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display5
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -748,7 +759,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display6
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -798,7 +809,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7
+|P1_BOARD_vga|i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display7
 num[0] => Equal0.IN3
 num[0] => Equal1.IN2
 num[0] => Equal2.IN3
@@ -848,7 +859,7 @@ HEX[5] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 HEX[6] <= HEX.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1
 vga_hs <= VGA_SYNC:inst2.vga_hs
 CLK_50 => clk_div_two:inst9.clock_50Mhz
 CLK_50 => wr_memory:inst1.clk_d1
@@ -857,14 +868,21 @@ CLK_50 => Video_Memory:inst.wrclock
 n_RST => clk_div_two:inst9.nrst
 n_RST => square:inst8.nrst
 n_RST => wr_memory:inst1.nrst
-LG7 => square:inst8.LG7
-LG6 => square:inst8.LG6
-LG2 => square:inst8.LG2
-LG1 => square:inst8.LG1
-LG0 => square:inst8.LG0
-LR2 => square:inst8.LR2
-LR1 => square:inst8.LR1
-LR0 => square:inst8.LR0
+cursor_x[0] => square:inst8.x_in[0]
+cursor_x[1] => square:inst8.x_in[1]
+cursor_x[2] => square:inst8.x_in[2]
+cursor_x[3] => square:inst8.x_in[3]
+cursor_x[4] => square:inst8.x_in[4]
+cursor_x[5] => square:inst8.x_in[5]
+cursor_x[6] => square:inst8.x_in[6]
+cursor_x[7] => square:inst8.x_in[7]
+cursor_y[0] => square:inst8.y_in[0]
+cursor_y[1] => square:inst8.y_in[1]
+cursor_y[2] => square:inst8.y_in[2]
+cursor_y[3] => square:inst8.y_in[3]
+cursor_y[4] => square:inst8.y_in[4]
+cursor_y[5] => square:inst8.y_in[5]
+cursor_y[6] => square:inst8.y_in[6]
 vga_vs <= VGA_SYNC:inst2.vga_vs
 vga_blank <= VGA_SYNC:inst2.vga_blank
 vga_syn1 <= VGA_SYNC:inst2.vga_sync
@@ -901,7 +919,7 @@ R[8] <= VGA_SYNC:inst2.vga_r[8]
 R[9] <= VGA_SYNC:inst2.vga_r[9]
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2
 clock_25Mhz => vga_g[0]~reg0.CLK
 clock_25Mhz => vga_g[1]~reg0.CLK
 clock_25Mhz => vga_g[2]~reg0.CLK
@@ -1042,12 +1060,12 @@ pixel_column[9] <= pixel_column[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 vga_clk <= clock_25Mhz.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3
 inclk => clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component.inclk[0]
 outclk <= clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component.outclk
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
 clkselect[0] => clkctrl1.CLKSELECT
 clkselect[1] => clkctrl1.CLKSELECT1
 ena => clkctrl1.ENA
@@ -1058,13 +1076,13 @@ inclk[3] => clkctrl1.INCLK3
 outclk <= clkctrl1.CLK
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_div_two:inst9
 clock_50Mhz => clk_int.CLK
 nrst => clk_int.ACLR
 clock_25MHz <= clk_int.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst
 data[0] => altsyncram:altsyncram_component.data_a[0]
 data[1] => altsyncram:altsyncram_component.data_a[1]
 data[2] => altsyncram:altsyncram_component.data_a[2]
@@ -1106,7 +1124,7 @@ q[1] <= altsyncram:altsyncram_component.q_b[1]
 q[2] <= altsyncram:altsyncram_component.q_b[2]
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
 wren_a => altsyncram_4jk1:auto_generated.wren_a
 rden_a => ~NO_FANOUT~
 wren_b => ~NO_FANOUT~
@@ -1170,7 +1188,7 @@ eccstatus[1] <= <GND>
 eccstatus[2] <= <GND>
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
 address_a[0] => altsyncram_fes1:altsyncram1.address_b[0]
 address_a[1] => altsyncram_fes1:altsyncram1.address_b[1]
 address_a[2] => altsyncram_fes1:altsyncram1.address_b[2]
@@ -1213,7 +1231,7 @@ wren_a => altsyncram_fes1:altsyncram1.clocken1
 wren_a => altsyncram_fes1:altsyncram1.wren_b
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
 address_a[0] => ram_block2a0.PORTAADDR
 address_a[0] => ram_block2a1.PORTAADDR
 address_a[0] => ram_block2a2.PORTAADDR
@@ -1924,7 +1942,7 @@ wren_a => decode_9oa:decode3.enable
 wren_b => decode_9oa:decode4.enable
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3
 data[0] => w_anode367w[1].IN0
 data[0] => w_anode384w[1].IN1
 data[0] => w_anode394w[1].IN0
@@ -1967,7 +1985,7 @@ eq[6] <= w_anode434w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode444w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4
 data[0] => w_anode367w[1].IN0
 data[0] => w_anode384w[1].IN1
 data[0] => w_anode394w[1].IN0
@@ -2010,7 +2028,7 @@ eq[6] <= w_anode434w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode444w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a
 data[0] => w_anode367w[1].IN0
 data[0] => w_anode384w[1].IN1
 data[0] => w_anode394w[1].IN0
@@ -2053,7 +2071,7 @@ eq[6] <= w_anode434w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode444w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b
 data[0] => w_anode367w[1].IN0
 data[0] => w_anode384w[1].IN1
 data[0] => w_anode394w[1].IN0
@@ -2096,7 +2114,7 @@ eq[6] <= w_anode434w[3].DB_MAX_OUTPUT_PORT_TYPE
 eq[7] <= w_anode444w[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -2204,7 +2222,7 @@ sel[2] => result_node[0].IN0
 sel[2] => _.IN0
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux6
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux6
 data[0] => _.IN0
 data[0] => _.IN0
 data[1] => _.IN0
@@ -2312,7 +2330,7 @@ sel[2] => result_node[0].IN0
 sel[2] => _.IN0
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1
 clk_d1 => data[0]~reg0.CLK
 clk_d1 => data[1]~reg0.CLK
 clk_d1 => data[2]~reg0.CLK
@@ -2422,15 +2440,22 @@ adr_memo[13] <= address_t[13].DB_MAX_OUTPUT_PORT_TYPE
 adr_memo[14] <= address_t[14].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8
-clk_d1 => t_x[0].CLK
-clk_d1 => t_x[1].CLK
-clk_d1 => t_x[2].CLK
-clk_d1 => t_x[3].CLK
-clk_d1 => t_x[4].CLK
-clk_d1 => t_x[5].CLK
-clk_d1 => t_x[6].CLK
-clk_d1 => t_x[7].CLK
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8
+clk_d1 => c_y[0].CLK
+clk_d1 => c_y[1].CLK
+clk_d1 => c_y[2].CLK
+clk_d1 => c_y[3].CLK
+clk_d1 => c_y[4].CLK
+clk_d1 => c_y[5].CLK
+clk_d1 => c_y[6].CLK
+clk_d1 => c_x[0].CLK
+clk_d1 => c_x[1].CLK
+clk_d1 => c_x[2].CLK
+clk_d1 => c_x[3].CLK
+clk_d1 => c_x[4].CLK
+clk_d1 => c_x[5].CLK
+clk_d1 => c_x[6].CLK
+clk_d1 => c_x[7].CLK
 clk_d1 => color_t[0]~reg0.CLK
 clk_d1 => color_t[1]~reg0.CLK
 clk_d1 => color_t[2]~reg0.CLK
@@ -2469,37 +2494,44 @@ nrst => y_t[0]~reg0.ENA
 nrst => color_t[2]~reg0.ENA
 nrst => color_t[1]~reg0.ENA
 nrst => color_t[0]~reg0.ENA
-nrst => t_x[7].ENA
-nrst => t_x[6].ENA
-nrst => t_x[5].ENA
-nrst => t_x[4].ENA
-nrst => t_x[3].ENA
-nrst => t_x[2].ENA
-nrst => t_x[1].ENA
-nrst => t_x[0].ENA
-LG7 => ~NO_FANOUT~
-LG6 => ~NO_FANOUT~
-LG2 => ~NO_FANOUT~
-LG1 => ~NO_FANOUT~
-LG0 => ~NO_FANOUT~
-LR2 => ~NO_FANOUT~
-LR1 => ~NO_FANOUT~
-LR0 => ~NO_FANOUT~
-x_in[0] => ~NO_FANOUT~
-x_in[1] => ~NO_FANOUT~
-x_in[2] => ~NO_FANOUT~
-x_in[3] => ~NO_FANOUT~
-x_in[4] => ~NO_FANOUT~
-x_in[5] => ~NO_FANOUT~
-x_in[6] => ~NO_FANOUT~
-x_in[7] => ~NO_FANOUT~
-y_in[0] => ~NO_FANOUT~
-y_in[1] => ~NO_FANOUT~
-y_in[2] => ~NO_FANOUT~
-y_in[3] => ~NO_FANOUT~
-y_in[4] => ~NO_FANOUT~
-y_in[5] => ~NO_FANOUT~
-y_in[6] => ~NO_FANOUT~
+nrst => c_x[7].ENA
+nrst => c_x[6].ENA
+nrst => c_x[5].ENA
+nrst => c_x[4].ENA
+nrst => c_x[3].ENA
+nrst => c_x[2].ENA
+nrst => c_x[1].ENA
+nrst => c_x[0].ENA
+nrst => c_y[6].ENA
+nrst => c_y[5].ENA
+nrst => c_y[4].ENA
+nrst => c_y[3].ENA
+nrst => c_y[2].ENA
+nrst => c_y[1].ENA
+nrst => c_y[0].ENA
+x_in[0] => Equal0.IN15
+x_in[0] => c_x.DATAB
+x_in[1] => Equal0.IN14
+x_in[1] => c_x.DATAB
+x_in[2] => Equal0.IN13
+x_in[2] => c_x.DATAB
+x_in[3] => Equal0.IN12
+x_in[3] => c_x.DATAB
+x_in[4] => Equal0.IN11
+x_in[4] => c_x.DATAB
+x_in[5] => Equal0.IN10
+x_in[5] => c_x.DATAB
+x_in[6] => Equal0.IN9
+x_in[6] => c_x.DATAB
+x_in[7] => Equal0.IN8
+x_in[7] => c_x.DATAB
+y_in[0] => c_y.DATAB
+y_in[1] => c_y.DATAB
+y_in[2] => c_y.DATAB
+y_in[3] => c_y.DATAB
+y_in[4] => c_y.DATAB
+y_in[5] => c_y.DATAB
+y_in[6] => c_y.DATAB
 start <= start.DB_MAX_OUTPUT_PORT_TYPE
 x_t[0] <= x_t[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 x_t[1] <= x_t[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2780,7 +2812,7 @@ done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
 
 
-|P1_BOARD_vga|i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|add_generator:inst7
+|P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|add_generator:inst7
 pixel_row[0] => ~NO_FANOUT~
 pixel_row[1] => ~NO_FANOUT~
 pixel_row[2] => adr_memo[8].DATAIN
@@ -2818,31 +2850,128 @@ adr_memo[13] <= pixel_row[7].DB_MAX_OUTPUT_PORT_TYPE
 adr_memo[14] <= pixel_row[8].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|main_control:inst
-clk50 => LED_CODE~reg0.CLK
-clk50 => game_over~reg0.CLK
-clk50 => state~6.DATAIN
-nrst => LED_CODE~reg0.ACLR
-nrst => game_over~reg0.PRESET
-nrst => state~8.DATAIN
-hash => state.OUTPUTSELECT
-hash => state.OUTPUTSELECT
-hash => state.OUTPUTSELECT
-hash => state.OUTPUTSELECT
-hash => state.OUTPUTSELECT
-code_entered => state.OUTPUTSELECT
-code_entered => state.OUTPUTSELECT
-code_entered => state.OUTPUTSELECT
-code_entered => state.OUTPUTSELECT
-code_entered => state.OUTPUTSELECT
-winer => process_0.IN0
-loser => process_0.IN1
-tie => process_0.IN1
-new_code <= new_code.DB_MAX_OUTPUT_PORT_TYPE
-key_read <= key_read.DB_MAX_OUTPUT_PORT_TYPE
-game_over <= game_over~reg0.DB_MAX_OUTPUT_PORT_TYPE
-new_game <= new_game.DB_MAX_OUTPUT_PORT_TYPE
-LED_CODE <= LED_CODE~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|P1_BOARD_vga|square_map:inst12
+cursor_x[0] => Equal0.IN5
+cursor_x[0] => Equal1.IN5
+cursor_x[0] => Equal2.IN5
+cursor_x[0] => Equal3.IN5
+cursor_x[0] => Equal4.IN5
+cursor_x[0] => Equal5.IN5
+cursor_x[0] => Equal6.IN5
+cursor_x[0] => Equal7.IN5
+cursor_x[1] => Equal0.IN4
+cursor_x[1] => Equal1.IN4
+cursor_x[1] => Equal2.IN4
+cursor_x[1] => Equal3.IN4
+cursor_x[1] => Equal4.IN4
+cursor_x[1] => Equal5.IN4
+cursor_x[1] => Equal6.IN4
+cursor_x[1] => Equal7.IN4
+cursor_x[2] => Equal0.IN3
+cursor_x[2] => Equal1.IN3
+cursor_x[2] => Equal2.IN3
+cursor_x[2] => Equal3.IN3
+cursor_x[2] => Equal4.IN3
+cursor_x[2] => Equal5.IN3
+cursor_x[2] => Equal6.IN3
+cursor_x[2] => Equal7.IN3
+cursor_y[0] => Equal8.IN5
+cursor_y[0] => Equal9.IN5
+cursor_y[0] => Equal10.IN5
+cursor_y[0] => Equal11.IN5
+cursor_y[0] => Equal12.IN5
+cursor_y[0] => Equal13.IN5
+cursor_y[0] => Equal14.IN5
+cursor_y[0] => Equal15.IN5
+cursor_y[1] => Equal8.IN4
+cursor_y[1] => Equal9.IN4
+cursor_y[1] => Equal10.IN4
+cursor_y[1] => Equal11.IN4
+cursor_y[1] => Equal12.IN4
+cursor_y[1] => Equal13.IN4
+cursor_y[1] => Equal14.IN4
+cursor_y[1] => Equal15.IN4
+cursor_y[2] => Equal8.IN3
+cursor_y[2] => Equal9.IN3
+cursor_y[2] => Equal10.IN3
+cursor_y[2] => Equal11.IN3
+cursor_y[2] => Equal12.IN3
+cursor_y[2] => Equal13.IN3
+cursor_y[2] => Equal14.IN3
+cursor_y[2] => Equal15.IN3
+x_t[0] <= <VCC>
+x_t[1] <= x_t[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[2] <= x_t[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[3] <= x_t[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[4] <= x_t[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[5] <= x_t[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[6] <= x_t[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+x_t[7] <= <GND>
+y_t[0] <= <VCC>
+y_t[1] <= y_t[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y_t[2] <= y_t[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y_t[3] <= y_t[3]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y_t[4] <= y_t[4]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y_t[5] <= y_t[5]$latch.DB_MAX_OUTPUT_PORT_TYPE
+y_t[6] <= y_t[6]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|P1_BOARD_vga|kb_xy_module:inst8
+clk => x_int[0].CLK
+clk => x_int[1].CLK
+clk => x_int[2].CLK
+clk => y_int[0].CLK
+clk => y_int[1].CLK
+clk => y_int[2].CLK
+clk => \ControlXY:x_cnt[0].CLK
+clk => \ControlXY:x_cnt[1].CLK
+clk => \ControlXY:x_cnt[2].CLK
+clk => \ControlXY:y_cnt[0].CLK
+clk => \ControlXY:y_cnt[1].CLK
+clk => \ControlXY:y_cnt[2].CLK
+nrst => x_int[0].ENA
+nrst => \ControlXY:y_cnt[2].ENA
+nrst => \ControlXY:y_cnt[1].ENA
+nrst => \ControlXY:y_cnt[0].ENA
+nrst => \ControlXY:x_cnt[2].ENA
+nrst => \ControlXY:x_cnt[1].ENA
+nrst => \ControlXY:x_cnt[0].ENA
+nrst => y_int[2].ENA
+nrst => y_int[1].ENA
+nrst => y_int[0].ENA
+nrst => x_int[2].ENA
+nrst => x_int[1].ENA
+freeze_kb => ~NO_FANOUT~
+up_key => y_cnt.OUTPUTSELECT
+up_key => y_cnt.OUTPUTSELECT
+up_key => y_cnt.OUTPUTSELECT
+up_key => y_int.OUTPUTSELECT
+up_key => y_int.OUTPUTSELECT
+up_key => y_int.OUTPUTSELECT
+down_key => y_cnt.OUTPUTSELECT
+down_key => y_cnt.OUTPUTSELECT
+down_key => y_cnt.OUTPUTSELECT
+down_key => y_int.OUTPUTSELECT
+down_key => y_int.OUTPUTSELECT
+down_key => y_int.OUTPUTSELECT
+left_key => x_cnt.OUTPUTSELECT
+left_key => x_cnt.OUTPUTSELECT
+left_key => x_cnt.OUTPUTSELECT
+left_key => x_int.OUTPUTSELECT
+left_key => x_int.OUTPUTSELECT
+left_key => x_int.OUTPUTSELECT
+right_key => x_cnt.OUTPUTSELECT
+right_key => x_cnt.OUTPUTSELECT
+right_key => x_cnt.OUTPUTSELECT
+right_key => x_int.OUTPUTSELECT
+right_key => x_int.OUTPUTSELECT
+right_key => x_int.OUTPUTSELECT
+pos_x[0] <= x_int[0].DB_MAX_OUTPUT_PORT_TYPE
+pos_x[1] <= x_int[1].DB_MAX_OUTPUT_PORT_TYPE
+pos_x[2] <= x_int[2].DB_MAX_OUTPUT_PORT_TYPE
+pos_y[0] <= y_int[0].DB_MAX_OUTPUT_PORT_TYPE
+pos_y[1] <= y_int[1].DB_MAX_OUTPUT_PORT_TYPE
+pos_y[2] <= y_int[2].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|keytest_h_v2:inst7
@@ -2861,23 +2990,17 @@ key => keycode_int[3].ENA
 key => keycode_int[2].ENA
 key => keycode_int[1].ENA
 key => keycode_int[0].ENA
-bcd <= bcd.DB_MAX_OUTPUT_PORT_TYPE
-ast <= ast.DB_MAX_OUTPUT_PORT_TYPE
 hash <= hash.DB_MAX_OUTPUT_PORT_TYPE
-A <= A.DB_MAX_OUTPUT_PORT_TYPE
-B <= B.DB_MAX_OUTPUT_PORT_TYPE
-C <= C.DB_MAX_OUTPUT_PORT_TYPE
-D <= D.DB_MAX_OUTPUT_PORT_TYPE
-new_code <= new_code_int.DB_MAX_OUTPUT_PORT_TYPE
+up_key <= up_key.DB_MAX_OUTPUT_PORT_TYPE
+down_key <= down_key.DB_MAX_OUTPUT_PORT_TYPE
+left_key <= left_key.DB_MAX_OUTPUT_PORT_TYPE
+right_key <= right_key.DB_MAX_OUTPUT_PORT_TYPE
+select_key <= select_key.DB_MAX_OUTPUT_PORT_TYPE
 code_read => new_code_int.OUTPUTSELECT
 keycode_kt[0] => keycode_int[0].DATAIN
 keycode_kt[1] => keycode_int[1].DATAIN
 keycode_kt[2] => keycode_int[2].DATAIN
 keycode_kt[3] => keycode_int[3].DATAIN
-keycode[0] <= keycode_int[0].DB_MAX_OUTPUT_PORT_TYPE
-keycode[1] <= keycode_int[1].DB_MAX_OUTPUT_PORT_TYPE
-keycode[2] <= keycode_int[2].DB_MAX_OUTPUT_PORT_TYPE
-keycode[3] <= keycode_int[3].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|keypad:inst2
@@ -3017,98 +3140,31 @@ key_read <= key_read.DB_MAX_OUTPUT_PORT_TYPE
 bank_ready <= bank_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|P1_BOARD_vga|register_bank2:GUESS_CODE
-clk => s_DataT[0].CLK
-clk => s_DataT[1].CLK
-clk => s_DataT[2].CLK
-clk => s_DataT[3].CLK
-clk => s_DataU[0].CLK
-clk => s_DataU[1].CLK
-clk => s_DataU[2].CLK
-clk => s_DataU[3].CLK
-clk => DataU[0]~reg0.CLK
-clk => DataU[1]~reg0.CLK
-clk => DataU[2]~reg0.CLK
-clk => DataU[3]~reg0.CLK
-clk => DataT[0]~reg0.CLK
-clk => DataT[1]~reg0.CLK
-clk => DataT[2]~reg0.CLK
-clk => DataT[3]~reg0.CLK
-clk => DataH[0]~reg0.CLK
-clk => DataH[1]~reg0.CLK
-clk => DataH[2]~reg0.CLK
-clk => DataH[3]~reg0.CLK
-clk => bank_ready~reg0.CLK
-clk => state~5.DATAIN
-nrst => DataU[0]~reg0.ACLR
-nrst => DataU[1]~reg0.ACLR
-nrst => DataU[2]~reg0.ACLR
-nrst => DataU[3]~reg0.ACLR
-nrst => DataT[0]~reg0.ACLR
-nrst => DataT[1]~reg0.ACLR
-nrst => DataT[2]~reg0.ACLR
-nrst => DataT[3]~reg0.ACLR
-nrst => DataH[0]~reg0.ACLR
-nrst => DataH[1]~reg0.ACLR
-nrst => DataH[2]~reg0.ACLR
-nrst => DataH[3]~reg0.ACLR
-nrst => bank_ready~reg0.PRESET
-nrst => state~7.DATAIN
-nrst => s_DataT[0].ENA
-nrst => s_DataU[3].ENA
-nrst => s_DataU[2].ENA
-nrst => s_DataU[1].ENA
-nrst => s_DataU[0].ENA
-nrst => s_DataT[3].ENA
-nrst => s_DataT[2].ENA
-nrst => s_DataT[1].ENA
-bcd => state.OUTPUTSELECT
-bcd => state.OUTPUTSELECT
-bcd => state.OUTPUTSELECT
-bcd => state.OUTPUTSELECT
-ast => state.OUTPUTSELECT
-ast => state.OUTPUTSELECT
-ast => state.OUTPUTSELECT
-ast => state.OUTPUTSELECT
-new_code => bank_ready.OUTPUTSELECT
-new_code => DataH.OUTPUTSELECT
-new_code => DataH.OUTPUTSELECT
-new_code => DataH.OUTPUTSELECT
-new_code => DataH.OUTPUTSELECT
-new_code => DataT.OUTPUTSELECT
-new_code => DataT.OUTPUTSELECT
-new_code => DataT.OUTPUTSELECT
-new_code => DataT.OUTPUTSELECT
-new_code => DataU.OUTPUTSELECT
-new_code => DataU.OUTPUTSELECT
-new_code => DataU.OUTPUTSELECT
-new_code => DataU.OUTPUTSELECT
-new_code => state.OUTPUTSELECT
-new_code => state.OUTPUTSELECT
-new_code => state.OUTPUTSELECT
-new_code => state.OUTPUTSELECT
-keycode[0] => Selector12.IN2
-keycode[0] => s_DataU.DATAB
-keycode[1] => Selector11.IN2
-keycode[1] => s_DataU.DATAB
-keycode[2] => Selector10.IN2
-keycode[2] => s_DataU.DATAB
-keycode[3] => Selector9.IN2
-keycode[3] => s_DataU.DATAB
-DataH[0] <= DataH[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataH[1] <= DataH[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataH[2] <= DataH[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataH[3] <= DataH[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataT[0] <= DataT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataT[1] <= DataT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataT[2] <= DataT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataT[3] <= DataT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataU[0] <= DataU[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataU[1] <= DataU[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataU[2] <= DataU[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-DataU[3] <= DataU[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+|P1_BOARD_vga|main_control:inst
+clk50 => LED_CODE~reg0.CLK
+clk50 => game_over~reg0.CLK
+clk50 => state~6.DATAIN
+nrst => LED_CODE~reg0.ACLR
+nrst => game_over~reg0.PRESET
+nrst => state~8.DATAIN
+hash => state.OUTPUTSELECT
+hash => state.OUTPUTSELECT
+hash => state.OUTPUTSELECT
+hash => state.OUTPUTSELECT
+hash => state.OUTPUTSELECT
+code_entered => state.OUTPUTSELECT
+code_entered => state.OUTPUTSELECT
+code_entered => state.OUTPUTSELECT
+code_entered => state.OUTPUTSELECT
+code_entered => state.OUTPUTSELECT
+winer => process_0.IN0
+loser => process_0.IN1
+tie => process_0.IN1
+new_code <= new_code.DB_MAX_OUTPUT_PORT_TYPE
 key_read <= key_read.DB_MAX_OUTPUT_PORT_TYPE
-bank_ready <= bank_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
+game_over <= game_over~reg0.DB_MAX_OUTPUT_PORT_TYPE
+new_game <= new_game.DB_MAX_OUTPUT_PORT_TYPE
+LED_CODE <= LED_CODE~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|game:GAME
@@ -3540,6 +3596,100 @@ rx_data[6] <= rx_data[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_data[7] <= rx_data[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 rx_new <= rx_new_internal.DB_MAX_OUTPUT_PORT_TYPE
 rx_data_lost <= rx_data_lost~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|P1_BOARD_vga|register_bank2:GUESS_CODE
+clk => s_DataT[0].CLK
+clk => s_DataT[1].CLK
+clk => s_DataT[2].CLK
+clk => s_DataT[3].CLK
+clk => s_DataU[0].CLK
+clk => s_DataU[1].CLK
+clk => s_DataU[2].CLK
+clk => s_DataU[3].CLK
+clk => DataU[0]~reg0.CLK
+clk => DataU[1]~reg0.CLK
+clk => DataU[2]~reg0.CLK
+clk => DataU[3]~reg0.CLK
+clk => DataT[0]~reg0.CLK
+clk => DataT[1]~reg0.CLK
+clk => DataT[2]~reg0.CLK
+clk => DataT[3]~reg0.CLK
+clk => DataH[0]~reg0.CLK
+clk => DataH[1]~reg0.CLK
+clk => DataH[2]~reg0.CLK
+clk => DataH[3]~reg0.CLK
+clk => bank_ready~reg0.CLK
+clk => state~5.DATAIN
+nrst => DataU[0]~reg0.ACLR
+nrst => DataU[1]~reg0.ACLR
+nrst => DataU[2]~reg0.ACLR
+nrst => DataU[3]~reg0.ACLR
+nrst => DataT[0]~reg0.ACLR
+nrst => DataT[1]~reg0.ACLR
+nrst => DataT[2]~reg0.ACLR
+nrst => DataT[3]~reg0.ACLR
+nrst => DataH[0]~reg0.ACLR
+nrst => DataH[1]~reg0.ACLR
+nrst => DataH[2]~reg0.ACLR
+nrst => DataH[3]~reg0.ACLR
+nrst => bank_ready~reg0.PRESET
+nrst => state~7.DATAIN
+nrst => s_DataT[0].ENA
+nrst => s_DataU[3].ENA
+nrst => s_DataU[2].ENA
+nrst => s_DataU[1].ENA
+nrst => s_DataU[0].ENA
+nrst => s_DataT[3].ENA
+nrst => s_DataT[2].ENA
+nrst => s_DataT[1].ENA
+bcd => state.OUTPUTSELECT
+bcd => state.OUTPUTSELECT
+bcd => state.OUTPUTSELECT
+bcd => state.OUTPUTSELECT
+ast => state.OUTPUTSELECT
+ast => state.OUTPUTSELECT
+ast => state.OUTPUTSELECT
+ast => state.OUTPUTSELECT
+new_code => bank_ready.OUTPUTSELECT
+new_code => DataH.OUTPUTSELECT
+new_code => DataH.OUTPUTSELECT
+new_code => DataH.OUTPUTSELECT
+new_code => DataH.OUTPUTSELECT
+new_code => DataT.OUTPUTSELECT
+new_code => DataT.OUTPUTSELECT
+new_code => DataT.OUTPUTSELECT
+new_code => DataT.OUTPUTSELECT
+new_code => DataU.OUTPUTSELECT
+new_code => DataU.OUTPUTSELECT
+new_code => DataU.OUTPUTSELECT
+new_code => DataU.OUTPUTSELECT
+new_code => state.OUTPUTSELECT
+new_code => state.OUTPUTSELECT
+new_code => state.OUTPUTSELECT
+new_code => state.OUTPUTSELECT
+keycode[0] => Selector12.IN2
+keycode[0] => s_DataU.DATAB
+keycode[1] => Selector11.IN2
+keycode[1] => s_DataU.DATAB
+keycode[2] => Selector10.IN2
+keycode[2] => s_DataU.DATAB
+keycode[3] => Selector9.IN2
+keycode[3] => s_DataU.DATAB
+DataH[0] <= DataH[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataH[1] <= DataH[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataH[2] <= DataH[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataH[3] <= DataH[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataT[0] <= DataT[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataT[1] <= DataT[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataT[2] <= DataT[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataT[3] <= DataT[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataU[0] <= DataU[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataU[1] <= DataU[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataU[2] <= DataU[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+DataU[3] <= DataU[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_read <= key_read.DB_MAX_OUTPUT_PORT_TYPE
+bank_ready <= bank_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|protocol_tx:inst3

@@ -36,28 +36,26 @@ architecture functional of square_map is
   constant Y6 : integer := 85;
   constant Y7 : integer := 99;
   
-  signal c_x, c_y : integer range 0 to 7;
-
   
   Begin
 	process(cursor_x, cursor_y)
 	Begin
-		if unsigned(cursor_y)=0 then
-			y_t <= Y0;
-		elsif unsigned(cursor_y)=1 then
-			y_t <= Y1;
-		elsif unsigned(cursor_y)=2 then
-			y_t <= Y2;
-		elsif unsigned(cursor_y)=3 then
-			y_t <= Y3;
-		elsif unsigned(cursor_y)=4 then
-			y_t <= Y4;
-		elsif unsigned(cursor_y)=5 then
-			y_t <= Y5;
-		elsif unsigned(cursor_y)=6 then
-			y_t <= Y6;
-		elsif unsigned(cursor_y)=7 then
-			y_t <= Y7;		
+		if unsigned(cursor_x)=0 then
+			x_t <= X0;
+		elsif unsigned(cursor_x)=1 then
+			x_t <= X1;
+		elsif unsigned(cursor_x)=2 then
+			x_t <= X2;
+		elsif unsigned(cursor_x)=3 then
+			x_t <= X3;
+		elsif unsigned(cursor_x)=4 then
+			x_t <= X4;
+		elsif unsigned(cursor_x)=5 then
+			x_t <= X5;
+		elsif unsigned(cursor_x)=6 then
+			x_t <= X6;
+		elsif unsigned(cursor_x)=7 then
+			x_t <= X7;		
 		end if;
 		
 		if unsigned(cursor_y)=0 then

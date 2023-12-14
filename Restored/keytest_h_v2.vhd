@@ -7,7 +7,7 @@ entity keytest_h_v2 is
 		hash, up_key, down_key, left_key, right_key, select_key: out std_logic; 
 		--new_code	: out std_logic;  -- activated when there is a new code in the register.
 		code_read	: in std_logic;  -- used to de-activate new_code.
-		keycode_kt	 : in std_logic_vector(3 downto 0);  -- Keycode from keytest
+		keycode_kt	 : in std_logic_vector(3 downto 0));  -- Keycode from keytest
 		--keycode      : out std_logic_vector(3 downto 0) );  -- output of the register.
 end keytest_h_v2;
 
@@ -44,15 +44,12 @@ end process;
 --				or keycode_int = x"9") and (new_code_int = '1') else '0';
 --ast <= '1' when (keycode_int = x"E" and new_code_int = '1') else '0';
 hash <= '1' when (keycode_int = x"F" and new_code_int = '1') else '0';
-up_key <= '1' when (keycode_int = x"8" and new_code_int = '1') else '0';
-down_key <='1' when (keycode_int = x"2" and new_code_int = '1') else '0';
+up_key <= '1' when (keycode_int = x"2" and new_code_int = '1') else '0';
+down_key <='1' when (keycode_int = x"8" and new_code_int = '1') else '0';
 left_key <= '1' when (keycode_int = x"4" and new_code_int = '1') else '0';
 right_key <= '1' when (keycode_int = x"6" and new_code_int = '1') else '0';
 select_key <= '1' when (keycode_int = x"5" and new_code_int = '1') else '0';
 
 -- UPdating the output keycode and new_code
-
-keycode <= keycode_int;
-new_code <= new_code_int;
 
 end;

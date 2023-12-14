@@ -20,26 +20,6 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-VGA_visualisation
-# storage
-db|Design1.(8).cnf
-db|Design1.(8).cnf
-# case_insensitive
-# source_file
-vga_visualisation.bdf
-87e1dd448a36ebdf29d42ff54ae184a0
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1
-}
-# macro_sequence
-
-# end
-# entity
 altsyncram_4jk1
 # storage
 db|Design1.(13).cnf
@@ -169,7 +149,7 @@ address_a0
 3
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
 }
 # macro_sequence
 
@@ -319,7 +299,7 @@ data_a0
 2
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
 }
 # macro_sequence
 
@@ -373,8 +353,8 @@ data0
 3
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4
 }
 # macro_sequence
 
@@ -428,8 +408,8 @@ enable
 2
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b
 }
 # macro_sequence
 
@@ -537,8 +517,8 @@ data0
 3
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux6
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux6
 }
 # macro_sequence
 
@@ -556,26 +536,6 @@ vga.bdf
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
-}
-# macro_sequence
-
-# end
-# entity
-P1_BOARD_vga
-# storage
-db|Design1.(30).cnf
-db|Design1.(30).cnf
-# case_insensitive
-# source_file
-p1_board_vga.bdf
-a59eeb283a393f397d6c15eca1da2456
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
 }
 # macro_sequence
 
@@ -639,7 +599,7 @@ ON
 }
 # hierarchies {
 clk_video:inst10
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -683,7 +643,7 @@ USR
 }
 # hierarchies {
 clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -717,39 +677,6 @@ ON
 }
 # hierarchies {
 f_div:inst1
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-i_o_manager_vga
-# storage
-db|Design1.(5).cnf
-db|Design1.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-i_o_manager_vga.vhd
-d8bdd08891f73902c358acd3f853e7
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-i_o_manager_vga:inst9
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -848,7 +775,7 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-i_o_manager_vga:inst9|hex_disps:b2v_inst
+i_o_manager_vga:inst13|hex_disps:b2v_inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -891,14 +818,14 @@ PARAMETER_STRING
 USR
 }
 # hierarchies {
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display0
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display1
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display2
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display3
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display4
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display5
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display6
-i_o_manager_vga:inst9|hex_disps:b2v_inst|BCD7seg:display7
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display0
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display1
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display2
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display3
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display4
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display5
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display6
+i_o_manager_vga:inst13|hex_disps:b2v_inst|BCD7seg:display7
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -931,7 +858,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -964,7 +891,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|clk_div_two:inst9
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_div_two:inst9
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -997,7 +924,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1337,7 +1264,7 @@ address_a0
 3
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component
 }
 # macro_sequence
 
@@ -1367,7 +1294,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1400,7 +1327,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|add_generator:inst7
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|add_generator:inst7
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1434,39 +1361,6 @@ ON
 }
 # hierarchies {
 main_control:inst
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-keytest_h_v2
-# storage
-db|Design1.(22).cnf
-db|Design1.(22).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-keytest_h_v2.vhd
-c1289d9ac8d146adae659c9b954248f
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keytest_h_v2:inst7
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1707,18 +1601,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-square
+i_o_manager_vga
 # storage
-db|Design1.(19).cnf
-db|Design1.(19).cnf
+db|Design1.(32).cnf
+db|Design1.(32).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-square.vhd
-ec312fdc6d2c4226d71cedb193f120
+i_o_manager_vga.vhd
+c152ff07e834f611c796976785512d
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1731,7 +1625,179 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|square:inst8
+i_o_manager_vga:inst13
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+P1_BOARD_vga
+# storage
+db|Design1.(5).cnf
+db|Design1.(5).cnf
+# case_insensitive
+# source_file
+p1_board_vga.bdf
+b27b4cb67ab79a95bfdbd297cd45a4d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+VGA_visualisation
+# storage
+db|Design1.(8).cnf
+db|Design1.(8).cnf
+# case_insensitive
+# source_file
+vga_visualisation.bdf
+c75fdcb8f5c62d59fe3119ec8affa2
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1
+}
+# macro_sequence
+
+# end
+# entity
+square_map
+# storage
+db|Design1.(30).cnf
+db|Design1.(30).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+square_map.vhd
+a664bf7c17979c403e9083fec9f4cbf4
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+square_map:inst12
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+square
+# storage
+db|Design1.(19).cnf
+db|Design1.(19).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+square.vhd
+1a6bdcf163cd76e3295399bf4ffd6b3
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+keytest_h_v2
+# storage
+db|Design1.(22).cnf
+db|Design1.(22).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+keytest_h_v2.vhd
+90dd50d0c725b6f61a7895be4f81b42
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+keytest_h_v2:inst7
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+kb_xy_module
+# storage
+db|Design1.(31).cnf
+db|Design1.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+kb_xy_module.vhd
+43811093162e38bdc7a71d5bf6a916ca
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+kb_xy_module:inst8
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
