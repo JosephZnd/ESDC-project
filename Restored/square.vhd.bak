@@ -34,24 +34,24 @@ end square;
 architecture functional of square is
   
   -- Coordinates of the squares
-  constant X0 : integer := 15;
-  constant X1 : integer := 30;
-  constant X2 : integer := 45;
-  constant X3 : integer := 60;
-  constant X4 : integer := 75;
-  constant X5 : integer := 90;
-  constant X6 : integer := 105;
-  constant X7 : integer := 120;
+  constant X0 : integer := 11;
+  constant X1 : integer := 25;
+  constant X2 : integer := 39;
+  constant X3 : integer := 53;
+  constant X4 : integer := 67;
+  constant X5 : integer := 81;
+  constant X6 : integer := 95;
+  constant X7 : integer := 109;
 
   
-  constant Y0 : integer := 15;
-  constant Y1 : integer := 30;
-  constant Y2 : integer := 45;
-  constant Y3 : integer := 60;
-  constant Y4 : integer := 75;
-  constant Y5 : integer := 90;
-  constant Y6 : integer := 105;
-  constant Y7 : integer := 120;
+  constant Y0 : integer := 1;
+  constant Y1 : integer := 15;
+  constant Y2 : integer := 29;
+  constant Y3 : integer := 43;
+  constant Y4 : integer := 57;
+  constant Y5 : integer := 71;
+  constant Y6 : integer := 85;
+  constant Y7 : integer := 99;
   
   -- Possible colors of the squares.
   -- Precondition: memory is created blank (remaining color = 000).
