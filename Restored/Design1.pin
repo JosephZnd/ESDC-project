@@ -282,12 +282,21 @@ GND*                         : C4        :        :                   :         
 GND*                         : C5        :        :                   :         : 3         :                
 GND*                         : C6        :        :                   :         : 3         :                
 GND*                         : C7        :        :                   :         : 3         :                
+<<<<<<< HEAD
+VGA_R[0]                     : C8        : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_R[4]                     : C9        : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_G[2]                     : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_B[6]                     : C11       : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_B[8]                     : C12       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name                     : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+=======
 GND*                         : C8        :        :                   :         : 3         :                
 GND*                         : C9        :        :                   :         : 3         :                
 GND*                         : C10       :        :                   :         : 3         :                
 GND*                         : C11       :        :                   :         : 3         :                
 GND*                         : C12       :        :                   :         : 3         :                
 LG7                          : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -308,12 +317,21 @@ GND                          : D4        : gnd    :                   :         
 GND*                         : D5        :        :                   :         : 3         :                
 GND*                         : D6        :        :                   :         : 3         :                
 GND*                         : D7        :        :                   :         : 3         :                
+<<<<<<< HEAD
+VGA_VS                       : D8        : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_R[3]                     : D9        : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_G[3]                     : D10       : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_G[7]                     : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
+VGA_G[9]                     : D12       : output : 3.3-V LVTTL       :         : 3         : Y              
+pin_name14                   : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
+=======
 GND*                         : D8        :        :                   :         : 3         :                
 GND*                         : D9        :        :                   :         : 3         :                
 GND*                         : D10       :        :                   :         : 3         :                
 GND*                         : D11       :        :                   :         : 3         :                
 GND*                         : D12       :        :                   :         : 3         :                
 LG6                          : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
+>>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                

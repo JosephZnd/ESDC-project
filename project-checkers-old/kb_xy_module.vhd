@@ -6,7 +6,8 @@ use ieee.numeric_std.all;
 entity kb_xy_module is
   port ( clk, nrst , freeze_kb  : in  std_logic;
 		up_key, down_key, left_key, right_key	: in std_logic;
-		pos_x, pos_y	: out std_logic_vector(2 downto 0));
+		pos_x, pos_y	: out std_logic_vector(2 downto 0);
+		key_read 	: out std_logic );
 		-- will add another flag later to set different first position depending on black or white
 end kb_xy_module;
 
