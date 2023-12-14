@@ -53,15 +53,7 @@ architecture functional of square is
   constant Y6 : integer := 85;
   constant Y7 : integer := 99;
   
-  variable  c_x : integer := 11;
-  variable  c_y : integer := 1;
-  variable  t_x : integer := 25;
-  variable  t_y : integer := 1;
-
- 
-
-  
-  -- Possible colors of the sqares.
+  -- Possible colors of the squares.
   -- Precondition: memory is created blank (remaining color = 000).
   constant RED : integer := 4;
   --constant BLUE : integer := 1;
@@ -100,7 +92,13 @@ architecture functional of square is
 );
   
   -- Internal signals
-  -- Output of the state register
+
+  signal c_x				: integer range 0 to 160:=11;
+		signal c_y				: integer range 0 to 120:=1;
+
+
+  signal t_x  		: integer range 0 to 160:=25;
+		signal t_y 			: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
   -- Internal address memory bus
   
@@ -746,17 +744,16 @@ architecture functional of square is
 						if done = '1' then st_square <= s_cursor_a; end if;	
 						
 					when s_cursor_a =>
-						
+						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
+--aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
 						if (c_x != t_x or c_x != t_x) then
-							x_t <= c_x; 
-							y_t <= c_y;
-							
-							t_x = c_x;
-							t_y = c_y;
-
-							st_square <= s_cursor_b;
+							t_x <= c_x; 
+						 t_y <= c_y;
+						 st_square <= s00a;
+      else st_square <= s_cursor_b;
 						end if;
 					when s_cursor_b =>
+      x_t <= c_x; y_t <= c_y;
 						color_t <= RED;
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
