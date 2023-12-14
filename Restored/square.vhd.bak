@@ -18,7 +18,7 @@ use ieee.std_logic_unsigned.all;
 
 
 entity square is
-  port( clk_d1, nrst, LG7, LG6, LG2, LG1, LG0   	 	: in std_logic;
+  port( clk_d1, nrst		: in std_logic;
 			LR2, LR1, LR0 	: in std_logic;
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
@@ -101,7 +101,7 @@ architecture functional of square is
 						st_square <= s00b;
 						x_t <= (X0+SIZE*i); y_t <= (Y0+SIZE*j);
 						if color_index = '0' then color_t <= WHITE; 
-							else color_index = '1' then color_t <= GREEN; 
+							else color_t <= GREEN; 
 						end if;
 					when s00b =>
 						i <= i+1;

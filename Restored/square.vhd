@@ -18,7 +18,7 @@ use ieee.std_logic_unsigned.all;
 
 
 entity square is
-  port( clk_d1, nrst, LG7, LG6, LG2, LG1, LG0   	 	: in std_logic;
+  port( clk_d1, nrst, LG7, LG6, LG2, LG1, LG0  : in std_logic;
 			LR2, LR1, LR0 	: in std_logic;
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
