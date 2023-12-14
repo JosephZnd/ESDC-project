@@ -5,41 +5,41 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.349 ns
-From           : KEY[0]
-To             : i_o_manager_vga:inst9|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[6]
+Actual Time    : 3.206 ns
+From           : done
+To             : st_square.s_cursor_a
 From Clock     : --
-To Clock       : OSC_50
+To Clock       : clk_d1
 Failed Paths   : 0
 
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.404 ns
-From           : keytest_h_v2:inst7|keycode_int[2]
-To             : HEX0[0]
-From Clock     : OSC_50
+Actual Time    : 7.373 ns
+From           : x_t[3]~reg0
+To             : x_t[3]
+From Clock     : clk_d1
 To Clock       : --
 Failed Paths   : 0
 
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : -1.712 ns
-From           : COL[0]
-To             : keypad:inst2|colq[0]
+Actual Time    : -0.830 ns
+From           : nrst
+To             : t_x[4]
 From Clock     : --
-To Clock       : OSC_50
+To Clock       : clk_d1
 Failed Paths   : 0
 
-Type           : Clock Setup: 'OSC_50'
+Type           : Clock Setup: 'clk_d1'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 183.22 MHz ( period = 5.458 ns )
-From           : keypad:inst2|colq[0]
-To             : keypad:inst2|current_state.wait0
-From Clock     : OSC_50
-To Clock       : OSC_50
+Actual Time    : 340.02 MHz ( period = 2.941 ns )
+From           : i[0]
+To             : x_t[7]~reg0
+From Clock     : clk_d1
+To Clock       : clk_d1
 Failed Paths   : 0
 
 Type           : Total number of failed paths
