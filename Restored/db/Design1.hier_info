@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 |P1_BOARD_vga
 UART_TXD <= tx_module:inst6.tx
 KEY[0] => i_o_manager_vga:inst13.BTN0
@@ -2457,23 +2456,6 @@ clk_d1 => c_x[4].CLK
 clk_d1 => c_x[5].CLK
 clk_d1 => c_x[6].CLK
 clk_d1 => c_x[7].CLK
-=======
-|square
-clk_d1 => t_x[0].CLK
-clk_d1 => t_x[1].CLK
-clk_d1 => t_x[2].CLK
-clk_d1 => t_x[3].CLK
-clk_d1 => t_x[4].CLK
-clk_d1 => t_x[5].CLK
-clk_d1 => t_x[6].CLK
-clk_d1 => t_x[7].CLK
-clk_d1 => j[0].CLK
-clk_d1 => j[1].CLK
-clk_d1 => j[2].CLK
-clk_d1 => i[0].CLK
-clk_d1 => i[1].CLK
-clk_d1 => i[2].CLK
->>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 clk_d1 => color_t[0]~reg0.CLK
 clk_d1 => color_t[1]~reg0.CLK
 clk_d1 => color_t[2]~reg0.CLK
@@ -2492,10 +2474,8 @@ clk_d1 => x_t[4]~reg0.CLK
 clk_d1 => x_t[5]~reg0.CLK
 clk_d1 => x_t[6]~reg0.CLK
 clk_d1 => x_t[7]~reg0.CLK
-clk_d1 => color_index.CLK
-clk_d1 => st_square~7.DATAIN
-nrst => color_index.ACLR
-nrst => st_square~9.DATAIN
+clk_d1 => st_square~196.DATAIN
+nrst => st_square~198.DATAIN
 nrst => x_t[7]~reg0.ENA
 nrst => x_t[6]~reg0.ENA
 nrst => x_t[5]~reg0.ENA
@@ -2514,7 +2494,6 @@ nrst => y_t[0]~reg0.ENA
 nrst => color_t[2]~reg0.ENA
 nrst => color_t[1]~reg0.ENA
 nrst => color_t[0]~reg0.ENA
-<<<<<<< HEAD
 nrst => c_x[7].ENA
 nrst => c_x[6].ENA
 nrst => c_x[5].ENA
@@ -2553,45 +2532,6 @@ y_in[3] => c_y.DATAB
 y_in[4] => c_y.DATAB
 y_in[5] => c_y.DATAB
 y_in[6] => c_y.DATAB
-=======
-nrst => i[2].ENA
-nrst => i[1].ENA
-nrst => i[0].ENA
-nrst => j[2].ENA
-nrst => j[1].ENA
-nrst => j[0].ENA
-nrst => t_x[7].ENA
-nrst => t_x[6].ENA
-nrst => t_x[5].ENA
-nrst => t_x[4].ENA
-nrst => t_x[3].ENA
-nrst => t_x[2].ENA
-nrst => t_x[1].ENA
-nrst => t_x[0].ENA
-LG7 => ~NO_FANOUT~
-LG6 => ~NO_FANOUT~
-LG2 => ~NO_FANOUT~
-LG1 => ~NO_FANOUT~
-LG0 => ~NO_FANOUT~
-LR2 => ~NO_FANOUT~
-LR1 => ~NO_FANOUT~
-LR0 => ~NO_FANOUT~
-x_in[0] => ~NO_FANOUT~
-x_in[1] => ~NO_FANOUT~
-x_in[2] => ~NO_FANOUT~
-x_in[3] => ~NO_FANOUT~
-x_in[4] => ~NO_FANOUT~
-x_in[5] => ~NO_FANOUT~
-x_in[6] => ~NO_FANOUT~
-x_in[7] => ~NO_FANOUT~
-y_in[0] => ~NO_FANOUT~
-y_in[1] => ~NO_FANOUT~
-y_in[2] => ~NO_FANOUT~
-y_in[3] => ~NO_FANOUT~
-y_in[4] => ~NO_FANOUT~
-y_in[5] => ~NO_FANOUT~
-y_in[6] => ~NO_FANOUT~
->>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 start <= start.DB_MAX_OUTPUT_PORT_TYPE
 x_t[0] <= x_t[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 x_t[1] <= x_t[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -2617,7 +2557,6 @@ done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
-<<<<<<< HEAD
 done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
 done => st_square.OUTPUTSELECT
@@ -3959,7 +3898,5 @@ tx_empty => tx_data.OUTPUTSELECT
 tx_empty => tx_data.OUTPUTSELECT
 tx_empty => tx_data.OUTPUTSELECT
 tx_empty => state.OUTPUTSELECT
-=======
->>>>>>> df89e4c80c30746e5454062a2b141721b3f760cd
 
 
