@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Thu Dec 14 15:26:35 2023
+Fri Dec 15 20:15:47 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -60,15 +60,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 14 15:26:35 2023        ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 15 20:15:47 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 826                                          ;
-;     Total combinational functions  ; 675                                          ;
-;     Dedicated logic registers      ; 498                                          ;
-; Total registers                    ; 498                                          ;
+; Total logic elements               ; 839                                          ;
+;     Total combinational functions  ; 689                                          ;
+;     Dedicated logic registers      ; 500                                          ;
+; Total registers                    ; 500                                          ;
 ; Total pins                         ; 113                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,304                                       ;
@@ -161,7 +161,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -194,7 +194,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; RegisterBank.vhd                 ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/RegisterBank.vhd                 ;
 ; MAIN.vhd                         ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/MAIN.vhd                         ;
 ; GAME.vhd                         ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/GAME.vhd                         ;
-; square_map.vhd                   ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/square_map.vhd                   ;
 ; kb_xy_module.vhd                 ; yes             ; User VHDL File                     ; L:/Documentos/Github/Restored/kb_xy_module.vhd                 ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
 ; db/altsyncram_4jk1.tdf           ; yes             ; Auto-Generated Megafunction        ; L:/Documentos/Github/Restored/db/altsyncram_4jk1.tdf           ;
@@ -209,28 +208,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 826    ;
+; Estimated Total logic elements              ; 839    ;
 ;                                             ;        ;
-; Total combinational functions               ; 675    ;
+; Total combinational functions               ; 689    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 290    ;
-;     -- 3 input functions                    ; 201    ;
-;     -- <=2 input functions                  ; 184    ;
+;     -- 4 input functions                    ; 294    ;
+;     -- 3 input functions                    ; 204    ;
+;     -- <=2 input functions                  ; 191    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 622    ;
-;     -- arithmetic mode                      ; 53     ;
+;     -- normal mode                          ; 631    ;
+;     -- arithmetic mode                      ; 58     ;
 ;                                             ;        ;
-; Total registers                             ; 498    ;
-;     -- Dedicated logic registers            ; 498    ;
+; Total registers                             ; 500    ;
+;     -- Dedicated logic registers            ; 500    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 113    ;
 ; Total memory bits                           ; 98304  ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 364    ;
-; Total fan-out                               ; 4356   ;
-; Average fan-out                             ; 3.32   ;
+; Maximum fan-out                             ; 362    ;
+; Total fan-out                               ; 4401   ;
+; Average fan-out                             ; 3.31   ;
 +---------------------------------------------+--------+
 
 
@@ -239,13 +238,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                               ; Library Name ;
 +---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                             ; 675 (1)           ; 498 (0)      ; 98304       ; 0            ; 0       ; 0         ; 113  ; 0            ; |P1_BOARD_vga                                                                                                                                                                                     ; work         ;
+; |P1_BOARD_vga                                                             ; 689 (1)           ; 500 (0)      ; 98304       ; 0            ; 0       ; 0         ; 113  ; 0            ; |P1_BOARD_vga                                                                                                                                                                                     ; work         ;
 ;    |clk_video:inst10|                                                     ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10                                                                                                                                                                    ;              ;
 ;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component|       ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                                                                        ;              ;
 ;    |f_div:inst1|                                                          ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|f_div:inst1                                                                                                                                                                         ;              ;
 ;    |game:GAME|                                                            ; 28 (28)           ; 11 (11)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                                                                           ;              ;
-;    |i_o_manager_vga:inst13|                                               ; 396 (0)           ; 335 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13                                                                                                                                                              ;              ;
-;       |VGA_visualisation:b2v_inst1|                                       ; 396 (0)           ; 335 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
+;    |i_o_manager_vga:inst13|                                               ; 402 (0)           ; 337 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13                                                                                                                                                              ;              ;
+;       |VGA_visualisation:b2v_inst1|                                       ; 402 (0)           ; 337 (0)      ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1                                                                                                                                  ;              ;
 ;          |VGA_SYNC:inst2|                                                 ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2                                                                                                                   ;              ;
 ;          |Video_Memory:inst|                                              ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst                                                                                                                ;              ;
 ;             |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|Video_Memory:inst|altsyncram:altsyncram_component                                                                                ;              ;
@@ -258,19 +257,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |clk_div_two:inst9|                                              ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_div_two:inst9                                                                                                                ;              ;
 ;          |clk_video:inst3|                                                ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3                                                                                                                  ;              ;
 ;             |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|clk_video:inst3|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                      ;              ;
-;          |square:inst8|                                                   ; 250 (250)         ; 222 (222)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
-;          |wr_memory:inst1|                                                ; 62 (62)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
-;    |kb_xy_module:inst8|                                                   ; 8 (8)             ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                                                                  ;              ;
+;          |square:inst8|                                                   ; 257 (257)         ; 224 (224)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8                                                                                                                     ;              ;
+;          |wr_memory:inst1|                                                ; 61 (61)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1                                                                                                                  ;              ;
+;    |kb_xy_module:inst8|                                                   ; 27 (27)           ; 6 (6)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                                                                  ;              ;
 ;    |keypad:inst2|                                                         ; 47 (43)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                                                                        ;              ;
 ;       |count4b:counter|                                                   ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                                                                        ;              ;
-;    |keytest_h_v2:inst7|                                                   ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                                                                  ;              ;
+;    |keytest_h_v2:inst7|                                                   ; 7 (7)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                                                                  ;              ;
 ;    |protocol_rx:inst4|                                                    ; 35 (35)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                                                                   ;              ;
 ;    |protocol_tx:inst3|                                                    ; 36 (36)           ; 28 (28)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                                                                   ;              ;
 ;    |register_bank2:GUESS_CODE|                                            ; 9 (9)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:GUESS_CODE                                                                                                                                                           ;              ;
 ;    |register_bank2:USER_CODE|                                             ; 3 (3)             ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|register_bank2:USER_CODE                                                                                                                                                            ;              ;
 ;    |rx_module2:inst5|                                                     ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                                                                    ;              ;
-;    |square_map:inst12|                                                    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square_map:inst12                                                                                                                                                                   ;              ;
-;    |tx_module:inst6|                                                      ; 27 (27)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                                                                     ;              ;
+;    |tx_module:inst6|                                                      ; 26 (26)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                                                                     ;              ;
 +---------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -675,24 +673,18 @@ Encoding Type:  One-Hot
 ; register_bank2:GUESS_CODE|s_DataT[1..3]                                    ; Stuck at GND due to stuck port data_in                                                 ;
 ; register_bank2:USER_CODE|s_DataU[0..3]                                     ; Stuck at GND due to stuck port data_in                                                 ;
 ; register_bank2:USER_CODE|s_DataT[1..3]                                     ; Stuck at GND due to stuck port data_in                                                 ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[7]     ; Stuck at GND due to stuck port data_in                                                 ;
 ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[0]     ; Stuck at VCC due to stuck port data_in                                                 ;
 ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[0]     ; Stuck at VCC due to stuck port data_in                                                 ;
 ; register_bank2:GUESS_CODE|s_DataT[0]                                       ; Stuck at GND due to stuck port data_in                                                 ;
 ; register_bank2:USER_CODE|s_DataT[0]                                        ; Stuck at GND due to stuck port data_in                                                 ;
-; kb_xy_module:inst8|\ControlXY:x_cnt[0]                                     ; Merged with kb_xy_module:inst8|x_int[0]                                                ;
-; kb_xy_module:inst8|y_int[2]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[2]                                     ;
-; kb_xy_module:inst8|y_int[1]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[1]                                     ;
-; kb_xy_module:inst8|y_int[0]                                                ; Merged with kb_xy_module:inst8|\ControlXY:y_cnt[0]                                     ;
-; kb_xy_module:inst8|x_int[2]                                                ; Merged with kb_xy_module:inst8|\ControlXY:x_cnt[2]                                     ;
-; kb_xy_module:inst8|x_int[1]                                                ; Merged with kb_xy_module:inst8|\ControlXY:x_cnt[1]                                     ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|x_t[7]     ; Stuck at GND due to stuck port data_in                                                 ;
 ; protocol_tx:inst3|frame_type[5]                                            ; Merged with protocol_tx:inst3|frame_type[7]                                            ;
 ; protocol_tx:inst3|frame_type[4]                                            ; Merged with protocol_tx:inst3|frame_type[6]                                            ;
+; register_bank2:GUESS_CODE|DataU[1]                                         ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
 ; register_bank2:GUESS_CODE|DataH[0..1]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
-; register_bank2:GUESS_CODE|DataT[0..3]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
-; register_bank2:GUESS_CODE|DataU[0..3]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataT[1..3]                                      ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
 ; register_bank2:GUESS_CODE|DataH[2]                                         ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataT[0]                                         ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
+; register_bank2:GUESS_CODE|DataU[0,2..3]                                    ; Merged with register_bank2:GUESS_CODE|DataH[3]                                         ;
 ; register_bank2:USER_CODE|DataH[0..2]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
 ; register_bank2:USER_CODE|DataT[0..3]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
 ; register_bank2:USER_CODE|DataU[0..3]                                       ; Merged with register_bank2:USER_CODE|DataH[3]                                          ;
@@ -723,40 +715,38 @@ Encoding Type:  One-Hot
 ; protocol_rx:inst4|RDY_RECEIVED                                             ; Lost fanout                                                                            ;
 ; register_bank2:GUESS_CODE|DataH[3]                                         ; Stuck at GND due to stuck port data_in                                                 ;
 ; protocol_tx:inst3|dataH_i[3]                                               ; Stuck at GND due to stuck port data_in                                                 ;
-; Total Number of Removed Registers = 87                                     ;                                                                                        ;
+; Total Number of Removed Registers = 79                                     ;                                                                                        ;
 +----------------------------------------------------------------------------+----------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                                                             ;
-+------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
-; Register name                                                          ; Reason for Removal        ; Registers Removed due to This Register                                             ;
-+------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
-; register_bank2:USER_CODE|bank_ready                                    ; Stuck at VCC              ; game:GAME|Light_WIN, game:GAME|Light_Loose, game:GAME|Light_Tie                    ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; game:GAME|state.st_W_TX1                                               ; Stuck at GND              ; game:GAME|state.st_S_RDY, protocol_tx:inst3|state.pr_rdy, game:GAME|state.st_W_RDY ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:GUESS_CODE|s_DataU[3]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[3], register_bank2:GUESS_CODE|DataH[3]           ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:USER_CODE|s_DataU[3]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[3], register_bank2:USER_CODE|DataH[3]             ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:GUESS_CODE|s_DataU[2]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[2]                                               ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:GUESS_CODE|s_DataU[1]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[1]                                               ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:GUESS_CODE|s_DataU[0]                                   ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[0]                                               ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:USER_CODE|s_DataU[2]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[2]                                                ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:USER_CODE|s_DataU[1]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[1]                                                ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; register_bank2:USER_CODE|s_DataU[0]                                    ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[0]                                                ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[7] ; Stuck at GND              ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|x_t[7]             ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-; main_control:inst|state.st_start_game                                  ; Stuck at GND              ; game:GAME|state.st_wait_game                                                       ;
-;                                                                        ; due to stuck port data_in ;                                                                                    ;
-+------------------------------------------------------------------------+---------------------------+------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                            ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; Register name                         ; Reason for Removal        ; Registers Removed due to This Register                                             ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------------+
+; register_bank2:USER_CODE|bank_ready   ; Stuck at VCC              ; game:GAME|Light_WIN, game:GAME|Light_Loose, game:GAME|Light_Tie                    ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; game:GAME|state.st_W_TX1              ; Stuck at GND              ; game:GAME|state.st_S_RDY, protocol_tx:inst3|state.pr_rdy, game:GAME|state.st_W_RDY ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[3]  ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[3], register_bank2:GUESS_CODE|DataH[3]           ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[3]   ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[3], register_bank2:USER_CODE|DataH[3]             ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[2]  ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[2]                                               ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[1]  ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[1]                                               ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:GUESS_CODE|s_DataU[0]  ; Stuck at GND              ; register_bank2:GUESS_CODE|s_DataT[0]                                               ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[2]   ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[2]                                                ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[1]   ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[1]                                                ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; register_bank2:USER_CODE|s_DataU[0]   ; Stuck at GND              ; register_bank2:USER_CODE|s_DataT[0]                                                ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
+; main_control:inst|state.st_start_game ; Stuck at GND              ; game:GAME|state.st_wait_game                                                       ;
+;                                       ; due to stuck port data_in ;                                                                                    ;
++---------------------------------------+---------------------------+------------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -764,12 +754,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 498   ;
+; Total registers                              ; 500   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 9     ;
-; Number of registers using Asynchronous Clear ; 316   ;
+; Number of registers using Asynchronous Clear ; 322   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 119   ;
+; Number of registers using Clock Enable       ; 120   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -783,13 +773,13 @@ Encoding Type:  One-Hot
 ; tx_module:inst6|tx_empty                                               ; 13      ;
 ; protocol_tx:inst3|ready_to_TX                                          ; 6       ;
 ; register_bank2:GUESS_CODE|bank_ready                                   ; 4       ;
+; kb_xy_module:inst8|y_int[2]                                            ; 7       ;
+; kb_xy_module:inst8|x_int[2]                                            ; 6       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[6] ; 1       ;
 ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[5] ; 1       ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[4] ; 1       ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[1] ; 2       ;
-; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[6] ; 2       ;
 ; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[3] ; 1       ;
-; kb_xy_module:inst8|\ControlXY:x_cnt[2]                                 ; 10      ;
-; kb_xy_module:inst8|\ControlXY:y_cnt[2]                                 ; 6       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_y[4] ; 1       ;
+; i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[1] ; 1       ;
 ; Total number of inverted registers = 11                                ;         ;
 +------------------------------------------------------------------------+---------+
 
@@ -799,31 +789,33 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |P1_BOARD_vga|kb_xy_module:inst8|x_int[0]                                                      ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |P1_BOARD_vga|kb_xy_module:inst8|y_int[1]                                                      ;
 ; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[14] ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[5]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|color_t[2]       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[4]  ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[0]                                                         ;
-; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|game:GAME|Light_Loose                                                            ;
+; 8:1                ; 3 bits    ; 15 LEs        ; 6 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|game:GAME|Light_WIN                                                              ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[6]                                                     ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[0]                                                     ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[3]                                                     ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[1]                                                     ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[0]                                                    ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[3]                                                ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|state                                                  ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count                                                        ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|square_map:inst12|x_t[1]                                                         ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector1                                                      ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|Selector13                                             ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:USER_CODE|Selector14                                              ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector4                                                      ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.check1                                                   ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector0                                                      ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:GUESS_CODE|Selector14                                             ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |P1_BOARD_vga|register_bank2:USER_CODE|Selector13                                              ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector2                                                      ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.wait0                                                    ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector10                                                       ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector9                                                       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector7                                                       ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector6                                                       ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector9                                                        ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector7                                                      ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector6                                                              ;
-; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector13                                                             ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|Selector0        ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector6                                                      ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector4                                                              ;
+; 20:1               ; 2 bits    ; 26 LEs        ; 4 LEs                ; 22 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector11                                                             ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|Selector193      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------------+
 
 
@@ -930,7 +922,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 14 15:25:56 2023
+    Info: Processing started: Fri Dec 15 20:15:01 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -1091,24 +1083,6 @@ Info: Elaborating entity "mux_kib" for hierarchy "i_o_manager_vga:inst13|VGA_vis
 Info: Elaborating entity "wr_memory" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1"
 Info: Elaborating entity "square" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8"
 Info: Elaborating entity "add_generator" for hierarchy "i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|add_generator:inst7"
-Info: Elaborating entity "square_map" for hierarchy "square_map:inst12"
-Warning (10631): VHDL Process Statement warning at square_map.vhd(41): inferring latch(es) for signal or variable "x_t", which holds its previous value in one or more paths through the process
-Warning (10631): VHDL Process Statement warning at square_map.vhd(41): inferring latch(es) for signal or variable "y_t", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "y_t[0]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[1]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[2]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[3]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[4]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[5]" at square_map.vhd(41)
-Info (10041): Inferred latch for "y_t[6]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[0]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[1]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[2]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[3]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[4]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[5]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[6]" at square_map.vhd(41)
-Info (10041): Inferred latch for "x_t[7]" at square_map.vhd(41)
 Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
 Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
 Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
@@ -1187,6 +1161,9 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "LED_RED[2]" is stuck at GND
     Warning (13410): Pin "LED_RED[1]" is stuck at GND
     Warning (13410): Pin "LED_RED[0]" is stuck at GND
+Critical Warning: Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register kb_xy_module:inst8|y_int[2] will power up to High
+    Critical Warning (18010): Register kb_xy_module:inst8|x_int[2] will power up to High
 Info: 9 registers lost all their fanouts during netlist optimizations. The first 9 are displayed below.
     Info: Register "main_control:inst|state.st_enter_code" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|Light_WIN" lost all its fanouts during netlist optimizations.
@@ -1197,15 +1174,15 @@ Info: 9 registers lost all their fanouts during netlist optimizations. The first
     Info: Register "register_bank2:USER_CODE|state.st_wait" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.st_wait_game" lost all its fanouts during netlist optimizations.
     Info: Register "protocol_rx:inst4|RDY_RECEIVED" lost all its fanouts during netlist optimizations.
-Info: Implemented 968 device resources after synthesis - the final resource count might be different
+Info: Implemented 992 device resources after synthesis - the final resource count might be different
     Info: Implemented 9 input pins
     Info: Implemented 104 output pins
-    Info: Implemented 829 logic cells
+    Info: Implemented 853 logic cells
     Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 84 warnings
-    Info: Peak virtual memory: 271 megabytes
-    Info: Processing ended: Thu Dec 14 15:26:35 2023
-    Info: Elapsed time: 00:00:39
-    Info: Total CPU time (on all processors): 00:00:32
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 85 warnings
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Fri Dec 15 20:15:47 2023
+    Info: Elapsed time: 00:00:46
+    Info: Total CPU time (on all processors): 00:00:40
 
 

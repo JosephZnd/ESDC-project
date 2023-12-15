@@ -7,8 +7,10 @@ ptn_Child1=Document-0
 [ProjectWorkspace.Frames.ChildFrames.Document-0]
 ptn_Child1=ViewFrame-0
 [ProjectWorkspace.Frames.ChildFrames.Document-0.ViewFrame-0]
-DocPathName=bloc_1.bdf
-DocumentCLSID={7b19e8f2-2bbe-11d1-a082-0020affa5bde}
+DocPathName=kb_xy_module.vhd
+DocumentCLSID={ca385d57-a4c7-11d1-a098-0020affa43f2}
 IsChildFrameDetached=False
 IsActiveChildFrame=True
 ptn_Child1=StateMap
+[ProjectWorkspace.Frames.ChildFrames.Document-0.ViewFrame-0.StateMap]
+AFC_IN_REPORT=False

@@ -25,6 +25,7 @@ entity square is
 		x_t				: out integer range 0 to 160;
 		y_t				: out integer range 0 to 120;
 		color_t 		: out integer range 0 to 7;
+		--s_lect			:	in std_logic;
 		
 		done			: in std_logic);  -- To be connected to the RAM ADD Bus.
 end square;
@@ -97,6 +98,7 @@ architecture functional of square is
   signal t_x  	: integer range 0 to 160:=25;
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
+  signal selected : std_logic;
   -- Internal address memory bus
   
   Begin
@@ -108,11 +110,12 @@ architecture functional of square is
 -- Only output control signals are presented.
 	t_x <= x_in;
 	t_y <= y_in;
-	process(clk_d1, nrst, x_in, y_in)
+	process(clk_d1, nrst)
 	Begin
 		if (nrst = '0') then
 			st_square <= s00a;
 		elsif rising_edge(clk_d1) then
+			
 			case st_square is
 					-- Row 1
 					when s00a =>
@@ -745,19 +748,21 @@ architecture functional of square is
 					when s_cursor_a =>
 						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
 						--aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
-						if (c_x /= t_x) or (c_x /= t_x) then
+						if (c_x /= t_x) or (c_y /= t_y) then
 							c_x<= t_x ; 
 							c_y<= t_y ; 
 							st_square <= s00a;
-						else st_square <= s_cursor_b;
+						else
+							x_t <= t_x; y_t <= t_y;
+							color_t <= RED; 
+							st_square <= s_cursor_b;
 						end if;
 					when s_cursor_b =>
-						x_t <= c_x; y_t <= c_y; --ESTO NO CONSIGO QUE FUNCIONE
-						--x_t <= 53; y_t <= 43; --ESTO es para ver si lo sigue printeando bien, y si
-						color_t <= RED;
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
 						if done = '1' then st_square <= s_cursor_a; end if;	
+						
+						
 			End Case;
 		End If;
 	End Process;

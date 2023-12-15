@@ -71,7 +71,7 @@ applicable agreement for further details.
 )
 (pin
 	(input)
-	(rect -216 272 -48 288)
+	(rect -208 272 -40 288)
 	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
 	(text "cursor_y[6..0]" (rect 5 0 74 12)(font "Arial" ))
 	(pt 168 8)
@@ -849,12 +849,12 @@ applicable agreement for further details.
 	(pt 432 432)
 )
 (connector
-	(pt -48 280)
-	(pt -8 280)
+	(pt -40 264)
+	(pt -8 264)
 	(bus)
 )
 (connector
-	(pt -40 264)
-	(pt -8 264)
+	(pt -8 280)
+	(pt -40 280)
 	(bus)
 )
