@@ -17,6 +17,7 @@ architecture main of kb_xy_module is
 	constant X0 : integer := 11;
 	constant Y0 : integer := 1;
 	constant SIZE : integer :=14;
+	signal d_int : std_logic;
 	--constant position_default	: unsigned(2 downto 0) := "100";	
 begin
 
@@ -27,7 +28,7 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int)
 	if (nrst='0') then 
 		x_int <= 4;
 		y_int <= 4;
-	elsif (rising_edge(clk) and debounce='1') then -- and freeze_kb='0' 
+	elsif (rising_edge(clk) and d_int='1') then -- and freeze_kb='0' 
 		--if (debounce='1') then
 			if(up_key = '1') then
 				
@@ -53,13 +54,10 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int)
 			--x_cnt := x_cnt+1;
 			--x_int <= std_logic_vector(x_cnt);
 			end if;
-		else 
-			x_int <= x_int;
-			y_int <= y_int;
 		--end if;
 	end if;
 end process;
-
+d_int <= debounce;
 pos_x <= (x_int*SIZE)+X0;
 pos_y <= (y_int*SIZE)+Y0;
 

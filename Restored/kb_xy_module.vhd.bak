@@ -30,7 +30,7 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int)
 	elsif (rising_edge(clk) and debounce='1') then -- and freeze_kb='0' 
 		--if (debounce='1') then
 			if(up_key = '1') then
-			
+				
 			--y_cnt := y_cnt-1;
 			y_int <= y_int -1;
 			--y_int <= std_logic_vector(y_cnt);
@@ -53,13 +53,10 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int)
 			--x_cnt := x_cnt+1;
 			--x_int <= std_logic_vector(x_cnt);
 			end if;
-		else 
-			x_int <= x_int;
-			y_int <= y_int;
 		--end if;
 	end if;
 end process;
-
+d_int <= debounce;
 pos_x <= (x_int*SIZE)+X0;
 pos_y <= (y_int*SIZE)+Y0;
 

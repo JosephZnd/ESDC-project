@@ -2892,7 +2892,6 @@ nrst => keycode_int[1].ACLR
 nrst => keycode_int[2].ACLR
 nrst => keycode_int[3].ACLR
 key => new_code_int.OUTPUTSELECT
-key => debouncer.DATAIN
 key => keycode_int[3].ENA
 key => keycode_int[2].ENA
 key => keycode_int[1].ENA
@@ -2908,7 +2907,6 @@ keycode_kt[0] => keycode_int[0].DATAIN
 keycode_kt[1] => keycode_int[1].DATAIN
 keycode_kt[2] => keycode_int[2].DATAIN
 keycode_kt[3] => keycode_int[3].DATAIN
-debouncer <= key.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |P1_BOARD_vga|keypad:inst2

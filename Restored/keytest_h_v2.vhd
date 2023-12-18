@@ -7,9 +7,9 @@ entity keytest_h_v2 is
 		hash, up_key, down_key, left_key, right_key, select_key: out std_logic; 
 		--new_code	: out std_logic;  -- activated when there is a new code in the register.
 		code_read	: in std_logic;  -- used to de-activate new_code.
-		keycode_kt	 : in std_logic_vector(3 downto 0);  -- Keycode from keytest
+		keycode_kt	 : in std_logic_vector(3 downto 0));  -- Keycode from keytest
 		--keycode      : out std_logic_vector(3 downto 0) );  -- output of the register.
-		debouncer :	out std_logic); 
+		
 end keytest_h_v2;
 
 architecture main of keytest_h_v2 is
@@ -21,8 +21,6 @@ architecture main of keytest_h_v2 is
 begin
 
 nkey <= not (key);
-debouncer <= not (nkey);
-
 REG_KEY : process (clk, nrst) begin
 	if nrst = '0' then
 		keycode_int <= x"0";

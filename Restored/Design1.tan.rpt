@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Design1
-Mon Dec 18 13:09:47 2023
+Mon Dec 18 13:20:26 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -654,7 +654,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Mon Dec 18 13:09:46 2023
+    Info: Processing started: Mon Dec 18 13:20:25 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Design1 -c Design1 --timing_analysis_only
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "OSC_50" is an undefined clock
@@ -737,8 +737,8 @@ Info: th for register "register_bank2:USER_CODE|state.st_end" (data pin = "pin_n
         Info: Total interconnect delay = 1.505 ns ( 53.01 % )
 Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 181 megabytes
-    Info: Processing ended: Mon Dec 18 13:09:48 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Mon Dec 18 13:20:26 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 
