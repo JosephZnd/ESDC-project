@@ -108,18 +108,17 @@ current_state.wait1 0 1 0 0 0 0 0 1
 current_state.check1 1 0 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|st_square
-Name st_square.s_cursor_wait st_square.s_select_c st_square.s_select_b st_square.s_select_a st_square.s_cursor_c st_square.s_cursor_b st_square.s_cursor_a st_square.s00c st_square.s00b st_square.s00ab st_square.s00a 
-st_square.s00a 0 0 0 0 0 0 0 0 0 0 0 
-st_square.s00ab 0 0 0 0 0 0 0 0 0 1 1 
-st_square.s00b 0 0 0 0 0 0 0 0 1 0 1 
-st_square.s00c 0 0 0 0 0 0 0 1 0 0 1 
-st_square.s_cursor_a 0 0 0 0 0 0 1 0 0 0 1 
-st_square.s_cursor_b 0 0 0 0 0 1 0 0 0 0 1 
-st_square.s_cursor_c 0 0 0 0 1 0 0 0 0 0 1 
-st_square.s_select_a 0 0 0 1 0 0 0 0 0 0 1 
-st_square.s_select_b 0 0 1 0 0 0 0 0 0 0 1 
-st_square.s_select_c 0 1 0 0 0 0 0 0 0 0 1 
-st_square.s_cursor_wait 1 0 0 0 0 0 0 0 0 0 1 
+Name st_square.s_cursor_wait st_square.s_select_c st_square.s_select_b st_square.s_select_a st_square.s_cursor_c st_square.s_cursor_b st_square.s_cursor_a st_square.s00c st_square.s00b st_square.s00a 
+st_square.s00a 0 0 0 0 0 0 0 0 0 0 
+st_square.s00b 0 0 0 0 0 0 0 0 1 1 
+st_square.s00c 0 0 0 0 0 0 0 1 0 1 
+st_square.s_cursor_a 0 0 0 0 0 0 1 0 0 1 
+st_square.s_cursor_b 0 0 0 0 0 1 0 0 0 1 
+st_square.s_cursor_c 0 0 0 0 1 0 0 0 0 1 
+st_square.s_select_a 0 0 0 1 0 0 0 0 0 1 
+st_square.s_select_b 0 0 1 0 0 0 0 0 0 1 
+st_square.s_select_c 0 1 0 0 0 0 0 0 0 1 
+st_square.s_cursor_wait 1 0 0 0 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write
 Name st_write.s6 st_write.s5 st_write.s4 st_write.s3 st_write.s2 st_write.s1 st_write.s0 

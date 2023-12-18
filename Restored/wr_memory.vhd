@@ -31,6 +31,8 @@ end wr_memory;
 architecture functional of wr_memory is
   -- Size of the square
   constant SQUARE_WIDTH : integer := 14; --25<<4 = 100.
+  constant SIZE_PIECE : integer := 7;
+  
   -- State definition:
   type state_memo is (s0, s1, s2, s3, s4, s5, s6);
   -- Internal signals

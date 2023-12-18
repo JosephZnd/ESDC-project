@@ -6,8 +6,8 @@ use ieee.numeric_std.all;
 entity kb_xy_module is
   port ( clk, nrst , freeze_kb  : in  std_logic;
 		up_key, down_key, left_key, right_key	: in std_logic;
-		pos_x	:	out integer range 0 to 160;
-		pos_y	: 	out integer range 0 to 120;
+		pos_x	:	out integer range 0 to 7;
+		pos_y	: 	out integer range 0 to 7;
 		debounce : in  std_logic;
 		code_read :  out std_logic);
 		-- will add another flag later to set different first position depending on black or white
@@ -67,8 +67,8 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce)
 	end if;
 
 end process;
-pos_x <= (x_int*SIZE)+X0;
-pos_y <= (y_int*SIZE)+Y0;
+pos_x <= x_int;
+pos_y <= y_int;
 code_read <= '1' when s_xy = s_end else '0';
 
 end;

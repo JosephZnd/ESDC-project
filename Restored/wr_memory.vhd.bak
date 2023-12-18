@@ -15,11 +15,13 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
 
-
+: out integer range 0 to 160;
+		y_t				: out integer range 0 to 120);
 entity wr_memory is
   port( clk_d1, start, nrst 	: in std_logic;
-		x_t				: in std_logic_vector(7 downto 0);
+		x_t				: in  integer range (7 downto 0);
 		y_t				: in std_logic_vector(6 downto 0);
 		color_t 			: in std_logic_vector(2 downto 0);
 		we, done		: out std_logic;  --To be connected to the RAM WE
@@ -31,6 +33,8 @@ end wr_memory;
 architecture functional of wr_memory is
   -- Size of the square
   constant SQUARE_WIDTH : integer := 14; --25<<4 = 100.
+  constant SIZE_PIECE : integer := 7;
+  
   -- State definition:
   type state_memo is (s0, s1, s2, s3, s4, s5, s6);
   -- Internal signals
@@ -50,7 +54,7 @@ Begin
 -- Process Unit: Blocks that process data (counters, registers).
 -- Control signals: they are not specified in the VHDL description, but they will be in the final implemented design. 
 -- Only output control signals are presented.
-	process(clk_d1, nrst, x, y)
+	process(clk_d1, nrst)
 	Begin
 		if (nrst = '0') then
 			st_write <= s0;
