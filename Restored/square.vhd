@@ -91,7 +91,7 @@ architecture functional of square is
     s17a, s17b, s17c, s27a, s27b, s27c, s37a, s37b, s37c,
     s47a, s47b, s47c, s57a, s57b, s57c, s67a, s67b, s67c,
     s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c, 
-    s_select_a, s_select_b, s_select_c, s_change, s_equal
+    s_select_a, s_select_b, s_select_c, s_cursor_wait 
 );
   
   -- Internal signals
@@ -117,6 +117,7 @@ architecture functional of square is
 	Begin
 		if (nrst = '0') then
 			st_square <= s00a;
+			sel_selected <='0';
 		elsif rising_edge(clk_d1) then
 			case st_square is
 					-- Row 1
@@ -749,38 +750,42 @@ architecture functional of square is
 							if sel_selected = '1' then
 								st_square <= s_select_a;
 							else
-								st_square <= s_cursor_a; 
+								st_square <= s_cursor_wait; 
 							end if;
 						end if;	
 						
-					when s_cursor_a =>
-						if ((c_x = t_x) and (c_y = t_y)) then
-							st_square <= s_equal;
-						else
-							st_square <= s_change;
+					when s_cursor_wait =>
+						if ((c_x /= t_x) or (c_y /= t_y)) then
+							st_square <= s00a;
+							c_x<= t_x; 
+							c_y<= t_y;
+						else  st_square <= s_cursor_a;
 						end if;
 						
-					when s_equal =>
-						st_square <= s_cursor_b;
-						x_out <= t_x; y_out <= t_y;
-						color_t <= RED; 
-						
-					when s_change =>
-						st_square <= s00a;
-						c_x<= t_x ; 
-						c_y<= t_y ; 
-					
+					when s_cursor_a =>
+						if (internal_sel = '1') then
+							sel_selected <= not (sel_selected);
+							sel_x <= t_x;
+							sel_y <= t_y;
+							st_square <= s00a;
+							else
+							color_t <= RED; 
+							x_out <= c_x; y_out <= c_y;
+							st_square <= s_cursor_b;
+						end if;
+			
+				
 					when s_cursor_b =>
-						--x_t <= c_x; y_t <= c_y; 
-						
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
-						if done = '1' then st_square <= s_cursor_a; end if;	
+						if done = '1' then st_square <= s_cursor_wait; end if;	
 						
 					when s_select_a =>
 						st_square <= s_select_b;
-						--x_t <= sel_x; y_t <= sel_y;
-						color_t <= BLUE;
+						x_out <= sel_x; y_out <= sel_y;
+						if sel_selected ='1' then
+							color_t <= BLUE;
+						end if;
 					when s_select_b =>
 						st_square <= s_select_c;
 					when s_select_c =>
@@ -792,7 +797,7 @@ t_x <= x_in;
 t_y <= y_in;
 x_t <= x_out;
 y_t <= y_out;
-
+internal_sel <= sel;
 Start <= '1' when st_square = s00b or st_square = s10b or st_square = s20b or st_square = s30b or
                st_square = s40b or st_square = s50b or st_square = s60b or st_square = s70b or
                st_square = s01b or st_square = s11b or st_square = s21b or st_square = s31b or

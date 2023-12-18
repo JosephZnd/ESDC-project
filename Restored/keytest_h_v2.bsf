@@ -100,6 +100,13 @@ applicable agreement for further details.
 		(text "select_key" (rect 117 107 171 119)(font "Arial" ))
 		(line (pt 192 112)(pt 176 112)(line_width 1))
 	)
+	(port
+		(pt 192 128)
+		(output)
+		(text "key_o" (rect 0 0 30 12)(font "Arial" ))
+		(text "key_o" (rect 141 123 171 135)(font "Arial" ))
+		(line (pt 192 128)(pt 176 128)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 176 144)(line_width 1))
 	)

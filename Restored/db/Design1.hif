@@ -1667,18 +1667,18 @@ i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1
 
 # end
 # entity
-square
+kb_xy_module
 # storage
-db|Design1.(21).cnf
-db|Design1.(21).cnf
+db|Design1.(23).cnf
+db|Design1.(23).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-square.vhd
-6650717788aaba0e2dab4fb711c7a
+kb_xy_module.vhd
+56298d47b310f6b8de50d354b318b7aa
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1691,7 +1691,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8
+kb_xy_module:inst8
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -1707,7 +1707,7 @@ db|Design1.(8).cnf
 # case_insensitive
 # source_file
 p1_board_vga.bdf
-c133e860bf982a5698719292d9819
+ee56e5dbe256f3fbe45e78f898b64d2
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
@@ -1731,7 +1731,7 @@ ON
 # case_insensitive
 # source_file
 keytest_h_v2.vhd
-2dae3f9f4cc1532164c2abae9ac4654
+a0bd2ab9388d5aac6fdf1ecabd5228
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1753,18 +1753,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-kb_xy_module
+square
 # storage
-db|Design1.(23).cnf
-db|Design1.(23).cnf
+db|Design1.(21).cnf
+db|Design1.(21).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-kb_xy_module.vhd
-10f7ad8a9ee7b5eb185c7bc4a1881c9c
+square.vhd
+dae6aba8c63bd652dfc253d389eb2c1
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -1777,7 +1777,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-kb_xy_module:inst8
+i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf

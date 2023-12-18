@@ -93,6 +93,13 @@ applicable agreement for further details.
 		(text "pos_y[6..0]" (rect 83 43 139 55)(font "Arial" ))
 		(line (pt 160 48)(pt 144 48)(line_width 3))
 	)
+	(port
+		(pt 160 64)
+		(output)
+		(text "code_read" (rect 0 0 50 12)(font "Arial" ))
+		(text "code_read" (rect 89 59 139 71)(font "Arial" ))
+		(line (pt 160 64)(pt 144 64)(line_width 1))
+	)
 	(drawing
 		(rectangle (rect 16 16 144 176)(line_width 1))
 	)

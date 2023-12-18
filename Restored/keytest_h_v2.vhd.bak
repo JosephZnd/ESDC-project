@@ -19,9 +19,7 @@ architecture main of keytest_h_v2 is
 	signal nkey : std_logic; -- Signal to comment if keypad has nkey instead of key.
 	
 begin
-
 nkey <= not (key);
-debouncer <= not (nkey);
 
 REG_KEY : process (clk, nrst) begin
 	if nrst = '0' then
