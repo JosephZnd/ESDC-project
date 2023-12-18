@@ -90,7 +90,8 @@ architecture functional of square is
     s66a, s66b, s66c, s76a, s76b, s76c, s07a, s07b, s07c,
     s17a, s17b, s17c, s27a, s27b, s27c, s37a, s37b, s37c,
     s47a, s47b, s47c, s57a, s57b, s57c, s67a, s67b, s67c,
-    s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c, s_select_a, s_select_b, s_select_c
+    s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c, 
+    s_select_a, s_select_b, s_select_c, s_change, s_equal
 );
   
   -- Internal signals
@@ -753,31 +754,22 @@ architecture functional of square is
 						end if;	
 						
 					when s_cursor_a =>
-						
-						internal_sel <= sel;
-						
 						if ((c_x = t_x) and (c_y = t_y)) then
-							x_out <= t_x; y_out <= t_y;
-							color_t <= RED; 
-							st_square <= s_cursor_b;
+							st_square <= s_equal;
 						else
-							st_square <= s00a;
-							c_x<= t_x ; 
-							c_y<= t_y ; 
+							st_square <= s_change;
 						end if;
 						
+					when s_equal =>
+						st_square <= s_cursor_b;
+						x_out <= t_x; y_out <= t_y;
+						color_t <= RED; 
 						
-						if (internal_sel = '1')then
-							if sel_selected = '1' then
-								sel_selected <= '0';
-							else
-								sel_selected <= '1';
-								sel_x <= c_x;
-								sel_y <= c_y;
-								st_square<= s00a;
-							end if;
+					when s_change =>
+						st_square <= s00a;
+						c_x<= t_x ; 
+						c_y<= t_y ; 
 					
-						end if;
 					when s_cursor_b =>
 						--x_t <= c_x; y_t <= c_y; 
 						

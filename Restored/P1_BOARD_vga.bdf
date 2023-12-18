@@ -2760,14 +2760,6 @@ applicable agreement for further details.
 	(pt 504 936)
 )
 (connector
-	(pt 760 984)
-	(pt 760 968)
-)
-(connector
-	(pt 696 984)
-	(pt 760 984)
-)
-(connector
 	(pt 768 968)
 	(pt 760 968)
 )
@@ -2801,9 +2793,19 @@ applicable agreement for further details.
 	(pt 712 968)
 )
 (connector
-	(text "sel_key" (rect 1304 640 1342 652)(font "Arial" ))
+	(text "sel_key" (rect 1272 640 1310 652)(font "Arial" ))
 	(pt 1328 656)
 	(pt 1304 656)
+)
+(connector
+	(text "<<__$DEF_ALIAS214>>" (rect 713 993 725 1111)(font "Arial" )(vertical)(invisible))
+	(pt 760 968)
+	(pt 760 1000)
+)
+(connector
+	(text "key_pressed" (rect 708 1008 771 1020)(font "Arial" ))
+	(pt 760 1000)
+	(pt 712 1000)
 )
 (text "TRANSMITER BLOCK" (rect 1560 288 1680 302)(font "Arial" (font_size 8)))
 (text "KEYBOARD BLOCK" (rect 376 800 489 814)(font "Arial" (font_size 8)))

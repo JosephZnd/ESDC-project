@@ -29,14 +29,14 @@ REG_KEY : process (clk, nrst) begin
 		new_code_int <= '0';
 	elsif clk'EVENT and clk = '1' then
 		if nkey = '0' then
-			keycode_int <= keycode_kt;
-		end if;
-		if nkey = '0' then
 			new_code_int <= '1';
+			keycode_int <= keycode_kt;
 		elsif code_read = '1' then
 			new_code_int <= '0';
 		end if;
+
 	end if;
+		
 end process;
 
 

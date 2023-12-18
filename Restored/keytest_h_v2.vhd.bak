@@ -29,13 +29,14 @@ REG_KEY : process (clk, nrst) begin
 		new_code_int <= '0';
 	elsif clk'EVENT and clk = '1' then
 		if nkey = '0' then
-			keycode_int <= keycode_kt;
-		end if;
-		if nkey = '0' then
 			new_code_int <= '1';
+			keycode_int <= keycode_kt;
 		elsif code_read = '1' then
 			new_code_int <= '0';
 		end if;
+
+		end if;
+		
 	end if;
 end process;
 
@@ -45,12 +46,12 @@ end process;
 --				or keycode_int = x"5" or keycode_int = x"6" or keycode_int = x"7" or keycode_int = x"8" 
 --				or keycode_int = x"9") and (new_code_int = '1') else '0';
 --ast <= '1' when (keycode_int = x"E" and new_code_int = '1') else '0';
-hash <= '1' when (keycode_int = x"F") else '0';
-up_key <= '1' when (keycode_int = x"2") else '0';
-down_key <='1' when (keycode_int = x"8") else '0';
-left_key <= '1' when (keycode_int = x"4") else '0';
-right_key <= '1' when (keycode_int = x"6") else '0';
-select_key <= '1' when (keycode_int = x"5") else '0';
+hash <= '1' when (keycode_int = x"F" and new_code_int = '1') else '0';
+up_key <= '1' when (keycode_int = x"2" and new_code_int = '1') else '0';
+down_key <='1' when (keycode_int = x"8" and new_code_int = '1') else '0';
+left_key <= '1' when (keycode_int = x"4" and new_code_int = '1') else '0';
+right_key <= '1' when (keycode_int = x"6" and new_code_int = '1') else '0';
+select_key <= '1' when (keycode_int = x"5" and new_code_int = '1') else '0';
 -- UPdating the output keycode and new_code
 
 end;

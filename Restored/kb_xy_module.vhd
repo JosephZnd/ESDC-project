@@ -21,16 +21,16 @@ architecture main of kb_xy_module is
 begin
 
 --fr <= '0'; --THIS IS FOR TEST, LATER USE FREEZE
-ControlXY : process (clk, nrst, freeze_kb) 
+ControlXY : process (clk, nrst, freeze_kb, x_int, y_int) 
 	--variable x_cnt, y_cnt : unsigned(2 downto 0);
 	begin
 	if (nrst='0') then 
 		x_int <= 4;
 		y_int <= 4;
-	elsif rising_edge(clk) then -- and freeze_kb='0' 
-		if (debounce='1') then
+	elsif (rising_edge(clk) and debounce='1') then -- and freeze_kb='0' 
+		--if (debounce='1') then
 			if(up_key = '1') then
-			
+				
 			--y_cnt := y_cnt-1;
 			y_int <= y_int -1;
 			--y_int <= std_logic_vector(y_cnt);
@@ -56,7 +56,7 @@ ControlXY : process (clk, nrst, freeze_kb)
 		else 
 			x_int <= x_int;
 			y_int <= y_int;
-		end if;
+		--end if;
 	end if;
 end process;
 
