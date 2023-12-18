@@ -86,6 +86,22 @@ applicable agreement for further details.
 	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
 )
 (pin
+	(input)
+	(rect -208 288 -40 304)
+	(text "INPUT" (rect 133 0 161 10)(font "Arial" (font_size 6)))
+	(text "sel" (rect 5 0 19 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 92 12)(pt 117 12)(line_width 1))
+		(line (pt 92 4)(pt 117 4)(line_width 1))
+		(line (pt 121 8)(pt 168 8)(line_width 1))
+		(line (pt 92 12)(pt 92 4)(line_width 1))
+		(line (pt 117 4)(pt 121 8)(line_width 1))
+		(line (pt 117 12)(pt 121 8)(line_width 1))
+	)
+	(text "VCC" (rect 136 7 156 17)(font "Arial" (font_size 6)))
+)
+(pin
 	(output)
 	(rect 1024 232 1200 248)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
@@ -581,9 +597,9 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect -8 200 152 328)
+	(rect -8 200 152 360)
 	(text "square" (rect 5 0 38 12)(font "Arial" ))
-	(text "inst8" (rect 8 112 31 124)(font "Arial" ))
+	(text "inst8" (rect 8 144 31 156)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -615,9 +631,16 @@ applicable agreement for further details.
 	(port
 		(pt 0 96)
 		(input)
-		(text "done" (rect 0 0 23 12)(font "Arial" ))
-		(text "done" (rect 21 91 44 103)(font "Arial" ))
+		(text "sel" (rect 0 0 14 12)(font "Arial" ))
+		(text "sel" (rect 21 91 35 103)(font "Arial" ))
 		(line (pt 0 96)(pt 16 96)(line_width 1))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "done" (rect 0 0 23 12)(font "Arial" ))
+		(text "done" (rect 21 107 44 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
 	)
 	(port
 		(pt 160 32)
@@ -648,7 +671,7 @@ applicable agreement for further details.
 		(line (pt 160 80)(pt 144 80)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 144 112)(line_width 1))
+		(rectangle (rect 16 16 144 144)(line_width 1))
 	)
 )
 (connector
@@ -837,14 +860,6 @@ applicable agreement for further details.
 	(pt -8 248)
 )
 (connector
-	(pt -24 296)
-	(pt -8 296)
-)
-(connector
-	(pt -24 432)
-	(pt -24 296)
-)
-(connector
 	(pt -24 432)
 	(pt 432 432)
 )
@@ -857,4 +872,16 @@ applicable agreement for further details.
 	(pt -8 280)
 	(pt -40 280)
 	(bus)
+)
+(connector
+	(pt -24 432)
+	(pt -24 312)
+)
+(connector
+	(pt -24 312)
+	(pt -8 312)
+)
+(connector
+	(pt -8 296)
+	(pt -40 296)
 )

@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.678 ns
+Actual Time    : 6.749 ns
 From           : KEY[0]
-To             : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[1]
+To             : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|address_t[5]
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 12.440 ns
-From           : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|video_on_h
+Actual Time    : 10.904 ns
+From           : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|VGA_SYNC:inst2|video_on_v
 To             : VGA_SYNC
 From Clock     : OSC_50
 To Clock       : --
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.918 ns
+Actual Time    : 1.967 ns
 From           : pin_name14
-To             : register_bank2:USER_CODE|state.st_Get_Key
+To             : register_bank2:USER_CODE|state.st_end
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'OSC_50'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 110.75 MHz ( period = 9.029 ns )
-From           : kb_xy_module:inst8|x_int[2]
-To             : i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|c_x[6]
+Actual Time    : 155.47 MHz ( period = 6.432 ns )
+From           : keypad:inst2|colq[1]
+To             : kb_xy_module:inst8|y_int[1]
 From Clock     : OSC_50
 To Clock       : OSC_50
 Failed Paths   : 0

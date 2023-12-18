@@ -98,6 +98,7 @@ architecture functional of square is
   signal t_x  	: integer range 0 to 160:=25;
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
+  signal selected : std_logic;
   -- Internal address memory bus
   
   Begin
@@ -751,14 +752,17 @@ architecture functional of square is
 							c_x<= t_x ; 
 							c_y<= t_y ; 
 							st_square <= s00a;
-						else st_square <= s_cursor_b;
+						else
+							x_t <= t_x; y_t <= t_y;
+							color_t <= RED; 
+							st_square <= s_cursor_b;
 						end if;
 					when s_cursor_b =>
-						x_t <= t_x; y_t <= t_y;
-						color_t <= RED;
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
 						if done = '1' then st_square <= s_cursor_a; end if;	
+						
+						
 			End Case;
 		End If;
 	End Process;

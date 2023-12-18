@@ -152,16 +152,23 @@ applicable agreement for further details.
 	(port
 		(pt 0 320)
 		(input)
-		(text "CURSx[7..0]" (rect 0 0 63 12)(font "Arial" ))
-		(text "CURSx[7..0]" (rect 21 315 84 327)(font "Arial" ))
-		(line (pt 0 320)(pt 16 320)(line_width 3))
+		(text "sel" (rect 0 0 14 12)(font "Arial" ))
+		(text "sel" (rect 21 315 35 327)(font "Arial" ))
+		(line (pt 0 320)(pt 16 320)(line_width 1))
 	)
 	(port
 		(pt 0 336)
 		(input)
-		(text "CURSy[6..0]" (rect 0 0 64 12)(font "Arial" ))
-		(text "CURSy[6..0]" (rect 21 331 85 343)(font "Arial" ))
+		(text "CURSx[7..0]" (rect 0 0 63 12)(font "Arial" ))
+		(text "CURSx[7..0]" (rect 21 331 84 343)(font "Arial" ))
 		(line (pt 0 336)(pt 16 336)(line_width 3))
+	)
+	(port
+		(pt 0 352)
+		(input)
+		(text "CURSy[6..0]" (rect 0 0 64 12)(font "Arial" ))
+		(text "CURSy[6..0]" (rect 21 347 85 359)(font "Arial" ))
+		(line (pt 0 352)(pt 16 352)(line_width 3))
 	)
 	(port
 		(pt 216 32)

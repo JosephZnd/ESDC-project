@@ -12,20 +12,21 @@
 -- Electronic System Design for Communications - ESDC - ETSTB. UPC. Barcelona.
 ----------------------------------------------------------------------------------------
 
-library ieee;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 
 entity square is
   port( clk_d1, nrst		: in std_logic;
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
+		sel: in std_logic;
 		start			: out std_logic;
 		x_t				: out integer range 0 to 160;
 		y_t				: out integer range 0 to 120;
 		color_t 		: out integer range 0 to 7;
-		--s_lect			:	in std_logic;
 		
 		done			: in std_logic);  -- To be connected to the RAM ADD Bus.
 end square;
@@ -62,6 +63,7 @@ architecture functional of square is
   --constant WHITE : integer := 5; MAGENTA
   constant GREEN : integer := 0; --VERDE-NEGRO
   constant WHITE : integer := 7; --BLANCO
+  constant BLUE : integer:= 3;
 
    
 
@@ -88,7 +90,7 @@ architecture functional of square is
     s66a, s66b, s66c, s76a, s76b, s76c, s07a, s07b, s07c,
     s17a, s17b, s17c, s27a, s27b, s27c, s37a, s37b, s37c,
     s47a, s47b, s47c, s57a, s57b, s57c, s67a, s67b, s67c,
-    s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c
+    s77a, s77b, s77c, s_cursor_a,s_cursor_b,s_cursor_c, s_select_a, s_select_b, s_select_c
 );
   
   -- Internal signals
@@ -98,7 +100,9 @@ architecture functional of square is
   signal t_x  	: integer range 0 to 160:=25;
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
-  signal selected : std_logic;
+  signal internal_sel: std_logic;
+  signal sel_x : integer range 0 to 162;
+  signal sel_y : integer range 0 to 120;
   -- Internal address memory bus
   
   Begin
@@ -108,14 +112,11 @@ architecture functional of square is
 -- Process Unit: Blocks that process data (counters, registers).
 -- Control signals: they are not specified in the VHDL description, but they will be in the final implemented design. 
 -- Only output control signals are presented.
-	t_x <= x_in;
-	t_y <= y_in;
-	process(clk_d1, nrst)
+	process(clk_d1, nrst, x_in, y_in)
 	Begin
 		if (nrst = '0') then
 			st_square <= s00a;
 		elsif rising_edge(clk_d1) then
-			
 			case st_square is
 					-- Row 1
 					when s00a =>
@@ -743,26 +744,49 @@ architecture functional of square is
 					when s77b =>
 						st_square <= s77c;
 					when s77c =>
-						if done = '1' then st_square <= s_cursor_a; end if;	
+						if done = '1' then
+							if internal_sel = '1' then
+								st_square <= s_select_a;
+							else
+								st_square <= s_cursor_a; 
+							end if;
+						end if;	
 						
 					when s_cursor_a =>
+						t_x <= x_in;
+						t_y <= y_in;
 						--si se mueve el cursor, primero pone el tablero a cero y luego ya pinta el square
 						--aqui está puesto c_x como valor fijo para probar, luego se puede cambiar a x_in
-						if (c_x /= t_x) or (c_y /= t_y) then
+						if (c_x /= t_x or c_y /= t_y) then
+							st_square <= s00a;
 							c_x<= t_x ; 
 							c_y<= t_y ; 
-							st_square <= s00a;
-						else
-							x_t <= t_x; y_t <= t_y;
-							color_t <= RED; 
-							st_square <= s_cursor_b;
+						elsif sel='1' then
+							if internal_sel = '1' then
+								internal_sel <= '0';
+							else
+								internal_sel <= '1';
+								sel_x <= c_x;
+								sel_y <= c_y;
+							end if;
+						else st_square <= s_cursor_b;
 						end if;
 					when s_cursor_b =>
+						x_t <= c_x; y_t <= c_y; --ESTO NO CONSIGO QUE FUNCIONE
+						--x_t <= 53; y_t <= 43; --ESTO es para ver si lo sigue printeando bien, y si
+						color_t <= RED;
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
 						if done = '1' then st_square <= s_cursor_a; end if;	
 						
-						
+					when s_select_a =>
+						st_square <= s_select_b;
+						x_t <= sel_x; y_t <= sel_y;
+						color_t <= BLUE;
+					when s_select_b =>
+						st_square <= s_select_c;
+					when s_select_c =>
+						if done = '1' then st_square <= s_cursor_a; end if;
 			End Case;
 		End If;
 	End Process;
@@ -783,5 +807,6 @@ Start <= '1' when st_square = s00b or st_square = s10b or st_square = s20b or st
                st_square = s46b or st_square = s56b or st_square = s66b or st_square = s76b or
                st_square = s07b or st_square = s17b or st_square = s27b or st_square = s37b or
                st_square = s47b or st_square = s57b or st_square = s67b or st_square = s77b or
-               st_square = s_cursor_b else '0';
+               st_square = s_cursor_b or st_square = s_select_b else '0';
+               
 End Functional;

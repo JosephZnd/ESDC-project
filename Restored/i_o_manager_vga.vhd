@@ -42,6 +42,7 @@ ENTITY i_o_manager_vga IS
 		Oponent_CodeH :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		Oponent_CodeT :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
 		Oponent_CodeU :  IN  STD_LOGIC_VECTOR(3 DOWNTO 0);
+		sel: IN STD_LOGIC;
 		nrst :  OUT  STD_LOGIC;
 		R0 :  OUT  STD_LOGIC;
 		R1 :  OUT  STD_LOGIC;
@@ -100,7 +101,8 @@ COMPONENT vga_visualisation
 	PORT(CLK_50 : IN STD_LOGIC;
 		 n_RST : IN STD_LOGIC;
 		 cursor_x : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-		 cursor_y : IN STD_LOGIC_VECTOR(6 DOWNTO 0);		
+		 cursor_y : IN STD_LOGIC_VECTOR(6 DOWNTO 0);	
+		 sel: IN STD_LOGIC;	
 		 --LG2 : IN STD_LOGIC;
 		 --LG1 : IN STD_LOGIC;
 		 --LG0 : IN STD_LOGIC;
@@ -133,6 +135,7 @@ SIGNAL	R_ALTERA_SYNTHESIZED2 :  STD_LOGIC;
 
 SIGNAL	INTERNAL_CURSOR_X :  STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL	INTERNAL_CURSOR_Y :  STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL 	INTERNAL_SEL: STD_LOGIC;
 
 
 BEGIN 
@@ -171,6 +174,7 @@ PORT MAP(CLK_50 => CLK_50,
 		 --LR0 => R_ALTERA_SYNTHESIZED0,
 		 cursor_x => INTERNAL_CURSOR_X,
 		 cursor_y => INTERNAL_CURSOR_Y,
+		 sel => INTERNAL_SEL,
 		 vga_hs => vga_hs,
 		 vga_vs => bga_vs,
 		 vga_blank => Vga_blank,
@@ -209,6 +213,8 @@ nrst_ALTERA_SYNTHESIZED <= BTN0;
 INTERNAL_CURSOR_X <= CURSx;
 
 INTERNAL_CURSOR_Y <= CURSy;
+
+INTERNAL_SEL <= sel; 
 
 
 nrst <= nrst_ALTERA_SYNTHESIZED;
