@@ -681,10 +681,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 432 432)
-	(pt 432 288)
-)
-(connector
 	(text "nrst" (rect 192 200 210 212)(font "Arial" ))
 	(pt 232 216)
 	(pt 184 216)
@@ -860,10 +856,6 @@ applicable agreement for further details.
 	(pt -8 248)
 )
 (connector
-	(pt -24 432)
-	(pt 432 432)
-)
-(connector
 	(pt -40 264)
 	(pt -8 264)
 	(bus)
@@ -884,4 +876,16 @@ applicable agreement for further details.
 (connector
 	(pt -8 296)
 	(pt -40 296)
+)
+(connector
+	(pt 432 288)
+	(pt 440 288)
+)
+(connector
+	(pt 440 288)
+	(pt 440 432)
+)
+(connector
+	(pt -24 432)
+	(pt 440 432)
 )
