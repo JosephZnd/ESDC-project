@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Mon Dec 18 12:12:01 2023
+Analysis & Synthesis Status : Successful - Mon Dec 18 12:23:37 2023
 Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
 Revision Name : Design1
 Top-level Entity Name : P1_BOARD_vga
 Family : Cyclone II
-Total logic elements : 852
-    Total combinational functions : 700
-    Dedicated logic registers : 507
-Total registers : 507
+Total logic elements : 848
+    Total combinational functions : 696
+    Dedicated logic registers : 505
+Total registers : 505
 Total pins : 113
 Total virtual pins : 0
 Total memory bits : 98,304

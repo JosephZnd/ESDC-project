@@ -1764,7 +1764,7 @@ ON
 # case_insensitive
 # source_file
 square.vhd
-bf273a764958fa1d2a2657e4abed1
+5b3f899c37a42e9b075cccace28ed47
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

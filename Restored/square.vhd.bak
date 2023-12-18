@@ -754,18 +754,17 @@ architecture functional of square is
 						
 					when s_cursor_a =>
 						
-						--internal_sel <= sel;
+						internal_sel <= sel;
 						
-						if ((c_x = x_in) and (c_y = x_in)) then
-							x_out <= x_in; y_out <= x_in;
+						if ((c_x = x_in) and (c_y = y_in)) then
+							x_out <= t_x; y_out <= t_y;
 							color_t <= RED; 
 							st_square <= s_cursor_b;
 						else
-							st_square <= s00a;
-							c_x<= x_in ; 
-							c_y<= x_in ; 
+							c_x<= x_in; 
+							c_y<= y_in ; 
 						end if;
-						
+						st_square <= s00a;
 						
 						if (internal_sel = '1')then
 							if sel_selected = '1' then

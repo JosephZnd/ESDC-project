@@ -780,6 +780,7 @@ architecture functional of square is
 						end if;
 					when s_cursor_b =>
 						--x_t <= c_x; y_t <= c_y; 
+						
 						st_square <= s_cursor_c;
 					when s_cursor_c =>
 						if done = '1' then st_square <= s_cursor_a; end if;	
