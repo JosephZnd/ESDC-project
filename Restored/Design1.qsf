@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone II"
 set_global_assignment -name DEVICE EP2C35F672C6
-set_global_assignment -name TOP_LEVEL_ENTITY P1_BOARD_vga
+set_global_assignment -name TOP_LEVEL_ENTITY sender_receiver
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:05:20  FEBRUARY 17, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
@@ -472,6 +472,16 @@ set_location_assignment PIN_W25 -to GPIO_B[34]
 set_location_assignment PIN_W23 -to GPIO_B[35]
 set_global_assignment -name MISC_FILE "C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.dpf"
 set_global_assignment -name MISC_FILE "L:/Documentos/Github/Restored/Design1.dpf"
+set_global_assignment -name VHDL_FILE protocol_rx_checkers.vhd
+set_global_assignment -name VHDL_FILE protocol_tx_checkers.vhd
+set_global_assignment -name SOURCE_FILE ram64.cmp
+set_global_assignment -name BDF_FILE VGA.bdf
+set_global_assignment -name VHDL_FILE vga_visualisation.vhd
+set_global_assignment -name VHDL_FILE Game_Checkers.vhd
+set_global_assignment -name VHDL_FILE Main_Checkers.vhd
+set_global_assignment -name VHDL_FILE mux_address.vhd
+set_global_assignment -name VHDL_FILE mux_piece.vhd
+set_global_assignment -name VHDL_FILE mux_write.vhd
 set_global_assignment -name BDF_FILE P1_BOARD_vga.bdf
 set_global_assignment -name BDF_FILE keyboard.bdf
 set_global_assignment -name BDF_FILE VGA_TEST_BOARD.bdf
@@ -511,6 +521,7 @@ set_global_assignment -name QIP_FILE ram64.qip
 set_global_assignment -name VHDL_FILE add64_gen.vhd
 set_global_assignment -name BDF_FILE trash.bdf
 set_global_assignment -name VHDL_FILE inverse_square_map.vhd
+set_global_assignment -name BDF_FILE sender_receiver.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

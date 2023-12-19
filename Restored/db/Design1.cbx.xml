@@ -1,9 +1,5 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="Design1">
-		<CBX_INST_ENTRY INSTANCE_NAME="|P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_4jk1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_3so.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1" CBX_FILE_NAME="lpm_divide_rqo.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_5h72.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
