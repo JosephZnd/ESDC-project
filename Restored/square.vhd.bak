@@ -28,7 +28,9 @@ entity square is
 		y_t				: out integer range 0 to 120;
 		color_t 		: out integer range 0 to 7;
 		
-		done			: in std_logic);  -- To be connected to the RAM ADD Bus.
+		done			: in std_logic;  -- To be connected to the RAM ADD Bus.
+		row, column				: out integer range 0 to 7;
+		adr_memo		: out std_logic_vector(5 downto 0));
 end square;
 
 
@@ -62,7 +64,7 @@ architecture functional of square is
   --constant GREEN : integer := 3; sky blue
   constant MAGENTA : integer := 5; --MAGENTA
   constant GREEN : integer := 0; --VERDE-NEGRO
-  constant WHITE : integer := 7; --BLANCO
+  constant WHITE : integer := 6; --BLANCO
   constant BLUE : integer:= 1;
   constant SIZE : integer :=14;
 
@@ -82,8 +84,8 @@ architecture functional of square is
   signal t_y 	: integer range 0 to 120:=15;  -- Output of the state register
   signal st_square : state_type	;
   signal internal_sel, sel_selected: std_logic;
-  signal sel_x, x_out : integer range 0 to 200;
-  signal sel_y, y_out : integer range 0 to 200;
+  signal sel_x, x_out : integer range 0 to 160;
+  signal sel_y, y_out : integer range 0 to 120;
   signal i, j : integer range 0 to 7:=0;
   signal color_index, SelMode : std_logic;
   -- Internal address memory bus
@@ -191,6 +193,8 @@ t_y <= y_in;
 x_t <= x_out;
 y_t <= y_out;
 internal_sel <= sel;
+row <= i;
+column <= j;
 Start <= '1' when st_square = s00b or st_square = s_cursor_b or st_square = s_select_b else '0';
                
 End Functional;

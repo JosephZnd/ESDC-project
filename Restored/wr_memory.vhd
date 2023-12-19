@@ -22,17 +22,19 @@ entity wr_memory is
 		x_t				: in std_logic_vector(7 downto 0);
 		y_t				: in std_logic_vector(6 downto 0);
 		color_t 			: in std_logic_vector(2 downto 0);
-		we, done		: out std_logic;  --To be connected to the RAM WE
+		--piece			: in std_logic_vector(2 downto 0);
+		
 		data 			: out std_logic_vector(2 downto 0);  -- To be connected to the RAM data bus
-		adr_memo		: out std_logic_vector(14 downto 0) );  -- To be connected to the RAM ADD Bus.
+		adr_memo		: out std_logic_vector(14 downto 0);  -- To be connected to the RAM ADD Bus.
+		we, done		: out std_logic);  --To be connected to the RAM WE
 end wr_memory;
 
 
 architecture functional of wr_memory is
   -- Size of the square
   constant SQUARE_WIDTH : integer := 14; --25<<4 = 100.
-  constant SIZE_PIECE : integer := 7;
-  
+  constant SIZE_PIECE : integer := 10;
+  constant EMPTY	:	std_logic_vector(2 downto 0) := "111";
   -- State definition:
   type state_memo is (s0, s1, s2, s3, s4, s5, s6);
   -- Internal signals
@@ -42,6 +44,8 @@ architecture functional of wr_memory is
   signal address_t : std_logic_vector(14 downto 0);
   -- Output of two counters
   signal i, j : integer range 0 to SQUARE_WIDTH; 
+  --signal k, l : integer range 0 to SIZE_PIECE; 
+  --signal s_piece : std_logic_vector(2 downto 0);
   
 
 Begin
@@ -60,21 +64,28 @@ Begin
 			case st_write is
 				when s0  => if start = '1' then st_write <= s1; end if;
 				when s1 => st_write <= s2;
-					j <= 0; i <= 0;
+					j <= 0; i <= 0; 
+					--k <= 0; l <= 0;
 					-- adress = y(8:1) concatenated with x(9:1)
 					address_t(14 downto 8) <= y_t(6 downto 0);
 					address_t(7 downto 0) <= x_t(7 downto 0);
 					data <= color_t;
 				-- In s2 wr_memo should be active and data is stored in the cell address_t.
-				when s2 => st_write <= s3; 
+				when s2 => st_write <= s3;
+					--k <= k+1;
 					i <= i+1;  -- i loop: to write a square row.
-					
+					--if ((k > 3) and (k<11) and (l > 3) and (l<11) and (s_piece/=EMPTY)) then 
+						--data <= s_piece;
+					--else
+						--data <= color_t;
+					--end if;
 				when s3 => if (i<SQUARE_WIDTH) then 
 									st_write <= s2;
 									address_t <= address_t + 1; -- Increase of collumn. Same Row 
 							else st_write <= s4; end if;
 				when s4 => st_write <= s5;
 					i <= 0; j <= j+1;  -- Now we are writting the following square row
+					--k <= 0; l <= l+1;
 				when s5 => if (j<SQUARE_WIDTH) then st_write <= s2; 
 							address_t(14 downto 8) <= address_t(14 downto 8) +1; -- Increase Row
 							address_t(7 downto 0) <= x_t(7 downto 0);  --Original Collumn
@@ -88,6 +99,6 @@ Begin
 we <= '1' when st_write = s2 else '0';
 done <= '1' when st_write = s6 else '0';
 adr_memo <= address_t;
-
+--s_piece <= piece;
 End functional;
 	

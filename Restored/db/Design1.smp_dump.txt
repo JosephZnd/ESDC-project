@@ -1,4 +1,47 @@
 
+State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
+Name s_xy.s_up s_xy.s_end s_xy.s_left s_xy.s_right s_xy.s_down s_xy.s_wait 
+s_xy.s_wait 0 0 0 0 0 0 
+s_xy.s_down 0 0 0 0 1 1 
+s_xy.s_right 0 0 0 1 0 1 
+s_xy.s_left 0 0 1 0 0 1 
+s_xy.s_end 0 1 0 0 0 1 
+s_xy.s_up 1 0 0 0 0 1 
+
+State Machine - |P1_BOARD_vga|keypad:inst2|current_state
+Name current_state.check1 current_state.wait1 current_state.kra3 current_state.kra2 current_state.kra1 current_state.kra0 current_state.check0 current_state.wait0 
+current_state.wait0 0 0 0 0 0 0 0 0 
+current_state.check0 0 0 0 0 0 0 1 1 
+current_state.kra0 0 0 0 0 0 1 0 1 
+current_state.kra1 0 0 0 0 1 0 0 1 
+current_state.kra2 0 0 0 1 0 0 0 1 
+current_state.kra3 0 0 1 0 0 0 0 1 
+current_state.wait1 0 1 0 0 0 0 0 1 
+current_state.check1 1 0 0 0 0 0 0 1 
+
+State Machine - |P1_BOARD_vga|square:inst21|st_square
+Name st_square.s_cursor_wait st_square.s_select_c st_square.s_select_b st_square.s_select_a st_square.s_cursor_c st_square.s_cursor_b st_square.s_cursor_a st_square.s00c st_square.s00b st_square.s00a 
+st_square.s00a 0 0 0 0 0 0 0 0 0 0 
+st_square.s00b 0 0 0 0 0 0 0 0 1 1 
+st_square.s00c 0 0 0 0 0 0 0 1 0 1 
+st_square.s_cursor_a 0 0 0 0 0 0 1 0 0 1 
+st_square.s_cursor_b 0 0 0 0 0 1 0 0 0 1 
+st_square.s_cursor_c 0 0 0 0 1 0 0 0 0 1 
+st_square.s_select_a 0 0 0 1 0 0 0 0 0 1 
+st_square.s_select_b 0 0 1 0 0 0 0 0 0 1 
+st_square.s_select_c 0 1 0 0 0 0 0 0 0 1 
+st_square.s_cursor_wait 1 0 0 0 0 0 0 0 0 1 
+
+State Machine - |P1_BOARD_vga|wr_memory:inst16|st_write
+Name st_write.s6 st_write.s5 st_write.s4 st_write.s3 st_write.s2 st_write.s1 st_write.s0 
+st_write.s0 0 0 0 0 0 0 0 
+st_write.s1 0 0 0 0 0 1 1 
+st_write.s2 0 0 0 0 1 0 1 
+st_write.s3 0 0 0 1 0 0 1 
+st_write.s4 0 0 1 0 0 0 1 
+st_write.s5 0 1 0 0 0 0 1 
+st_write.s6 1 0 0 0 0 0 1 
+
 State Machine - |P1_BOARD_vga|register_bank2:GUESS_CODE|state
 Name state.st_end state.st_Get_Key state.st_W_Keypress state.st_wait 
 state.st_wait 0 0 0 0 
@@ -86,49 +129,6 @@ state.pr_w4 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 state.pr_s5 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.pr_w5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.pr_set_TX 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-
-State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
-Name s_xy.s_up s_xy.s_end s_xy.s_left s_xy.s_right s_xy.s_down s_xy.s_wait 
-s_xy.s_wait 0 0 0 0 0 0 
-s_xy.s_down 0 0 0 0 1 1 
-s_xy.s_right 0 0 0 1 0 1 
-s_xy.s_left 0 0 1 0 0 1 
-s_xy.s_end 0 1 0 0 0 1 
-s_xy.s_up 1 0 0 0 0 1 
-
-State Machine - |P1_BOARD_vga|keypad:inst2|current_state
-Name current_state.check1 current_state.wait1 current_state.kra3 current_state.kra2 current_state.kra1 current_state.kra0 current_state.check0 current_state.wait0 
-current_state.wait0 0 0 0 0 0 0 0 0 
-current_state.check0 0 0 0 0 0 0 1 1 
-current_state.kra0 0 0 0 0 0 1 0 1 
-current_state.kra1 0 0 0 0 1 0 0 1 
-current_state.kra2 0 0 0 1 0 0 0 1 
-current_state.kra3 0 0 1 0 0 0 0 1 
-current_state.wait1 0 1 0 0 0 0 0 1 
-current_state.check1 1 0 0 0 0 0 0 1 
-
-State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|square:inst8|st_square
-Name st_square.s_cursor_wait st_square.s_select_c st_square.s_select_b st_square.s_select_a st_square.s_cursor_c st_square.s_cursor_b st_square.s_cursor_a st_square.s00c st_square.s00b st_square.s00a 
-st_square.s00a 0 0 0 0 0 0 0 0 0 0 
-st_square.s00b 0 0 0 0 0 0 0 0 1 1 
-st_square.s00c 0 0 0 0 0 0 0 1 0 1 
-st_square.s_cursor_a 0 0 0 0 0 0 1 0 0 1 
-st_square.s_cursor_b 0 0 0 0 0 1 0 0 0 1 
-st_square.s_cursor_c 0 0 0 0 1 0 0 0 0 1 
-st_square.s_select_a 0 0 0 1 0 0 0 0 0 1 
-st_square.s_select_b 0 0 1 0 0 0 0 0 0 1 
-st_square.s_select_c 0 1 0 0 0 0 0 0 0 1 
-st_square.s_cursor_wait 1 0 0 0 0 0 0 0 0 1 
-
-State Machine - |P1_BOARD_vga|i_o_manager_vga:inst13|VGA_visualisation:b2v_inst1|wr_memory:inst1|st_write
-Name st_write.s6 st_write.s5 st_write.s4 st_write.s3 st_write.s2 st_write.s1 st_write.s0 
-st_write.s0 0 0 0 0 0 0 0 
-st_write.s1 0 0 0 0 0 1 1 
-st_write.s2 0 0 0 0 1 0 1 
-st_write.s3 0 0 0 1 0 0 1 
-st_write.s4 0 0 1 0 0 0 1 
-st_write.s5 0 1 0 0 0 0 1 
-st_write.s6 1 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|tx_module:inst6|state
 Name state.tx_stop state.tx_shift state.tx_start state.tx_idle 

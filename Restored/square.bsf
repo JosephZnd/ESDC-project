@@ -93,6 +93,20 @@ applicable agreement for further details.
 		(text "color_t[2..0]" (rect 80 75 139 87)(font "Arial" ))
 		(line (pt 160 80)(pt 144 80)(line_width 3))
 	)
+	(port
+		(pt 160 96)
+		(output)
+		(text "row[2..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "row[2..0]" (rect 97 91 139 103)(font "Arial" ))
+		(line (pt 160 96)(pt 144 96)(line_width 3))
+	)
+	(port
+		(pt 160 112)
+		(output)
+		(text "column[2..0]" (rect 0 0 61 12)(font "Arial" ))
+		(text "column[2..0]" (rect 78 107 139 119)(font "Arial" ))
+		(line (pt 160 112)(pt 144 112)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 144 144)(line_width 1))
 	)

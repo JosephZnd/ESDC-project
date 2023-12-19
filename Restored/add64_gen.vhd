@@ -1,0 +1,17 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+entity add64_gen is
+  port( row, column 	: in std_logic_vector(2 downto 0);
+		adr_memo		    : out std_logic_vector(5 downto 0) );
+end add64_gen;
+
+architecture a of add64_gen is
+  
+Begin
+  
+	adr_memo(2 downto 0) <= row(2 downto 0);
+	adr_memo(5 downto 3) <= column(2 downto 0);
+	
+End a;

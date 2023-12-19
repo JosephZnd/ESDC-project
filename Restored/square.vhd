@@ -28,7 +28,9 @@ entity square is
 		y_t				: out integer range 0 to 120;
 		color_t 		: out integer range 0 to 7;
 		
-		done			: in std_logic);  -- To be connected to the RAM ADD Bus.
+		done			: in std_logic;  -- To be connected to the RAM ADD Bus.
+		row, column				: out integer range 0 to 7;
+		adr_memo		: out std_logic_vector(5 downto 0));
 end square;
 
 
@@ -191,6 +193,8 @@ t_y <= y_in;
 x_t <= x_out;
 y_t <= y_out;
 internal_sel <= sel;
+row <= i;
+column <= j;
 Start <= '1' when st_square = s00b or st_square = s_cursor_b or st_square = s_select_b else '0';
                
 End Functional;

@@ -471,6 +471,7 @@ set_location_assignment PIN_V23 -to GPIO_B[33]
 set_location_assignment PIN_W25 -to GPIO_B[34]
 set_location_assignment PIN_W23 -to GPIO_B[35]
 set_global_assignment -name MISC_FILE "C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.dpf"
+set_global_assignment -name MISC_FILE "L:/Documentos/Github/Restored/Design1.dpf"
 set_global_assignment -name BDF_FILE P1_BOARD_vga.bdf
 set_global_assignment -name BDF_FILE keyboard.bdf
 set_global_assignment -name BDF_FILE VGA_TEST_BOARD.bdf
@@ -506,7 +507,10 @@ set_global_assignment -name VHDL_FILE main_entity.vhd
 set_global_assignment -name VHDL_FILE square_map.vhd
 set_global_assignment -name VHDL_FILE kb_xy_module.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_xy.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE sim_xy.vwf
+set_global_assignment -name QIP_FILE ram64.qip
+set_global_assignment -name VHDL_FILE add64_gen.vhd
+set_global_assignment -name BDF_FILE trash.bdf
+set_global_assignment -name VHDL_FILE inverse_square_map.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
