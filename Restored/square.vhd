@@ -63,7 +63,7 @@ architecture functional of square is
   --constant WHITE : integer := 2;
   --constant GREEN : integer := 3; sky blue
   constant MAGENTA : integer := 5; --MAGENTA
-  constant GREEN : integer := 0; --VERDE-NEGRO
+  constant GREEN : integer := 0		; --VERDE-NEGRO
   constant WHITE : integer := 7; --BLANCO
   constant BLUE : integer:= 1;
   constant SIZE : integer :=14;

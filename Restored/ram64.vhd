@@ -126,7 +126,7 @@ BEGIN
 		outdata_reg_a => "CLOCK0",
 		outdata_reg_b => "CLOCK0",
 		power_up_uninitialized => "FALSE",
-		read_during_write_mode_mixed_ports => "DONT_CARE",
+		read_during_write_mode_mixed_ports => "OLD_DATA",
 		widthad_a => 6,
 		widthad_b => 6,
 		width_a => 3,
@@ -192,7 +192,7 @@ END SYN;
 -- Retrieval info: PRIVATE: OUTDATA_ACLR_B NUMERIC "0"
 -- Retrieval info: PRIVATE: OUTDATA_REG_B NUMERIC "1"
 -- Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
--- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "2"
+-- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_MIXED_PORTS NUMERIC "1"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_A NUMERIC "4"
 -- Retrieval info: PRIVATE: READ_DURING_WRITE_MODE_PORT_B NUMERIC "4"
 -- Retrieval info: PRIVATE: REGdata NUMERIC "1"
@@ -231,7 +231,7 @@ END SYN;
 -- Retrieval info: CONSTANT: OUTDATA_REG_A STRING "CLOCK0"
 -- Retrieval info: CONSTANT: OUTDATA_REG_B STRING "CLOCK0"
 -- Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
--- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "DONT_CARE"
+-- Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "OLD_DATA"
 -- Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "6"
 -- Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "6"
 -- Retrieval info: CONSTANT: WIDTH_A NUMERIC "3"
