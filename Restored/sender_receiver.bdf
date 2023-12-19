@@ -274,9 +274,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 840 304 1016 320)
+	(rect 960 264 1136 280)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LR0" (rect 90 0 110 12)(font "Arial" ))
+	(text "LED_RED[16]" (rect 90 0 159 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -290,9 +290,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 960 264 1136 280)
+	(rect 840 304 1016 320)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LR17" (rect 90 0 115 12)(font "Arial" ))
+	(text "LED_RED[0]" (rect 90 0 153 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -308,7 +308,7 @@ applicable agreement for further details.
 	(output)
 	(rect 960 232 1136 248)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "LR16" (rect 90 0 115 12)(font "Arial" ))
+	(text "LED_GREEN[0]" (rect 90 0 169 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
