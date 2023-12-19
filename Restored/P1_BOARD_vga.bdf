@@ -2525,7 +2525,7 @@ applicable agreement for further details.
 	(pt 440 8)
 )
 (connector
-	(text "ByteRX[7..0]" (rect 320 8 383 20)(font "Arial" ))
+	(text "ByteRX[7..0]" (rect 344 8 407 20)(font "Arial" ))
 	(pt 376 24)
 	(pt 440 24)
 	(bus)
@@ -3024,6 +3024,8 @@ applicable agreement for further details.
 (text "TRANSMITER BLOCK" (rect 1560 288 1680 302)(font "Arial" (font_size 8)))
 (text "KEYBOARD BLOCK" (rect 376 800 489 814)(font "Arial" (font_size 8)))
 (text "VISUALIZATION BLOCK" (rect 1664 1184 1800 1198)(font "Arial" (font_size 8)))
+(text "CLOCK BLOCK" (rect -48 -64 38 -50)(font "Arial" (font_size 8)))
 (rectangle (rect 1224 32 1880 304)(color 255 0 0))
 (rectangle (rect -312 792 1288 1064)(color 255 0 0))
-(rectangle (rect 568 1152 2368 1696)(color 255 0 0))
+(rectangle (rect 568 1152 2368 1648)(color 255 0 0))
+(rectangle (rect -256 -80 320 120)(color 255 0 0))
