@@ -46,6 +46,8 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce)
 						 s_xy <= s_left; end if;
 				if(right_key= '1' and debounce='1') then
 						 s_xy <= s_right; end if;
+				if (debounce='1') then
+					s_xy <= s_end; end if;
 			when s_up =>
 				y_int <= y_int-1;
 				s_xy <= s_end;

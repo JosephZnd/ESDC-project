@@ -32,7 +32,7 @@ architecture main of protocol_tx is
 	signal state : state_type;
 	
 	-- Definition of the registers in the process unit
-	signal s_whites : std_logic:='0';
+	signal s_whites : std_logic;
 	signal frame_type: std_logic_vector(7 downto 0);
 	signal dataH_i, dataT_i, dataU_i : std_logic_vector(3 downto 0);  -- Data to trasmit if FRAME is DATA.
 	

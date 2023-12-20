@@ -39,7 +39,9 @@ process (clk50, nrst) begin
 				if white_received = '1' then s_opp_first <= '1' ; LED_BLACK <= '1'; end if;
 				if hash = '1' and  s_opp_first ='1' then 
 					state <= st_Op_First;
+					LED_ON <= '0';
 				elsif hash = '1' then state <= st_P_First;
+					LED_ON <= '0';
 				end if;
 				
 			when st_Op_First => state <= st_start_game;
@@ -51,7 +53,7 @@ process (clk50, nrst) begin
 				LED_WHITE <= '1';
 		
 			when st_start_game =>
-				LED_ON <= '0';	
+				LED_ON <= '1';	
 				if s_color_white='1' then state <= S_Change_Turn;
 				else state <= S_Wait_Turn; end if;
 			

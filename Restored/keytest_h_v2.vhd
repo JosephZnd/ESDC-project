@@ -9,7 +9,8 @@ entity keytest_h_v2 is
 		code_read	: in std_logic;  -- used to de-activate new_code.
 		keycode_kt	 : in std_logic_vector(3 downto 0);  -- Keycode from keytest
 		--keycode      : out std_logic_vector(3 downto 0) );  -- output of the register.
-		key_o	: out std_logic); 
+		key_o	: out std_logic;
+		color_white	:	out std_logic); 
 end keytest_h_v2;
 
 architecture main of keytest_h_v2 is
@@ -42,7 +43,7 @@ end process;
 --bcd <= '1' when (keycode_int = x"0" or keycode_int = x"1" or keycode_int = x"2" or keycode_int = x"3" or keycode_int = x"4"
 --				or keycode_int = x"5" or keycode_int = x"6" or keycode_int = x"7" or keycode_int = x"8" 
 --				or keycode_int = x"9") and (new_code_int = '1') else '0';
---ast <= '1' when (keycode_int = x"E" and new_code_int = '1') else '0';
+--
 hash <= '1' when (keycode_int = x"F" and new_code_int = '1') else '0';
 up_key <= '1' when (keycode_int = x"2" and new_code_int = '1') else '0';
 down_key <='1' when (keycode_int = x"8" and new_code_int = '1') else '0';
@@ -50,6 +51,7 @@ left_key <= '1' when (keycode_int = x"4" and new_code_int = '1') else '0';
 right_key <= '1' when (keycode_int = x"6" and new_code_int = '1') else '0';
 select_key <= '1' when (keycode_int = x"5" and new_code_int = '1') else '0';
 key_o <= '1' when new_code_int = '1' else '0';
+color_white <= '1' when (keycode_int = x"E" and new_code_int = '1') else '0';
 -- UPdating the output keycode and new_code
 
 end;

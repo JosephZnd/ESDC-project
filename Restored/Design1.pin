@@ -184,7 +184,7 @@ GND*                         : AD8       :        :                   :         
 GND                          : AD9       : gnd    :                   :         :           :                
 GND*                         : AD10      :        :                   :         : 8         :                
 GND*                         : AD11      :        :                   :         : 8         :                
-GND*                         : AD12      :        :                   :         : 8         :                
+LED_RED[17]                  : AD12      : output : 3.3-V LVTTL       :         : 8         : Y              
 GND+                         : AD13      :        :                   :         : 8         :                
 GND                          : AD14      : gnd    :                   :         :           :                
 GND*                         : AD15      :        :                   :         : 7         :                
@@ -220,8 +220,8 @@ GND*                         : AE18      :        :                   :         
 GND*                         : AE19      :        :                   :         : 7         :                
 GND*                         : AE20      :        :                   :         : 7         :                
 GND*                         : AE21      :        :                   :         : 7         :                
-GND*                         : AE22      :        :                   :         : 7         :                
-GND*                         : AE23      :        :                   :         : 7         :                
+LED_GREEN[0]                 : AE22      : output : 3.3-V LVTTL       :         : 7         : Y              
+LED_RED[0]                   : AE23      : output : 3.3-V LVTTL       :         : 7         : Y              
 ~LVDS150p/nCEO~              : AE24      : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : AE25      :        :                   :         : 6         :                
 GND                          : AE26      : gnd    :                   :         :           :                
@@ -287,7 +287,7 @@ VGA_R[4]                     : C9        : output : 3.3-V LVTTL       :         
 VGA_G[2]                     : C10       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_B[6]                     : C11       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_B[8]                     : C12       : output : 3.3-V LVTTL       :         : 3         : Y              
-pin_name                     : C13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : C13       :        :                   :         : 3         :                
 GND                          : C14       : gnd    :                   :         :           :                
 GND*                         : C15       :        :                   :         : 4         :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -313,7 +313,7 @@ VGA_R[3]                     : D9        : output : 3.3-V LVTTL       :         
 VGA_G[3]                     : D10       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_G[7]                     : D11       : output : 3.3-V LVTTL       :         : 3         : Y              
 VGA_G[9]                     : D12       : output : 3.3-V LVTTL       :         : 3         : Y              
-pin_name14                   : D13       : input  : 3.3-V LVTTL       :         : 3         : N              
+GND+                         : D13       :        :                   :         : 3         :                
 GND*                         : D14       :        :                   :         : 4         :                
 GND*                         : D15       :        :                   :         : 4         :                
 GND*                         : D16       :        :                   :         : 4         :                

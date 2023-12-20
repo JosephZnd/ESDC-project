@@ -46,8 +46,8 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SETUP_HOLD_DETECTION OFF
 set_global_assignment -name MISC_FILE "C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.dpf"
+set_global_assignment -name MISC_FILE "L:/Documentos/Github/Restored/Design1.dpf"
 set_global_assignment -name BDF_FILE P1_BOARD_vga.bdf
-set_global_assignment -name BDF_FILE keyboard.bdf
 set_global_assignment -name BDF_FILE VGA_TEST_BOARD.bdf
 set_global_assignment -name BDF_FILE VGA_visualisation.bdf
 set_global_assignment -name VHDL_FILE i_o_manager_vga.vhd
@@ -83,4 +83,7 @@ set_global_assignment -name VHDL_FILE kb_xy_module.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_xy.vwf
 set_global_assignment -name QIP_FILE ram64.qip
 set_global_assignment -name VHDL_FILE add64_gen.vhd
-set_global_assignment -name MISC_FILE "L:/Documentos/Github/Restored/Design1.dpf"
+set_global_assignment -name BDF_FILE trash.bdf
+set_global_assignment -name VHDL_FILE inverse_square_map.vhd
+set_global_assignment -name BDF_FILE sender1.bdf
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON

@@ -12,7 +12,7 @@ entity game is
 		bank_ready, ready_to_TX: in std_logic;  
 		SEND_RDY, SEND_GR, SEND_EQ, SEND_SM, SEND_DT : out std_logic;
 		frame_received : out std_logic;
-		LightD, LightG, LightS, Light_WIN, Light_Loose, Light_Tie : out std_logic;
+		--LightD, LightG, LightS, Light_WIN, Light_Loose, Light_Tie : out std_logic;
 		enterCode : out std_logic
 		);
 end game;
@@ -31,12 +31,12 @@ begin
 process (clk50, nrst) begin
 	if nrst = '0' then
 		state <= st_wait_game;
-		LightD <= '0';
-		LightG <= '0';
-		LightS <= '0';
-		Light_WIN <= '0';
-		Light_Loose <= '0';
-		Light_Tie <= '0';
+		--LightD <= '0';
+		--LightG <= '0';
+		--LightS <= '0';
+		--Light_WIN <= '0';
+		--Light_Loose <= '0';
+		--Light_Tie <= '0';
 		
 	elsif clk50'event and clk50 = '1' then
 		case state is
@@ -65,7 +65,7 @@ process (clk50, nrst) begin
 			when st_W_code =>
 				if bank_ready = '1' then
 					state <= st_W_TX2;
-					--LightD <= '0';
+					LightD <= '0';
 				end if;	
 			
 			when st_W_TX2 =>

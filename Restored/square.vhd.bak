@@ -23,14 +23,13 @@ entity square is
 		x_in				: in integer range 0 to 160;
 		y_in				: in integer range 0 to 120;
 		sel: in std_logic;
+		done			: in std_logic;  -- To be connected to the RAM ADD Bus.
+		new_game		:	in std_logic;
 		start			: out std_logic;
 		x_t				: out integer range 0 to 160;
 		y_t				: out integer range 0 to 120;
-		color_t 		: out integer range 0 to 7;
-		
-		done			: in std_logic;  -- To be connected to the RAM ADD Bus.
-		row, column				: out integer range 0 to 7;
-		adr_memo		: out std_logic_vector(5 downto 0));
+		color_t 		: out integer range 0 to 7);
+		--adr_memo		: out std_logic_vector(5 downto 0));
 end square;
 
 
@@ -63,7 +62,7 @@ architecture functional of square is
   --constant WHITE : integer := 2;
   --constant GREEN : integer := 3; sky blue
   constant MAGENTA : integer := 5; --MAGENTA
-  constant GREEN : integer := 0; --VERDE-NEGRO
+  constant GREEN : integer := 0		; --VERDE-NEGRO
   constant WHITE : integer := 7; --BLANCO
   constant BLUE : integer:= 1;
   constant SIZE : integer :=14;
@@ -73,7 +72,7 @@ architecture functional of square is
   -- State definition:
   type state_type is (
     s00a, s00b, s00c, s_cursor_a,s_cursor_b,s_cursor_c, 
-    s_select_a, s_select_b, s_select_c, s_cursor_wait 
+    s_select_a, s_select_b, s_select_c, s_cursor_wait, s_game_wait
 );
   
   -- Internal signals
@@ -87,7 +86,7 @@ architecture functional of square is
   signal sel_x, x_out : integer range 0 to 160;
   signal sel_y, y_out : integer range 0 to 120;
   signal i, j : integer range 0 to 7:=0;
-  signal color_index, SelMode : std_logic;
+  signal color_index, SelMode, s_new_game : std_logic;
   -- Internal address memory bus
   
   Begin
@@ -142,13 +141,20 @@ architecture functional of square is
 								if sel_selected = '1' then
 									st_square <= s_select_a;
 								else
-									st_square <= s_cursor_wait; 
+									if s_new_game ='1' then st_square <= s_cursor_wait; 
+									else st_square <= s_game_wait; end if; 
 								end if;
 							else 
 							color_index <= not color_index;
 							st_square <= s00a;
 						end if;
 						end if;
+					
+					when s_game_wait =>
+						if new_game ='1' then
+							s_new_game <='1'; 
+							st_square <= s_cursor_wait; 
+							end if;
 						
 					when s_cursor_wait =>
 						if ((c_x /= t_x) or (c_y /= t_y)) then
@@ -193,8 +199,8 @@ t_y <= y_in;
 x_t <= x_out;
 y_t <= y_out;
 internal_sel <= sel;
-row <= i;
-column <= j;
+--row <= i;
+--column <= j;
 Start <= '1' when st_square = s00b or st_square = s_cursor_b or st_square = s_select_b else '0';
                
 End Functional;

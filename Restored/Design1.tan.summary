@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 6.598 ns
+Actual Time    : 6.927 ns
 From           : KEY[0]
-To             : square:inst21|y_out[5]
+To             : wr_memory:inst16|address_t[7]
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 14.940 ns
-From           : VGA_SYNC:inst19|video_on_v
+Actual Time    : 12.955 ns
+From           : VGA_SYNC:inst19|video_on_h
 To             : VGA_SYNC
 From Clock     : OSC_50
 To Clock       : --
@@ -25,9 +25,9 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 5.272 ns
-From           : pin_name14
-To             : register_bank2:GUESS_CODE|state.st_end
+Actual Time    : -0.996 ns
+From           : UART_RXD
+To             : rx_module2:inst5|state.rx_shift
 From Clock     : --
 To Clock       : OSC_50
 Failed Paths   : 0
@@ -35,9 +35,9 @@ Failed Paths   : 0
 Type           : Clock Setup: 'OSC_50'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 52.13 MHz ( period = 19.182 ns )
-From           : square:inst21|x_out[1]
-To             : ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0~portb_address_reg2
+Actual Time    : 49.11 MHz ( period = 20.363 ns )
+From           : square:inst21|x_out[0]
+To             : ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0~portb_address_reg5
 From Clock     : OSC_50
 To Clock       : OSC_50
 Failed Paths   : 0
