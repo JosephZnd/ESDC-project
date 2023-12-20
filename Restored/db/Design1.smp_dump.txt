@@ -27,24 +27,6 @@ state.pr_s5 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 state.pr_w5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 state.pr_set_TX 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
-State Machine - |P1_BOARD_vga|game:GAME|state
-Name state.st_W_FR2 state.st_S_EQ state.st_W_FR state.st_S_GRorSM state.st_W_TX3 state.sT_FR_R state.st_W_DT state.st_S_DT state.st_W_TX2 state.st_W_Code state.st_Code state.st_W_RDY state.st_S_RDY state.st_W_TX1 state.st_wait_game 
-state.st_wait_game 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.st_W_TX1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.st_S_RDY 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.st_W_RDY 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.st_Code 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.st_W_Code 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.st_W_TX2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.st_S_DT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.st_W_DT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.sT_FR_R 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.st_W_TX3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.st_S_GRorSM 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.st_W_FR 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_S_EQ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_W_FR2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-
 State Machine - |P1_BOARD_vga|rx_module2:inst5|state
 Name state.rx_stop state.rx_shift state.rx_start state.rx_idle 
 state.rx_idle 0 0 0 0 
@@ -81,6 +63,27 @@ state.st_send_color 0 0 0 1 0 0 1
 state.st_start_game 0 0 1 0 0 0 1 
 state.S_Change_Turn 0 1 0 0 0 0 1 
 state.S_Wait_Turn 1 0 0 0 0 0 1 
+
+State Machine - |P1_BOARD_vga|game:GAME|state
+Name state.st_W_FR2 state.st_S_EQ state.st_W_FR state.st_S_GRorSM state.st_W_TX3 state.sT_FR_R state.st_W_DT state.st_S_DT state.st_W_TX2 state.st_W_Code state.st_Code state.st_Wait_Turn state.st_Turn state.st_Start_Game state.st_W_RDY state.st_S_RDY state.st_W_TX1 state.st_wait_game 
+state.st_wait_game 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.st_W_TX1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.st_S_RDY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.st_W_RDY 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.st_Start_Game 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.st_Turn 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.st_Wait_Turn 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.st_Code 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.st_W_Code 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.st_W_TX2 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.st_S_DT 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.st_W_DT 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.sT_FR_R 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_W_TX3 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_S_GRorSM 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_W_FR 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_S_EQ 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_W_FR2 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
 Name s_xy.s_up s_xy.s_end s_xy.s_left s_xy.s_right s_xy.s_down s_xy.s_wait 

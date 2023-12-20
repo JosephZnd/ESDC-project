@@ -71,7 +71,7 @@ architecture functional of square is
 
   -- State definition:
   type state_type is (
-    s00a, s00b, s00c, s_cursor_a,s_cursor_b,s_cursor_c, 
+    s00, s00a, s00b, s00c, s_cursor_a,s_cursor_b,s_cursor_c, 
     s_select_a, s_select_b, s_select_c, s_cursor_wait, s_game_wait
 );
   
@@ -103,15 +103,22 @@ architecture functional of square is
 			sel_selected <='0';
 			color_index <= '0';
 			SelMode <= '0';
-
+			s_new_game <= '0';
 		elsif rising_edge(clk_d1) then
 			case st_square is
 					-- Row 1
+					when s00 =>
+						st_square <= s00a;
+						sel_selected <='0';
+						color_index <= '0';
+						SelMode <= '0';
+						sel_x <= 160;
+						sel_y <= 120;
 					when s00a =>
 						st_square <= s00b;
 						x_out <= X0+(SIZE*i); 
 						y_out <= Y0+(SIZE*j);
-						if (X0+(SIZE*i) = sel_x and (Y0+(SIZE*j) = sel_y)) then
+						if ((X0+(SIZE*i) = sel_x) and (Y0+(SIZE*j) = sel_y)) then
 							SelMode<='1';
 							else SelMode<='0';
 						end if;
@@ -168,7 +175,7 @@ architecture functional of square is
 						if (internal_sel = '1') then
 							sel_x <= t_x;
 							sel_y <= t_y;
-							sel_selected <= not (sel_selected);
+							sel_selected <= not(sel_selected);
 							st_square <= s00a;
 						else
 							color_t <= RED; 
@@ -183,10 +190,9 @@ architecture functional of square is
 						
 					when s_select_a =>
 						st_square <= s_select_b;
-						if sel_selected ='1' then
-							x_out <= sel_x; y_out <= sel_y;
-							color_t <= BLUE;
-						end if;
+						x_out <= sel_x; y_out <= sel_y;
+						color_t <= BLUE;
+
 					when s_select_b =>
 						st_square <= s_select_c;
 					when s_select_c =>

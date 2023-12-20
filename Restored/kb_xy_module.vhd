@@ -38,13 +38,13 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce)
 		--if (debounce='1') then
 		case s_xy is
 			when s_wait =>
-				if(up_key = '1'  and debounce='1') then 
+				if(up_key = '1'  and debounce='1'  and freeze_kb='0' ) then 
 						 s_xy <= s_up; end if;
-				if(down_key= '1' and debounce='1') then
+				if(down_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_down; end if;
-				if(left_key= '1' and debounce='1') then
+				if(left_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_left; end if;
-				if(right_key= '1' and debounce='1') then
+				if(right_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_right; end if;
 			when s_up =>
 				y_int <= y_int-1;
