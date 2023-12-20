@@ -137,7 +137,7 @@ architecture functional of square is
 						
 						if done = '1' then
 							if (i=0 and j=0) then
-								color_index <= not color_index; 
+								color_index <= not color_index; 	
 								if sel_selected = '1' then
 									st_square <= s_select_a;
 								else

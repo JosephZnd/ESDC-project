@@ -42,6 +42,8 @@ set_global_assignment -name TOP_LEVEL_ENTITY P1_BOARD_vga
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION "9.1 SP2"
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "11:05:20  FEBRUARY 17, 2022"
 set_global_assignment -name LAST_QUARTUS_VERSION "9.1 SP2"
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name SETUP_HOLD_DETECTION OFF
 set_location_assignment PIN_N25 -to DPDT_SW[0]
 set_location_assignment PIN_N26 -to DPDT_SW[1]
@@ -505,10 +507,16 @@ set_global_assignment -name VHDL_FILE square_map.vhd
 set_global_assignment -name VHDL_FILE kb_xy_module.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE sim_xy.vwf
 set_global_assignment -name QIP_FILE ram64.qip
+set_global_assignment -name IP_TOOL_NAME "RAM: 2-PORT" -qip ram64.qip
+set_global_assignment -name IP_TOOL_VERSION 9.1 -qip ram64.qip
+set_global_assignment -name VHDL_FILE ram64.vhd -qip ram64.qip
+set_global_assignment -name MISC_FILE ram64.bsf -qip ram64.qip
+set_global_assignment -name MISC_FILE ram64.cmp -qip ram64.qip
 set_global_assignment -name VHDL_FILE add64_gen.vhd
 set_global_assignment -name BDF_FILE trash.bdf
 set_global_assignment -name VHDL_FILE inverse_square_map.vhd
 set_global_assignment -name BDF_FILE sender1.bdf
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

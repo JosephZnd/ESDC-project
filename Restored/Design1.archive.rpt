@@ -1,0 +1,119 @@
+Archive Project report for Design1
+Wed Dec 20 16:29:13 2023
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Archive Project Summary
+  3. Archive Project Messages
+  4. Files Archived
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------+
+; Archive Project Summary                                    ;
++------------------------+-----------------------------------+
+; Archive Project Status ; Failed - Wed Dec 20 16:29:13 2023 ;
+; Revision Name          ; Design1                           ;
+; Top-level Entity Name  ; P1_BOARD_vga                      ;
+; Family                 ; Cyclone II                        ;
++------------------------+-----------------------------------+
+
+
++--------------------------+
+; Archive Project Messages ;
++--------------------------+
+Info: File Set 'Source control' contains:
+    Info: Project source and settings files
+    Info: Automatically detected source files
+Error: Can't create Quartus II Archive File D:/Project.qar
+Error: ERROR: Archiver failed either because some files could not be processed (refer to: D:/Project.qarlog) or because D:/Project.qar is read-only
+
+Error: Failed to generate 'D:/Project.qar'
+Info: Generated report 'Design1.archive.rpt'
+Error: Evaluation of Tcl script c:/altera/91sp2/quartus/common/tcl/apps/qpm/qar.tcl unsuccessful
+Error: Quartus II Shell was unsuccessful. 4 errors, 0 warnings
+    Error: Peak virtual memory: 147 megabytes
+    Error: Processing ended: Wed Dec 20 16:29:13 2023
+    Error: Elapsed time: 00:00:08
+    Error: Total CPU time (on all processors): 00:00:02
+
+
++-------------------------------------------+
+; Files Archived                            ;
++-------------------------------------------+
+; File Name                                 ;
++-------------------------------------------+
+; add64_gen.vhd                             ;
+; add_generator.vhd                         ;
+; assignment_defaults.qdf                   ;
+; bcd7seg.vhd                               ;
+; big_block.vhd                             ;
+; clk_div_two.vhd                           ;
+; clk_video.vhd                             ;
+; count4b.vhd                               ;
+; db/Design1.sim.cvwf                       ;
+; Design1.qpf                               ;
+; Design1.qsf                               ;
+; Design1.vhd                               ;
+; Design1_1.vwf                             ;
+; Design1_2.vwf                             ;
+; f_div.vhd                                 ;
+; GAME.vhd                                  ;
+; hex_disps.vhd                             ;
+; i_o_manager_vga.vhd                       ;
+; inverse_square_map.vhd                    ;
+; kb_xy_module.vhd                          ;
+; keypad.vhd                                ;
+; keytest_h_v2.vhd                          ;
+; L:/Documentos/Github/Restored/Design1.dpf ;
+; MAIN.vhd                                  ;
+; main_entity.vhd                           ;
+; P1_BOARD_vga.bdf                          ;
+; protocol_rx.vhd                           ;
+; protocol_tx.vhd                           ;
+; ram64.bsf                                 ;
+; ram64.cmp                                 ;
+; ram64.qip                                 ;
+; ram64.vhd                                 ;
+; ram_init.mif                              ;
+; RegisterBank.vhd                          ;
+; rx_block.vhd                              ;
+; rx_module2.vhd                            ;
+; sender1.bdf                               ;
+; sim_xy.vwf                                ;
+; square.vhd                                ;
+; square_map.vhd                            ;
+; trash.bdf                                 ;
+; tx_block.vhd                              ;
+; tx_module.vhd                             ;
+; VGA_SYNC.VHD                              ;
+; VGA_TEST_BOARD.bdf                        ;
+; VGA_visualisation.bdf                     ;
+; Video_Memory.vhd                          ;
+; wr_memory.vhd                             ;
++-------------------------------------------+
+
+

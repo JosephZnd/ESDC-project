@@ -1,0 +1,295 @@
+library ieee;
+use ieee.numeric_std.all; 
+use ieee.std_logic_1164.all;
+
+entity Game_Checkers is
+	port(	clk,nrst, Sel, Turn, Colour: in std_logic;
+			posX, posY : in std_logic_vector(2 downto 0);
+			in_piece :  in std_logic_vector(2 downto 0);
+			gw_piece:out std_logic_vector(2 downto 0); --piece to write RAM and TX 
+			g_addW : out std_logic_vector(5 downto 0); --addresses to write RAM and TX
+			g_addR: out std_logic_vector(5 downto 0);
+			send_x, send_y, send_figure : out std_logic_vector(2 downto 0);
+			WEN_Game, freeze_kb, send1, send2: out std_logic;
+			ready_to_TX : in std_logic);
+	end entity;
+	
+architecture arq of Game_Checkers is
+type state_type is (S_Wait, S_New_Game, S_Wait_Turn, S_Turn, S_Turn_2, S_Move_White,  S_Move_Black, S_Check, S_Wait_Check, S_Verify, 
+					S_Place_Figure, S_End_Turn, S_Pre_Send, S_Send_1, S_Send_2, S_Send_3, S_Send_End, S_Tx_1, S_Tx_2, S_Tx_End  );
+signal state : state_type;
+signal you_are_white, SelMode, new_game, three_packets, s_tx_ready : std_logic;
+signal aux_piece, temp_piece, oldX, oldY, selX, selY, ext_piece, auX, auY, s_x, s_y, s_figure: std_logic_vector(2 downto 0);
+signal s_addR, s_addW : std_logic_vector(5 downto 0);
+begin
+
+
+
+process(clk, nrst)
+variable count: integer :=0;
+variable iselX, iselY, ioldX, ioldY, iauX, iAuY : integer range 0 to 7;
+
+begin
+
+	if nrst = '0' then
+		SelMode <= '0';
+		you_are_white <='0';
+		new_game<='1';
+		state <= S_Wait;
+	elsif rising_edge(clk) then
+		-- La casilla anterior está vcia, se pone a tu ficha y se envia los paquetes. Cuando se han enviado, se pone turno a cero
+		s_addR <= posY & posX;		
+		selX <= posX; 		-- podemos hacer que x e y vayan tanto a RAM como input a Game
+		selY <= posY;
+		aux_piece <= in_piece;
+		s_tx_ready <= ready_to_TX;
+
+		case state is
+			when S_Wait =>
+				if Colour='1' then you_are_white <='1';
+				end if;
+				if Turn='1' then 
+					state <= S_New_Game;
+					
+				end if;
+				
+			when S_New_Game => 
+				new_game<='0';
+				state <= S_Turn;
+				
+			when S_Wait_Turn =>
+				if Turn ='1' then 
+					state<= S_Turn;
+				else state <= S_Wait_Turn;
+				end if;
+				
+			when S_Turn =>
+			
+				if( Sel='1')then --don't write rising edge here
+				 
+					if(SelMode = '0') then
+						oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
+						oldY <= selY;
+						if(temp_piece < "100" and you_are_white = '1') then 
+							state <= S_Turn_2;
+						elsif (temp_piece > "100" and you_are_white = '0') then
+							state <= S_Turn_2;
+						else SelMode <= '0';
+						end if;
+					else
+						if(temp_piece = "100") then
+							SelMode <= '0';
+						elsif(selX = oldX and selY = oldY) then --piece back to where it came.
+							SelMode <= '0';
+							ext_piece <= temp_piece;
+							temp_piece <= "100";
+							state <= S_Place_Figure;
+							
+						elsif (temp_piece < "100" and you_are_white ='1') then -- This to allow only white movements
+							state <= S_Move_White;
+						elsif (temp_piece > "100" and you_are_white ='0') then state <= S_Move_Black;
+						else SelMode <= '0'; --cualquier otro caso, vuelves a elegir, no puedes elegir de otro color
+						end if;
+					end if;
+				end if;
+			when S_Turn_2 =>
+				temp_piece <= aux_piece;
+				s_addW <= selY & selX; 
+				ext_piece <= "100"; --hay que poner como vacia la casilla
+				state <= S_Place_Figure;
+				
+			when S_Move_White =>
+				ioldX := to_integer(unsigned(oldX));
+				ioldY := to_integer(unsigned(oldY));
+				iselX := to_integer(unsigned(selX));
+				iselY := to_integer(unsigned(selY));
+				--peon blanco
+				if temp_piece = "010" then
+					-- primer cuadrante, dcha-arriba. 
+					if ((ioldY - iselY) = (iselX - ioldX)  and (iselY < ioldY) and (iselX > ioldX)) then --Quad1
+						if aux_piece > "100" then --se dispone a comer la pieza
+							iauY := ioldY-1;
+							iauX := ioldX+1;
+							state <= S_Check;
+						elsif aux_piece = "100" then
+							s_addW <= selY & selX;
+							ext_piece <= temp_piece;
+							state <= S_Place_Figure;
+						else state <= S_Turn;		
+						end if;
+						
+					-- segundo cuadrante, izda arriba
+					elsif ((ioldY - iselY) = (ioldX - iselX)  and iselY < ioldY and iselX < ioldX) then --Quad2
+						if aux_piece > "100" then
+								iauY := ioldY-1;
+								iauX := ioldX-1;
+								state <= S_Check;
+						elsif aux_piece = "100" then
+							ext_piece <= temp_piece;
+							s_addW <= selY & selX;
+							state <= S_Place_Figure;
+						else state <= S_Turn;
+						end if;
+				
+					end if;
+				end if;
+				
+			when S_Move_Black =>
+				ioldX := to_integer(unsigned(oldX));
+				ioldY := to_integer(unsigned(oldY));
+				iselX := to_integer(unsigned(selX));
+				iselY := to_integer(unsigned(selY));
+				--peon negr
+				if temp_piece = "111" then
+					-- tercer cuadrante, izda abajo
+					if ((iselY - ioldY) = (ioldX - iselX)  and iselY > ioldY and iselX < ioldX) then --Quad3
+						if aux_piece < "100" then
+								iauY := ioldY+1;
+								iauX := ioldX-1;
+								state <= S_Check;
+						elsif aux_piece = "100" then
+							s_addW <= selY & selX;
+							ext_piece <= temp_piece;							
+							state <= S_Place_Figure;
+						else state <= S_Turn;								
+						end if;
+					
+					-- cuarto cuadrante, dcha abajo
+					elsif ((iselY - ioldY) = (iselX - ioldX)  and iselY > ioldY and iselX > ioldX) then --Quad2
+						if aux_piece < "100" then
+								iauY := ioldY+1;
+								iauX := ioldX+1;
+								state <= S_Check;
+						elsif aux_piece = "100" then
+							s_addW <= selY & selX;
+							ext_piece <= temp_piece;
+							state <= S_Place_Figure;
+						else state <= S_Turn;								
+						end if;
+					end if;
+				end if;
+			
+					
+			
+			when S_Check => 
+				auX <= std_logic_vector(to_unsigned(iauX, auX'length));
+				auY <= std_logic_vector(to_unsigned(iauY, auY'length));
+				s_addR <= auY & auX;
+				state <= S_Wait_Check ;
+			
+			when S_Wait_Check =>
+				for i in 1 to 4 loop
+					if(i = 4) then state <= S_Verify ;
+					end if;
+				end loop;
+			
+			when S_Verify =>
+				if aux_piece = "100" then 
+					ext_piece <= temp_piece;
+					three_packets <= '1';
+					state <= S_Place_Figure; 
+				else 
+					SelMode <= '0';
+					ext_piece <= temp_piece;
+					temp_piece <= "100";
+					state <= S_Place_Figure;---add como volver a mover
+				end if;
+			
+			when S_Place_Figure =>
+				count := count + 1;
+				if count=10 then --we can put 4
+					count := 0;
+					state <= S_End_Turn ;
+				end if;
+			--ensure they wait enough time to write
+					
+				
+			when S_End_Turn =>
+				if SelMode ='0' then
+					SelMode <= '1';
+					state <= S_Turn;
+				elsif SelMode = '1' then 
+					SelMode <='0';
+					state <= S_Pre_Send;
+				end if;
+			
+			when S_Pre_Send => 
+				if s_tx_ready = '1' then
+				state <= S_Send_1;
+				end if;
+				
+			when S_Send_1 =>
+				--send packet 1
+				s_figure <= "100";
+				s_x <= oldX;
+				s_y <= oldY;
+				state <= S_Tx_1;
+			
+			when S_Tx_1 =>
+				if s_tx_ready = '1' then
+					if three_packets ='0' then
+						state <= S_Send_2;
+					elsif three_packets ='1' then
+						state <= S_Send_3;
+					end if;
+				end if;
+			
+			when S_Send_3 =>
+				s_x <= auX;
+				s_y <= auY;
+				s_figure <= temp_piece;
+				state <= S_Tx_2;
+			
+			when S_Tx_2 =>
+				if s_tx_ready = '1' then
+				state <= S_Send_2;
+				end if;	
+				
+			when S_Send_2 =>
+				s_x <= selX;
+				s_y <= selY;
+				if three_packets ='0' then
+					s_figure <= temp_piece;
+				else
+					s_figure <= "100";
+				end if;
+				state <= S_Tx_End;
+								
+			when S_Tx_End =>
+				if s_tx_ready = '1' then
+				state <= S_Send_End;
+				end if;	
+				
+			when S_Send_End =>
+				three_packets <= '0';
+				temp_piece <= "100";
+				state <= S_Wait_turn;
+				
+					
+		end case;
+	end if;
+	
+	
+end process;
+
+
+g_addR <= s_addR;
+g_addW <= s_addW;
+gw_piece <= ext_piece;
+WEN_Game <= '1' when state = S_Place_Figure else '0';
+
+freeze_kb <= '0' when (state = S_Turn) else '1';
+-- add a read RAM to read the following position just in case
+send_x <= s_x;
+send_y <= s_y;
+send_figure <= s_figure;
+send1 <= '1' when state = S_Send_1 or state = S_Send_3 else '0';
+send2 <= '1' when state = S_Send_2 or state = S_Send_3 else '0';
+
+end;
+
+-- necesito mirar como cambiar de color una posicion en funcion de si la he seleccionado, y confirmar como veo el cursor.
+-- tengo0 la matriz, ciertos valores. cuando me muevo, x e y van cambiando la posicion de la ram video que va cambiando de color
+-- Puede que haya una memoria de video, o simplemente ir metiendo 
+-- cuando clicko en Sel, ese valor se cambia a color diferente. y luego x e y siguen siguiendo. cuando clicko por segunda vez, se mira si es correcto.
+
