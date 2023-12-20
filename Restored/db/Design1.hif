@@ -3318,72 +3318,6 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-square
-# storage
-db|Design1.(40).cnf
-db|Design1.(40).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-square.vhd
-12af3de778c1f33dd85e15f75e31e1b7
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-square:inst21
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-kb_xy_module
-# storage
-db|Design1.(7).cnf
-db|Design1.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-kb_xy_module.vhd
-b5651aa1dbe5a944129dafb2938941d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-kb_xy_module:inst8
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
 protocol_rx
 # storage
 db|Design1.(10).cnf
@@ -3409,92 +3343,6 @@ ON
 }
 # hierarchies {
 protocol_rx:inst4
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-game
-# storage
-db|Design1.(32).cnf
-db|Design1.(32).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-game.vhd
-595de9df1340114b29202469972bd7e9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-game:GAME
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-P1_BOARD_vga
-# storage
-db|Design1.(1).cnf
-db|Design1.(1).cnf
-# case_insensitive
-# source_file
-p1_board_vga.bdf
-c2b708035e114f3bc7e7848bbb52a71
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-keytest_h_v2
-# storage
-db|Design1.(6).cnf
-db|Design1.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-keytest_h_v2.vhd
-c1eb15d8c048e53234a1d583f0d54e7d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keytest_h_v2:inst7
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -3536,6 +3384,158 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
+square
+# storage
+db|Design1.(40).cnf
+db|Design1.(40).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+square.vhd
+12af3de778c1f33dd85e15f75e31e1b7
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+square:inst21
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+game
+# storage
+db|Design1.(32).cnf
+db|Design1.(32).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+game.vhd
+595de9df1340114b29202469972bd7e9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+game:GAME
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+keytest_h_v2
+# storage
+db|Design1.(6).cnf
+db|Design1.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+keytest_h_v2.vhd
+c1eb15d8c048e53234a1d583f0d54e7d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+keytest_h_v2:inst7
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+kb_xy_module
+# storage
+db|Design1.(7).cnf
+db|Design1.(7).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+kb_xy_module.vhd
+a55d406bb8d6e8d33597a37ece7c4962
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+kb_xy_module:inst8
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+P1_BOARD_vga
+# storage
+db|Design1.(1).cnf
+db|Design1.(1).cnf
+# case_insensitive
+# source_file
+p1_board_vga.bdf
+73354229cccdd02733fb38a997998d
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
 main_control
 # storage
 db|Design1.(8).cnf
@@ -3547,7 +3547,7 @@ ON
 # case_insensitive
 # source_file
 main.vhd
-e275bd80f1248435c7a4418de6da8
+4432c0d59aa7188f445eb1e916eb80c2
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

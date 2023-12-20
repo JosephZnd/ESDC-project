@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Wed Dec 20 16:20:42 2023
+Wed Dec 20 17:49:53 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -63,15 +63,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 20 16:20:42 2023        ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 20 17:49:52 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 717                                          ;
-;     Total combinational functions  ; 643                                          ;
-;     Dedicated logic registers      ; 284                                          ;
-; Total registers                    ; 284                                          ;
+; Total logic elements               ; 785                                          ;
+;     Total combinational functions  ; 698                                          ;
+;     Dedicated logic registers      ; 322                                          ;
+; Total registers                    ; 322                                          ;
 ; Total pins                         ; 50                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,496                                       ;
@@ -191,7 +191,6 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; wr_memory.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/wr_memory.vhd                    ;
 ; tx_module.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/tx_module.vhd                    ;
 ; MAIN.vhd                         ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/MAIN.vhd                         ;
-; GAME.vhd                         ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/GAME.vhd                         ;
 ; square_map.vhd                   ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/square_map.vhd                   ;
 ; kb_xy_module.vhd                 ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/kb_xy_module.vhd                 ;
 ; ram64.vhd                        ; yes             ; User Wizard-Generated File             ; L:/Documentos/Github/Restored/ram64.vhd                        ;
@@ -202,6 +201,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; db/altsyncram_fes1.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_fes1.tdf           ;
 ; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/decode_9oa.tdf                ;
 ; db/mux_kib.tdf                   ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/mux_kib.tdf                   ;
+; game.vhd                         ; yes             ; Auto-Found VHDL File                   ; L:/Documentos/Github/Restored/game.vhd                         ;
 ; db/altsyncram_5h72.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_5h72.tdf           ;
 ; ram_init.mif                     ; yes             ; Auto-Found Memory Initialization File  ; L:/Documentos/Github/Restored/ram_init.mif                     ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf ;
@@ -224,28 +224,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 717    ;
+; Estimated Total logic elements              ; 785    ;
 ;                                             ;        ;
-; Total combinational functions               ; 643    ;
+; Total combinational functions               ; 698    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 219    ;
-;     -- 3 input functions                    ; 185    ;
-;     -- <=2 input functions                  ; 239    ;
+;     -- 4 input functions                    ; 241    ;
+;     -- 3 input functions                    ; 206    ;
+;     -- <=2 input functions                  ; 251    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 500    ;
-;     -- arithmetic mode                      ; 143    ;
+;     -- normal mode                          ; 550    ;
+;     -- arithmetic mode                      ; 148    ;
 ;                                             ;        ;
-; Total registers                             ; 284    ;
-;     -- Dedicated logic registers            ; 284    ;
+; Total registers                             ; 322    ;
+;     -- Dedicated logic registers            ; 322    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
 ; I/O pins                                    ; 50     ;
 ; Total memory bits                           ; 98496  ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 152    ;
-; Total fan-out                               ; 3498   ;
-; Average fan-out                             ; 3.48   ;
+; Maximum fan-out                             ; 165    ;
+; Total fan-out                               ; 3787   ;
+; Average fan-out                             ; 3.45   ;
 +---------------------------------------------+--------+
 
 
@@ -254,7 +254,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                              ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                       ; 643 (1)           ; 284 (0)      ; 98496       ; 0            ; 0       ; 0         ; 50   ; 0            ; |P1_BOARD_vga                                                                                                                                    ; work         ;
+; |P1_BOARD_vga                                                       ; 698 (1)           ; 322 (0)      ; 98496       ; 0            ; 0       ; 0         ; 50   ; 0            ; |P1_BOARD_vga                                                                                                                                    ; work         ;
 ;    |VGA_SYNC:inst19|                                                ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|VGA_SYNC:inst19                                                                                                                    ;              ;
 ;    |Video_Memory:inst18|                                            ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18                                                                                                                ;              ;
 ;       |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component                                                                                ;              ;
@@ -282,18 +282,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |abs_divider_8ag:divider|                               ; 83 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider                                    ;              ;
 ;                |alt_u_div_sve:divider|                              ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider              ;              ;
 ;                |lpm_abs_kq9:my_abs_num|                             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num             ;              ;
-;    |kb_xy_module:inst8|                                             ; 2 (2)             ; 2 (2)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
+;    |kb_xy_module:inst8|                                             ; 16 (16)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
 ;    |keypad:inst2|                                                   ; 47 (43)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
 ;       |count4b:counter|                                             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                       ;              ;
-;    |keytest_h_v2:inst7|                                             ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
-;    |main_control:inst|                                              ; 7 (7)             ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|main_control:inst                                                                                                                  ;              ;
+;    |keytest_h_v2:inst7|                                             ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
+;    |main_control:inst|                                              ; 10 (10)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|main_control:inst                                                                                                                  ;              ;
 ;    |protocol_rx:inst4|                                              ; 30 (30)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                  ;              ;
-;    |protocol_tx:inst3|                                              ; 24 (24)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
+;    |protocol_tx:inst3|                                              ; 25 (25)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
 ;    |ram64:inst14|                                                   ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14                                                                                                                       ;              ;
 ;       |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component                                                                                       ;              ;
 ;          |altsyncram_5h72:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated                                                        ;              ;
 ;    |rx_module2:inst5|                                               ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                   ;              ;
-;    |square:inst21|                                                  ; 77 (77)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
+;    |square:inst21|                                                  ; 99 (99)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
+;    |square_map:inst9|                                               ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square_map:inst9                                                                                                                   ;              ;
 ;    |tx_module:inst6|                                                ; 25 (25)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                    ;              ;
 ;    |wr_memory:inst16|                                               ; 68 (68)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|wr_memory:inst16                                                                                                                   ;              ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
@@ -414,18 +415,19 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                                           ;
-+---------------------+-------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; Name                ; state.S_Wait_Turn ; state.S_Change_Turn ; state.st_start_game ; state.st_P_First ; state.st_Op_First ; state.st_wait_hash ;
-+---------------------+-------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; state.st_wait_hash  ; 0                 ; 0                   ; 0                   ; 0                ; 0                 ; 0                  ;
-; state.st_Op_First   ; 0                 ; 0                   ; 0                   ; 0                ; 1                 ; 1                  ;
-; state.st_P_First    ; 0                 ; 0                   ; 0                   ; 1                ; 0                 ; 1                  ;
-; state.st_start_game ; 0                 ; 0                   ; 1                   ; 0                ; 0                 ; 1                  ;
-; state.S_Change_Turn ; 0                 ; 1                   ; 0                   ; 0                ; 0                 ; 1                  ;
-; state.S_Wait_Turn   ; 1                 ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
-+---------------------+-------------------+---------------------+---------------------+------------------+-------------------+--------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                                                                 ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
+; Name                ; state.S_Wait_Turn ; state.S_Change_Turn ; state.st_start_game ; state.st_send_color ; state.st_P_First ; state.st_Op_First ; state.st_wait_hash ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
+; state.st_wait_hash  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 0                  ;
+; state.st_Op_First   ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 1                 ; 1                  ;
+; state.st_P_First    ; 0                 ; 0                   ; 0                   ; 0                   ; 1                ; 0                 ; 1                  ;
+; state.st_send_color ; 0                 ; 0                   ; 0                   ; 1                   ; 0                ; 0                 ; 1                  ;
+; state.st_start_game ; 0                 ; 0                   ; 1                   ; 0                   ; 0                ; 0                 ; 1                  ;
+; state.S_Change_Turn ; 0                 ; 1                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
+; state.S_Wait_Turn   ; 1                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -522,35 +524,9 @@ Encoding Type:  One-Hot
 ; wr_memory:inst16|k[2]                  ; Merged with wr_memory:inst16|i[2]           ;
 ; wr_memory:inst16|l[3]                  ; Merged with wr_memory:inst16|j[3]           ;
 ; wr_memory:inst16|k[3]                  ; Merged with wr_memory:inst16|i[3]           ;
-; kb_xy_module:inst8|x_int[0..1]         ; Stuck at GND due to stuck port clock_enable ;
-; kb_xy_module:inst8|y_int[0..1]         ; Stuck at GND due to stuck port clock_enable ;
-; square:inst21|sel_x[2]                 ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|sel_y[1..2]              ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|c_x[2]                   ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|c_x[1]                   ; Stuck at VCC due to stuck port data_in      ;
-; square:inst21|c_y[1..2,6]              ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|sel_y[6]                 ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|c_x[7]                   ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|sel_x[7]                 ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|c_x[4..5]                ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|sel_x[4..5]              ; Stuck at GND due to stuck port data_in      ;
-; square:inst21|sel_x[1]                 ; Merged with square:inst21|sel_x[0]          ;
-; square:inst21|c_x[3]                   ; Merged with square:inst21|c_x[6]            ;
-; kb_xy_module:inst8|y_int[2]            ; Merged with kb_xy_module:inst8|x_int[2]     ;
-; square:inst21|c_x[6]                   ; Merged with square:inst21|c_y[5]            ;
-; square:inst21|c_y[3..4]                ; Merged with square:inst21|c_y[5]            ;
-; square:inst21|sel_x[6]                 ; Merged with square:inst21|sel_y[5]          ;
-; square:inst21|sel_y[3..4]              ; Merged with square:inst21|sel_y[5]          ;
 ; protocol_tx:inst3|state.pr_sm          ; Lost fanout                                 ;
 ; game:GAME|state.sT_FR_R                ; Lost fanout                                 ;
 ; game:GAME|state.st_S_GRorSM            ; Lost fanout                                 ;
-; kb_xy_module:inst8|s_xy.s_down         ; Lost fanout                                 ;
-; kb_xy_module:inst8|s_xy.s_right        ; Lost fanout                                 ;
-; kb_xy_module:inst8|s_xy.s_left         ; Lost fanout                                 ;
-; kb_xy_module:inst8|s_xy.s_up           ; Lost fanout                                 ;
-; main_control:inst|s_color_white        ; Lost fanout                                 ;
-; main_control:inst|state.S_Change_Turn  ; Lost fanout                                 ;
-; main_control:inst|state.S_Wait_Turn    ; Lost fanout                                 ;
 ; game:GAME|state.st_W_TX3               ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_W_TX2               ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_W_FR                ; Stuck at GND due to stuck port data_in      ;
@@ -569,35 +545,25 @@ Encoding Type:  One-Hot
 ; protocol_tx:inst3|state.pr_s5          ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_w5          ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_W_Code              ; Lost fanout                                 ;
-; kb_xy_module:inst8|x_int[2]            ; Stuck at GND due to stuck port clock        ;
-; square:inst21|sel_x[3]                 ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 89 ;                                             ;
+; Total Number of Removed Registers = 52 ;                                             ;
 +----------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                                         ;
-+---------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; Register name                   ; Reason for Removal             ; Registers Removed due to This Register                                           ;
-+---------------------------------+--------------------------------+----------------------------------------------------------------------------------+
-; kb_xy_module:inst8|x_int[1]     ; Stuck at GND                   ; square:inst21|sel_x[2], square:inst21|c_x[2], square:inst21|c_x[1],              ;
-;                                 ; due to stuck port clock_enable ; square:inst21|c_y[2], square:inst21|c_y[1], square:inst21|c_y[6],                ;
-;                                 ;                                ; square:inst21|sel_x[7], square:inst21|c_x[5], square:inst21|c_x[4],              ;
-;                                 ;                                ; square:inst21|sel_x[4], square:inst21|sel_x[5], square:inst21|sel_x[3]           ;
-; protocol_tx:inst3|frame_type[2] ; Stuck at GND                   ; protocol_tx:inst3|state.pr_s3, protocol_tx:inst3|state.pr_w3,                    ;
-;                                 ; due to stuck port data_in      ; protocol_tx:inst3|state.pr_s4, protocol_tx:inst3|state.pr_w4,                    ;
-;                                 ;                                ; protocol_tx:inst3|state.pr_s5                                                    ;
-; game:GAME|state.st_W_TX3        ; Stuck at GND                   ; game:GAME|state.st_S_EQ, protocol_tx:inst3|state.pr_eq, game:GAME|state.st_W_DT, ;
-;                                 ; due to stuck port data_in      ; game:GAME|state.st_W_FR2                                                         ;
-; protocol_tx:inst3|dataH_i[2]    ; Stuck at GND                   ; protocol_tx:inst3|tx_data[2]                                                     ;
-;                                 ; due to stuck port data_in      ;                                                                                  ;
-; kb_xy_module:inst8|y_int[1]     ; Stuck at GND                   ; square:inst21|sel_y[6]                                                           ;
-;                                 ; due to stuck port clock_enable ;                                                                                  ;
-; kb_xy_module:inst8|y_int[0]     ; Stuck at GND                   ; square:inst21|sel_y[1]                                                           ;
-;                                 ; due to stuck port clock_enable ;                                                                                  ;
-; game:GAME|state.st_W_TX2        ; Stuck at GND                   ; game:GAME|state.st_S_DT                                                          ;
-;                                 ; due to stuck port data_in      ;                                                                                  ;
-+---------------------------------+--------------------------------+----------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++---------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                                           ;
++---------------------------------+---------------------------+----------------------------------------------------------------------------------+
+; protocol_tx:inst3|frame_type[2] ; Stuck at GND              ; protocol_tx:inst3|state.pr_s3, protocol_tx:inst3|state.pr_w3,                    ;
+;                                 ; due to stuck port data_in ; protocol_tx:inst3|state.pr_s4, protocol_tx:inst3|state.pr_w4,                    ;
+;                                 ;                           ; protocol_tx:inst3|state.pr_s5                                                    ;
+; game:GAME|state.st_W_TX3        ; Stuck at GND              ; game:GAME|state.st_S_EQ, protocol_tx:inst3|state.pr_eq, game:GAME|state.st_W_DT, ;
+;                                 ; due to stuck port data_in ; game:GAME|state.st_W_FR2                                                         ;
+; protocol_tx:inst3|dataH_i[2]    ; Stuck at GND              ; protocol_tx:inst3|tx_data[2]                                                     ;
+;                                 ; due to stuck port data_in ;                                                                                  ;
+; game:GAME|state.st_W_TX2        ; Stuck at GND              ; game:GAME|state.st_S_DT                                                          ;
+;                                 ; due to stuck port data_in ;                                                                                  ;
++---------------------------------+---------------------------+----------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -605,28 +571,34 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 284   ;
+; Total registers                              ; 322   ;
 ; Number of registers using Synchronous Clear  ; 26    ;
 ; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 122   ;
+; Number of registers using Asynchronous Clear ; 135   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 98    ;
+; Number of registers using Clock Enable       ; 133   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; tx_module:inst6|tx                     ; 1       ;
-; main_control:inst|LED_ON               ; 2       ;
-; tx_module:inst6|tx_empty               ; 8       ;
-; protocol_tx:inst3|ready_to_TX          ; 3       ;
-; square:inst21|c_y[5]                   ; 8       ;
-; Total number of inverted registers = 5 ;         ;
-+----------------------------------------+---------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; tx_module:inst6|tx                      ; 1       ;
+; main_control:inst|LED_ON                ; 1       ;
+; tx_module:inst6|tx_empty                ; 8       ;
+; protocol_tx:inst3|ready_to_TX           ; 3       ;
+; square:inst21|c_y[5]                    ; 2       ;
+; square:inst21|c_y[4]                    ; 2       ;
+; square:inst21|c_x[1]                    ; 2       ;
+; square:inst21|c_x[6]                    ; 2       ;
+; square:inst21|c_y[3]                    ; 2       ;
+; kb_xy_module:inst8|y_int[2]             ; 6       ;
+; kb_xy_module:inst8|x_int[2]             ; 5       ;
+; Total number of inverted registers = 11 ;         ;
++-----------------------------------------+---------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -634,26 +606,27 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[9]     ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|data[0]          ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[7]     ;
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |P1_BOARD_vga|square:inst21|color_t[1]          ;
-; 6:1                ; 13 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |P1_BOARD_vga|square:inst21|x_out[7]            ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[11]    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|data[2]          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[0]     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |P1_BOARD_vga|square:inst21|color_t[2]          ;
+; 6:1                ; 13 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |P1_BOARD_vga|square:inst21|x_out[4]            ;
 ; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[2]          ;
 ; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[7]      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[0]     ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[1]     ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[2] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count         ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|state           ;
-; 7:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |P1_BOARD_vga|kb_xy_module:inst8|s_xy           ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |P1_BOARD_vga|kb_xy_module:inst8|s_xy           ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector2       ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector6       ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.check1    ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector8         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector9         ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector7         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector9        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector8        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|square:inst21|Selector9           ;
-; 11:1               ; 6 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector9               ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector6       ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|square:inst21|Selector10          ;
+; 11:1               ; 6 bits    ; 42 LEs        ; 18 LEs               ; 24 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector6               ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector10      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -885,7 +858,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 20 16:20:30 2023
+    Info: Processing started: Wed Dec 20 17:49:39 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -961,9 +934,6 @@ Info: Found 2 design units, including 1 entities, in source file registerbank.vh
 Info: Found 2 design units, including 1 entities, in source file main.vhd
     Info: Found design unit 1: main_control-main
     Info: Found entity 1: main_control
-Info: Found 2 design units, including 1 entities, in source file game.vhd
-    Info: Found design unit 1: game-main
-    Info: Found entity 1: game
 Info: Found 2 design units, including 1 entities, in source file tx_block.vhd
     Info: Found design unit 1: tx_block-main
     Info: Found entity 1: tx_block
@@ -1044,6 +1014,9 @@ Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
 Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
 Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
 Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
+Warning: Using design file game.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+    Info: Found design unit 1: game-main
+    Info: Found entity 1: game
 Info: Elaborating entity "game" for hierarchy "game:GAME"
 Info: Elaborating entity "protocol_tx" for hierarchy "protocol_tx:inst3"
 Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
@@ -1127,28 +1100,22 @@ Info: DEV_CLRn pin will set, and not reset, register with preset signal due to N
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK" is stuck at VCC
 Critical Warning: Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register kb_xy_module:inst8|y_int[2] will power up to High
     Critical Warning (18010): Register kb_xy_module:inst8|x_int[2] will power up to High
-Info: 11 registers lost all their fanouts during netlist optimizations. The first 11 are displayed below.
+Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
     Info: Register "protocol_tx:inst3|state.pr_sm" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.sT_FR_R" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.st_S_GRorSM" lost all its fanouts during netlist optimizations.
-    Info: Register "kb_xy_module:inst8|s_xy.s_down" lost all its fanouts during netlist optimizations.
-    Info: Register "kb_xy_module:inst8|s_xy.s_right" lost all its fanouts during netlist optimizations.
-    Info: Register "kb_xy_module:inst8|s_xy.s_left" lost all its fanouts during netlist optimizations.
-    Info: Register "kb_xy_module:inst8|s_xy.s_up" lost all its fanouts during netlist optimizations.
-    Info: Register "main_control:inst|s_color_white" lost all its fanouts during netlist optimizations.
-    Info: Register "main_control:inst|state.S_Change_Turn" lost all its fanouts during netlist optimizations.
-    Info: Register "main_control:inst|state.S_Wait_Turn" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.st_W_Code" lost all its fanouts during netlist optimizations.
-Info: Implemented 802 device resources after synthesis - the final resource count might be different
+Info: Implemented 881 device resources after synthesis - the final resource count might be different
     Info: Implemented 7 input pins
     Info: Implemented 43 output pins
-    Info: Implemented 723 logic cells
+    Info: Implemented 802 logic cells
     Info: Implemented 27 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 6 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 8 warnings
     Info: Peak virtual memory: 258 megabytes
-    Info: Processing ended: Wed Dec 20 16:20:42 2023
-    Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Processing ended: Wed Dec 20 17:49:53 2023
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:08
 
 

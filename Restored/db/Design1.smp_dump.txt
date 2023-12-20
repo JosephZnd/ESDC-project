@@ -73,13 +73,14 @@ state.pr_r5 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
 state.pr_s_dt 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|main_control:inst|state
-Name state.S_Wait_Turn state.S_Change_Turn state.st_start_game state.st_P_First state.st_Op_First state.st_wait_hash 
-state.st_wait_hash 0 0 0 0 0 0 
-state.st_Op_First 0 0 0 0 1 1 
-state.st_P_First 0 0 0 1 0 1 
-state.st_start_game 0 0 1 0 0 1 
-state.S_Change_Turn 0 1 0 0 0 1 
-state.S_Wait_Turn 1 0 0 0 0 1 
+Name state.S_Wait_Turn state.S_Change_Turn state.st_start_game state.st_send_color state.st_P_First state.st_Op_First state.st_wait_hash 
+state.st_wait_hash 0 0 0 0 0 0 0 
+state.st_Op_First 0 0 0 0 0 1 1 
+state.st_P_First 0 0 0 0 1 0 1 
+state.st_send_color 0 0 0 1 0 0 1 
+state.st_start_game 0 0 1 0 0 0 1 
+state.S_Change_Turn 0 1 0 0 0 0 1 
+state.S_Wait_Turn 1 0 0 0 0 0 1 
 
 State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
 Name s_xy.s_up s_xy.s_end s_xy.s_left s_xy.s_right s_xy.s_down s_xy.s_wait 

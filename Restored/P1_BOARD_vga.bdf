@@ -1882,6 +1882,13 @@ applicable agreement for further details.
 		(line (pt 0 96)(pt 16 96)(line_width 1))
 	)
 	(port
+		(pt 0 112)
+		(input)
+		(text "turn_read" (rect 0 0 46 12)(font "Arial" ))
+		(text "turn_read" (rect 21 107 67 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 1))
+	)
+	(port
 		(pt 192 32)
 		(output)
 		(text "new_game" (rect 0 0 51 12)(font "Arial" ))
@@ -2397,11 +2404,6 @@ applicable agreement for further details.
 	(text "new_game" (rect 752 1440 803 1452)(font "Arial" ))
 	(pt 792 1456)
 	(pt 744 1456)
-)
-(connector
-	(text "freeze" (rect 800 872 830 884)(font "Arial" ))
-	(pt 848 888)
-	(pt 792 888)
 )
 (connector
 	(text "clk" (rect 824 8 838 20)(font "Arial" ))
