@@ -8,13 +8,12 @@ entity game is
 	port (
 		clk50, nrst: in std_logic;
 		New_Game, Sel : in std_logic;  
-		RDY_RECEIVED, GR_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: in std_logic;  
+		RDY_RECEIVED: in std_logic;  
 		Pos_X, Pos_Y : in integer range 7 downto 0;
 		In_Piece : in std_logic_vector(2 downto 0);
-		bank_ready, ready_to_TX, Turn, Color: in std_logic;  
-		SEND_RDY, SEND_GR, SEND_EQ, SEND_SM, SEND_DT : out std_logic;
-		frame_received : out std_logic;
-		enterCode, led_turn, turn_read, freeze_kb : out std_logic;
+		ready_to_TX, Turn, Color: in std_logic;  
+		SEND_RDY : out std_logic;
+		led_turn, turn_read, freeze_kb : out std_logic;
 		Ram_X, Ram_Y : out integer range 7 downto 0;
 		X_To_Sent, Y_To_Sent: out integer range 7 downto 0;
 		Write_Piece: out std_logic_vector(2 downto 0));
