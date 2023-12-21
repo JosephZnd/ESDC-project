@@ -1,7 +1,7 @@
 Quartus II
 Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 11
-3700
+1000
 OFF
 OFF
 OFF
@@ -20,24 +20,27 @@ VHSM_ON
 -- Start VHDL Libraries --
 -- End VHDL Libraries --
 # entity
-sender_receiver
+P1_BOARD_vga
 # storage
 db|Design1.(0).cnf
 db|Design1.(0).cnf
 # case_insensitive
 # source_file
-sender_receiver.bdf
-465a3543c52f2c105634157b2c552595
+p1_board_vga.bdf
+c9fa975c37eee95eed394f2c236df5
 26
 # internal_option {
 BLOCK_DESIGN_NAMING
 AUTO
 }
+# hierarchies {
+|
+}
 # macro_sequence
 
 # end
 # entity
-Main_Checkers
+VGA_SYNC
 # storage
 db|Design1.(1).cnf
 db|Design1.(1).cnf
@@ -47,8 +50,8 @@ ON
 }
 # case_insensitive
 # source_file
-main_checkers.vhd
-c22b24ae7ba8486b3797fa27ea889b97
+vga_sync.vhd
+dbb7135c243a2d569ef707b32699892
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -61,10 +64,10 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-Main_Checkers:inst13
+VGA_SYNC:inst19
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -98,7 +101,7 @@ clk_video:inst20
 clk_video:inst10
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -142,1080 +145,7 @@ clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
 clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-f_div
-# storage
-db|Design1.(4).cnf
-db|Design1.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-f_div.vhd
-6b7bb21a0af966099a2ffc846da30d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-f_div:inst1
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-<<<<<<< Updated upstream
-register_bank2
-=======
-keytest_h_v2
-# storage
-db|Design1.(5).cnf
-db|Design1.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-keytest_h_v2.vhd
-a0bd2ab9388d5aac6fdf1ecabd5228
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keytest_h_v2:inst7
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-keypad
-# storage
-db|Design1.(6).cnf
-db|Design1.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-keypad.vhd
-2f596d786bfcff510b728324f9cf162
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keypad:inst2
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-count4b
-# storage
-db|Design1.(7).cnf
-db|Design1.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-count4b.vhd
-a367e4584297f14576b758641de3a7d
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keypad:inst2|count4b:counter
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-kb_xy_module
-# storage
-db|Design1.(8).cnf
-db|Design1.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-kb_xy_module.vhd
-a55d406bb8d6e8d33597a37ece7c4962
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-kb_xy_module:inst8
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-Game_Checkers
->>>>>>> Stashed changes
-# storage
-db|Design1.(9).cnf
-db|Design1.(9).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-game_checkers.vhd
-1a3f7c80997e4ef39a72eb5fe01a6a5f
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-<<<<<<< Updated upstream
-=======
-# hierarchies {
-Game_Checkers:inst15
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-protocol_tx_checkers
-# storage
-db|Design1.(10).cnf
-db|Design1.(10).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_tx_checkers.vhd
-1e4fc081013beb044d1313dd4e71f
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_tx_checkers:inst27
-}
->>>>>>> Stashed changes
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-tx_module
-# storage
-db|Design1.(11).cnf
-db|Design1.(11).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-tx_module.vhd
-dc60315030dbc6902a4fc52bb3a071a8
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-tx_module:inst6
-tx_module:inst29
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-ram64
-# storage
-db|Design1.(12).cnf
-db|Design1.(12).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-ram64.vhd
-a5fae5ec1e2acc4f8378d3ef3b9e76
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-ram64:inst14
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-altsyncram
-# storage
-db|Design1.(13).cnf
-db|Design1.(13).cnf
-# case_insensitive
-# source_file
-|altera|91sp2|quartus|libraries|megafunctions|altsyncram.tdf
-67d9a3902c8a461c1d5750189e124f2
-7
-# user_parameter {
-BYTE_SIZE_BLOCK
-8
-PARAMETER_UNKNOWN
-DEF
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-WIDTH_BYTEENA
-1
-PARAMETER_UNKNOWN
-DEF
-OPERATION_MODE
-BIDIR_DUAL_PORT
-PARAMETER_UNKNOWN
-USR
-WIDTH_A
-3
-PARAMETER_SIGNED_DEC
-USR
-WIDTHAD_A
-6
-PARAMETER_SIGNED_DEC
-USR
-NUMWORDS_A
-64
-PARAMETER_SIGNED_DEC
-USR
-OUTDATA_REG_A
-CLOCK0
-PARAMETER_UNKNOWN
-USR
-ADDRESS_ACLR_A
-NONE
-PARAMETER_UNKNOWN
-DEF
-OUTDATA_ACLR_A
-NONE
-PARAMETER_UNKNOWN
-USR
-WRCONTROL_ACLR_A
-NONE
-PARAMETER_UNKNOWN
-DEF
-INDATA_ACLR_A
-NONE
-PARAMETER_UNKNOWN
-DEF
-BYTEENA_ACLR_A
-NONE
-PARAMETER_UNKNOWN
-DEF
-WIDTH_B
-3
-PARAMETER_SIGNED_DEC
-USR
-WIDTHAD_B
-6
-PARAMETER_SIGNED_DEC
-USR
-NUMWORDS_B
-64
-PARAMETER_SIGNED_DEC
-USR
-INDATA_REG_B
-CLOCK0
-PARAMETER_UNKNOWN
-USR
-WRCONTROL_WRADDRESS_REG_B
-CLOCK0
-PARAMETER_UNKNOWN
-USR
-RDCONTROL_REG_B
-CLOCK1
-PARAMETER_UNKNOWN
-DEF
-ADDRESS_REG_B
-CLOCK0
-PARAMETER_UNKNOWN
-USR
-OUTDATA_REG_B
-CLOCK0
-PARAMETER_UNKNOWN
-USR
-BYTEENA_REG_B
-CLOCK1
-PARAMETER_UNKNOWN
-DEF
-INDATA_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-DEF
-WRCONTROL_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-DEF
-ADDRESS_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-DEF
-OUTDATA_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-USR
-RDCONTROL_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-DEF
-BYTEENA_ACLR_B
-NONE
-PARAMETER_UNKNOWN
-DEF
-WIDTH_BYTEENA_A
-1
-PARAMETER_SIGNED_DEC
-USR
-WIDTH_BYTEENA_B
-1
-PARAMETER_SIGNED_DEC
-USR
-RAM_BLOCK_TYPE
-AUTO
-PARAMETER_UNKNOWN
-DEF
-BYTE_SIZE
-8
-PARAMETER_UNKNOWN
-DEF
-READ_DURING_WRITE_MODE_MIXED_PORTS
-OLD_DATA
-PARAMETER_UNKNOWN
-USR
-READ_DURING_WRITE_MODE_PORT_A
-NEW_DATA_NO_NBE_READ
-PARAMETER_UNKNOWN
-DEF
-READ_DURING_WRITE_MODE_PORT_B
-NEW_DATA_NO_NBE_READ
-PARAMETER_UNKNOWN
-DEF
-INIT_FILE
-ram_init.mif
-PARAMETER_UNKNOWN
-USR
-INIT_FILE_LAYOUT
-PORT_A
-PARAMETER_UNKNOWN
-DEF
-MAXIMUM_DEPTH
-0
-PARAMETER_UNKNOWN
-DEF
-CLOCK_ENABLE_INPUT_A
-BYPASS
-PARAMETER_UNKNOWN
-USR
-CLOCK_ENABLE_INPUT_B
-BYPASS
-PARAMETER_UNKNOWN
-USR
-CLOCK_ENABLE_OUTPUT_A
-BYPASS
-PARAMETER_UNKNOWN
-USR
-CLOCK_ENABLE_OUTPUT_B
-BYPASS
-PARAMETER_UNKNOWN
-USR
-CLOCK_ENABLE_CORE_A
-USE_INPUT_CLKEN
-PARAMETER_UNKNOWN
-DEF
-CLOCK_ENABLE_CORE_B
-USE_INPUT_CLKEN
-PARAMETER_UNKNOWN
-DEF
-ENABLE_ECC
-FALSE
-PARAMETER_UNKNOWN
-DEF
-DEVICE_FAMILY
-Cyclone II
-PARAMETER_UNKNOWN
-USR
-CBXI_PARAMETER
-altsyncram_5h72
-PARAMETER_UNKNOWN
-USR
-}
-# used_port {
-wren_b
--1
-3
-wren_a
--1
-3
-q_b2
--1
-3
-q_b1
--1
-3
-q_b0
--1
-3
-q_a2
--1
-3
-q_a1
--1
-3
-q_a0
--1
-3
-data_b2
--1
-3
-data_b1
--1
-3
-data_b0
--1
-3
-data_a2
--1
-3
-data_a1
--1
-3
-data_a0
--1
-3
-clock0
--1
-3
-address_b5
--1
-3
-address_b4
--1
-3
-address_b3
--1
-3
-address_b2
--1
-3
-address_b1
--1
-3
-address_b0
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# hierarchies {
-ram64:inst14|altsyncram:altsyncram_component
-}
-# macro_sequence
-
-# end
-# entity
-altsyncram_5h72
-# storage
-db|Design1.(14).cnf
-db|Design1.(14).cnf
-# case_insensitive
-# source_file
-db|altsyncram_5h72.tdf
-9911adf2eba853717ee5a0b165aeb618
-7
-# used_port {
-wren_b
--1
-3
-wren_a
--1
-3
-q_b2
--1
-3
-q_b1
--1
-3
-q_b0
--1
-3
-q_a2
--1
-3
-q_a1
--1
-3
-q_a0
--1
-3
-data_b2
--1
-3
-data_b1
--1
-3
-data_b0
--1
-3
-data_a2
--1
-3
-data_a1
--1
-3
-data_a0
--1
-3
-clock0
--1
-3
-address_b5
--1
-3
-address_b4
--1
-3
-address_b3
--1
-3
-address_b2
--1
-3
-address_b1
--1
-3
-address_b0
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-ram_init.mif
-32e2a4f058723bb15274622da316365c
-}
-# hierarchies {
-ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated
-}
-# macro_sequence
-
-# end
-# entity
-mux_write
-# storage
-db|Design1.(15).cnf
-db|Design1.(15).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mux_write.vhd
-317d8be2c02612b9becda6a84eb7610
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mux_write:inst26
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-mux_address
-# storage
-db|Design1.(16).cnf
-db|Design1.(16).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mux_address.vhd
-1b9d4b8458e4f523b51f71afa4c5572
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mux_address:inst24
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-protocol_rx_checkers
-# storage
-db|Design1.(17).cnf
-db|Design1.(17).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_rx_checkers.vhd
-e76b44eeeae3a22f7fc642df92ec329
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_rx_checkers:inst30
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-rx_module2
-# storage
-db|Design1.(18).cnf
-db|Design1.(18).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-rx_module2.vhd
-cbae78da868f8266ef46f5e95c31b3b7
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-rx_module2:inst5
-rx_module2:inst28
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-add64_gen
-# storage
-db|Design1.(19).cnf
-db|Design1.(19).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-add64_gen.vhd
-6df11e97a497906877aeab5d36cf3367
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-add64_gen:inst22
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-inverse_square_map
-# storage
-db|Design1.(20).cnf
-db|Design1.(20).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-inverse_square_map.vhd
-c3f7dc1365a7349467de2d9d9f373e
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-inverse_square_map:inst23
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-square
-# storage
-db|Design1.(21).cnf
-db|Design1.(21).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-square.vhd
-9318a2d8dd8abb7516616f4d69873a7b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-square:inst21
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-wr_memory
-# storage
-db|Design1.(22).cnf
-db|Design1.(22).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-wr_memory.vhd
-11cdd8ead15b6ee52d158b2f87710a0
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-wr_memory:inst16
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-square_map
-# storage
-db|Design1.(23).cnf
-db|Design1.(23).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-square_map.vhd
-20b07c9dc3fcb05414dcfe44a783bde2
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-square_map:inst9
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-mux_piece
-# storage
-db|Design1.(24).cnf
-db|Design1.(24).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mux_piece.vhd
-749d4bd9d2f86ef5f4374a91ccafdb3
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mux_piece:inst25
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-VGA_SYNC
-# storage
-db|Design1.(25).cnf
-db|Design1.(25).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-vga_sync.vhd
-dbb7135c243a2d569ef707b32699892
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-VGA_SYNC:inst19
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -1223,8 +153,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 clk_div_two
 # storage
-db|Design1.(26).cnf
-db|Design1.(26).cnf
+db|Design1.(4).cnf
+db|Design1.(4).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1248,7 +178,7 @@ ON
 clk_div_two:inst17
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -1256,8 +186,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 Video_Memory
 # storage
-db|Design1.(27).cnf
-db|Design1.(27).cnf
+db|Design1.(5).cnf
+db|Design1.(5).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -1281,7 +211,7 @@ ON
 Video_Memory:inst18
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
@@ -1289,11 +219,11 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 altsyncram
 # storage
-db|Design1.(28).cnf
-db|Design1.(28).cnf
+db|Design1.(6).cnf
+db|Design1.(6).cnf
 # case_insensitive
 # source_file
-|altera|91sp2|quartus|libraries|megafunctions|altsyncram.tdf
+c:|altera|91sp2|quartus|libraries|megafunctions|altsyncram.tdf
 67d9a3902c8a461c1d5750189e124f2
 7
 # user_parameter {
@@ -1626,8 +556,8 @@ Video_Memory:inst18|altsyncram:altsyncram_component
 # entity
 altsyncram_4jk1
 # storage
-db|Design1.(29).cnf
-db|Design1.(29).cnf
+db|Design1.(7).cnf
+db|Design1.(7).cnf
 # case_insensitive
 # source_file
 db|altsyncram_4jk1.tdf
@@ -1761,8 +691,8 @@ Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generat
 # entity
 altsyncram_fes1
 # storage
-db|Design1.(30).cnf
-db|Design1.(30).cnf
+db|Design1.(8).cnf
+db|Design1.(8).cnf
 # case_insensitive
 # source_file
 db|altsyncram_fes1.tdf
@@ -1911,8 +841,8 @@ Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generat
 # entity
 decode_9oa
 # storage
-db|Design1.(31).cnf
-db|Design1.(31).cnf
+db|Design1.(9).cnf
+db|Design1.(9).cnf
 # case_insensitive
 # source_file
 db|decode_9oa.tdf
@@ -1966,8 +896,8 @@ Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generat
 # entity
 decode_9oa
 # storage
-db|Design1.(32).cnf
-db|Design1.(32).cnf
+db|Design1.(10).cnf
+db|Design1.(10).cnf
 # case_insensitive
 # source_file
 db|decode_9oa.tdf
@@ -2021,8 +951,8 @@ Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generat
 # entity
 mux_kib
 # storage
-db|Design1.(33).cnf
-db|Design1.(33).cnf
+db|Design1.(11).cnf
+db|Design1.(11).cnf
 # case_insensitive
 # source_file
 db|mux_kib.tdf
@@ -2128,11 +1058,241 @@ Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generat
 
 # end
 # entity
-<<<<<<< Updated upstream
+wr_memory
+# storage
+db|Design1.(12).cnf
+db|Design1.(12).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+wr_memory.vhd
+11cdd8ead15b6ee52d158b2f87710a0
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+wr_memory:inst16
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+square
+# storage
+db|Design1.(13).cnf
+db|Design1.(13).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+square.vhd
+59d4c272a490874ad26f3f13f9942250
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+square:inst21
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+kb_xy_module
+# storage
+db|Design1.(14).cnf
+db|Design1.(14).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+kb_xy_module.vhd
+91a78889cfbe86419318ae60c2719f9a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+kb_xy_module:inst8
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+f_div
+# storage
+db|Design1.(15).cnf
+db|Design1.(15).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+f_div.vhd
+6b7bb21a0af966099a2ffc846da30d
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+f_div:inst1
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+game
+# storage
+db|Design1.(16).cnf
+db|Design1.(16).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+game.vhd
+648c7437cf11588b12b681795556f1c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+game:GAME
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+main_control
+# storage
+db|Design1.(17).cnf
+db|Design1.(17).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+main.vhd
+4432c0d59aa7188f445eb1e916eb80c2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+main_control:inst
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+keytest_h_v2
+# storage
+db|Design1.(18).cnf
+db|Design1.(18).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+keytest_h_v2.vhd
+5289db9691f685ec5cb45b50ed508b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+keytest_h_v2:inst7
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 keypad
 # storage
-db|Design1.(33).cnf
-db|Design1.(33).cnf
+db|Design1.(19).cnf
+db|Design1.(19).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2164,8 +1324,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 count4b
 # storage
-db|Design1.(34).cnf
-db|Design1.(34).cnf
+db|Design1.(20).cnf
+db|Design1.(20).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2195,18 +1355,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-square_map
+protocol_rx
 # storage
-db|Design1.(36).cnf
-db|Design1.(36).cnf
+db|Design1.(21).cnf
+db|Design1.(21).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-square_map.vhd
-20b07c9dc3fcb05414dcfe44a783bde2
+protocol_rx.vhd
+2d91c120eb3d314905c18376a0c2b1
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -2219,7 +1379,7 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-square_map:inst9
+protocol_rx:inst4
 }
 # lmf
 c:|altera|91sp2|quartus|lmf|maxplus2.lmf
@@ -2228,20 +1388,18 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
-=======
->>>>>>> Stashed changes
-add_generator
+rx_module2
 # storage
-db|Design1.(34).cnf
-db|Design1.(34).cnf
+db|Design1.(22).cnf
+db|Design1.(22).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_insensitive
 # source_file
-add_generator.vhd
-e9502ff98b40d5996517f08db75764fb
+rx_module2.vhd
+cbae78da868f8266ef46f5e95c31b3b7
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -2254,20 +1412,118 @@ AUTO_ROM_RECOGNITION
 ON
 }
 # hierarchies {
-add_generator:inst12
+rx_module2:inst5
 }
 # lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
 a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
 # entity
-<<<<<<< Updated upstream
+protocol_tx
+# storage
+db|Design1.(23).cnf
+db|Design1.(23).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+protocol_tx.vhd
+dbbb103874a8e2a74721bd5ea4189a
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+protocol_tx:inst3
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+tx_module
+# storage
+db|Design1.(24).cnf
+db|Design1.(24).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+tx_module.vhd
+dc60315030dbc6902a4fc52bb3a071a8
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+tx_module:inst6
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+ram64
+# storage
+db|Design1.(25).cnf
+db|Design1.(25).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+ram64.vhd
+a5fae5ec1e2acc4f8378d3ef3b9e76
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+ram64:inst14
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 altsyncram
 # storage
-db|Design1.(39).cnf
-db|Design1.(39).cnf
+db|Design1.(26).cnf
+db|Design1.(26).cnf
 # case_insensitive
 # source_file
 c:|altera|91sp2|quartus|libraries|megafunctions|altsyncram.tdf
@@ -2415,7 +1671,7 @@ BYTE_SIZE
 PARAMETER_UNKNOWN
 DEF
 READ_DURING_WRITE_MODE_MIXED_PORTS
-DONT_CARE
+OLD_DATA
 PARAMETER_UNKNOWN
 USR
 READ_DURING_WRITE_MODE_PORT_A
@@ -2471,7 +1727,7 @@ Cyclone II
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-altsyncram_sk72
+altsyncram_5h72
 PARAMETER_UNKNOWN
 USR
 }
@@ -2558,14 +1814,153 @@ address_a0
 -1
 3
 }
+# hierarchies {
+ram64:inst14|altsyncram:altsyncram_component
+}
+# macro_sequence
+
+# end
+# entity
+altsyncram_5h72
+# storage
+db|Design1.(27).cnf
+db|Design1.(27).cnf
+# case_insensitive
+# source_file
+db|altsyncram_5h72.tdf
+9911adf2eba853717ee5a0b165aeb618
+7
+# used_port {
+wren_b
+-1
+3
+wren_a
+-1
+3
+q_b2
+-1
+3
+q_b1
+-1
+3
+q_b0
+-1
+3
+q_a2
+-1
+3
+q_a1
+-1
+3
+q_a0
+-1
+3
+data_b2
+-1
+3
+data_b1
+-1
+3
+data_b0
+-1
+3
+data_a2
+-1
+3
+data_a1
+-1
+3
+data_a0
+-1
+3
+clock0
+-1
+3
+address_b5
+-1
+3
+address_b4
+-1
+3
+address_b3
+-1
+3
+address_b2
+-1
+3
+address_b1
+-1
+3
+address_b0
+-1
+3
+address_a5
+-1
+3
+address_a4
+-1
+3
+address_a3
+-1
+3
+address_a2
+-1
+3
+address_a1
+-1
+3
+address_a0
+-1
+3
+}
+# memory_file {
+ram_init.mif
+32e2a4f058723bb15274622da316365c
+}
+# hierarchies {
+ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated
+}
+# macro_sequence
+
+# end
+# entity
+mux_ram
+# storage
+db|Design1.(28).cnf
+db|Design1.(28).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+mux_ram.vhd
+c657bfc348a180eb988b8680ea662b
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+mux_ram:inst15
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end
 # entity
 add64_gen
 # storage
-db|Design1.(41).cnf
-db|Design1.(41).cnf
+db|Design1.(29).cnf
+db|Design1.(29).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2599,8 +1994,8 @@ a36c8ec425c8a2589af98b2d4daabc3
 # entity
 inverse_square_map
 # storage
-db|Design1.(0).cnf
-db|Design1.(0).cnf
+db|Design1.(30).cnf
+db|Design1.(30).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
@@ -2630,10 +2025,76 @@ a36c8ec425c8a2589af98b2d4daabc3
 
 # end
 # entity
+square_map
+# storage
+db|Design1.(31).cnf
+db|Design1.(31).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+square_map.vhd
+20b07c9dc3fcb05414dcfe44a783bde2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+square_map:inst9
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+add_generator
+# storage
+db|Design1.(32).cnf
+db|Design1.(32).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+add_generator.vhd
+e9502ff98b40d5996517f08db75764fb
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+add_generator:inst12
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
 lpm_divide
 # storage
-db|Design1.(21).cnf
-db|Design1.(21).cnf
+db|Design1.(33).cnf
+db|Design1.(33).cnf
 # case_insensitive
 # source_file
 c:|altera|91sp2|quartus|libraries|megafunctions|lpm_divide.tdf
@@ -2752,33 +2213,15 @@ denom2
 denom1
 -1
 2
-=======
-P1_BOARD_vga
-# storage
-db|Design1.(35).cnf
-db|Design1.(35).cnf
-# case_insensitive
-# source_file
-p1_board_vga.bdf
-f036d09b60c6ec76abca2d7ac6af779
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
->>>>>>> Stashed changes
 }
 # macro_sequence
 
 # end
 # entity
-<<<<<<< Updated upstream
 lpm_divide_3so
 # storage
-db|Design1.(42).cnf
-db|Design1.(42).cnf
+db|Design1.(34).cnf
+db|Design1.(34).cnf
 # case_insensitive
 # source_file
 db|lpm_divide_3so.tdf
@@ -2867,8 +2310,8 @@ denom0
 # entity
 abs_divider_gbg
 # storage
-db|Design1.(43).cnf
-db|Design1.(43).cnf
+db|Design1.(35).cnf
+db|Design1.(35).cnf
 # case_insensitive
 # source_file
 db|abs_divider_gbg.tdf
@@ -2972,8 +2415,8 @@ denominator0
 # entity
 alt_u_div_c2f
 # storage
-db|Design1.(44).cnf
-db|Design1.(44).cnf
+db|Design1.(36).cnf
+db|Design1.(36).cnf
 # case_insensitive
 # source_file
 db|alt_u_div_c2f.tdf
@@ -3077,8 +2520,8 @@ denominator0
 # entity
 add_sub_lkc
 # storage
-db|Design1.(45).cnf
-db|Design1.(45).cnf
+db|Design1.(37).cnf
+db|Design1.(37).cnf
 # case_insensitive
 # source_file
 db|add_sub_lkc.tdf
@@ -3104,8 +2547,8 @@ cout
 # entity
 add_sub_mkc
 # storage
-db|Design1.(46).cnf
-db|Design1.(46).cnf
+db|Design1.(38).cnf
+db|Design1.(38).cnf
 # case_insensitive
 # source_file
 db|add_sub_mkc.tdf
@@ -3140,8 +2583,8 @@ cout
 # entity
 lpm_abs_gq9
 # storage
-db|Design1.(47).cnf
-db|Design1.(47).cnf
+db|Design1.(39).cnf
+db|Design1.(39).cnf
 # case_insensitive
 # source_file
 db|lpm_abs_gq9.tdf
@@ -3185,8 +2628,8 @@ data0
 # entity
 lpm_abs_sr9
 # storage
-db|Design1.(48).cnf
-db|Design1.(48).cnf
+db|Design1.(40).cnf
+db|Design1.(40).cnf
 # case_insensitive
 # source_file
 db|lpm_abs_sr9.tdf
@@ -3260,8 +2703,8 @@ data0
 # entity
 lpm_divide
 # storage
-db|Design1.(49).cnf
-db|Design1.(49).cnf
+db|Design1.(41).cnf
+db|Design1.(41).cnf
 # case_insensitive
 # source_file
 c:|altera|91sp2|quartus|libraries|megafunctions|lpm_divide.tdf
@@ -3384,8 +2827,8 @@ denom1
 # entity
 lpm_divide_rqo
 # storage
-db|Design1.(50).cnf
-db|Design1.(50).cnf
+db|Design1.(42).cnf
+db|Design1.(42).cnf
 # case_insensitive
 # source_file
 db|lpm_divide_rqo.tdf
@@ -3468,8 +2911,8 @@ denom0
 # entity
 abs_divider_8ag
 # storage
-db|Design1.(51).cnf
-db|Design1.(51).cnf
+db|Design1.(43).cnf
+db|Design1.(43).cnf
 # case_insensitive
 # source_file
 db|abs_divider_8ag.tdf
@@ -3567,8 +3010,8 @@ denominator0
 # entity
 alt_u_div_sve
 # storage
-db|Design1.(52).cnf
-db|Design1.(52).cnf
+db|Design1.(44).cnf
+db|Design1.(44).cnf
 # case_insensitive
 # source_file
 db|alt_u_div_sve.tdf
@@ -3666,8 +3109,8 @@ denominator0
 # entity
 lpm_abs_kq9
 # storage
-db|Design1.(53).cnf
-db|Design1.(53).cnf
+db|Design1.(45).cnf
+db|Design1.(45).cnf
 # case_insensitive
 # source_file
 db|lpm_abs_kq9.tdf
@@ -3729,576 +3172,6 @@ data0
 -1
 3
 }
-# macro_sequence
-
-# end
-# entity
-altsyncram_sk72
-# storage
-db|Design1.(55).cnf
-db|Design1.(55).cnf
-# case_insensitive
-# source_file
-db|altsyncram_sk72.tdf
-962ecc2951b277e152b0bb6122019b1
-7
-# used_port {
-wren_b
--1
-3
-wren_a
--1
-3
-q_b2
--1
-3
-q_b1
--1
-3
-q_b0
--1
-3
-q_a2
--1
-3
-q_a1
--1
-3
-q_a0
--1
-3
-data_b2
--1
-3
-data_b1
--1
-3
-data_b0
--1
-3
-data_a2
--1
-3
-data_a1
--1
-3
-data_a0
--1
-3
-clock0
--1
-3
-address_b5
--1
-3
-address_b4
--1
-3
-address_b3
--1
-3
-address_b2
--1
-3
-address_b1
--1
-3
-address_b0
--1
-3
-address_a5
--1
-3
-address_a4
--1
-3
-address_a3
--1
-3
-address_a2
--1
-3
-address_a1
--1
-3
-address_a0
--1
-3
-}
-# memory_file {
-ram_init.mif
-32e2a4f058723bb15274622da316365c
-}
-# macro_sequence
-
-# end
-# entity
-ram64
-=======
-protocol_tx
->>>>>>> Stashed changes
-# storage
-db|Design1.(36).cnf
-db|Design1.(36).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_tx.vhd
-31701e625ad29dc268944e9ec8f5a613
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_tx:inst3
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-game
-# storage
-db|Design1.(37).cnf
-db|Design1.(37).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-game.vhd
-4be32f7d77aafb1542451889d4cc39e4
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-game:GAME
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-main_control
-# storage
-db|Design1.(38).cnf
-db|Design1.(38).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-main.vhd
-c6cf344a27ecffad4971223becaea37
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-main_control:inst
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-register_bank2
-# storage
-db|Design1.(39).cnf
-db|Design1.(39).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-registerbank.vhd
-cd4fb33f6e97a3b686c935b975a162c
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-register_bank2:USER_CODE
-register_bank2:GUESS_CODE
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-protocol_rx
-# storage
-db|Design1.(40).cnf
-db|Design1.(40).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_rx.vhd
-4c53d323754d449f91f3a05998d1c874
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_rx:inst4
-}
-# lmf
-|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-protocol_rx
-# storage
-db|Design1.(10).cnf
-db|Design1.(10).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_rx.vhd
-2d91c120eb3d314905c18376a0c2b1
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_rx:inst4
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-protocol_tx
-# storage
-db|Design1.(35).cnf
-db|Design1.(35).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-protocol_tx.vhd
-dbbb103874a8e2a74721bd5ea4189a
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-protocol_tx:inst3
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-main_control
-# storage
-db|Design1.(8).cnf
-db|Design1.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-main.vhd
-4432c0d59aa7188f445eb1e916eb80c2
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-main_control:inst
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-mux_ram
-# storage
-db|Design1.(58).cnf
-db|Design1.(58).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-mux_ram.vhd
-c657bfc348a180eb988b8680ea662b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-mux_ram:inst15
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-sim_game
-# storage
-db|Design1.(40).cnf
-db|Design1.(40).cnf
-# case_insensitive
-# source_file
-sim_game.bdf
-8b72c4f81818cb219df53a9b537f2ce2
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# macro_sequence
-
-# end
-# entity
-square
-# storage
-db|Design1.(6).cnf
-db|Design1.(6).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-square.vhd
-59d4c272a490874ad26f3f13f9942250
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-square:inst21
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-P1_BOARD_vga
-# storage
-db|Design1.(1).cnf
-db|Design1.(1).cnf
-# case_insensitive
-# source_file
-p1_board_vga.bdf
-c9fa975c37eee95eed394f2c236df5
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-kb_xy_module
-# storage
-db|Design1.(7).cnf
-db|Design1.(7).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-kb_xy_module.vhd
-c86ac77d17581433f1cc033681fae2a
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-kb_xy_module:inst8
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-keytest_h_v2
-# storage
-db|Design1.(32).cnf
-db|Design1.(32).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-keytest_h_v2.vhd
-5289db9691f685ec5cb45b50ed508b
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-keytest_h_v2:inst7
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
-# macro_sequence
-
-# end
-# entity
-game
-# storage
-db|Design1.(59).cnf
-db|Design1.(59).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-game.vhd
-73b8beedf2c273b49c4b39ccdeae158
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-game:GAME
-}
-# lmf
-c:|altera|91sp2|quartus|lmf|maxplus2.lmf
-a36c8ec425c8a2589af98b2d4daabc3
 # macro_sequence
 
 # end

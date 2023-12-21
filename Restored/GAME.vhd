@@ -122,11 +122,22 @@ process (clk50, nrst) begin
 			when st_Invalid => state <= st_Turn;
 				SelMode <= '0';
 			
-			when s_Turn1 => 
+			when s_Turn1 => state <= s_Turn2;
 				temp_piece <= in_piece;
-				state <= s_Turn2;
 			
 			when s_Turn2 =>
+				if(selX = oldX and selY = oldY) then --piece back to where it came.
+					SelMode <= '0';
+					ext_piece <= aux_piece;
+					temp_piece <= "100";
+					state <= S_Place_Figure;
+					end if;		
+				--elsif (temp_piece < "100" and s_white ='1') then -- This to allow only white movements
+					--state <= S_Move_White;
+				--elsif (temp_piece > "100" and s_white ='0') then state <= S_Move_Black;
+				--else SelMode <= '0'; --cualquier otro caso, vuelves a elegir, no puedes elegir de otro color
+						--end if;
+					--end if;
 				
 				
 				

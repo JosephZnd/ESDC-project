@@ -1,13 +1,5 @@
 Flow report for Design1
-<<<<<<< HEAD
-Thu Dec 21 13:59:55 2023
-=======
-<<<<<<< Updated upstream
-Wed Dec 20 19:13:34 2023
-=======
-Wed Dec 20 12:09:59 2023
->>>>>>> Stashed changes
->>>>>>> 48575225485b3fc73278f909a34bfd23c3bf4e15
+Thu Dec 21 14:31:28 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,44 +38,23 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-<<<<<<< HEAD
-; Flow Status                        ; Successful - Thu Dec 21 13:59:55 2023        ;
-=======
-<<<<<<< Updated upstream
-; Flow Status                        ; Successful - Wed Dec 20 19:13:33 2023        ;
-=======
-; Flow Status                        ; Flow Failed - Wed Dec 20 12:09:59 2023       ;
->>>>>>> Stashed changes
->>>>>>> 48575225485b3fc73278f909a34bfd23c3bf4e15
+; Flow Status                        ; Successful - Thu Dec 21 14:31:28 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
-<<<<<<< Updated upstream
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Met timing requirements            ; Yes                                          ;
-; Total logic elements               ; 818 / 33,216 ( 2 % )                         ;
-;     Total combinational functions  ; 755 / 33,216 ( 2 % )                         ;
-;     Dedicated logic registers      ; 354 / 33,216 ( 1 % )                         ;
-; Total registers                    ; 354                                          ;
+; Met timing requirements            ; No                                           ;
+; Total logic elements               ; 837 / 33,216 ( 3 % )                         ;
+;     Total combinational functions  ; 770 / 33,216 ( 2 % )                         ;
+;     Dedicated logic registers      ; 366 / 33,216 ( 1 % )                         ;
+; Total registers                    ; 366                                          ;
 ; Total pins                         ; 52 / 475 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,496 / 483,840 ( 20 % )                    ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                               ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                ;
-=======
-; Met timing requirements            ; N/A                                          ;
-; Total logic elements               ; N/A until Partition Merge                    ;
-;     Total combinational functions  ; N/A until Partition Merge                    ;
-;     Dedicated logic registers      ; N/A until Partition Merge                    ;
-; Total registers                    ; N/A until Partition Merge                    ;
-; Total pins                         ; N/A until Partition Merge                    ;
-; Total virtual pins                 ; N/A until Partition Merge                    ;
-; Total memory bits                  ; N/A until Partition Merge                    ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                    ;
-; Total PLLs                         ; N/A until Partition Merge                    ;
->>>>>>> Stashed changes
 +------------------------------------+----------------------------------------------+
 
 
@@ -92,15 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-<<<<<<< HEAD
-; Start date & time ; 12/21/2023 13:59:30 ;
-=======
-<<<<<<< Updated upstream
-; Start date & time ; 12/20/2023 19:13:07 ;
-=======
-; Start date & time ; 12/20/2023 12:09:57 ;
->>>>>>> Stashed changes
->>>>>>> 48575225485b3fc73278f909a34bfd23c3bf4e15
+; Start date & time ; 12/21/2023 14:31:01 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Design1             ;
 +-------------------+---------------------+
@@ -111,15 +74,7 @@ applicable agreement for further details.
 +------------------------+-----------------------------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name        ; Value                                                                             ; Default Value ; Entity Name  ; Section Id ;
 +------------------------+-----------------------------------------------------------------------------------+---------------+--------------+------------+
-<<<<<<< HEAD
-; COMPILER_SIGNATURE_ID  ; 18587647032645.170316356913152                                                    ; --            ; --           ; --         ;
-=======
-<<<<<<< Updated upstream
-; COMPILER_SIGNATURE_ID  ; 84440846877591.170309598708468                                                    ; --            ; --           ; --         ;
-=======
-; COMPILER_SIGNATURE_ID  ; 18587647032645.170307059713752                                                    ; --            ; --           ; --         ;
->>>>>>> Stashed changes
->>>>>>> 48575225485b3fc73278f909a34bfd23c3bf4e15
+; COMPILER_SIGNATURE_ID  ; 18587647032645.170316546116196                                                    ; --            ; --           ; --         ;
 ; IP_TOOL_NAME           ; RAM: 2-PORT                                                                       ; --            ; --           ; --         ;
 ; IP_TOOL_VERSION        ; 9.1                                                                               ; --            ; --           ; --         ;
 ; MISC_FILE              ; C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.dpf ; --            ; --           ; --         ;
@@ -132,17 +87,16 @@ applicable agreement for further details.
 +------------------------+-----------------------------------------------------------------------------------+---------------+--------------+------------+
 
 
-<<<<<<< Updated upstream
 +-----------------------------------------------------------------------------------------------------------------------------+
 ; Flow Elapsed Time                                                                                                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:12     ; 1.0                     ; 258 MB              ; 00:00:06                           ;
-; Fitter                  ; 00:00:06     ; 1.0                     ; 284 MB              ; 00:00:06                           ;
+; Analysis & Synthesis    ; 00:00:12     ; 1.0                     ; 259 MB              ; 00:00:06                           ;
+; Fitter                  ; 00:00:07     ; 1.0                     ; 284 MB              ; 00:00:06                           ;
 ; Assembler               ; 00:00:02     ; 1.0                     ; 256 MB              ; 00:00:01                           ;
 ; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 167 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:21     ; --                      ; --                  ; 00:00:14                           ;
+; Total                   ; 00:00:22     ; --                      ; --                  ; 00:00:14                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -156,25 +110,6 @@ applicable agreement for further details.
 ; Assembler               ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
 ; Classic Timing Analyzer ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
 +-------------------------+------------------+---------------+------------+----------------+
-=======
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:02     ; 1.0                     ; 253 MB              ; 00:00:02                           ;
-; Total                ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                       ;
-+----------------------+------------------+---------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+----------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis ; c4d10            ; Windows Vista ; 6.2        ; x86_64         ;
-+----------------------+------------------+---------------+------------+----------------+
->>>>>>> Stashed changes
 
 
 ------------

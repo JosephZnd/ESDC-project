@@ -25,7 +25,6 @@ architecture main of kb_xy_module is
 	
 	--constant position_default	: unsigned(2 downto 0) := "100";	
 begin
----
 --fr <= '0'; --THIS IS FOR TEST, LATER USE FREEZE
 ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce) 
 	--variable x_cnt, y_cnt : unsigned(2 downto 0);
