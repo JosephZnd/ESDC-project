@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Thu Dec 21 01:04:32 2023
+Thu Dec 21 12:56:10 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -15,8 +15,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |game|state
   9. User-Specified and Inferred Latches
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
  13. Analysis & Synthesis Messages
 
@@ -44,16 +44,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 21 01:04:32 2023        ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 21 12:56:10 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; game                                         ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 145                                          ;
-;     Total combinational functions  ; 109                                          ;
-;     Dedicated logic registers      ; 72                                           ;
-; Total registers                    ; 72                                           ;
-; Total pins                         ; 50                                           ;
+; Total logic elements               ; 147                                          ;
+;     Total combinational functions  ; 124                                          ;
+;     Dedicated logic registers      ; 67                                           ;
+; Total registers                    ; 67                                           ;
+; Total pins                         ; 47                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -164,27 +164,27 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 145   ;
+; Estimated Total logic elements              ; 147   ;
 ;                                             ;       ;
-; Total combinational functions               ; 109   ;
+; Total combinational functions               ; 124   ;
 ; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 62    ;
-;     -- 3 input functions                    ; 35    ;
-;     -- <=2 input functions                  ; 12    ;
+;     -- 4 input functions                    ; 70    ;
+;     -- 3 input functions                    ; 45    ;
+;     -- <=2 input functions                  ; 9     ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 109   ;
+;     -- normal mode                          ; 124   ;
 ;     -- arithmetic mode                      ; 0     ;
 ;                                             ;       ;
-; Total registers                             ; 72    ;
-;     -- Dedicated logic registers            ; 72    ;
+; Total registers                             ; 67    ;
+;     -- Dedicated logic registers            ; 67    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 50    ;
+; I/O pins                                    ; 47    ;
 ; Maximum fan-out node                        ; clk50 ;
-; Maximum fan-out                             ; 72    ;
-; Total fan-out                               ; 624   ;
-; Average fan-out                             ; 2.70  ;
+; Maximum fan-out                             ; 67    ;
+; Total fan-out                               ; 652   ;
+; Average fan-out                             ; 2.74  ;
 +---------------------------------------------+-------+
 
 
@@ -193,34 +193,35 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |game                      ; 109 (109)         ; 72 (72)      ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |game               ; work         ;
+; |game                      ; 124 (124)         ; 67 (67)      ; 0           ; 0            ; 0       ; 0         ; 47   ; 0            ; |game               ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |game|state                                                                                                                                                                                                                                                                                                                                                 ;
-+----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; Name                       ; state.st_Finish_Turn ; state.st_Invalid_Move ; state.st_Write_Ram ; state.st_Move_Piece ; state.st_Check_capture ; state.st_Capture ; state.st_Check_Second_Move ; state.st_Check_Piece ; state.st_Read_Ram ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_Rdy ; state.st_S_Rdy ; state.st_W_Tx1 ; state.st_Wait_Game ;
-+----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; state.st_Wait_Game         ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
-; state.st_W_Tx1             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
-; state.st_S_Rdy             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
-; state.st_W_Rdy             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
-; state.st_Start_Game        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Turn              ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Wait_Turn         ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Read_Ram          ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 1                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Check_Piece       ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 1                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Check_Second_Move ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 1                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Capture           ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 1                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Check_capture     ; 0                    ; 0                     ; 0                  ; 0                   ; 1                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Move_Piece        ; 0                    ; 0                     ; 0                  ; 1                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Write_Ram         ; 0                    ; 0                     ; 1                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Invalid_Move      ; 0                    ; 1                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Finish_Turn       ; 1                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-+----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |game|state                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------------------+--------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; Name                       ; state.st_Assign_Position ; state.st_Finish_Turn ; state.st_Invalid_Move ; state.st_Write_Ram ; state.st_Move_Piece ; state.st_Check_capture ; state.st_Capture ; state.st_Check_Second_Move ; state.st_Check_Piece ; state.st_Read_Ram ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_Rdy ; state.st_S_Rdy ; state.st_W_Tx1 ; state.st_Wait_Game ;
++----------------------------+--------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; state.st_Wait_Game         ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
+; state.st_W_Tx1             ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
+; state.st_S_Rdy             ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
+; state.st_W_Rdy             ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
+; state.st_Start_Game        ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Turn              ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Wait_Turn         ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Read_Ram          ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 1                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_Piece       ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 1                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_Second_Move ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 1                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Capture           ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 1                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_capture     ; 0                        ; 0                    ; 0                     ; 0                  ; 0                   ; 1                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Move_Piece        ; 0                        ; 0                    ; 0                     ; 0                  ; 1                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Write_Ram         ; 0                        ; 0                    ; 0                     ; 1                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Invalid_Move      ; 0                        ; 0                    ; 1                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Finish_Turn       ; 0                        ; 1                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Assign_Position   ; 1                        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
++----------------------------+--------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
 
 
 +----------------------------------------------------------------------------------------------------+
@@ -228,37 +229,24 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------+---------------------+------------------------+
 ; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
 +-----------------------------------------------------+---------------------+------------------------+
-; Addr_W[0]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_W[1]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_W[2]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_W[3]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_W[4]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_W[5]$latch                                     ; state.st_Write_Ram  ; yes                    ;
-; Addr_R[0]$latch                                     ; state.st_Read_Ram   ; yes                    ;
-; Addr_R[1]$latch                                     ; state.st_Read_Ram   ; yes                    ;
-; Addr_R[2]$latch                                     ; state.st_Read_Ram   ; yes                    ;
-; Addr_R[3]$latch                                     ; state.st_Read_Ram   ; yes                    ;
-; Addr_R[4]$latch                                     ; state.st_Read_Ram   ; yes                    ;
-; Addr_R[5]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Ram_X[0]$latch                                      ; Ram_X               ; yes                    ;
+; Ram_X[1]$latch                                      ; Ram_X               ; yes                    ;
+; Ram_X[2]$latch                                      ; Ram_X               ; yes                    ;
+; Ram_Y[0]$latch                                      ; Ram_X               ; yes                    ;
+; Ram_Y[1]$latch                                      ; Ram_X               ; yes                    ;
+; Ram_Y[2]$latch                                      ; Ram_X               ; yes                    ;
 ; X_To_Sent[0]$latch                                  ; state.st_Write_Ram  ; yes                    ;
 ; X_To_Sent[1]$latch                                  ; state.st_Write_Ram  ; yes                    ;
 ; X_To_Sent[2]$latch                                  ; state.st_Write_Ram  ; yes                    ;
 ; Y_To_Sent[0]$latch                                  ; state.st_Write_Ram  ; yes                    ;
 ; Y_To_Sent[1]$latch                                  ; state.st_Write_Ram  ; yes                    ;
 ; Y_To_Sent[2]$latch                                  ; state.st_Write_Ram  ; yes                    ;
-; Number of user-specified and inferred latches = 18  ;                     ;                        ;
+; Write_Piece[0]$latch                                ; state.st_Write_Ram  ; yes                    ;
+; Write_Piece[1]$latch                                ; state.st_Write_Ram  ; yes                    ;
+; Write_Piece[2]$latch                                ; state.st_Write_Ram  ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                     ;                        ;
 +-----------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; checking_Second_Move                  ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 1 ;                                        ;
-+---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -266,28 +254,51 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 72    ;
+; Total registers                              ; 67    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 6     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 17    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 55    ;
+; Number of registers using Clock Enable       ; 49    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |game|s_Addr_W[0]             ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_Y[0] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_Y[1] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_X[1] ;
-; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |game|Selector0               ;
-; 19:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |game|Selector9               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; s_Ram_X[0]                              ; 2       ;
+; s_Ram_X[1]                              ; 2       ;
+; s_Ram_X[2]                              ; 2       ;
+; s_Ram_y[0]                              ; 2       ;
+; s_Ram_y[1]                              ; 2       ;
+; s_Ram_y[2]                              ; 2       ;
+; pos_To_Capture_X[0]                     ; 1       ;
+; pos_To_Capture_X[1]                     ; 1       ;
+; pos_To_Capture_X[2]                     ; 1       ;
+; pos_To_Capture_Y[0]                     ; 1       ;
+; pos_To_Capture_Y[1]                     ; 1       ;
+; pos_To_Capture_Y[2]                     ; 1       ;
+; Total number of inverted registers = 12 ;         ;
++-----------------------------------------+---------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |game|piece_To_Write[2]    ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |game|counter[1]           ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |game|pos_To_Capture_Y[0]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|pos_To_Capture_Y[2]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|pos_To_Capture_X[2]  ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |game|s_Ram_X[0]           ;
+; 17:1               ; 5 bits    ; 55 LEs        ; 30 LEs               ; 25 LEs                 ; No         ; |game|Selector0            ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |game|Selector11           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
 
 
 +-------------------------------+
@@ -296,7 +307,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 01:04:30 2023
+    Info: Processing started: Thu Dec 21 12:56:07 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -409,34 +420,23 @@ Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit 
 Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_EQ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_SM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
 Warning (10541): VHDL Signal Declaration warning at game.vhd(17): used implicit default value for signal "enterCode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
-Warning (10036): Verilog HDL or VHDL warning at game.vhd(49): object "piece_To_Write" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at game.vhd(53): object "s_Addr_R" assigned a value but never read
-Info (10041): Inferred latch for "frame_received" at game.vhd(295)
-Info (10041): Inferred latch for "X_To_Sent[0]" at game.vhd(284)
-Info (10041): Inferred latch for "X_To_Sent[1]" at game.vhd(284)
-Info (10041): Inferred latch for "X_To_Sent[2]" at game.vhd(284)
-Info (10041): Inferred latch for "Y_To_Sent[0]" at game.vhd(283)
-Info (10041): Inferred latch for "Y_To_Sent[1]" at game.vhd(283)
-Info (10041): Inferred latch for "Y_To_Sent[2]" at game.vhd(283)
-Info (10041): Inferred latch for "Addr_R[0]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_R[1]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_R[2]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_R[3]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_R[4]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_R[5]" at game.vhd(281)
-Info (10041): Inferred latch for "Addr_W[0]" at game.vhd(280)
-Info (10041): Inferred latch for "Addr_W[1]" at game.vhd(280)
-Info (10041): Inferred latch for "Addr_W[2]" at game.vhd(280)
-Info (10041): Inferred latch for "Addr_W[3]" at game.vhd(280)
-Info (10041): Inferred latch for "Addr_W[4]" at game.vhd(280)
-Info (10041): Inferred latch for "Addr_W[5]" at game.vhd(280)
-Info: Duplicate LATCH primitives merged into single LATCH primitive
-    Info: Duplicate LATCH primitive "X_To_Sent[0]$latch" merged with LATCH primitive "Addr_W[0]$latch"
-    Info: Duplicate LATCH primitive "X_To_Sent[1]$latch" merged with LATCH primitive "Addr_W[1]$latch"
-    Info: Duplicate LATCH primitive "X_To_Sent[2]$latch" merged with LATCH primitive "Addr_W[2]$latch"
-    Info: Duplicate LATCH primitive "Y_To_Sent[0]$latch" merged with LATCH primitive "Addr_W[3]$latch"
-    Info: Duplicate LATCH primitive "Y_To_Sent[1]$latch" merged with LATCH primitive "Addr_W[4]$latch"
-    Info: Duplicate LATCH primitive "Y_To_Sent[2]$latch" merged with LATCH primitive "Addr_W[5]$latch"
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(33): object "checking_Simple_Move" assigned a value but never read
+Info (10041): Inferred latch for "frame_received" at game.vhd(309)
+Info (10041): Inferred latch for "X_To_Sent[0]" at game.vhd(298)
+Info (10041): Inferred latch for "X_To_Sent[1]" at game.vhd(298)
+Info (10041): Inferred latch for "X_To_Sent[2]" at game.vhd(298)
+Info (10041): Inferred latch for "Y_To_Sent[0]" at game.vhd(297)
+Info (10041): Inferred latch for "Y_To_Sent[1]" at game.vhd(297)
+Info (10041): Inferred latch for "Y_To_Sent[2]" at game.vhd(297)
+Info (10041): Inferred latch for "Write_Piece[0]" at game.vhd(295)
+Info (10041): Inferred latch for "Write_Piece[1]" at game.vhd(295)
+Info (10041): Inferred latch for "Write_Piece[2]" at game.vhd(295)
+Info (10041): Inferred latch for "Ram_Y[0]" at game.vhd(294)
+Info (10041): Inferred latch for "Ram_Y[1]" at game.vhd(294)
+Info (10041): Inferred latch for "Ram_Y[2]" at game.vhd(294)
+Info (10041): Inferred latch for "Ram_X[0]" at game.vhd(293)
+Info (10041): Inferred latch for "Ram_X[1]" at game.vhd(293)
+Info (10041): Inferred latch for "Ram_X[2]" at game.vhd(293)
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "SEND_RDY" is stuck at GND
     Warning (13410): Pin "SEND_GR" is stuck at GND
@@ -450,14 +450,14 @@ Warning: Design contains 5 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SM_RECEIVED"
     Warning (15610): No output dependent on input pin "DT_RECEIVED"
     Warning (15610): No output dependent on input pin "bank_ready"
-Info: Implemented 195 device resources after synthesis - the final resource count might be different
+Info: Implemented 202 device resources after synthesis - the final resource count might be different
     Info: Implemented 22 input pins
-    Info: Implemented 28 output pins
-    Info: Implemented 145 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Implemented 25 output pins
+    Info: Implemented 155 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 19 warnings
     Info: Peak virtual memory: 250 megabytes
-    Info: Processing ended: Thu Dec 21 01:04:32 2023
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Processing ended: Thu Dec 21 12:56:10 2023
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:04
 
 

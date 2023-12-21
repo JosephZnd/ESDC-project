@@ -9,38 +9,39 @@ entity game is
 		clk50, nrst: in std_logic;
 		New_Game, Sel : in std_logic;  
 		RDY_RECEIVED, GR_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: in std_logic;  
-		Pos_X, Pos_Y : in std_logic_vector(2 downto 0);
+		Pos_X, Pos_Y : in integer range 7 downto 0;
 		In_Piece : in std_logic_vector(2 downto 0);
 		bank_ready, ready_to_TX, Turn, Color: in std_logic;  
 		SEND_RDY, SEND_GR, SEND_EQ, SEND_SM, SEND_DT : out std_logic;
 		frame_received : out std_logic;
 		enterCode, led_turn, turn_read, freeze_kb : out std_logic;
-		Addr_W, Addr_R : out std_logic_vector(5 downto 0);
-		X_To_Sent, Y_To_Sent, Write_Piece: out std_logic_vector(2 downto 0));
+		Ram_X, Ram_Y : out integer range 7 downto 0;
+		X_To_Sent, Y_To_Sent: out integer range 7 downto 0;
+		Write_Piece: out std_logic_vector(2 downto 0));
 end game;
 
 
 architecture main of game is
 	type state_type is (st_Wait_Game, st_W_Tx1, st_S_Rdy, st_W_Rdy, st_Start_Game, st_Turn, st_Wait_Turn, st_Read_Ram, st_Check_Piece, st_Check_Second_Move, st_Capture, st_Check_capture,
-	st_Move_Piece, st_Write_Ram, st_Invalid_Move, st_Finish_Turn);
+	st_Move_Piece, st_Write_Ram, st_Invalid_Move, st_Finish_Turn, st_Assign_Position);
 	
 	signal state : state_type;
 	signal s_whites : std_logic:='0';
 	signal while_Capturing : std_logic:='0';
 	signal sel_Selected : std_logic:='0';
 	signal piece_Moved : std_logic:='0';
-	signal checking_Second_Move: std_logic:='0';
+	signal piece_Removed : std_logic:='0';
 	
 	signal counter : STD_LOGIC_VECTOR(3 downto 0) := "0000";
 	
-	signal sel_X : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal sel_Y : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal old_X : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal old_Y : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal to_Move_X : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal to_Move_Y : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal pos_To_Capture_X : STD_LOGIC_VECTOR(2 downto 0) := "000";
-	signal pos_To_Capture_Y : STD_LOGIC_VECTOR(2 downto 0) := "000";
+	signal sel_X : integer range 7 downto 0 := 0;
+	signal sel_Y : integer range 7 downto 0 := 0;
+	signal old_X : integer range 7 downto 0 := 0;
+	signal old_Y : integer range 7 downto 0 := 0;
+	signal to_Move_X : integer range 7 downto 0 := 0;
+	signal to_Move_Y : integer range 7 downto 0 := 0;
+	signal pos_To_Capture_X : integer range 7 downto 0;
+	signal pos_To_Capture_Y : integer range 7 downto 0;
 	
 	
 	signal piece_To_Move: STD_LOGIC_VECTOR(2 downto 0) := "000";
@@ -50,18 +51,19 @@ architecture main of game is
 	signal last_Piece: STD_LOGIC_VECTOR(2 downto 0) := "000";
 
 	
-	signal s_Addr_R : STD_LOGIC_VECTOR(5 downto 0) := "000000";
-	signal s_Addr_W : STD_LOGIC_VECTOR(5 downto 0) := "000000";
+	signal s_Ram_X : integer range 7 downto 0;
+	signal s_Ram_y : integer range 7 downto 0;
 	signal address_To_Capture : STD_LOGIC_VECTOR(5 downto 0) := "000000";
 	
 begin
 
-process (clk50, nrst, In_Piece) 
-	variable int_To_Move_X, int_To_Move_Y, int_Old_X, int_Old_Y, int_Pos_To_Capture_X, int_Pos_To_Capture_Y : integer range 0 to 7;
+process (clk50, nrst) 
 	begin
 	if nrst = '0' then
 		state <= st_Wait_Game;
 	elsif clk50'event and clk50 = '1' then
+			sel_X <= Pos_X;
+			sel_Y <= Pos_Y;
 		case state is
 			when st_Wait_Game =>
 				if New_Game = '1' then
@@ -98,25 +100,33 @@ process (clk50, nrst, In_Piece)
 				if Turn='1' then state <= st_Turn; end if;
 			
 			when st_Turn =>
-				sel_X <= Pos_X;
-				sel_Y <= Pos_Y;
-				if( Sel='1')then --don't write rising edge here
+				if Sel = '1' then --don't write rising edge here
 					if(sel_Selected = '0') then
-						old_X <= sel_X; --pero que no se lea en Game hasta que no se pulsa Sel
-						old_Y <= sel_Y;
-						s_Addr_R <= old_X & old_Y;
-						state <= st_Read_Ram;
+						state <= st_Assign_Position;
+						s_Ram_X <= sel_X;
+						s_Ram_Y <= sel_Y;
 					else
-						to_Move_X <= sel_X;
-						to_Move_Y <= sel_Y;
-						s_Addr_R <= old_X & old_Y;
-						state <= st_Read_Ram;
+						state <= st_Assign_Position;
+						s_Ram_X <= old_X;
+						s_Ram_Y <= old_Y;
 					end if;
+				end if;
+			
+			when st_Assign_Position =>
+			counter <= "0000";
+				if sel_Selected = '0' then
+					old_X <= sel_X;
+					old_Y <= sel_Y;
+					state <= st_Read_Ram;
+				elsif sel_Selected = '1' then	
+					to_Move_X <= sel_X;
+					to_Move_Y <= sel_Y;
+					state <= st_Read_Ram;
 				end if;
 				
 			when st_Read_Ram =>
-					if last_Piece /= In_Piece then
-						last_Piece <= In_Piece;
+					counter <= counter +1;
+					if counter = "0100" then
 						if sel_Selected = '0' then
 							piece_To_Move <= In_Piece;
 							state <= st_Check_Piece;
@@ -141,63 +151,60 @@ process (clk50, nrst, In_Piece)
 				end if;
 			
 			when st_Check_Second_Move => 
-				int_To_Move_X := to_integer(unsigned(to_Move_X));
-				int_To_Move_Y := to_integer(unsigned(to_Move_Y));
-				int_Old_X := to_integer(unsigned(old_X));
-				int_Old_Y := to_integer(unsigned(old_Y));
-				if (int_To_Move_X = int_Old_X+1 and int_To_Move_Y = int_Old_Y+1) then	
+				if (to_Move_X = old_X+1) and (to_Move_Y = old_Y+1) then	
 					if arriving_cell = "100" then
 						state <= st_Move_Piece;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X +1 and int_To_Move_Y = int_Old_Y-1 then
+				elsif (to_Move_X = old_X +1) and (to_Move_Y = old_Y-1) then
 					if arriving_cell = "100" then
 						state <= st_Move_Piece;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X -1 and int_To_Move_Y = int_Old_Y+1 then
+				elsif (to_Move_X = old_X -1) and (to_Move_Y = old_Y+1) then
 					if arriving_cell = "100" then
 						state <= st_Move_Piece;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X -1 and int_To_Move_Y = int_Old_Y-1 then
+				elsif (to_Move_X = old_X -1) and (to_Move_Y = old_Y-1) then
 					if arriving_cell = "100" then
+						checking_Simple_Move <= '1';
 						state <= st_Move_Piece;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X +2 and int_To_Move_Y = int_Old_Y+2 then	
+				elsif to_Move_X = old_X +2 and to_Move_Y = old_Y+2 then	
 					if arriving_Cell = "100" then
 						state <= st_Capture;
-						int_Pos_To_Capture_X := int_Old_X+1;
-						int_Pos_To_Capture_Y := int_Old_Y+1;
+						pos_To_Capture_X <= old_X+1;
+						pos_To_Capture_Y <= old_Y+1;
 					else 
 						state <= st_Invalid_Move;
 					end if;
 
-				elsif int_To_Move_X = int_Old_X +2 and int_To_Move_Y = int_Old_Y-2 then
+				elsif to_Move_X = old_X +2 and to_Move_Y = old_Y-2 then
 					if arriving_Cell = "100" then
-						int_Pos_To_Capture_X := int_Old_X+1;
-						int_Pos_To_Capture_Y := int_Old_Y-1;
+						pos_To_Capture_X <= old_X+1;
+						pos_To_Capture_Y <= old_Y-1;
 						state <= st_Capture;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X -2 and int_To_Move_Y = int_Old_Y+2 then
+				elsif to_Move_X = old_X -2 and to_Move_Y = old_Y+2 then
 					if arriving_Cell = "100" then
-						int_Pos_To_Capture_X := int_Old_X-1;
-						int_Pos_To_Capture_Y := int_Old_Y+1;
+						pos_To_Capture_X <= old_X-1;
+						pos_To_Capture_Y <= old_Y+1;
 						state <= st_Capture;
 					else 
 						state <= st_Invalid_Move;
 					end if;
-				elsif int_To_Move_X = int_Old_X -2 and int_To_Move_Y = int_Old_Y-2 then
+				elsif to_Move_X = old_X -2 and to_Move_Y = old_Y-2 then
 					if arriving_Cell = "100" then
-						int_Pos_To_Capture_X := int_Old_X-1;
-						int_Pos_To_Capture_Y := int_Old_Y-1;
+						pos_To_Capture_X <= old_X-1;
+						pos_To_Capture_Y <= old_Y-1;
 						state <= st_Capture;
 					else 
 						state <= st_Invalid_Move;
@@ -207,8 +214,7 @@ process (clk50, nrst, In_Piece)
 				end if;	
 				
 			when st_Capture =>
-				pos_To_Capture_X <= std_logic_vector(to_unsigned(int_Pos_To_Capture_X, 3));
-				pos_To_Capture_Y <= std_logic_vector(to_unsigned(int_Pos_To_Capture_Y, 3));
+				counter <= "0000";
 				while_Capturing <= '1';
 				state <= st_Read_Ram;
 			
@@ -228,17 +234,20 @@ process (clk50, nrst, In_Piece)
 				end if;
 				
 			when st_Move_Piece =>
-				counter <= "0000";
+				counter <= "0000";	
 				if while_Capturing = '1' then
-					s_Addr_W <= pos_To_Capture_X & pos_To_Capture_Y;
+					s_Ram_X <= pos_To_Capture_X;
+					s_Ram_Y <= pos_To_Capture_Y;
 					piece_To_Write <= "100";
 					state <= st_Write_Ram; 
 				elsif piece_Moved = '1' then
-					s_Addr_W <= old_X & old_Y;
+					s_Ram_X <= old_X;
+					s_Ram_Y <= old_Y;
 					piece_To_Write <= "100";
 					state <= st_Write_Ram;
 				else 
-					s_Addr_W <= to_Move_X & to_Move_Y;
+					s_Ram_X <= to_Move_X;
+					s_Ram_Y <= to_Move_Y;
 					piece_To_Write <= piece_To_Move;
 					state <= st_Write_Ram;
 				end if;
@@ -246,15 +255,15 @@ process (clk50, nrst, In_Piece)
 			when st_Write_Ram => 
 				counter <= counter +1;
 				if counter = "1111" then
-					if checking_Second_Move = '1' then 
-						state <= st_Turn;
-					elsif while_Capturing = '1' then
+					if while_Capturing = '1' then
 						while_Capturing <= '0';
-						piece_Moved <= '1';
 						state <= st_Move_Piece;
 					elsif piece_Moved = '1' then
 						piece_Moved <= '0';
 						state <= st_Finish_Turn;
+					else
+						piece_Moved <= '1';
+						state <= st_Move_Piece;
 					end if;
 				end if;
 				
@@ -262,14 +271,12 @@ process (clk50, nrst, In_Piece)
 				sel_Selected <= '0';
 				while_Capturing <='0';
 				piece_Moved <='0';
-				checking_Second_Move <='0'; 
 				state <= st_Turn;	
 				
 			when st_Finish_Turn =>
 				sel_Selected <= '0';
 				while_Capturing <='0';
-				piece_Moved <='0';
-				checking_Second_Move <='0'; 
+				piece_Moved <='0'; 
 				state <= st_Wait_Turn;
 				
 		
@@ -277,11 +284,12 @@ process (clk50, nrst, In_Piece)
 				end case; 
 	end if;
 end process;
-Addr_W <= s_Addr_W when state = st_Write_Ram;
-Addr_R <= s_Addr_W when state = st_Read_Ram;
+Ram_X <= s_Ram_X when (state = st_Write_Ram or state = st_Read_Ram);
+Ram_Y <= s_Ram_Y when (state = st_Write_Ram or state = st_Read_Ram);
+Write_Piece <= piece_To_Write when state = st_Write_Ram;
 
-Y_TO_Sent <= s_Addr_W(5 downto 3) when state = st_Write_Ram;
-X_To_Sent <= s_Addr_W(2 downto 0) when state = st_Write_Ram;
+Y_To_Sent <= s_Ram_Y when state = st_Write_Ram;
+X_To_Sent <= s_Ram_X when state = st_Write_Ram;
 
 SEND_DT <= '1' when state = st_Write_Ram else '0';
 

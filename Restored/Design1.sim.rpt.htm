@@ -10,7 +10,7 @@
 
 <CENTER>
 <H1>Simulator report for Design1</H1>
-<H3>Thu Dec 21 01:05:15 2023<BR>
+<H3>Thu Dec 21 13:06:31 2023<BR>
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition</H3>
 </CENTER>
 
@@ -65,19 +65,19 @@ applicable agreement for further details.
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Simulation End Time</TD>
-<TD ALIGN="LEFT">1.0 us</TD>
+<TD ALIGN="LEFT">3.0 us</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Simulation Netlist Size</TD>
-<TD ALIGN="LEFT">247 nodes</TD>
+<TD ALIGN="LEFT">253 nodes</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Simulation Coverage</TD>
-<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.17 %</TD>
+<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72.53 %</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total Number of Transitions</TD>
-<TD ALIGN="LEFT">516</TD>
+<TD ALIGN="LEFT">2116</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Simulation Breakpoints</TD>
@@ -225,31 +225,31 @@ Please use Quartus II to view the waveform report data.
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total coverage as a percentage</TD>
-<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.17 %</TD>
+<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72.53 %</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total nodes checked</TD>
-<TD ALIGN="LEFT">247</TD>
+<TD ALIGN="LEFT">253</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total output ports checked</TD>
-<TD ALIGN="LEFT">230</TD>
+<TD ALIGN="LEFT">233</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total output ports with complete 1/0-value coverage</TD>
-<TD ALIGN="LEFT">74</TD>
+<TD ALIGN="LEFT">169</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total output ports with no 1/0-value coverage</TD>
-<TD ALIGN="LEFT">127</TD>
+<TD ALIGN="LEFT">40</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total output ports with no 1-value coverage</TD>
-<TD ALIGN="LEFT">136</TD>
+<TD ALIGN="LEFT">43</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">Total output ports with no 0-value coverage</TD>
-<TD ALIGN="LEFT">147</TD>
+<TD ALIGN="LEFT">61</TD>
 </TR>
 </TABLE>
 <P><A NAME="6"><HR></A></P>
@@ -264,9 +264,49 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TH>Output Port Type</TH>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Turn</TD>
 <TD ALIGN="LEFT">|game|state.st_Turn</TD>
 <TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Invalid_Move</TD>
@@ -284,6 +324,16 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Check_Piece</TD>
 <TD ALIGN="LEFT">|game|state.st_Check_Piece</TD>
 <TD ALIGN="LEFT">regout</TD>
@@ -294,13 +344,78 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[0]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Read_Ram</TD>
 <TD ALIGN="LEFT">|game|state.st_Read_Ram</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|WideOr9~0</TD>
+<TD ALIGN="LEFT">|game|WideOr9~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[1]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_y[0]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_y[1]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_y[2]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Write[0]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Write[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[2]</TD>
+<TD ALIGN="LEFT">|game|old_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal6~0</TD>
+<TD ALIGN="LEFT">|game|Equal6~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~1</TD>
+<TD ALIGN="LEFT">|game|Equal8~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Check_Second_Move</TD>
 <TD ALIGN="LEFT">|game|state.st_Check_Second_Move</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[2]</TD>
+<TD ALIGN="LEFT">|game|old_X[2]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
@@ -314,18 +429,78 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal6~0</TD>
-<TD ALIGN="LEFT">|game|Equal6~0</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal8~1</TD>
-<TD ALIGN="LEFT">|game|Equal8~1</TD>
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector17~0</TD>
-<TD ALIGN="LEFT">|game|Selector17~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Add0~0</TD>
+<TD ALIGN="LEFT">|game|Add0~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Assign_Position</TD>
+<TD ALIGN="LEFT">|game|state.st_Assign_Position</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|WideOr9~1</TD>
+<TD ALIGN="LEFT">|game|WideOr9~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector24~0</TD>
+<TD ALIGN="LEFT">|game|Selector24~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector25~0</TD>
+<TD ALIGN="LEFT">|game|Selector25~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~39</TD>
+<TD ALIGN="LEFT">|game|state~39</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -344,23 +519,18 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector6~0</TD>
-<TD ALIGN="LEFT">|game|Selector6~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[0]</TD>
-<TD ALIGN="LEFT">|game|last_Piece[0]</TD>
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal0~0</TD>
-<TD ALIGN="LEFT">|game|Equal0~0</TD>
+<TD ALIGN="LEFT">|game|Selector6~0</TD>
+<TD ALIGN="LEFT">|game|Selector6~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[0]~0</TD>
-<TD ALIGN="LEFT">|game|last_Piece[0]~0</TD>
+<TD ALIGN="LEFT">|game|Equal0~0</TD>
+<TD ALIGN="LEFT">|game|Equal0~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -384,18 +554,48 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~2</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~3</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X[0]~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|Selector7~0</TD>
 <TD ALIGN="LEFT">|game|Selector7~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector7~1</TD>
-<TD ALIGN="LEFT">|game|Selector7~1</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector9~0</TD>
-<TD ALIGN="LEFT">|game|Selector9~0</TD>
+<TD ALIGN="LEFT">|game|Selector18~1</TD>
+<TD ALIGN="LEFT">|game|Selector18~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -404,23 +604,43 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
-<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~5</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~5</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
-<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|Selector17~0</TD>
+<TD ALIGN="LEFT">|game|Selector17~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[0]</TD>
-<TD ALIGN="LEFT">|game|sel_X[0]</TD>
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector22~1</TD>
+<TD ALIGN="LEFT">|game|Selector22~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
-<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector21~1</TD>
+<TD ALIGN="LEFT">|game|Selector21~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -429,13 +649,88 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
-<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~2</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~2</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector11~0</TD>
-<TD ALIGN="LEFT">|game|Selector11~0</TD>
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector20~1</TD>
+<TD ALIGN="LEFT">|game|Selector20~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Write~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Write[0]~1</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Write~3</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~1</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~1</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector29~0</TD>
+<TD ALIGN="LEFT">|game|Selector29~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector28~0</TD>
+<TD ALIGN="LEFT">|game|Selector28~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector29~1</TD>
+<TD ALIGN="LEFT">|game|Selector29~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector29~2</TD>
+<TD ALIGN="LEFT">|game|Selector29~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -444,9 +739,44 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector16~0</TD>
+<TD ALIGN="LEFT">|game|Selector16~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_W_Rdy</TD>
 <TD ALIGN="LEFT">|game|state.st_W_Rdy</TD>
 <TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector4~0</TD>
+<TD ALIGN="LEFT">|game|Selector4~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector15~0</TD>
+<TD ALIGN="LEFT">|game|Selector15~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector29~3</TD>
+<TD ALIGN="LEFT">|game|Selector29~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector27~0</TD>
+<TD ALIGN="LEFT">|game|Selector27~0</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|Selector0~0</TD>
@@ -459,19 +789,19 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~2</TD>
+<TD ALIGN="LEFT">|game|Selector0~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~3</TD>
+<TD ALIGN="LEFT">|game|Selector0~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_S_Rdy</TD>
 <TD ALIGN="LEFT">|game|state.st_S_Rdy</TD>
 <TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector0~2</TD>
-<TD ALIGN="LEFT">|game|Selector0~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector0~3</TD>
-<TD ALIGN="LEFT">|game|Selector0~3</TD>
-<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|Selector0~4</TD>
@@ -494,38 +824,53 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector4~0</TD>
-<TD ALIGN="LEFT">|game|Selector4~0</TD>
+<TD ALIGN="LEFT">|game|Selector1~2</TD>
+<TD ALIGN="LEFT">|game|Selector1~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[0]~1</TD>
-<TD ALIGN="LEFT">|game|last_Piece[0]~1</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~1</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector17~2</TD>
-<TD ALIGN="LEFT">|game|Selector17~2</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~2</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector16~0</TD>
-<TD ALIGN="LEFT">|game|Selector16~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X~3</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X~3</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector1~0</TD>
-<TD ALIGN="LEFT">|game|Selector1~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~4</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~4</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector1~1</TD>
-<TD ALIGN="LEFT">|game|Selector1~1</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X~5</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X~5</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[2]~0</TD>
-<TD ALIGN="LEFT">|game|sel_X[2]~0</TD>
+<TD ALIGN="LEFT">|game|Equal10~0</TD>
+<TD ALIGN="LEFT">|game|Equal10~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~1</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y~2</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y~3</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y~3</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -539,9 +884,29 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal10~0</TD>
-<TD ALIGN="LEFT">|game|Equal10~0</TD>
+<TD ALIGN="LEFT">|game|Selector23~2</TD>
+<TD ALIGN="LEFT">|game|Selector23~2</TD>
 <TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[3]~2</TD>
+<TD ALIGN="LEFT">|game|counter[3]~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector26~2</TD>
+<TD ALIGN="LEFT">|game|Selector26~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector1~3</TD>
+<TD ALIGN="LEFT">|game|Selector1~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|led_turn</TD>
@@ -556,6 +921,66 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|freeze_kb</TD>
 <TD ALIGN="LEFT">|game|freeze_kb</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_X[0]</TD>
+<TD ALIGN="LEFT">|game|Ram_X[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_X[1]</TD>
+<TD ALIGN="LEFT">|game|Ram_X[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_X[2]</TD>
+<TD ALIGN="LEFT">|game|Ram_X[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_Y[0]</TD>
+<TD ALIGN="LEFT">|game|Ram_Y[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_Y[1]</TD>
+<TD ALIGN="LEFT">|game|Ram_Y[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Ram_Y[2]</TD>
+<TD ALIGN="LEFT">|game|Ram_Y[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Write_Piece[0]</TD>
+<TD ALIGN="LEFT">|game|Write_Piece[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Write_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|Write_Piece[2]</TD>
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
@@ -574,8 +999,18 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|In_Piece[0]</TD>
 <TD ALIGN="LEFT">|game|In_Piece[0]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[2]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -589,13 +1024,18 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
+<TD ALIGN="LEFT">|game|New_Game</TD>
+<TD ALIGN="LEFT">|game|New_Game~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
 <TD ALIGN="LEFT">|game|ready_to_TX</TD>
 <TD ALIGN="LEFT">|game|ready_to_TX~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|New_Game</TD>
-<TD ALIGN="LEFT">|game|New_Game~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_X[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[1]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -604,8 +1044,8 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_X[0]</TD>
-<TD ALIGN="LEFT">|game|Pos_X[0]~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[1]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -614,19 +1054,54 @@ The following table displays output ports that toggle between 1 and 0 during sim
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_Y[0]</TD>
-<TD ALIGN="LEFT">|game|Pos_Y[0]~corein</TD>
+<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
+<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|WideOr9~0clkctrl</TD>
+<TD ALIGN="LEFT">|game|WideOr9~0clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Check_Second_Move~feeder</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_Second_Move~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
-<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
-<TD ALIGN="LEFT">outclk</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Read_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">|game|state.st_Read_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">outclk</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|sel_Y[2]~feeder</TD>
@@ -646,91 +1121,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TH>Output Port Type</TH>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|while_Capturing</TD>
-<TD ALIGN="LEFT">|game|while_Capturing</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_Moved</TD>
-<TD ALIGN="LEFT">|game|piece_Moved</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector13~0</TD>
-<TD ALIGN="LEFT">|game|Selector13~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[3]</TD>
-<TD ALIGN="LEFT">|game|counter[3]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[2]</TD>
-<TD ALIGN="LEFT">|game|counter[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[1]</TD>
-<TD ALIGN="LEFT">|game|counter[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[0]</TD>
-<TD ALIGN="LEFT">|game|counter[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal18~0</TD>
-<TD ALIGN="LEFT">|game|Equal18~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector13~1</TD>
-<TD ALIGN="LEFT">|game|Selector13~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
 <TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
 <TD ALIGN="LEFT">regout</TD>
@@ -741,8 +1131,33 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~0</TD>
-<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -756,18 +1171,18 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
-<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal7~1</TD>
-<TD ALIGN="LEFT">|game|Equal7~1</TD>
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal7~2</TD>
-<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">|game|Equal5~1</TD>
+<TD ALIGN="LEFT">|game|Equal5~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -781,54 +1196,14 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|Equal13~0</TD>
 <TD ALIGN="LEFT">|game|Equal13~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~1</TD>
-<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
 <TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_Y[1]</TD>
-<TD ALIGN="LEFT">|game|old_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_Y[0]</TD>
-<TD ALIGN="LEFT">|game|old_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal8~0</TD>
-<TD ALIGN="LEFT">|game|Equal8~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal8~2</TD>
-<TD ALIGN="LEFT">|game|Equal8~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~2</TD>
-<TD ALIGN="LEFT">|game|Selector12~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
-<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
-<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
@@ -836,139 +1211,24 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">|game|state~38</TD>
+<TD ALIGN="LEFT">|game|state~38</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state~36</TD>
-<TD ALIGN="LEFT">|game|state~36</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~1</TD>
 <TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~3</TD>
-<TD ALIGN="LEFT">|game|Selector12~3</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Capture</TD>
-<TD ALIGN="LEFT">|game|state.st_Capture</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
-<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector17~1</TD>
-<TD ALIGN="LEFT">|game|Selector17~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector22~0</TD>
-<TD ALIGN="LEFT">|game|Selector22~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Add8~0</TD>
-<TD ALIGN="LEFT">|game|Add8~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector18~0</TD>
-<TD ALIGN="LEFT">|game|Selector18~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector19~0</TD>
-<TD ALIGN="LEFT">|game|Selector19~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector19~1</TD>
-<TD ALIGN="LEFT">|game|Selector19~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector20~0</TD>
-<TD ALIGN="LEFT">|game|Selector20~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector21~0</TD>
-<TD ALIGN="LEFT">|game|Selector21~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector14~0</TD>
-<TD ALIGN="LEFT">|game|Selector14~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal12~0</TD>
-<TD ALIGN="LEFT">|game|Equal12~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state~37</TD>
-<TD ALIGN="LEFT">|game|state~37</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal11~0</TD>
-<TD ALIGN="LEFT">|game|Equal11~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
-<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
-<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|pos_To_Capture_X[0]</TD>
@@ -976,14 +1236,9 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~4</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~4</TD>
 <TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
@@ -991,133 +1246,33 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[1]</TD>
-<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
-<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~0</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector11~1</TD>
-<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal9~0</TD>
-<TD ALIGN="LEFT">|game|Equal9~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector10~0</TD>
-<TD ALIGN="LEFT">|game|Selector10~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector10~1</TD>
-<TD ALIGN="LEFT">|game|Selector10~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector0~8</TD>
-<TD ALIGN="LEFT">|game|Selector0~8</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~6</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~6</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~2</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector15~2</TD>
-<TD ALIGN="LEFT">|game|Selector15~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~2</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1141,11 +1296,6 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|SEND_DT</TD>
-<TD ALIGN="LEFT">|game|SEND_DT</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|frame_received</TD>
 <TD ALIGN="LEFT">|game|frame_received</TD>
 <TD ALIGN="LEFT">padio</TD>
@@ -1156,173 +1306,33 @@ The following table displays output ports that do not toggle to 1 during simulat
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
+<TD ALIGN="LEFT">|game|Write_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|Write_Piece[1]</TD>
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[0]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[1]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[2]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[3]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[3]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[4]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[4]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_R[5]</TD>
-<TD ALIGN="LEFT">|game|Addr_R[5]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
-<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
-<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
-<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
-<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
-<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
-<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|In_Piece[1]</TD>
-<TD ALIGN="LEFT">|game|In_Piece[1]~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_X[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[0]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|In_Piece[2]</TD>
-<TD ALIGN="LEFT">|game|In_Piece[2]~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[0]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_X[1]</TD>
-<TD ALIGN="LEFT">|game|Pos_X[1]~corein</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_Y[1]</TD>
-<TD ALIGN="LEFT">|game|Pos_Y[1]~corein</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">outclk</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 </TABLE>
@@ -1338,98 +1348,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TH>Output Port Type</TH>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|while_Capturing</TD>
-<TD ALIGN="LEFT">|game|while_Capturing</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_Moved</TD>
-<TD ALIGN="LEFT">|game|piece_Moved</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector13~0</TD>
-<TD ALIGN="LEFT">|game|Selector13~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[3]</TD>
-<TD ALIGN="LEFT">|game|counter[3]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[2]</TD>
-<TD ALIGN="LEFT">|game|counter[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[1]</TD>
-<TD ALIGN="LEFT">|game|counter[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|counter[0]</TD>
-<TD ALIGN="LEFT">|game|counter[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal18~0</TD>
-<TD ALIGN="LEFT">|game|Equal18~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector13~1</TD>
-<TD ALIGN="LEFT">|game|Selector13~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
 <TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
@@ -1443,19 +1363,49 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state~35</TD>
-<TD ALIGN="LEFT">|game|state~35</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~0</TD>
-<TD ALIGN="LEFT">|game|Selector12~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_X[2]</TD>
-<TD ALIGN="LEFT">|game|old_X[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write[1]</TD>
 <TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|to_Move_X[2]</TD>
@@ -1513,69 +1463,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal13~0</TD>
-<TD ALIGN="LEFT">|game|Equal13~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
 <TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~1</TD>
-<TD ALIGN="LEFT">|game|Selector12~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_Y[2]</TD>
-<TD ALIGN="LEFT">|game|old_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_Y[1]</TD>
-<TD ALIGN="LEFT">|game|old_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|old_Y[0]</TD>
-<TD ALIGN="LEFT">|game|old_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal8~0</TD>
-<TD ALIGN="LEFT">|game|Equal8~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal6~1</TD>
-<TD ALIGN="LEFT">|game|Equal6~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal8~2</TD>
-<TD ALIGN="LEFT">|game|Equal8~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~2</TD>
-<TD ALIGN="LEFT">|game|Selector12~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
-<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
-<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
@@ -1593,68 +1483,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state~36</TD>
-<TD ALIGN="LEFT">|game|state~36</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector12~3</TD>
-<TD ALIGN="LEFT">|game|Selector12~3</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Capture</TD>
-<TD ALIGN="LEFT">|game|state.st_Capture</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
-<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector17~1</TD>
-<TD ALIGN="LEFT">|game|Selector17~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector22~0</TD>
-<TD ALIGN="LEFT">|game|Selector22~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Add8~0</TD>
-<TD ALIGN="LEFT">|game|Add8~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector18~0</TD>
-<TD ALIGN="LEFT">|game|Selector18~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector19~0</TD>
-<TD ALIGN="LEFT">|game|Selector19~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector19~1</TD>
-<TD ALIGN="LEFT">|game|Selector19~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector20~0</TD>
-<TD ALIGN="LEFT">|game|Selector20~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector21~0</TD>
-<TD ALIGN="LEFT">|game|Selector21~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector14~0</TD>
-<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~0</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1663,29 +1493,9 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state~37</TD>
-<TD ALIGN="LEFT">|game|state~37</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|Equal11~0</TD>
 <TD ALIGN="LEFT">|game|Equal11~0</TD>
 <TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
-<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
-<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">|game|s_whites~0</TD>
@@ -1693,43 +1503,13 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~0</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~3</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~3</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~4</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~4</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1738,8 +1518,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~4</TD>
+<TD ALIGN="LEFT">|game|s_Ram_X~4</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1748,48 +1528,43 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|s_Addr_W~6</TD>
-<TD ALIGN="LEFT">|game|s_Addr_W~6</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
 <TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[1]</TD>
-<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
-<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~0</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector11~1</TD>
-<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~1</TD>
+<TD ALIGN="LEFT">|game|s_Ram_y~1</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
-<TD ALIGN="LEFT">combout</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Equal9~0</TD>
-<TD ALIGN="LEFT">|game|Equal9~0</TD>
-<TD ALIGN="LEFT">combout</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector10~0</TD>
-<TD ALIGN="LEFT">|game|Selector10~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector10~1</TD>
-<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~2</TD>
+<TD ALIGN="LEFT">|game|piece_To_Write~2</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1798,93 +1573,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">regout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector0~8</TD>
-<TD ALIGN="LEFT">|game|Selector0~8</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">regout</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|state.st_Wait_Game~0</TD>
 <TD ALIGN="LEFT">|game|state.st_Wait_Game~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Selector15~2</TD>
-<TD ALIGN="LEFT">|game|Selector15~2</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
-<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -1908,11 +1598,6 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|SEND_DT</TD>
-<TD ALIGN="LEFT">|game|SEND_DT</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|frame_received</TD>
 <TD ALIGN="LEFT">|game|frame_received</TD>
 <TD ALIGN="LEFT">padio</TD>
@@ -1923,58 +1608,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
-<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
-<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
-<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
 <TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
 <TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
-<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
-<TD ALIGN="LEFT">padio</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
-<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
 <TD ALIGN="LEFT">padio</TD>
 </TR>
 <TR valign="middle">
@@ -1988,23 +1623,13 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|In_Piece[1]</TD>
-<TD ALIGN="LEFT">|game|In_Piece[1]~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_X[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[0]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|In_Piece[2]</TD>
-<TD ALIGN="LEFT">|game|In_Piece[2]~corein</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_X[1]</TD>
-<TD ALIGN="LEFT">|game|Pos_X[1]~corein</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|Pos_Y[1]</TD>
-<TD ALIGN="LEFT">|game|Pos_Y[1]~corein</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[0]~corein</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
@@ -2013,63 +1638,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 <TD ALIGN="LEFT">outclk</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
-<TD ALIGN="LEFT">outclk</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
-<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
-<TD ALIGN="LEFT">combout</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
-<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]~feeder</TD>
 <TD ALIGN="LEFT">combout</TD>
 </TR>
 </TABLE>
@@ -2091,23 +1671,35 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 01:05:15 2023
+    Info: Processing started: Thu Dec 21 13:06:31 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Using vector source file "C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/game.vwf"
 Info: Overwriting simulation input file with simulation results
     Info: A backup of game.vwf called Design1.sim_ori.vwf has been created in the db folder
-Warning: Can't find signal in vector source file for input pin "|game|SM_RECEIVED"
+Info: Inverted registers were found during simulation
+    Info: Register: |game|s_Ram_X[0]
+    Info: Register: |game|s_Ram_X[1]
+    Info: Register: |game|s_Ram_X[2]
+    Info: Register: |game|s_Ram_y[0]
+    Info: Register: |game|s_Ram_y[1]
+    Info: Register: |game|s_Ram_y[2]
+    Info: Register: |game|pos_To_Capture_X[0]
+    Info: Register: |game|pos_To_Capture_X[1]
+    Info: Register: |game|pos_To_Capture_X[2]
+    Info: Register: |game|pos_To_Capture_Y[0]
+    Info: Register: |game|pos_To_Capture_Y[1]
+    Info: Register: |game|pos_To_Capture_Y[2]
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      32.17 %
-Info: Number of transitions in simulation is 516
+Info: Simulation coverage is      72.53 %
+Info: Number of transitions in simulation is 2116
 Info: Vector file game.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II Simulator was successful. 0 errors, 1 warning
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 159 megabytes
-    Info: Processing ended: Thu Dec 21 01:05:15 2023
+    Info: Processing ended: Thu Dec 21 13:06:31 2023
     Info: Elapsed time: 00:00:00
-    Info: Total CPU time (on all processors): 00:00:00
+    Info: Total CPU time (on all processors): 00:00:01
 </PRE>
 <HR>
 
