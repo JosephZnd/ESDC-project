@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Wed Dec 20 19:13:18 2023
+Thu Dec 21 01:04:32 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,31 +13,12 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Analysis & Synthesis RAM Summary
-  9. State Machine - |P1_BOARD_vga|tx_module:inst6|state
- 10. State Machine - |P1_BOARD_vga|protocol_tx:inst3|state
- 11. State Machine - |P1_BOARD_vga|rx_module2:inst5|state
- 12. State Machine - |P1_BOARD_vga|protocol_rx:inst4|state
- 13. State Machine - |P1_BOARD_vga|main_control:inst|state
- 14. State Machine - |P1_BOARD_vga|game:GAME|state
- 15. State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
- 16. State Machine - |P1_BOARD_vga|keypad:inst2|current_state
- 17. State Machine - |P1_BOARD_vga|square:inst21|st_square
- 18. State Machine - |P1_BOARD_vga|wr_memory:inst16|st_write
- 19. Registers Removed During Synthesis
- 20. Removed Registers Triggering Further Register Optimizations
- 21. General Register Statistics
- 22. Inverted Register Statistics
- 23. Multiplexer Restructuring Statistics (Restructuring Performed)
- 24. Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
- 25. Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
- 26. Source assignments for ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated
- 27. Parameter Settings for User Entity Instance: Video_Memory:inst18|altsyncram:altsyncram_component
- 28. Parameter Settings for User Entity Instance: ram64:inst14|altsyncram:altsyncram_component
- 29. Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div0
- 30. Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div1
- 31. altsyncram Parameter Settings by Entity Instance
- 32. Analysis & Synthesis Messages
+  8. State Machine - |game|state
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Analysis & Synthesis Messages
 
 
 
@@ -63,18 +44,18 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 20 19:13:18 2023        ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 21 01:04:32 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
-; Top-level Entity Name              ; P1_BOARD_vga                                 ;
+; Top-level Entity Name              ; game                                         ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 794                                          ;
-;     Total combinational functions  ; 708                                          ;
-;     Dedicated logic registers      ; 324                                          ;
-; Total registers                    ; 324                                          ;
-; Total pins                         ; 51                                           ;
+; Total logic elements               ; 145                                          ;
+;     Total combinational functions  ; 109                                          ;
+;     Dedicated logic registers      ; 72                                           ;
+; Total registers                    ; 72                                           ;
+; Total pins                         ; 50                                           ;
 ; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 98,496                                       ;
+; Total memory bits                  ; 0                                            ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
 ; Total PLLs                         ; 0                                            ;
 +------------------------------------+----------------------------------------------+
@@ -86,7 +67,7 @@ applicable agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
-; Top-level entity name                                                      ; P1_BOARD_vga       ; Design1            ;
+; Top-level entity name                                                      ; game               ; Design1            ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -169,407 +150,115 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                       ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                   ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------+
-; P1_BOARD_vga.bdf                 ; yes             ; User Block Diagram/Schematic File      ; L:/Documentos/Github/Restored/P1_BOARD_vga.bdf                 ;
-; add_generator.vhd                ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/add_generator.vhd                ;
-; clk_div_two.vhd                  ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/clk_div_two.vhd                  ;
-; clk_video.vhd                    ; yes             ; User Wizard-Generated File             ; L:/Documentos/Github/Restored/clk_video.vhd                    ;
-; count4b.vhd                      ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/count4b.vhd                      ;
-; f_div.vhd                        ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/f_div.vhd                        ;
-; keypad.vhd                       ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/keypad.vhd                       ;
-; keytest_h_v2.vhd                 ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/keytest_h_v2.vhd                 ;
-; protocol_rx.vhd                  ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/protocol_rx.vhd                  ;
-; protocol_tx.vhd                  ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/protocol_tx.vhd                  ;
-; square.vhd                       ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/square.vhd                       ;
-; rx_module2.vhd                   ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/rx_module2.vhd                   ;
-; VGA_SYNC.VHD                     ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/VGA_SYNC.VHD                     ;
-; Video_Memory.vhd                 ; yes             ; User Wizard-Generated File             ; L:/Documentos/Github/Restored/Video_Memory.vhd                 ;
-; wr_memory.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/wr_memory.vhd                    ;
-; tx_module.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/tx_module.vhd                    ;
-; MAIN.vhd                         ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/MAIN.vhd                         ;
-; square_map.vhd                   ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/square_map.vhd                   ;
-; kb_xy_module.vhd                 ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/kb_xy_module.vhd                 ;
-; ram64.vhd                        ; yes             ; User Wizard-Generated File             ; L:/Documentos/Github/Restored/ram64.vhd                        ;
-; add64_gen.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/add64_gen.vhd                    ;
-; inverse_square_map.vhd           ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/inverse_square_map.vhd           ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
-; db/altsyncram_4jk1.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_4jk1.tdf           ;
-; db/altsyncram_fes1.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_fes1.tdf           ;
-; db/decode_9oa.tdf                ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/decode_9oa.tdf                ;
-; db/mux_kib.tdf                   ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/mux_kib.tdf                   ;
-; game.vhd                         ; yes             ; Auto-Found VHDL File                   ; L:/Documentos/Github/Restored/game.vhd                         ;
-; db/altsyncram_5h72.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_5h72.tdf           ;
-; ram_init.mif                     ; yes             ; Auto-Found Memory Initialization File  ; L:/Documentos/Github/Restored/ram_init.mif                     ;
-; lpm_divide.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/lpm_divide.tdf ;
-; db/lpm_divide_3so.tdf            ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/lpm_divide_3so.tdf            ;
-; db/abs_divider_gbg.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/abs_divider_gbg.tdf           ;
-; db/alt_u_div_c2f.tdf             ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/alt_u_div_c2f.tdf             ;
-; db/add_sub_lkc.tdf               ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/add_sub_lkc.tdf               ;
-; db/add_sub_mkc.tdf               ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/add_sub_mkc.tdf               ;
-; db/lpm_abs_gq9.tdf               ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/lpm_abs_gq9.tdf               ;
-; db/lpm_abs_sr9.tdf               ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/lpm_abs_sr9.tdf               ;
-; db/lpm_divide_rqo.tdf            ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/lpm_divide_rqo.tdf            ;
-; db/abs_divider_8ag.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/abs_divider_8ag.tdf           ;
-; db/alt_u_div_sve.tdf             ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/alt_u_div_sve.tdf             ;
-; db/lpm_abs_kq9.tdf               ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/lpm_abs_kq9.tdf               ;
-+----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                  ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                     ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
+; game.vhd                         ; yes             ; User VHDL File  ; C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/game.vhd ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Estimated Total logic elements              ; 794    ;
-;                                             ;        ;
-; Total combinational functions               ; 708    ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 243    ;
-;     -- 3 input functions                    ; 215    ;
-;     -- <=2 input functions                  ; 250    ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 560    ;
-;     -- arithmetic mode                      ; 148    ;
-;                                             ;        ;
-; Total registers                             ; 324    ;
-;     -- Dedicated logic registers            ; 324    ;
-;     -- I/O registers                        ; 0      ;
-;                                             ;        ;
-; I/O pins                                    ; 51     ;
-; Total memory bits                           ; 98496  ;
-; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 168    ;
-; Total fan-out                               ; 3827   ;
-; Average fan-out                             ; 3.44   ;
-+---------------------------------------------+--------+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 145   ;
+;                                             ;       ;
+; Total combinational functions               ; 109   ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 62    ;
+;     -- 3 input functions                    ; 35    ;
+;     -- <=2 input functions                  ; 12    ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 109   ;
+;     -- arithmetic mode                      ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 72    ;
+;     -- Dedicated logic registers            ; 72    ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 50    ;
+; Maximum fan-out node                        ; clk50 ;
+; Maximum fan-out                             ; 72    ;
+; Total fan-out                               ; 624   ;
+; Average fan-out                             ; 2.70  ;
++---------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                               ;
-+---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                              ; Library Name ;
-+---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                       ; 708 (1)           ; 324 (0)      ; 98496       ; 0            ; 0       ; 0         ; 51   ; 0            ; |P1_BOARD_vga                                                                                                                                    ; work         ;
-;    |VGA_SYNC:inst19|                                                ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|VGA_SYNC:inst19                                                                                                                    ;              ;
-;    |Video_Memory:inst18|                                            ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18                                                                                                                ;              ;
-;       |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component                                                                                ;              ;
-;          |altsyncram_4jk1:auto_generated|                           ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
-;             |altsyncram_fes1:altsyncram1|                           ; 36 (0)            ; 6 (6)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
-;                |decode_9oa:decode4|                                 ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4  ;              ;
-;                |decode_9oa:decode_a|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
-;                |decode_9oa:decode_b|                                ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b ;              ;
-;                |mux_kib:mux5|                                       ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5        ;              ;
-;    |clk_div_two:inst17|                                             ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_div_two:inst17                                                                                                                 ;              ;
-;    |clk_video:inst10|                                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10                                                                                                                   ;              ;
-;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                       ;              ;
-;    |clk_video:inst20|                                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst20                                                                                                                   ;              ;
-;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                       ;              ;
-;    |f_div:inst1|                                                    ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|f_div:inst1                                                                                                                        ;              ;
-;    |game:GAME|                                                      ; 10 (10)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                          ;              ;
-;    |inverse_square_map:inst23|                                      ; 198 (16)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23                                                                                                          ;              ;
-;       |lpm_divide:Div0|                                             ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0                                                                                          ;              ;
-;          |lpm_divide_3so:auto_generated|                            ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated                                                            ;              ;
-;             |abs_divider_gbg:divider|                               ; 99 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider                                    ;              ;
-;                |alt_u_div_c2f:divider|                              ; 84 (84)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|alt_u_div_c2f:divider              ;              ;
-;                |lpm_abs_sr9:my_abs_num|                             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|lpm_abs_sr9:my_abs_num             ;              ;
-;       |lpm_divide:Div1|                                             ; 83 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1                                                                                          ;              ;
-;          |lpm_divide_rqo:auto_generated|                            ; 83 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated                                                            ;              ;
-;             |abs_divider_8ag:divider|                               ; 83 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider                                    ;              ;
-;                |alt_u_div_sve:divider|                              ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider              ;              ;
-;                |lpm_abs_kq9:my_abs_num|                             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num             ;              ;
-;    |kb_xy_module:inst8|                                             ; 18 (18)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
-;    |keypad:inst2|                                                   ; 47 (43)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
-;       |count4b:counter|                                             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                       ;              ;
-;    |keytest_h_v2:inst7|                                             ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
-;    |main_control:inst|                                              ; 15 (15)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|main_control:inst                                                                                                                  ;              ;
-;    |protocol_rx:inst4|                                              ; 30 (30)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                  ;              ;
-;    |protocol_tx:inst3|                                              ; 24 (24)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
-;    |ram64:inst14|                                                   ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14                                                                                                                       ;              ;
-;       |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component                                                                                       ;              ;
-;          |altsyncram_5h72:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated                                                        ;              ;
-;    |rx_module2:inst5|                                               ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                   ;              ;
-;    |square:inst21|                                                  ; 100 (100)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
-;    |square_map:inst9|                                               ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square_map:inst9                                                                                                                   ;              ;
-;    |tx_module:inst6|                                                ; 25 (25)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                    ;              ;
-;    |wr_memory:inst16|                                               ; 68 (68)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|wr_memory:inst16                                                                                                                   ;              ;
-+---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
+; |game                      ; 109 (109)         ; 72 (72)      ; 0           ; 0            ; 0       ; 0         ; 50   ; 0            ; |game               ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                     ;
-+---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------+
-; Name                                                                                                                      ; Type ; Mode           ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size  ; MIF          ;
-+---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------+
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; 32768        ; 3            ; 32768        ; 3            ; 98304 ; None         ;
-; ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ALTSYNCRAM                                    ; AUTO ; True Dual Port ; 64           ; 3            ; 64           ; 3            ; 192   ; ram_init.mif ;
-+---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+-------+--------------+
-
-
 Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|tx_module:inst6|state                              ;
-+----------------+---------------+----------------+----------------+---------------+
-; Name           ; state.tx_stop ; state.tx_shift ; state.tx_start ; state.tx_idle ;
-+----------------+---------------+----------------+----------------+---------------+
-; state.tx_idle  ; 0             ; 0              ; 0              ; 0             ;
-; state.tx_start ; 0             ; 0              ; 1              ; 1             ;
-; state.tx_shift ; 0             ; 1              ; 0              ; 1             ;
-; state.tx_stop  ; 1             ; 0              ; 0              ; 1             ;
-+----------------+---------------+----------------+----------------+---------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |game|state                                                                                                                                                                                                                                                                                                                                                 ;
++----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; Name                       ; state.st_Finish_Turn ; state.st_Invalid_Move ; state.st_Write_Ram ; state.st_Move_Piece ; state.st_Check_capture ; state.st_Capture ; state.st_Check_Second_Move ; state.st_Check_Piece ; state.st_Read_Ram ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_Rdy ; state.st_S_Rdy ; state.st_W_Tx1 ; state.st_Wait_Game ;
++----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; state.st_Wait_Game         ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
+; state.st_W_Tx1             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
+; state.st_S_Rdy             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
+; state.st_W_Rdy             ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
+; state.st_Start_Game        ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Turn              ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Wait_Turn         ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Read_Ram          ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 1                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_Piece       ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 1                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_Second_Move ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 1                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Capture           ; 0                    ; 0                     ; 0                  ; 0                   ; 0                      ; 1                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Check_capture     ; 0                    ; 0                     ; 0                  ; 0                   ; 1                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Move_Piece        ; 0                    ; 0                     ; 0                  ; 1                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Write_Ram         ; 0                    ; 0                     ; 1                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Invalid_Move      ; 0                    ; 1                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Finish_Turn       ; 1                    ; 0                     ; 0                  ; 0                   ; 0                      ; 0                ; 0                          ; 0                    ; 0                 ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
++----------------------------+----------------------+-----------------------+--------------------+---------------------+------------------------+------------------+----------------------------+----------------------+-------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
 
 
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|protocol_tx:inst3|state                                                                                                                                                                                                                                          ;
-+---------------------+-----------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+---------------+
-; Name                ; state.pr_set_TX ; state.pr_w5 ; state.pr_s5 ; state.pr_w4 ; state.pr_s4 ; state.pr_w3 ; state.pr_s3 ; state.pr_check_data ; state.pr_w2 ; state.pr_s2 ; state.pr_w1 ; state.pr_s1 ; state.pr_dt ; state.pr_eq ; state.pr_sm ; state.pr_gr ; state.pr_rdy ; state.pr_wait ;
-+---------------------+-----------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+---------------+
-; state.pr_wait       ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 0             ;
-; state.pr_rdy        ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1            ; 1             ;
-; state.pr_gr         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0            ; 1             ;
-; state.pr_sm         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0            ; 1             ;
-; state.pr_eq         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_dt         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_s1         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_w1         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_s2         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_w2         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_check_data ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_s3         ; 0               ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_w3         ; 0               ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_s4         ; 0               ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_w4         ; 0               ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_s5         ; 0               ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_w5         ; 0               ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-; state.pr_set_TX     ; 1               ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0                   ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0            ; 1             ;
-+---------------------+-----------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+---------------+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; Addr_W[0]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_W[1]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_W[2]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_W[3]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_W[4]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_W[5]$latch                                     ; state.st_Write_Ram  ; yes                    ;
+; Addr_R[0]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Addr_R[1]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Addr_R[2]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Addr_R[3]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Addr_R[4]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; Addr_R[5]$latch                                     ; state.st_Read_Ram   ; yes                    ;
+; X_To_Sent[0]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; X_To_Sent[1]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; X_To_Sent[2]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; Y_To_Sent[0]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; Y_To_Sent[1]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; Y_To_Sent[2]$latch                                  ; state.st_Write_Ram  ; yes                    ;
+; Number of user-specified and inferred latches = 18  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|rx_module2:inst5|state                             ;
-+----------------+---------------+----------------+----------------+---------------+
-; Name           ; state.rx_stop ; state.rx_shift ; state.rx_start ; state.rx_idle ;
-+----------------+---------------+----------------+----------------+---------------+
-; state.rx_idle  ; 0             ; 0              ; 0              ; 0             ;
-; state.rx_start ; 0             ; 0              ; 1              ; 1             ;
-; state.rx_shift ; 0             ; 1              ; 0              ; 1             ;
-; state.rx_stop  ; 1             ; 0              ; 0              ; 1             ;
-+----------------+---------------+----------------+----------------+---------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|protocol_rx:inst4|state                                                                                                                                                                                                                         ;
-+-----------------+---------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------+---------------+---------------+----------------+-----------------+-------------+-------------+-------------+-------------+--------------+
-; Name            ; state.pr_s_dt ; state.pr_r5 ; state.pr_w5 ; state.pr_r4 ; state.pr_w4 ; state.pr_r3 ; state.pr_w3 ; state.pr_s_eq ; state.pr_s_sm ; state.pr_s_gr ; state.pr_s_rdy ; state.pr_f_type ; state.pr_r2 ; state.pr_w2 ; state.pr_r1 ; state.pr_w1 ; state.pr_ini ;
-+-----------------+---------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------+---------------+---------------+----------------+-----------------+-------------+-------------+-------------+-------------+--------------+
-; state.pr_ini    ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 0            ;
-; state.pr_w1     ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 1           ; 1            ;
-; state.pr_r1     ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 1           ; 0           ; 1            ;
-; state.pr_w2     ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 1           ; 0           ; 0           ; 1            ;
-; state.pr_r2     ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 1           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_f_type ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 1               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_s_rdy  ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 1              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_s_gr   ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 1             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_s_sm   ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 1             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_s_eq   ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_w3     ; 0             ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_r3     ; 0             ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_w4     ; 0             ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_r4     ; 0             ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_w5     ; 0             ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_r5     ; 0             ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-; state.pr_s_dt   ; 1             ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0             ; 0             ; 0             ; 0              ; 0               ; 0           ; 0           ; 0           ; 0           ; 1            ;
-+-----------------+---------------+-------------+-------------+-------------+-------------+-------------+-------------+---------------+---------------+---------------+----------------+-----------------+-------------+-------------+-------------+-------------+--------------+
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                                                                 ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; Name                ; state.S_Wait_Turn ; state.S_Change_Turn ; state.st_start_game ; state.st_send_color ; state.st_P_First ; state.st_Op_First ; state.st_wait_hash ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; state.st_wait_hash  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 0                  ;
-; state.st_Op_First   ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 1                 ; 1                  ;
-; state.st_P_First    ; 0                 ; 0                   ; 0                   ; 0                   ; 1                ; 0                 ; 1                  ;
-; state.st_send_color ; 0                 ; 0                   ; 0                   ; 1                   ; 0                ; 0                 ; 1                  ;
-; state.st_start_game ; 0                 ; 0                   ; 1                   ; 0                   ; 0                ; 0                 ; 1                  ;
-; state.S_Change_Turn ; 0                 ; 1                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
-; state.S_Wait_Turn   ; 1                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|game:GAME|state                                                                                                                                                                                                                                                                                                   ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; Name                ; state.st_W_FR2 ; state.st_S_EQ ; state.st_W_FR ; state.st_S_GRorSM ; state.st_W_TX3 ; state.sT_FR_R ; state.st_W_DT ; state.st_S_DT ; state.st_W_TX2 ; state.st_W_Code ; state.st_Code ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_RDY ; state.st_S_RDY ; state.st_W_TX1 ; state.st_wait_game ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; state.st_wait_game  ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
-; state.st_W_TX1      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
-; state.st_S_RDY      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
-; state.st_W_RDY      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
-; state.st_Start_Game ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Turn       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Wait_Turn  ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Code       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 1             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_Code     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 1               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_TX2      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 1              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_DT       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 1             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_DT       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 1             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.sT_FR_R       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 1             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_TX3      ; 0              ; 0             ; 0             ; 0                 ; 1              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_GRorSM   ; 0              ; 0             ; 0             ; 1                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_FR       ; 0              ; 0             ; 1             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_EQ       ; 0              ; 1             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_FR2      ; 1              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy                                          ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-; Name         ; s_xy.s_up ; s_xy.s_end ; s_xy.s_left ; s_xy.s_right ; s_xy.s_down ; s_xy.s_wait ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-; s_xy.s_wait  ; 0         ; 0          ; 0           ; 0            ; 0           ; 0           ;
-; s_xy.s_down  ; 0         ; 0          ; 0           ; 0            ; 1           ; 1           ;
-; s_xy.s_right ; 0         ; 0          ; 0           ; 1            ; 0           ; 1           ;
-; s_xy.s_left  ; 0         ; 0          ; 1           ; 0            ; 0           ; 1           ;
-; s_xy.s_end   ; 0         ; 1          ; 0           ; 0            ; 0           ; 1           ;
-; s_xy.s_up    ; 1         ; 0          ; 0           ; 0            ; 0           ; 1           ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-
-
-Encoding Type:  One-Hot
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|keypad:inst2|current_state                                                                                                                                           ;
-+----------------------+----------------------+---------------------+--------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
-; Name                 ; current_state.check1 ; current_state.wait1 ; current_state.kra3 ; current_state.kra2 ; current_state.kra1 ; current_state.kra0 ; current_state.check0 ; current_state.wait0 ;
-+----------------------+----------------------+---------------------+--------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
-; current_state.wait0  ; 0                    ; 0                   ; 0                  ; 0                  ; 0                  ; 0                  ; 0                    ; 0                   ;
-; current_state.check0 ; 0                    ; 0                   ; 0                  ; 0                  ; 0                  ; 0                  ; 1                    ; 1                   ;
-; current_state.kra0   ; 0                    ; 0                   ; 0                  ; 0                  ; 0                  ; 1                  ; 0                    ; 1                   ;
-; current_state.kra1   ; 0                    ; 0                   ; 0                  ; 0                  ; 1                  ; 0                  ; 0                    ; 1                   ;
-; current_state.kra2   ; 0                    ; 0                   ; 0                  ; 1                  ; 0                  ; 0                  ; 0                    ; 1                   ;
-; current_state.kra3   ; 0                    ; 0                   ; 1                  ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
-; current_state.wait1  ; 0                    ; 1                   ; 0                  ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
-; current_state.check1 ; 1                    ; 0                   ; 0                  ; 0                  ; 0                  ; 0                  ; 0                    ; 1                   ;
-+----------------------+----------------------+---------------------+--------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|square:inst21|st_square                                                                                                                                                                                                                  ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
-; Name                    ; st_square.s_game_wait ; st_square.s_cursor_wait ; st_square.s_select_c ; st_square.s_select_b ; st_square.s_select_a ; st_square.s_cursor_c ; st_square.s_cursor_b ; st_square.s_cursor_a ; st_square.s00c ; st_square.s00b ; st_square.s00a ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
-; st_square.s00a          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0              ;
-; st_square.s00b          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 1              ; 1              ;
-; st_square.s00c          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ; 0              ; 1              ;
-; st_square.s_cursor_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_b    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_c    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_b    ; 0                     ; 0                       ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_c    ; 0                     ; 0                       ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_wait ; 0                     ; 1                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_game_wait   ; 1                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|wr_memory:inst16|st_write                                                       ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; Name        ; st_write.s6 ; st_write.s5 ; st_write.s4 ; st_write.s3 ; st_write.s2 ; st_write.s1 ; st_write.s0 ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-; st_write.s0 ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ; 0           ;
-; st_write.s1 ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ; 1           ;
-; st_write.s2 ; 0           ; 0           ; 0           ; 0           ; 1           ; 0           ; 1           ;
-; st_write.s3 ; 0           ; 0           ; 0           ; 1           ; 0           ; 0           ; 1           ;
-; st_write.s4 ; 0           ; 0           ; 1           ; 0           ; 0           ; 0           ; 1           ;
-; st_write.s5 ; 0           ; 1           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-; st_write.s6 ; 1           ; 0           ; 0           ; 0           ; 0           ; 0           ; 1           ;
-+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-
-
-+--------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                   ;
-+----------------------------------------+---------------------------------------------+
-; Register name                          ; Reason for Removal                          ;
-+----------------------------------------+---------------------------------------------+
-; protocol_tx:inst3|dataH_i[0..3]        ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|dataT_i[0..3]        ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|dataU_i[0..3]        ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|frame_type[3]        ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|frame_type[0]        ; Stuck at VCC due to stuck port data_in      ;
-; square:inst21|c_x[0]                   ; Stuck at VCC due to stuck port data_in      ;
-; square:inst21|c_y[0]                   ; Stuck at VCC due to stuck port data_in      ;
-; square:inst21|sel_y[0]                 ; Merged with square:inst21|sel_x[0]          ;
-; protocol_tx:inst3|frame_type[5]        ; Merged with protocol_tx:inst3|frame_type[7] ;
-; protocol_tx:inst3|frame_type[4]        ; Merged with protocol_tx:inst3|frame_type[6] ;
-; square:inst21|y_out[0]                 ; Merged with square:inst21|x_out[0]          ;
-; wr_memory:inst16|l[0]                  ; Merged with wr_memory:inst16|j[0]           ;
-; wr_memory:inst16|k[0]                  ; Merged with wr_memory:inst16|i[0]           ;
-; protocol_tx:inst3|tx_data[5]           ; Merged with protocol_tx:inst3|tx_data[7]    ;
-; protocol_tx:inst3|tx_data[4]           ; Merged with protocol_tx:inst3|tx_data[6]    ;
-; wr_memory:inst16|l[1]                  ; Merged with wr_memory:inst16|j[1]           ;
-; wr_memory:inst16|k[1]                  ; Merged with wr_memory:inst16|i[1]           ;
-; wr_memory:inst16|l[2]                  ; Merged with wr_memory:inst16|j[2]           ;
-; wr_memory:inst16|k[2]                  ; Merged with wr_memory:inst16|i[2]           ;
-; wr_memory:inst16|l[3]                  ; Merged with wr_memory:inst16|j[3]           ;
-; wr_memory:inst16|k[3]                  ; Merged with wr_memory:inst16|i[3]           ;
-; protocol_tx:inst3|state.pr_sm          ; Lost fanout                                 ;
-; game:GAME|state.st_Code                ; Lost fanout                                 ;
-; game:GAME|state.sT_FR_R                ; Lost fanout                                 ;
-; game:GAME|state.st_S_GRorSM            ; Lost fanout                                 ;
-; game:GAME|state.st_W_FR                ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_TX3               ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_TX2               ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_Code              ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_S_DT                ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_S_EQ                ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_eq          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_dt          ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_FR2               ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_DT                ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|frame_type[1..2]     ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|tx_data[2]           ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_s3          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_w3          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_s4          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_w4          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_s5          ; Stuck at GND due to stuck port data_in      ;
-; protocol_tx:inst3|state.pr_w5          ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 53 ;                                             ;
-+----------------------------------------+---------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+---------------------------------+---------------------------+---------------------------------------------------------------+
-; Register name                   ; Reason for Removal        ; Registers Removed due to This Register                        ;
-+---------------------------------+---------------------------+---------------------------------------------------------------+
-; protocol_tx:inst3|frame_type[2] ; Stuck at GND              ; protocol_tx:inst3|state.pr_s3, protocol_tx:inst3|state.pr_w3, ;
-;                                 ; due to stuck port data_in ; protocol_tx:inst3|state.pr_s4, protocol_tx:inst3|state.pr_w4, ;
-;                                 ;                           ; protocol_tx:inst3|state.pr_s5                                 ;
-; game:GAME|state.st_W_FR         ; Stuck at GND              ; game:GAME|state.st_W_FR2, game:GAME|state.st_W_DT             ;
-;                                 ; due to stuck port data_in ;                                                               ;
-; game:GAME|state.st_W_TX3        ; Stuck at GND              ; game:GAME|state.st_S_EQ, protocol_tx:inst3|state.pr_eq        ;
-;                                 ; due to stuck port data_in ;                                                               ;
-; protocol_tx:inst3|dataH_i[2]    ; Stuck at GND              ; protocol_tx:inst3|tx_data[2]                                  ;
-;                                 ; due to stuck port data_in ;                                                               ;
-; game:GAME|state.st_W_TX2        ; Stuck at GND              ; game:GAME|state.st_S_DT                                       ;
-;                                 ; due to stuck port data_in ;                                                               ;
-+---------------------------------+---------------------------+---------------------------------------------------------------+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; checking_Second_Move                  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -577,285 +266,28 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 324   ;
-; Number of registers using Synchronous Clear  ; 26    ;
-; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 137   ;
+; Total registers                              ; 72    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 16    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 132   ;
+; Number of registers using Clock Enable       ; 55    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------+
-; Inverted Register Statistics                      ;
-+-----------------------------------------+---------+
-; Inverted Register                       ; Fan out ;
-+-----------------------------------------+---------+
-; tx_module:inst6|tx                      ; 1       ;
-; main_control:inst|LED_ON                ; 2       ;
-; protocol_tx:inst3|ready_to_TX           ; 2       ;
-; tx_module:inst6|tx_empty                ; 8       ;
-; square:inst21|c_y[5]                    ; 2       ;
-; square:inst21|c_y[4]                    ; 2       ;
-; square:inst21|c_x[1]                    ; 2       ;
-; square:inst21|c_x[6]                    ; 2       ;
-; square:inst21|c_y[3]                    ; 2       ;
-; kb_xy_module:inst8|y_int[2]             ; 6       ;
-; kb_xy_module:inst8|x_int[2]             ; 5       ;
-; Total number of inverted registers = 11 ;         ;
-+-----------------------------------------+---------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[10]    ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|data[0]          ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|square:inst21|color_t[2]          ;
-; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |P1_BOARD_vga|square:inst21|x_out[2]            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[1]     ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[2]          ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[2]      ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[0]     ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[3] ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count         ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |P1_BOARD_vga|kb_xy_module:inst8|s_xy           ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector2       ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.check1    ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector6       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector10        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector7         ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector7        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector6        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|square:inst21|Selector9           ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector10      ;
-; 14:1               ; 8 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector1               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------+
-; Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated ;
-+---------------------------------+--------------------+------+---------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                          ;
-+---------------------------------+--------------------+------+---------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                           ;
-+---------------------------------+--------------------+------+---------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1 ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------+
-; Assignment                      ; Value              ; From ; To                                                                      ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                       ;
-+---------------------------------+--------------------+------+-------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------+
-; Source assignments for ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated ;
-+---------------------------------+--------------------+------+--------------------------------------+
-; Assignment                      ; Value              ; From ; To                                   ;
-+---------------------------------+--------------------+------+--------------------------------------+
-; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                    ;
-+---------------------------------+--------------------+------+--------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Video_Memory:inst18|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+--------------------------------------+
-; Parameter Name                     ; Value                ; Type                                 ;
-+------------------------------------+----------------------+--------------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                              ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                           ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                         ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                         ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                       ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                              ;
-; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                              ;
-; WIDTH_A                            ; 3                    ; Signed Integer                       ;
-; WIDTHAD_A                          ; 15                   ; Signed Integer                       ;
-; NUMWORDS_A                         ; 32768                ; Signed Integer                       ;
-; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                              ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                              ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                              ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                              ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                              ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                              ;
-; WIDTH_B                            ; 3                    ; Signed Integer                       ;
-; WIDTHAD_B                          ; 15                   ; Signed Integer                       ;
-; NUMWORDS_B                         ; 32768                ; Signed Integer                       ;
-; INDATA_REG_B                       ; CLOCK1               ; Untyped                              ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                              ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                              ;
-; ADDRESS_REG_B                      ; CLOCK1               ; Untyped                              ;
-; OUTDATA_REG_B                      ; CLOCK1               ; Untyped                              ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                              ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                              ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                              ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                              ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                              ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                              ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                       ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                              ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                              ;
-; BYTE_SIZE                          ; 8                    ; Untyped                              ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                              ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                              ;
-; INIT_FILE                          ; UNUSED               ; Untyped                              ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                              ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                              ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                              ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                              ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                              ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                              ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                              ;
-; CBXI_PARAMETER                     ; altsyncram_4jk1      ; Untyped                              ;
-+------------------------------------+----------------------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ram64:inst14|altsyncram:altsyncram_component ;
-+------------------------------------+----------------------+-------------------------------+
-; Parameter Name                     ; Value                ; Type                          ;
-+------------------------------------+----------------------+-------------------------------+
-; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                       ;
-; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                    ;
-; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                  ;
-; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                  ;
-; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                ;
-; WIDTH_BYTEENA                      ; 1                    ; Untyped                       ;
-; OPERATION_MODE                     ; BIDIR_DUAL_PORT      ; Untyped                       ;
-; WIDTH_A                            ; 3                    ; Signed Integer                ;
-; WIDTHAD_A                          ; 6                    ; Signed Integer                ;
-; NUMWORDS_A                         ; 64                   ; Signed Integer                ;
-; OUTDATA_REG_A                      ; CLOCK0               ; Untyped                       ;
-; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                       ;
-; INDATA_ACLR_A                      ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                       ;
-; WIDTH_B                            ; 3                    ; Signed Integer                ;
-; WIDTHAD_B                          ; 6                    ; Signed Integer                ;
-; NUMWORDS_B                         ; 64                   ; Signed Integer                ;
-; INDATA_REG_B                       ; CLOCK0               ; Untyped                       ;
-; WRCONTROL_WRADDRESS_REG_B          ; CLOCK0               ; Untyped                       ;
-; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                       ;
-; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                       ;
-; OUTDATA_REG_B                      ; CLOCK0               ; Untyped                       ;
-; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                       ;
-; INDATA_ACLR_B                      ; NONE                 ; Untyped                       ;
-; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                       ;
-; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                       ;
-; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                       ;
-; WIDTH_BYTEENA_A                    ; 1                    ; Signed Integer                ;
-; WIDTH_BYTEENA_B                    ; 1                    ; Signed Integer                ;
-; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                       ;
-; BYTE_SIZE                          ; 8                    ; Untyped                       ;
-; READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA             ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                       ;
-; INIT_FILE                          ; ram_init.mif         ; Untyped                       ;
-; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                       ;
-; MAXIMUM_DEPTH                      ; 0                    ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_A              ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                       ;
-; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                       ;
-; ENABLE_ECC                         ; FALSE                ; Untyped                       ;
-; DEVICE_FAMILY                      ; Cyclone II           ; Untyped                       ;
-; CBXI_PARAMETER                     ; altsyncram_5h72      ; Untyped                       ;
-+------------------------------------+----------------------+-------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div0 ;
-+------------------------+----------------+--------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                             ;
-+------------------------+----------------+--------------------------------------------------+
-; LPM_WIDTHN             ; 10             ; Untyped                                          ;
-; LPM_WIDTHD             ; 5              ; Untyped                                          ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                          ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                          ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
-; CBXI_PARAMETER         ; lpm_divide_3so ; Untyped                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
-+------------------------+----------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div1 ;
-+------------------------+----------------+--------------------------------------------------+
-; Parameter Name         ; Value          ; Type                                             ;
-+------------------------+----------------+--------------------------------------------------+
-; LPM_WIDTHN             ; 9              ; Untyped                                          ;
-; LPM_WIDTHD             ; 5              ; Untyped                                          ;
-; LPM_NREPRESENTATION    ; SIGNED         ; Untyped                                          ;
-; LPM_DREPRESENTATION    ; SIGNED         ; Untyped                                          ;
-; LPM_PIPELINE           ; 0              ; Untyped                                          ;
-; LPM_REMAINDERPOSITIVE  ; FALSE          ; Untyped                                          ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                          ;
-; CBXI_PARAMETER         ; lpm_divide_rqo ; Untyped                                          ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                          ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                          ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                       ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                     ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                     ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                   ;
-+------------------------+----------------+--------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; altsyncram Parameter Settings by Entity Instance                                                ;
-+-------------------------------------------+-----------------------------------------------------+
-; Name                                      ; Value                                               ;
-+-------------------------------------------+-----------------------------------------------------+
-; Number of entity instances                ; 2                                                   ;
-; Entity Instance                           ; Video_Memory:inst18|altsyncram:altsyncram_component ;
-;     -- OPERATION_MODE                     ; DUAL_PORT                                           ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 32768                                               ;
-;     -- OUTDATA_REG_A                      ; UNREGISTERED                                        ;
-;     -- WIDTH_B                            ; 3                                                   ;
-;     -- NUMWORDS_B                         ; 32768                                               ;
-;     -- ADDRESS_REG_B                      ; CLOCK1                                              ;
-;     -- OUTDATA_REG_B                      ; CLOCK1                                              ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                           ;
-; Entity Instance                           ; ram64:inst14|altsyncram:altsyncram_component        ;
-;     -- OPERATION_MODE                     ; BIDIR_DUAL_PORT                                     ;
-;     -- WIDTH_A                            ; 3                                                   ;
-;     -- NUMWORDS_A                         ; 64                                                  ;
-;     -- OUTDATA_REG_A                      ; CLOCK0                                              ;
-;     -- WIDTH_B                            ; 3                                                   ;
-;     -- NUMWORDS_B                         ; 64                                                  ;
-;     -- ADDRESS_REG_B                      ; CLOCK0                                              ;
-;     -- OUTDATA_REG_B                      ; CLOCK0                                              ;
-;     -- RAM_BLOCK_TYPE                     ; AUTO                                                ;
-;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; OLD_DATA                                            ;
-+-------------------------------------------+-----------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |game|s_Addr_W[0]             ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 0 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_Y[0] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_Y[1] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |game|int_Pos_To_Capture_X[1] ;
+; 18:1               ; 5 bits    ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; No         ; |game|Selector0               ;
+; 19:1               ; 2 bits    ; 24 LEs        ; 6 LEs                ; 18 LEs                 ; No         ; |game|Selector9               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +-------------------------------+
@@ -864,7 +296,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 20 19:13:05 2023
+    Info: Processing started: Thu Dec 21 01:04:30 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -968,162 +400,64 @@ Info: Found 2 design units, including 1 entities, in source file inverse_square_
     Info: Found entity 1: inverse_square_map
 Info: Found 1 design units, including 1 entities, in source file sender1.bdf
     Info: Found entity 1: sender1
-Info: Elaborating entity "P1_BOARD_vga" for the top level hierarchy
-Warning: Not all bits in bus "LED_GREEN[7..0]" are used
-Warning: Not all bits in bus "LED_RED[17..0]" are used
-Info: Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst19"
-Info: Elaborating entity "clk_video" for hierarchy "clk_video:inst20"
-Info: Elaborating entity "clk_video_altclkctrl_6df" for hierarchy "clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component"
-Info: Elaborating entity "clk_div_two" for hierarchy "clk_div_two:inst17"
-Info: Elaborating entity "Video_Memory" for hierarchy "Video_Memory:inst18"
-Info: Elaborating entity "altsyncram" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component"
-Info: Elaborated megafunction instantiation "Video_Memory:inst18|altsyncram:altsyncram_component"
-Info: Instantiated megafunction "Video_Memory:inst18|altsyncram:altsyncram_component" with the following parameter:
-    Info: Parameter "address_reg_b" = "CLOCK1"
-    Info: Parameter "clock_enable_input_a" = "BYPASS"
-    Info: Parameter "clock_enable_input_b" = "BYPASS"
-    Info: Parameter "clock_enable_output_a" = "BYPASS"
-    Info: Parameter "clock_enable_output_b" = "BYPASS"
-    Info: Parameter "intended_device_family" = "Cyclone II"
-    Info: Parameter "lpm_type" = "altsyncram"
-    Info: Parameter "numwords_a" = "32768"
-    Info: Parameter "numwords_b" = "32768"
-    Info: Parameter "operation_mode" = "DUAL_PORT"
-    Info: Parameter "outdata_aclr_b" = "NONE"
-    Info: Parameter "outdata_reg_b" = "CLOCK1"
-    Info: Parameter "power_up_uninitialized" = "FALSE"
-    Info: Parameter "widthad_a" = "15"
-    Info: Parameter "widthad_b" = "15"
-    Info: Parameter "width_a" = "3"
-    Info: Parameter "width_b" = "3"
-    Info: Parameter "width_byteena_a" = "1"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_4jk1.tdf
-    Info: Found entity 1: altsyncram_4jk1
-Info: Elaborating entity "altsyncram_4jk1" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_fes1.tdf
-    Info: Found entity 1: altsyncram_fes1
-Info: Elaborating entity "altsyncram_fes1" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1"
-Warning: Variable or input pin "clocken1" is defined but never used
-Info: Found 1 design units, including 1 entities, in source file db/decode_9oa.tdf
-    Info: Found entity 1: decode_9oa
-Info: Elaborating entity "decode_9oa" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode3"
-Info: Elaborating entity "decode_9oa" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a"
-Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
-    Info: Found entity 1: mux_kib
-Info: Elaborating entity "mux_kib" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5"
-Info: Elaborating entity "wr_memory" for hierarchy "wr_memory:inst16"
-Info: Elaborating entity "square" for hierarchy "square:inst21"
-Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
-Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
-Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
-Info: Elaborating entity "count4b" for hierarchy "keypad:inst2|count4b:counter"
-Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
-Warning: Using design file game.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
+Info: Found 2 design units, including 1 entities, in source file game.vhd
     Info: Found design unit 1: game-main
     Info: Found entity 1: game
-Info: Elaborating entity "game" for hierarchy "game:GAME"
-Warning (10036): Verilog HDL or VHDL warning at game.vhd(26): object "s_white" assigned a value but never read
-Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
-Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
-Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
-Info: Elaborating entity "protocol_tx" for hierarchy "protocol_tx:inst3"
-Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
-Info: Elaborating entity "square_map" for hierarchy "square_map:inst9"
-Info: Elaborating entity "ram64" for hierarchy "ram64:inst14"
-Info: Elaborating entity "altsyncram" for hierarchy "ram64:inst14|altsyncram:altsyncram_component"
-Info: Elaborated megafunction instantiation "ram64:inst14|altsyncram:altsyncram_component"
-Info: Instantiated megafunction "ram64:inst14|altsyncram:altsyncram_component" with the following parameter:
-    Info: Parameter "address_reg_b" = "CLOCK0"
-    Info: Parameter "clock_enable_input_a" = "BYPASS"
-    Info: Parameter "clock_enable_input_b" = "BYPASS"
-    Info: Parameter "clock_enable_output_a" = "BYPASS"
-    Info: Parameter "clock_enable_output_b" = "BYPASS"
-    Info: Parameter "indata_reg_b" = "CLOCK0"
-    Info: Parameter "init_file" = "ram_init.mif"
-    Info: Parameter "intended_device_family" = "Cyclone II"
-    Info: Parameter "lpm_type" = "altsyncram"
-    Info: Parameter "numwords_a" = "64"
-    Info: Parameter "numwords_b" = "64"
-    Info: Parameter "operation_mode" = "BIDIR_DUAL_PORT"
-    Info: Parameter "outdata_aclr_a" = "NONE"
-    Info: Parameter "outdata_aclr_b" = "NONE"
-    Info: Parameter "outdata_reg_a" = "CLOCK0"
-    Info: Parameter "outdata_reg_b" = "CLOCK0"
-    Info: Parameter "power_up_uninitialized" = "FALSE"
-    Info: Parameter "read_during_write_mode_mixed_ports" = "OLD_DATA"
-    Info: Parameter "widthad_a" = "6"
-    Info: Parameter "widthad_b" = "6"
-    Info: Parameter "width_a" = "3"
-    Info: Parameter "width_b" = "3"
-    Info: Parameter "width_byteena_a" = "1"
-    Info: Parameter "width_byteena_b" = "1"
-    Info: Parameter "wrcontrol_wraddress_reg_b" = "CLOCK0"
-Info: Found 1 design units, including 1 entities, in source file db/altsyncram_5h72.tdf
-    Info: Found entity 1: altsyncram_5h72
-Info: Elaborating entity "altsyncram_5h72" for hierarchy "ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated"
-Info: Elaborating entity "add64_gen" for hierarchy "add64_gen:inst22"
-Info: Elaborating entity "inverse_square_map" for hierarchy "inverse_square_map:inst23"
-Info: Elaborating entity "add_generator" for hierarchy "add_generator:inst12"
-Info: Inferred 2 megafunctions from design logic
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "inverse_square_map:inst23|Div0"
-    Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "inverse_square_map:inst23|Div1"
-Info: Elaborated megafunction instantiation "inverse_square_map:inst23|lpm_divide:Div0"
-Info: Instantiated megafunction "inverse_square_map:inst23|lpm_divide:Div0" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "10"
-    Info: Parameter "LPM_WIDTHD" = "5"
-    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_3so.tdf
-    Info: Found entity 1: lpm_divide_3so
-Info: Found 1 design units, including 1 entities, in source file db/abs_divider_gbg.tdf
-    Info: Found entity 1: abs_divider_gbg
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_c2f.tdf
-    Info: Found entity 1: alt_u_div_c2f
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_lkc.tdf
-    Info: Found entity 1: add_sub_lkc
-Info: Found 1 design units, including 1 entities, in source file db/add_sub_mkc.tdf
-    Info: Found entity 1: add_sub_mkc
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_gq9.tdf
-    Info: Found entity 1: lpm_abs_gq9
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_sr9.tdf
-    Info: Found entity 1: lpm_abs_sr9
-Info: Elaborated megafunction instantiation "inverse_square_map:inst23|lpm_divide:Div1"
-Info: Instantiated megafunction "inverse_square_map:inst23|lpm_divide:Div1" with the following parameter:
-    Info: Parameter "LPM_WIDTHN" = "9"
-    Info: Parameter "LPM_WIDTHD" = "5"
-    Info: Parameter "LPM_NREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_DREPRESENTATION" = "SIGNED"
-    Info: Parameter "LPM_HINT" = "LPM_REMAINDERPOSITIVE=FALSE"
-Info: Found 1 design units, including 1 entities, in source file db/lpm_divide_rqo.tdf
-    Info: Found entity 1: lpm_divide_rqo
-Info: Found 1 design units, including 1 entities, in source file db/abs_divider_8ag.tdf
-    Info: Found entity 1: abs_divider_8ag
-Info: Found 1 design units, including 1 entities, in source file db/alt_u_div_sve.tdf
-    Info: Found entity 1: alt_u_div_sve
-Info: Found 1 design units, including 1 entities, in source file db/lpm_abs_kq9.tdf
-    Info: Found entity 1: lpm_abs_kq9
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info: Elaborating entity "game" for the top level hierarchy
+Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_RDY" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_GR" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_EQ" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at game.vhd(15): used implicit default value for signal "SEND_SM" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10541): VHDL Signal Declaration warning at game.vhd(17): used implicit default value for signal "enterCode" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(49): object "piece_To_Write" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(53): object "s_Addr_R" assigned a value but never read
+Info (10041): Inferred latch for "frame_received" at game.vhd(295)
+Info (10041): Inferred latch for "X_To_Sent[0]" at game.vhd(284)
+Info (10041): Inferred latch for "X_To_Sent[1]" at game.vhd(284)
+Info (10041): Inferred latch for "X_To_Sent[2]" at game.vhd(284)
+Info (10041): Inferred latch for "Y_To_Sent[0]" at game.vhd(283)
+Info (10041): Inferred latch for "Y_To_Sent[1]" at game.vhd(283)
+Info (10041): Inferred latch for "Y_To_Sent[2]" at game.vhd(283)
+Info (10041): Inferred latch for "Addr_R[0]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_R[1]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_R[2]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_R[3]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_R[4]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_R[5]" at game.vhd(281)
+Info (10041): Inferred latch for "Addr_W[0]" at game.vhd(280)
+Info (10041): Inferred latch for "Addr_W[1]" at game.vhd(280)
+Info (10041): Inferred latch for "Addr_W[2]" at game.vhd(280)
+Info (10041): Inferred latch for "Addr_W[3]" at game.vhd(280)
+Info (10041): Inferred latch for "Addr_W[4]" at game.vhd(280)
+Info (10041): Inferred latch for "Addr_W[5]" at game.vhd(280)
+Info: Duplicate LATCH primitives merged into single LATCH primitive
+    Info: Duplicate LATCH primitive "X_To_Sent[0]$latch" merged with LATCH primitive "Addr_W[0]$latch"
+    Info: Duplicate LATCH primitive "X_To_Sent[1]$latch" merged with LATCH primitive "Addr_W[1]$latch"
+    Info: Duplicate LATCH primitive "X_To_Sent[2]$latch" merged with LATCH primitive "Addr_W[2]$latch"
+    Info: Duplicate LATCH primitive "Y_To_Sent[0]$latch" merged with LATCH primitive "Addr_W[3]$latch"
+    Info: Duplicate LATCH primitive "Y_To_Sent[1]$latch" merged with LATCH primitive "Addr_W[4]$latch"
+    Info: Duplicate LATCH primitive "Y_To_Sent[2]$latch" merged with LATCH primitive "Addr_W[5]$latch"
 Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "VGA_BLANK" is stuck at VCC
-Critical Warning: Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register kb_xy_module:inst8|y_int[2] will power up to High
-    Critical Warning (18010): Register kb_xy_module:inst8|x_int[2] will power up to High
-Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
-    Info: Register "protocol_tx:inst3|state.pr_sm" lost all its fanouts during netlist optimizations.
-    Info: Register "game:GAME|state.st_Code" lost all its fanouts during netlist optimizations.
-    Info: Register "game:GAME|state.sT_FR_R" lost all its fanouts during netlist optimizations.
-    Info: Register "game:GAME|state.st_S_GRorSM" lost all its fanouts during netlist optimizations.
-Info: Implemented 891 device resources after synthesis - the final resource count might be different
-    Info: Implemented 7 input pins
-    Info: Implemented 44 output pins
-    Info: Implemented 811 logic cells
-    Info: Implemented 27 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 258 megabytes
-    Info: Processing ended: Wed Dec 20 19:13:18 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:08
+    Warning (13410): Pin "SEND_RDY" is stuck at GND
+    Warning (13410): Pin "SEND_GR" is stuck at GND
+    Warning (13410): Pin "SEND_EQ" is stuck at GND
+    Warning (13410): Pin "SEND_SM" is stuck at GND
+    Warning (13410): Pin "frame_received" is stuck at VCC
+    Warning (13410): Pin "enterCode" is stuck at GND
+Warning: Design contains 5 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "GR_RECEIVED"
+    Warning (15610): No output dependent on input pin "EQ_RECEIVED"
+    Warning (15610): No output dependent on input pin "SM_RECEIVED"
+    Warning (15610): No output dependent on input pin "DT_RECEIVED"
+    Warning (15610): No output dependent on input pin "bank_ready"
+Info: Implemented 195 device resources after synthesis - the final resource count might be different
+    Info: Implemented 22 input pins
+    Info: Implemented 28 output pins
+    Info: Implemented 145 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 20 warnings
+    Info: Peak virtual memory: 250 megabytes
+    Info: Processing ended: Thu Dec 21 01:04:32 2023
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 

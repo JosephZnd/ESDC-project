@@ -1,0 +1,2119 @@
+<HTML>
+
+<HEAD>
+<TITLE>Simulator report for Design1</TITLE>
+</HEAD>
+
+<BODY>
+
+<A NAME="top"></A>
+
+<CENTER>
+<H1>Simulator report for Design1</H1>
+<H3>Thu Dec 21 01:05:15 2023<BR>
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition</H3>
+</CENTER>
+
+<P><HR></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Table of Contents</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<OL>
+<LI><A HREF="#1">Legal Notice</A></LI>
+<LI><A HREF="#2">Simulator Summary</A></LI>
+<LI><A HREF="#3">Simulator Settings</A></LI>
+<LI><A HREF="#4">Simulation Waveforms</A></LI>
+<LI><A HREF="#5">Coverage Summary</A></LI>
+<LI><A HREF="#6">Complete 1/0-Value Coverage</A></LI>
+<LI><A HREF="#7">Missing 1-Value Coverage</A></LI>
+<LI><A HREF="#8">Missing 0-Value Coverage</A></LI>
+<LI><A HREF="#9">Simulator INI Usage</A></LI>
+<LI><A HREF="#10">Simulator Messages</A></LI>
+</OL>
+
+<P><A NAME="1"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Legal Notice</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<PRE>Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+</PRE>
+
+<P><A NAME="2"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Simulator Summary</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Type</TH>
+<TH>Value</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation Start Time</TD>
+<TD ALIGN="LEFT">0 ps</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation End Time</TD>
+<TD ALIGN="LEFT">1.0 us</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation Netlist Size</TD>
+<TD ALIGN="LEFT">247 nodes</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation Coverage</TD>
+<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.17 %</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total Number of Transitions</TD>
+<TD ALIGN="LEFT">516</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation Breakpoints</TD>
+<TD ALIGN="LEFT">0</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Family</TD>
+<TD ALIGN="LEFT">Cyclone II</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Device</TD>
+<TD ALIGN="LEFT">EP2C35F672C6</TD>
+</TR>
+</TABLE>
+<P><A NAME="3"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Simulator Settings</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Option</TH>
+<TH>Setting</TH>
+<TH>Default Value</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation mode</TD>
+<TD ALIGN="LEFT">Timing</TD>
+<TD ALIGN="LEFT">Timing</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Start time</TD>
+<TD ALIGN="LEFT">0 ns</TD>
+<TD ALIGN="LEFT">0 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Simulation results format</TD>
+<TD ALIGN="LEFT">CVWF</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Vector input source</TD>
+<TD ALIGN="LEFT">game.vwf</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Add pins automatically to simulation output waveforms</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Check outputs</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Report simulation coverage</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Display complete 1/0 value coverage report</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Display missing 1-value coverage report</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Display missing 0-value coverage report</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Detect setup and hold time violations</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Detect glitches</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Disable timing delays in Timing Simulation</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Generate Signal Activity File</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Generate VCD File for PowerPlay Power Analyzer</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Group bus channels in simulation results</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Preserve fewer signal transitions to reduce memory requirements</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">On</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Trigger vector comparison with the specified mode</TD>
+<TD ALIGN="LEFT">INPUT_EDGE</TD>
+<TD ALIGN="LEFT">INPUT_EDGE</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Disable setup and hold time violations detection in input registers of bi-directional pins</TD>
+<TD ALIGN="LEFT">Off</TD>
+<TD ALIGN="LEFT">Off</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Overwrite Waveform Inputs With Simulation Outputs</TD>
+<TD ALIGN="LEFT">On</TD>
+<TD ALIGN="LEFT">&nbsp;</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Perform Glitch Filtering in Timing Simulation</TD>
+<TD ALIGN="LEFT">Auto</TD>
+<TD ALIGN="LEFT">Auto</TD>
+</TR>
+</TABLE>
+<P><A NAME="4"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Simulation Waveforms</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+Waveform report data cannot be output to HTML.<BR>
+Please use Quartus II to view the waveform report data.
+<P><A NAME="5"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Coverage Summary</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Type</TH>
+<TH>Value</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total coverage as a percentage</TD>
+<TD ALIGN="LEFT">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32.17 %</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total nodes checked</TD>
+<TD ALIGN="LEFT">247</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total output ports checked</TD>
+<TD ALIGN="LEFT">230</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total output ports with complete 1/0-value coverage</TD>
+<TD ALIGN="LEFT">74</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total output ports with no 1/0-value coverage</TD>
+<TD ALIGN="LEFT">127</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total output ports with no 1-value coverage</TD>
+<TD ALIGN="LEFT">136</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">Total output ports with no 0-value coverage</TD>
+<TD ALIGN="LEFT">147</TD>
+</TR>
+</TABLE>
+<P><A NAME="6"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Complete 1/0-Value Coverage</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+The following table displays output ports that toggle between 1 and 0 during simulation.<br>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Node Name</TH>
+<TH>Output Port Name</TH>
+<TH>Output Port Type</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Turn</TD>
+<TD ALIGN="LEFT">|game|state.st_Turn</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Invalid_Move</TD>
+<TD ALIGN="LEFT">|game|state.st_Invalid_Move</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Wait_Turn</TD>
+<TD ALIGN="LEFT">|game|state.st_Wait_Turn</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector5~0</TD>
+<TD ALIGN="LEFT">|game|Selector5~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Check_Piece</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_Piece</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector5~1</TD>
+<TD ALIGN="LEFT">|game|Selector5~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Read_Ram</TD>
+<TD ALIGN="LEFT">|game|state.st_Read_Ram</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Check_Second_Move</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_Second_Move</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal7~0</TD>
+<TD ALIGN="LEFT">|game|Equal7~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal5~0</TD>
+<TD ALIGN="LEFT">|game|Equal5~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal6~0</TD>
+<TD ALIGN="LEFT">|game|Equal6~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~1</TD>
+<TD ALIGN="LEFT">|game|Equal8~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector17~0</TD>
+<TD ALIGN="LEFT">|game|Selector17~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector14~1</TD>
+<TD ALIGN="LEFT">|game|Selector14~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector14~2</TD>
+<TD ALIGN="LEFT">|game|Selector14~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Start_Game</TD>
+<TD ALIGN="LEFT">|game|state.st_Start_Game</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector6~0</TD>
+<TD ALIGN="LEFT">|game|Selector6~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[0]</TD>
+<TD ALIGN="LEFT">|game|last_Piece[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal0~0</TD>
+<TD ALIGN="LEFT">|game|Equal0~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[0]~0</TD>
+<TD ALIGN="LEFT">|game|last_Piece[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Selected</TD>
+<TD ALIGN="LEFT">|game|sel_Selected</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[2]~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">|game|state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector8~0</TD>
+<TD ALIGN="LEFT">|game|Selector8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector7~0</TD>
+<TD ALIGN="LEFT">|game|Selector7~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector7~1</TD>
+<TD ALIGN="LEFT">|game|Selector7~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector9~0</TD>
+<TD ALIGN="LEFT">|game|Selector9~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[2]</TD>
+<TD ALIGN="LEFT">|game|sel_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|old_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
+<TD ALIGN="LEFT">|game|sel_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[2]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector11~0</TD>
+<TD ALIGN="LEFT">|game|Selector11~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal11~1</TD>
+<TD ALIGN="LEFT">|game|Equal11~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_W_Rdy</TD>
+<TD ALIGN="LEFT">|game|state.st_W_Rdy</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~0</TD>
+<TD ALIGN="LEFT">|game|Selector0~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~1</TD>
+<TD ALIGN="LEFT">|game|Selector0~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_S_Rdy</TD>
+<TD ALIGN="LEFT">|game|state.st_S_Rdy</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~2</TD>
+<TD ALIGN="LEFT">|game|Selector0~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~3</TD>
+<TD ALIGN="LEFT">|game|Selector0~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~4</TD>
+<TD ALIGN="LEFT">|game|Selector0~4</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~5</TD>
+<TD ALIGN="LEFT">|game|Selector0~5</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~6</TD>
+<TD ALIGN="LEFT">|game|Selector0~6</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~7</TD>
+<TD ALIGN="LEFT">|game|Selector0~7</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector4~0</TD>
+<TD ALIGN="LEFT">|game|Selector4~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[0]~1</TD>
+<TD ALIGN="LEFT">|game|last_Piece[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector17~2</TD>
+<TD ALIGN="LEFT">|game|Selector17~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector16~0</TD>
+<TD ALIGN="LEFT">|game|Selector16~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector1~0</TD>
+<TD ALIGN="LEFT">|game|Selector1~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector1~1</TD>
+<TD ALIGN="LEFT">|game|Selector1~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[2]~0</TD>
+<TD ALIGN="LEFT">|game|sel_X[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector3~0</TD>
+<TD ALIGN="LEFT">|game|Selector3~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector2~0</TD>
+<TD ALIGN="LEFT">|game|Selector2~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal10~0</TD>
+<TD ALIGN="LEFT">|game|Equal10~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|led_turn</TD>
+<TD ALIGN="LEFT">|game|led_turn</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|turn_read</TD>
+<TD ALIGN="LEFT">|game|turn_read</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|freeze_kb</TD>
+<TD ALIGN="LEFT">|game|freeze_kb</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|clk50</TD>
+<TD ALIGN="LEFT">|game|clk50~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Turn</TD>
+<TD ALIGN="LEFT">|game|Turn~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Sel</TD>
+<TD ALIGN="LEFT">|game|Sel~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[0]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[0]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Color</TD>
+<TD ALIGN="LEFT">|game|Color~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|RDY_RECEIVED</TD>
+<TD ALIGN="LEFT">|game|RDY_RECEIVED~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|ready_to_TX</TD>
+<TD ALIGN="LEFT">|game|ready_to_TX~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|New_Game</TD>
+<TD ALIGN="LEFT">|game|New_Game~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_X[2]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[2]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_X[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[0]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_Y[2]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[2]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_Y[0]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[0]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
+<TD ALIGN="LEFT">|game|clk50~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Read_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">|game|state.st_Read_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+</TABLE>
+<P><A NAME="7"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Missing 1-Value Coverage</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+The following table displays output ports that do not toggle to 1 during simulation.<br>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Node Name</TH>
+<TH>Output Port Name</TH>
+<TH>Output Port Type</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector13~1</TD>
+<TD ALIGN="LEFT">|game|Selector13~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[1]</TD>
+<TD ALIGN="LEFT">|game|old_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[0]</TD>
+<TD ALIGN="LEFT">|game|old_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal7~1</TD>
+<TD ALIGN="LEFT">|game|Equal7~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[1]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal13~0</TD>
+<TD ALIGN="LEFT">|game|Equal13~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~36</TD>
+<TD ALIGN="LEFT">|game|state~36</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Add8~0</TD>
+<TD ALIGN="LEFT">|game|Add8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal12~0</TD>
+<TD ALIGN="LEFT">|game|Equal12~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal11~0</TD>
+<TD ALIGN="LEFT">|game|Equal11~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~8</TD>
+<TD ALIGN="LEFT">|game|Selector0~8</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~6</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~6</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~2</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector15~2</TD>
+<TD ALIGN="LEFT">|game|Selector15~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_RDY</TD>
+<TD ALIGN="LEFT">|game|SEND_RDY</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_GR</TD>
+<TD ALIGN="LEFT">|game|SEND_GR</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_EQ</TD>
+<TD ALIGN="LEFT">|game|SEND_EQ</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_SM</TD>
+<TD ALIGN="LEFT">|game|SEND_SM</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|frame_received</TD>
+<TD ALIGN="LEFT">|game|frame_received</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|enterCode</TD>
+<TD ALIGN="LEFT">|game|enterCode</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[0]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[1]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[2]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[3]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[3]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[4]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[4]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_R[5]</TD>
+<TD ALIGN="LEFT">|game|Addr_R[5]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[2]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_X[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_Y[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+</TABLE>
+<P><A NAME="8"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Missing 0-Value Coverage</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+The following table displays output ports that do not toggle to 0 during simulation.<br>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Node Name</TH>
+<TH>Output Port Name</TH>
+<TH>Output Port Type</TH>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[3]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[4]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[5]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">|game|state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">|game|while_Capturing</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">|game|piece_Moved</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">|game|Selector13~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">|game|counter[3]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">|game|counter[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">|game|counter[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">|game|counter[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">|game|Equal18~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector13~1</TD>
+<TD ALIGN="LEFT">|game|Selector13~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_whites</TD>
+<TD ALIGN="LEFT">|game|s_whites</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~35</TD>
+<TD ALIGN="LEFT">|game|state~35</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">|game|Selector12~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[2]</TD>
+<TD ALIGN="LEFT">|game|old_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[2]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[1]</TD>
+<TD ALIGN="LEFT">|game|old_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_X[0]</TD>
+<TD ALIGN="LEFT">|game|old_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal7~1</TD>
+<TD ALIGN="LEFT">|game|Equal7~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_X[0]</TD>
+<TD ALIGN="LEFT">|game|to_Move_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">|game|Equal7~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal5~1</TD>
+<TD ALIGN="LEFT">|game|Equal5~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[1]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal13~0</TD>
+<TD ALIGN="LEFT">|game|Equal13~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">|game|Selector12~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[2]</TD>
+<TD ALIGN="LEFT">|game|old_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">|game|old_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">|game|old_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">|game|to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">|game|Equal8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">|game|Equal6~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">|game|Equal8~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
+<TD ALIGN="LEFT">|game|Selector12~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Check_capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~36</TD>
+<TD ALIGN="LEFT">|game|state~36</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">|game|Selector12~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">|game|state.st_Capture</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
+<TD ALIGN="LEFT">|game|state.st_Finish_Turn</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">|game|Selector17~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">|game|Selector22~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Add8~0</TD>
+<TD ALIGN="LEFT">|game|Add8~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
+<TD ALIGN="LEFT">|game|Selector18~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">|game|Selector19~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">|game|Selector19~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">|game|Selector20~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">|game|Selector21~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">|game|Selector14~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal12~0</TD>
+<TD ALIGN="LEFT">|game|Equal12~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">|game|state~37</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal11~0</TD>
+<TD ALIGN="LEFT">|game|Equal11~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|last_Piece[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|last_Piece[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_whites~0</TD>
+<TD ALIGN="LEFT">|game|s_whites~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~0</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W[0]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~3</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~4</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~4</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~5</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|s_Addr_W~6</TD>
+<TD ALIGN="LEFT">|game|s_Addr_W~6</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">|game|sel_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">|game|Selector11~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
+<TD ALIGN="LEFT">|game|Equal9~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">|game|Selector10~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">|game|Selector10~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">|game|state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector0~8</TD>
+<TD ALIGN="LEFT">|game|Selector0~8</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">regout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Wait_Game~0</TD>
+<TD ALIGN="LEFT">|game|state.st_Wait_Game~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[1]~4</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y~5</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X~0</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[1]~1</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Selector15~2</TD>
+<TD ALIGN="LEFT">|game|Selector15~2</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_Y[0]~7</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
+<TD ALIGN="LEFT">|game|int_Pos_To_Capture_X[0]~3</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_RDY</TD>
+<TD ALIGN="LEFT">|game|SEND_RDY</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_GR</TD>
+<TD ALIGN="LEFT">|game|SEND_GR</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_EQ</TD>
+<TD ALIGN="LEFT">|game|SEND_EQ</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_SM</TD>
+<TD ALIGN="LEFT">|game|SEND_SM</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">|game|SEND_DT</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|frame_received</TD>
+<TD ALIGN="LEFT">|game|frame_received</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|enterCode</TD>
+<TD ALIGN="LEFT">|game|enterCode</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[3]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[4]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
+<TD ALIGN="LEFT">|game|Addr_W[5]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
+<TD ALIGN="LEFT">|game|X_To_Sent[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[0]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
+<TD ALIGN="LEFT">|game|Y_To_Sent[2]</TD>
+<TD ALIGN="LEFT">padio</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|nrst</TD>
+<TD ALIGN="LEFT">|game|nrst~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[1]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|In_Piece[2]</TD>
+<TD ALIGN="LEFT">|game|In_Piece[2]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_X[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_X[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|Pos_Y[1]</TD>
+<TD ALIGN="LEFT">|game|Pos_Y[1]~corein</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|nrst~clkctrl</TD>
+<TD ALIGN="LEFT">|game|nrst~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">|game|state.st_Write_Ram~clkctrl</TD>
+<TD ALIGN="LEFT">outclk</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[0]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_Y[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[0]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|pos_To_Capture_X[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Move[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|arriving_Cell[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
+<TD ALIGN="LEFT">|game|piece_To_Capture[2]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_X[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">|game|sel_Y[1]~feeder</TD>
+<TD ALIGN="LEFT">combout</TD>
+</TR>
+</TABLE>
+<P><A NAME="9"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Simulator INI Usage</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<TABLE BORDER="1" cellspacing="1" cellpadding="2">
+<TR valign="middle" bgcolor="#C0C0C0">
+<TH>Option</TH>
+<TH>Usage</TH>
+</TR>
+</TABLE>
+<P><A NAME="10"><HR></A></P>
+<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
+<TD><H2>Simulator Messages</H2></TD>
+<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
+<PRE>
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Dec 21 01:05:15 2023
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Design1 -c Design1
+Info: Using vector source file "C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/game.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of game.vwf called Design1.sim_ori.vwf has been created in the db folder
+Warning: Can't find signal in vector source file for input pin "|game|SM_RECEIVED"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      32.17 %
+Info: Number of transitions in simulation is 516
+Info: Vector file game.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Thu Dec 21 01:05:15 2023
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+</PRE>
+<HR>
+
+<A HREF="#top">Top</A>
+
+</BODY>
+
+</HTML>
+
