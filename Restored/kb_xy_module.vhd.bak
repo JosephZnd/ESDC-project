@@ -8,8 +8,8 @@ entity kb_xy_module is
 		up_key, down_key, left_key, right_key	: in std_logic;
 		pos_x	:	out integer range 0 to 7;
 		pos_y	: 	out integer range 0 to 7;
-		debounce : in  std_logic;
-		code_read :  out std_logic);
+		debounce, select_key : in  std_logic;
+		code_read, sel_key :  out std_logic);
 		-- will add another flag later to set different first position depending on black or white
 end kb_xy_module;
 
@@ -18,7 +18,7 @@ architecture main of kb_xy_module is
 	constant X0 : integer := 11;
 	constant Y0 : integer := 1;
 	constant SIZE : integer :=14;
-	type state_type is (s_up, s_down, s_right, s_left, s_end, s_wait);
+	type state_type is (s_up, s_down, s_right, s_left, s_end, s_wait, s_sel);
 	signal s_xy : state_type;
 
 	
@@ -38,14 +38,16 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce)
 		--if (debounce='1') then
 		case s_xy is
 			when s_wait =>
-				if(up_key = '1'  and debounce='1') then 
+				if(up_key = '1'  and debounce='1'  and freeze_kb='0' ) then 
 						 s_xy <= s_up; end if;
-				if(down_key= '1' and debounce='1') then
+				if(down_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_down; end if;
-				if(left_key= '1' and debounce='1') then
+				if(left_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_left; end if;
-				if(right_key= '1' and debounce='1') then
+				if(right_key= '1' and debounce='1'  and freeze_kb='0' ) then
 						 s_xy <= s_right; end if;
+				if(select_key= '1' and debounce='1'  and freeze_kb='0' ) then
+						 s_xy <= s_sel; end if;
 			when s_up =>
 				y_int <= y_int-1;
 				s_xy <= s_end;
@@ -60,6 +62,10 @@ ControlXY : process (clk, nrst, freeze_kb, x_int, y_int, debounce)
 			when s_right =>
 				x_int <= x_int +1;
 				s_xy <= s_end;
+			
+			when s_sel =>
+				s_xy <= s_end;	
+			
 			when s_end =>
 				s_xy <= s_wait;
 			
@@ -70,6 +76,6 @@ end process;
 pos_x <= x_int;
 pos_y <= y_int;
 code_read <= '1' when s_xy = s_end else '0';
-
+sel_key <='1' when s_xy = s_sel else '0';
 end;
 	

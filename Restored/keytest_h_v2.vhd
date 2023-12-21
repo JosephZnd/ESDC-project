@@ -4,12 +4,12 @@ use ieee.std_logic_1164.all;
 entity keytest_h_v2 is
   port ( clk, nrst   : in  std_logic;
 		key         : in std_logic;  -- From the keytest.
-		hash, up_key, down_key, left_key, right_key, select_key: out std_logic; 
+		hash, up_key, down_key, left_key, right_key: out std_logic; 
 		--new_code	: out std_logic;  -- activated when there is a new code in the register.
 		code_read	: in std_logic;  -- used to de-activate new_code.
 		keycode_kt	 : in std_logic_vector(3 downto 0);  -- Keycode from keytest
 		--keycode      : out std_logic_vector(3 downto 0) );  -- output of the register.
-		key_o	: out std_logic;
+		key_o, select_key	: out std_logic;
 		color_white	:	out std_logic); 
 end keytest_h_v2;
 

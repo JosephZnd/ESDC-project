@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 
 entity game is
@@ -9,22 +10,33 @@ entity game is
 		RDY_RECEIVED, GR_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: in std_logic;  
 		OponentH, OponentT, OponentU : in std_logic_vector(3 downto 0);
 		OurH, OurT, OurU : in std_logic_vector(3 downto 0);
-		bank_ready, ready_to_TX, Turn, Color: in std_logic;  
+		bank_ready, ready_to_TX, Turn, Color: in std_logic; 
+		pos_x, pos_y : in integer range 0 to 7; 
+		Sel	: in std_logic;
+		in_piece :  in std_logic_vector(2 downto 0);
 		SEND_RDY, SEND_GR, SEND_EQ, SEND_SM, SEND_DT : out std_logic;
 		frame_received : out std_logic;
 		LightD, LightG, LightS, Light_WIN, Light_Loose, Light_Tie : out std_logic;
-		enterCode, led_turn, turn_read, freeze_kb : out std_logic
-		);
+		enterCode, led_turn, turn_read, freeze_kb, wen_game, mux_ram : out std_logic;
+		x_out, y_out : out integer range 0 to 7; 
+		out_piece :  out std_logic_vector(2 downto 0);
+		led_test : out std_logic);
 end game;
 
 
 architecture main of game is
-	type state_type is (st_wait_game, st_W_TX1, st_S_RDY, st_W_RDY, st_Start_Game, st_Turn, st_Wait_Turn, st_Code, st_W_Code, st_W_TX2, st_S_DT, st_W_DT,
+	type state_type is (st_wait_game, st_W_TX1, st_S_RDY, st_W_RDY, st_Start_Game, 
+	st_Turn, st_Wait_Turn, st_rFigure, st_Move, s_Turn0, s_Turn1, st_Invalid, 
+	S_Turn2, S_Validate, S_Place_Figure, S_End_Turn, st_Code, st_W_Code, st_W_TX2, st_S_DT, st_W_DT,
 	sT_FR_R, st_W_TX3, st_S_GRorSM, st_W_FR, st_S_EQ, st_W_FR2);
 	
 	signal state : state_type;
-	signal s_white : std_logic:='0';
+	signal s_white, SelMode : std_logic;
 	signal Opponent_Gr_Our : std_logic;
+	signal selX, selY, oldX, oldY, s_x_out, s_y_out : integer range 0 to 7; 
+	signal temp_piece, aux_piece, ext_piece : std_logic_vector(2 downto 0);
+	signal count : integer range 0 to 5; 
+
 	
 begin
 
@@ -37,7 +49,9 @@ process (clk50, nrst) begin
 		Light_WIN <= '0';
 		Light_Loose <= '0';
 		Light_Tie <= '0';
-		led_turn <= '0';
+		s_white <= '0';
+		SelMode <= '0';
+		count<=0;
 	elsif clk50'event and clk50 = '1' then
 		case state is
 			when st_wait_game =>
@@ -75,7 +89,64 @@ process (clk50, nrst) begin
 				if Turn='1' then state <= st_Turn; end if;
 			
 			when st_Turn =>
-				 --se queda aqui
+				if( Sel='1')then 
+					selX <= pos_x; 		-- podemos hacer que x e y vayan tanto a RAM como input a Game
+					selY <= pos_y;
+					state <= st_rFigure;
+				else state <= st_Turn;
+				end if;
+				
+			when st_rFigure => 
+				count <= count + 1;
+				if (count = 4) then state <= st_Move ; end if;
+							
+			when st_Move => 
+				count <= 0;
+				if(SelMode = '0') then
+					temp_piece <= in_piece;
+					oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
+					oldY <= selY;
+					state <= s_Turn0;
+				else 
+					aux_piece <= temp_piece;
+					state <= s_Turn1;
+				end if;
+				
+			when s_Turn0 =>
+				if(temp_piece < "100" and s_white = '1') then 
+						state <= S_Validate;
+					elsif (temp_piece > "100" and s_white = '0') then
+						state <= S_Validate;
+					else state <= st_Invalid;
+					end if;
+					
+			when st_Invalid => state <= st_Turn;
+				SelMode <= '0';
+			
+			when s_Turn1 => 
+				temp_piece <= in_piece;
+				state <= s_Turn2;
+			
+			when s_Turn2 =>
+				
+				
+			when S_Validate =>
+				aux_piece <= temp_piece;
+				s_x_out <= selX; 
+				s_y_out <= selY; 
+				ext_piece <= "100"; --hay que poner como vacia la casilla
+				state <= S_Place_Figure;
+			
+			when S_Place_Figure =>
+				count <= count + 1;
+				if (count = 4) then state <= S_End_Turn ; end if;
+			--ensure they wait enough time to write
+					
+				
+			when S_End_Turn => 
+				SelMode <= not(SelMode);
+				state <= st_Turn;
+			
 					
 			
 			when st_Code =>
@@ -169,11 +240,18 @@ process (clk50, nrst) begin
 				end case; 
 	end if;
 end process;
-led_turn <='1' when state = st_Turn else '0';
 
+x_out <= s_x_out;
+y_out <= s_y_out;
+
+led_turn <='1' when state = st_Turn else '0';
+led_test <='1' when state = S_End_Turn else '0';
 turn_read <='1' when state = st_Turn else '0';
 freeze_kb <='0' when state = st_Turn else '1';
-
+--s_sel <= Sel when state = st_Turn else '0';
+wen_game <= '1' when state = S_Place_Figure else '0';
+mux_ram <= '1' when state = S_Place_Figure else '0';
+out_piece <= ext_piece when state = S_Place_Figure else "000";
 SEND_RDY <= '1' when state = st_S_RDY else '0';
 SEND_DT <= '1' when state = st_S_DT else '0';
 SEND_EQ <= '1' when state = st_S_EQ else '0';

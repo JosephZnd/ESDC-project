@@ -18,7 +18,7 @@ architecture arq of Game is
 type state_type is (S_Wait, S_New_Game, S_Wait_Turn, S_Turn, S_Turn_2, S_Move_White,  S_Move_Black, S_Check, S_Wait_Check, S_Verify, 
 					S_Place_Figure, S_End_Turn, S_Pre_Send, S_Send_1, S_Send_2, S_Send_3, S_Send_End, S_Tx_1, S_Tx_2, S_Tx_End  );
 signal state : state_type;
-signal you_are_white, SelMode, new_game, three_packets, s_tx_ready : std_logic;
+signal you_are_white, , new_game, three_packets, s_tx_ready : std_logic;
 signal aux_piece, temp_piece, oldX, oldY, selX, selY, ext_piece, auX, auY, s_x, s_y, s_figure: std_logic_vector(2 downto 0);
 signal s_addR, s_addW : std_logic_vector(5 downto 0);
 begin

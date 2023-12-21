@@ -507,6 +507,9 @@ set_global_assignment -name VHDL_FILE add64_gen.vhd
 set_global_assignment -name BDF_FILE trash.bdf
 set_global_assignment -name VHDL_FILE inverse_square_map.vhd
 set_global_assignment -name BDF_FILE sender1.bdf
+set_global_assignment -name VHDL_FILE mux_ram.vhd
+set_global_assignment -name BDF_FILE sim_game.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE sim_game.vwf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"

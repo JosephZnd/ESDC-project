@@ -108,17 +108,17 @@ architecture functional of square is
 			case st_square is
 					-- Row 1
 					when s00 =>
-						st_square <= s00a;
-						sel_selected <='0';
-						color_index <= '0';
-						SelMode <= '0';
-						sel_x <= 160;
-						sel_y <= 120;
+						--st_square <= s00a;
+						--sel_selected <='0';
+						--color_index <= '0';
+						--SelMode <= '0';
+						--sel_x <= 0;
+						--sel_y <= 0;
 					when s00a =>
 						st_square <= s00b;
 						x_out <= X0+(SIZE*i); 
 						y_out <= Y0+(SIZE*j);
-						if ((X0+(SIZE*i) = sel_x) and (Y0+(SIZE*j) = sel_y)) then
+						if ((X0+(SIZE*i) = sel_x) and (Y0+(SIZE*j) = sel_y) and (sel_selected='1')) then
 							SelMode<='1';
 							else SelMode<='0';
 						end if;

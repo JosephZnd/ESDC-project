@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Wed Dec 20 19:13:18 2023
+Thu Dec 21 13:59:41 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -18,10 +18,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  10. State Machine - |P1_BOARD_vga|protocol_tx:inst3|state
  11. State Machine - |P1_BOARD_vga|rx_module2:inst5|state
  12. State Machine - |P1_BOARD_vga|protocol_rx:inst4|state
- 13. State Machine - |P1_BOARD_vga|main_control:inst|state
- 14. State Machine - |P1_BOARD_vga|game:GAME|state
- 15. State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
- 16. State Machine - |P1_BOARD_vga|keypad:inst2|current_state
+ 13. State Machine - |P1_BOARD_vga|keypad:inst2|current_state
+ 14. State Machine - |P1_BOARD_vga|main_control:inst|state
+ 15. State Machine - |P1_BOARD_vga|game:GAME|state
+ 16. State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy
  17. State Machine - |P1_BOARD_vga|square:inst21|st_square
  18. State Machine - |P1_BOARD_vga|wr_memory:inst16|st_write
  19. Registers Removed During Synthesis
@@ -63,16 +63,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 20 19:13:18 2023        ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 21 13:59:41 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 794                                          ;
-;     Total combinational functions  ; 708                                          ;
-;     Dedicated logic registers      ; 324                                          ;
-; Total registers                    ; 324                                          ;
-; Total pins                         ; 51                                           ;
+; Total logic elements               ; 850                                          ;
+;     Total combinational functions  ; 751                                          ;
+;     Dedicated logic registers      ; 354                                          ;
+; Total registers                    ; 354                                          ;
+; Total pins                         ; 52                                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,496                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                            ;
@@ -164,7 +164,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
@@ -196,6 +196,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; ram64.vhd                        ; yes             ; User Wizard-Generated File             ; L:/Documentos/Github/Restored/ram64.vhd                        ;
 ; add64_gen.vhd                    ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/add64_gen.vhd                    ;
 ; inverse_square_map.vhd           ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/inverse_square_map.vhd           ;
+; mux_ram.vhd                      ; yes             ; User VHDL File                         ; L:/Documentos/Github/Restored/mux_ram.vhd                      ;
 ; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/altera/91sp2/quartus/libraries/megafunctions/altsyncram.tdf ;
 ; db/altsyncram_4jk1.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_4jk1.tdf           ;
 ; db/altsyncram_fes1.tdf           ; yes             ; Auto-Generated Megafunction            ; L:/Documentos/Github/Restored/db/altsyncram_fes1.tdf           ;
@@ -224,28 +225,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+--------+
 ; Resource                                    ; Usage  ;
 +---------------------------------------------+--------+
-; Estimated Total logic elements              ; 794    ;
+; Estimated Total logic elements              ; 850    ;
 ;                                             ;        ;
-; Total combinational functions               ; 708    ;
+; Total combinational functions               ; 751    ;
 ; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 243    ;
-;     -- 3 input functions                    ; 215    ;
-;     -- <=2 input functions                  ; 250    ;
+;     -- 4 input functions                    ; 253    ;
+;     -- 3 input functions                    ; 226    ;
+;     -- <=2 input functions                  ; 272    ;
 ;                                             ;        ;
 ; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 560    ;
+;     -- normal mode                          ; 603    ;
 ;     -- arithmetic mode                      ; 148    ;
 ;                                             ;        ;
-; Total registers                             ; 324    ;
-;     -- Dedicated logic registers            ; 324    ;
+; Total registers                             ; 354    ;
+;     -- Dedicated logic registers            ; 354    ;
 ;     -- I/O registers                        ; 0      ;
 ;                                             ;        ;
-; I/O pins                                    ; 51     ;
+; I/O pins                                    ; 52     ;
 ; Total memory bits                           ; 98496  ;
 ; Maximum fan-out node                        ; KEY[0] ;
-; Maximum fan-out                             ; 168    ;
-; Total fan-out                               ; 3827   ;
-; Average fan-out                             ; 3.44   ;
+; Maximum fan-out                             ; 186    ;
+; Total fan-out                               ; 4059   ;
+; Average fan-out                             ; 3.42   ;
 +---------------------------------------------+--------+
 
 
@@ -254,7 +255,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                              ; Library Name ;
 +---------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                       ; 708 (1)           ; 324 (0)      ; 98496       ; 0            ; 0       ; 0         ; 51   ; 0            ; |P1_BOARD_vga                                                                                                                                    ; work         ;
+; |P1_BOARD_vga                                                       ; 751 (1)           ; 354 (0)      ; 98496       ; 0            ; 0       ; 0         ; 52   ; 0            ; |P1_BOARD_vga                                                                                                                                    ; work         ;
 ;    |VGA_SYNC:inst19|                                                ; 47 (47)           ; 74 (74)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|VGA_SYNC:inst19                                                                                                                    ;              ;
 ;    |Video_Memory:inst18|                                            ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18                                                                                                                ;              ;
 ;       |altsyncram:altsyncram_component|                             ; 36 (0)            ; 6 (0)        ; 98304       ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component                                                                                ;              ;
@@ -270,7 +271,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |clk_video:inst20|                                               ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst20                                                                                                                   ;              ;
 ;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                       ;              ;
 ;    |f_div:inst1|                                                    ; 22 (22)           ; 17 (17)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|f_div:inst1                                                                                                                        ;              ;
-;    |game:GAME|                                                      ; 10 (10)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                          ;              ;
+;    |game:GAME|                                                      ; 43 (43)           ; 36 (36)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|game:GAME                                                                                                                          ;              ;
 ;    |inverse_square_map:inst23|                                      ; 198 (16)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23                                                                                                          ;              ;
 ;       |lpm_divide:Div0|                                             ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0                                                                                          ;              ;
 ;          |lpm_divide_3so:auto_generated|                            ; 99 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated                                                            ;              ;
@@ -282,18 +283,19 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;             |abs_divider_8ag:divider|                               ; 83 (6)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider                                    ;              ;
 ;                |alt_u_div_sve:divider|                              ; 68 (68)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider              ;              ;
 ;                |lpm_abs_kq9:my_abs_num|                             ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num             ;              ;
-;    |kb_xy_module:inst8|                                             ; 18 (18)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
-;    |keypad:inst2|                                                   ; 47 (43)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
+;    |kb_xy_module:inst8|                                             ; 22 (22)           ; 13 (13)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
+;    |keypad:inst2|                                                   ; 45 (41)           ; 16 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
 ;       |count4b:counter|                                             ; 4 (4)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                       ;              ;
-;    |keytest_h_v2:inst7|                                             ; 4 (4)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
+;    |keytest_h_v2:inst7|                                             ; 5 (5)             ; 5 (5)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
 ;    |main_control:inst|                                              ; 15 (15)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|main_control:inst                                                                                                                  ;              ;
+;    |mux_ram:inst15|                                                 ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|mux_ram:inst15                                                                                                                     ;              ;
 ;    |protocol_rx:inst4|                                              ; 30 (30)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                  ;              ;
-;    |protocol_tx:inst3|                                              ; 24 (24)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
+;    |protocol_tx:inst3|                                              ; 26 (26)           ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
 ;    |ram64:inst14|                                                   ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14                                                                                                                       ;              ;
 ;       |altsyncram:altsyncram_component|                             ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component                                                                                       ;              ;
 ;          |altsyncram_5h72:auto_generated|                           ; 0 (0)             ; 0 (0)        ; 192         ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated                                                        ;              ;
 ;    |rx_module2:inst5|                                               ; 46 (46)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                   ;              ;
-;    |square:inst21|                                                  ; 100 (100)         ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
+;    |square:inst21|                                                  ; 99 (99)           ; 65 (65)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
 ;    |square_map:inst9|                                               ; 16 (16)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|square_map:inst9                                                                                                                   ;              ;
 ;    |tx_module:inst6|                                                ; 25 (25)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|tx_module:inst6                                                                                                                    ;              ;
 ;    |wr_memory:inst16|                                               ; 68 (68)           ; 33 (33)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |P1_BOARD_vga|wr_memory:inst16                                                                                                                   ;              ;
@@ -391,64 +393,6 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                                                                 ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; Name                ; state.S_Wait_Turn ; state.S_Change_Turn ; state.st_start_game ; state.st_send_color ; state.st_P_First ; state.st_Op_First ; state.st_wait_hash ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-; state.st_wait_hash  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 0                  ;
-; state.st_Op_First   ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 1                 ; 1                  ;
-; state.st_P_First    ; 0                 ; 0                   ; 0                   ; 0                   ; 1                ; 0                 ; 1                  ;
-; state.st_send_color ; 0                 ; 0                   ; 0                   ; 1                   ; 0                ; 0                 ; 1                  ;
-; state.st_start_game ; 0                 ; 0                   ; 1                   ; 0                   ; 0                ; 0                 ; 1                  ;
-; state.S_Change_Turn ; 0                 ; 1                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
-; state.S_Wait_Turn   ; 1                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
-+---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
-
-
-Encoding Type:  One-Hot
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|game:GAME|state                                                                                                                                                                                                                                                                                                   ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; Name                ; state.st_W_FR2 ; state.st_S_EQ ; state.st_W_FR ; state.st_S_GRorSM ; state.st_W_TX3 ; state.sT_FR_R ; state.st_W_DT ; state.st_S_DT ; state.st_W_TX2 ; state.st_W_Code ; state.st_Code ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_RDY ; state.st_S_RDY ; state.st_W_TX1 ; state.st_wait_game ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-; state.st_wait_game  ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
-; state.st_W_TX1      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
-; state.st_S_RDY      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
-; state.st_W_RDY      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
-; state.st_Start_Game ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Turn       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Wait_Turn  ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_Code       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 1             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_Code     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 1               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_TX2      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 1              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_DT       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 1             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_DT       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 1             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.sT_FR_R       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 1             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_TX3      ; 0              ; 0             ; 0             ; 0                 ; 1              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_GRorSM   ; 0              ; 0             ; 0             ; 1                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_FR       ; 0              ; 0             ; 1             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_S_EQ       ; 0              ; 1             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-; state.st_W_FR2      ; 1              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
-+---------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
-
-
-Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy                                          ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-; Name         ; s_xy.s_up ; s_xy.s_end ; s_xy.s_left ; s_xy.s_right ; s_xy.s_down ; s_xy.s_wait ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-; s_xy.s_wait  ; 0         ; 0          ; 0           ; 0            ; 0           ; 0           ;
-; s_xy.s_down  ; 0         ; 0          ; 0           ; 0            ; 1           ; 1           ;
-; s_xy.s_right ; 0         ; 0          ; 0           ; 1            ; 0           ; 1           ;
-; s_xy.s_left  ; 0         ; 0          ; 1           ; 0            ; 0           ; 1           ;
-; s_xy.s_end   ; 0         ; 1          ; 0           ; 0            ; 0           ; 1           ;
-; s_xy.s_up    ; 1         ; 0          ; 0           ; 0            ; 0           ; 1           ;
-+--------------+-----------+------------+-------------+--------------+-------------+-------------+
-
-
-Encoding Type:  One-Hot
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; State Machine - |P1_BOARD_vga|keypad:inst2|current_state                                                                                                                                           ;
 +----------------------+----------------------+---------------------+--------------------+--------------------+--------------------+--------------------+----------------------+---------------------+
@@ -466,23 +410,92 @@ Encoding Type:  One-Hot
 
 
 Encoding Type:  One-Hot
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |P1_BOARD_vga|square:inst21|st_square                                                                                                                                                                                                                  ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
-; Name                    ; st_square.s_game_wait ; st_square.s_cursor_wait ; st_square.s_select_c ; st_square.s_select_b ; st_square.s_select_a ; st_square.s_cursor_c ; st_square.s_cursor_b ; st_square.s_cursor_a ; st_square.s00c ; st_square.s00b ; st_square.s00a ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
-; st_square.s00a          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0              ;
-; st_square.s00b          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 1              ; 1              ;
-; st_square.s00c          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ; 0              ; 1              ;
-; st_square.s_cursor_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_b    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_c    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_b    ; 0                     ; 0                       ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_select_c    ; 0                     ; 0                       ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_cursor_wait ; 0                     ; 1                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-; st_square.s_game_wait   ; 1                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1              ;
-+-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|main_control:inst|state                                                                                                                 ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
+; Name                ; state.S_Wait_Turn ; state.S_Change_Turn ; state.st_start_game ; state.st_send_color ; state.st_P_First ; state.st_Op_First ; state.st_wait_hash ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
+; state.st_wait_hash  ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 0                  ;
+; state.st_Op_First   ; 0                 ; 0                   ; 0                   ; 0                   ; 0                ; 1                 ; 1                  ;
+; state.st_P_First    ; 0                 ; 0                   ; 0                   ; 0                   ; 1                ; 0                 ; 1                  ;
+; state.st_send_color ; 0                 ; 0                   ; 0                   ; 1                   ; 0                ; 0                 ; 1                  ;
+; state.st_start_game ; 0                 ; 0                   ; 1                   ; 0                   ; 0                ; 0                 ; 1                  ;
+; state.S_Change_Turn ; 0                 ; 1                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
+; state.S_Wait_Turn   ; 1                 ; 0                   ; 0                   ; 0                   ; 0                ; 0                 ; 1                  ;
++---------------------+-------------------+---------------------+---------------------+---------------------+------------------+-------------------+--------------------+
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|game:GAME|state                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++----------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+------------------+----------------------+------------------+---------------+------------------+---------------+---------------+---------------+------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; Name                 ; state.st_W_FR2 ; state.st_S_EQ ; state.st_W_FR ; state.st_S_GRorSM ; state.st_W_TX3 ; state.sT_FR_R ; state.st_W_DT ; state.st_S_DT ; state.st_W_TX2 ; state.st_W_Code ; state.st_Code ; state.S_End_Turn ; state.S_Place_Figure ; state.S_Validate ; state.S_Turn2 ; state.st_Invalid ; state.s_Turn1 ; state.s_Turn0 ; state.st_Move ; state.st_rFigure ; state.st_Wait_Turn ; state.st_Turn ; state.st_Start_Game ; state.st_W_RDY ; state.st_S_RDY ; state.st_W_TX1 ; state.st_wait_game ;
++----------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+------------------+----------------------+------------------+---------------+------------------+---------------+---------------+---------------+------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+; state.st_wait_game   ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 0                  ;
+; state.st_W_TX1       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 1              ; 1                  ;
+; state.st_S_RDY       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 1              ; 0              ; 1                  ;
+; state.st_W_RDY       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 1              ; 0              ; 0              ; 1                  ;
+; state.st_Start_Game  ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 1                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Turn        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 1             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Wait_Turn   ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 1                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_rFigure     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 1                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Move        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 1             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.s_Turn0        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 1             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.s_Turn1        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 1             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Invalid     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 1                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.S_Turn2        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 1             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.S_Validate     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 1                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.S_Place_Figure ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 1                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.S_End_Turn     ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 1                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_Code        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 1             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_Code      ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 1               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_TX2       ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 1              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_S_DT        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 1             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_DT        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 1             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.sT_FR_R        ; 0              ; 0             ; 0             ; 0                 ; 0              ; 1             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_TX3       ; 0              ; 0             ; 0             ; 0                 ; 1              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_S_GRorSM    ; 0              ; 0             ; 0             ; 1                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_FR        ; 0              ; 0             ; 1             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_S_EQ        ; 0              ; 1             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
+; state.st_W_FR2       ; 1              ; 0             ; 0             ; 0                 ; 0              ; 0             ; 0             ; 0             ; 0              ; 0               ; 0             ; 0                ; 0                    ; 0                ; 0             ; 0                ; 0             ; 0             ; 0             ; 0                ; 0                  ; 0             ; 0                   ; 0              ; 0              ; 0              ; 1                  ;
++----------------------+----------------+---------------+---------------+-------------------+----------------+---------------+---------------+---------------+----------------+-----------------+---------------+------------------+----------------------+------------------+---------------+------------------+---------------+---------------+---------------+------------------+--------------------+---------------+---------------------+----------------+----------------+----------------+--------------------+
+
+
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|kb_xy_module:inst8|s_xy                                                       ;
++--------------+------------+-----------+------------+-------------+--------------+-------------+-------------+
+; Name         ; s_xy.s_sel ; s_xy.s_up ; s_xy.s_end ; s_xy.s_left ; s_xy.s_right ; s_xy.s_down ; s_xy.s_wait ;
++--------------+------------+-----------+------------+-------------+--------------+-------------+-------------+
+; s_xy.s_wait  ; 0          ; 0         ; 0          ; 0           ; 0            ; 0           ; 0           ;
+; s_xy.s_down  ; 0          ; 0         ; 0          ; 0           ; 0            ; 1           ; 1           ;
+; s_xy.s_right ; 0          ; 0         ; 0          ; 0           ; 1            ; 0           ; 1           ;
+; s_xy.s_left  ; 0          ; 0         ; 0          ; 1           ; 0            ; 0           ; 1           ;
+; s_xy.s_end   ; 0          ; 0         ; 1          ; 0           ; 0            ; 0           ; 1           ;
+; s_xy.s_up    ; 0          ; 1         ; 0          ; 0           ; 0            ; 0           ; 1           ;
+; s_xy.s_sel   ; 1          ; 0         ; 0          ; 0           ; 0            ; 0           ; 1           ;
++--------------+------------+-----------+------------+-------------+--------------+-------------+-------------+
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |P1_BOARD_vga|square:inst21|st_square                                                                                                                                                                                                                                  ;
++-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+---------------+----------------+
+; Name                    ; st_square.s_game_wait ; st_square.s_cursor_wait ; st_square.s_select_c ; st_square.s_select_b ; st_square.s_select_a ; st_square.s_cursor_c ; st_square.s_cursor_b ; st_square.s_cursor_a ; st_square.s00c ; st_square.s00b ; st_square.s00 ; st_square.s00a ;
++-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+---------------+----------------+
+; st_square.s00a          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 0              ;
+; st_square.s00           ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 1             ; 1              ;
+; st_square.s00b          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 1              ; 0             ; 1              ;
+; st_square.s00c          ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1              ; 0              ; 0             ; 1              ;
+; st_square.s_cursor_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_cursor_b    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_cursor_c    ; 0                     ; 0                       ; 0                    ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_select_a    ; 0                     ; 0                       ; 0                    ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_select_b    ; 0                     ; 0                       ; 0                    ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_select_c    ; 0                     ; 0                       ; 1                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_cursor_wait ; 0                     ; 1                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
+; st_square.s_game_wait   ; 1                     ; 0                       ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0                    ; 0              ; 0              ; 0             ; 1              ;
++-------------------------+-----------------------+-------------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------------+----------------+----------------+---------------+----------------+
 
 
 Encoding Type:  One-Hot
@@ -511,6 +524,8 @@ Encoding Type:  One-Hot
 ; protocol_tx:inst3|dataU_i[0..3]        ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|frame_type[3]        ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|frame_type[0]        ; Stuck at VCC due to stuck port data_in      ;
+; game:GAME|ext_piece[2]                 ; Stuck at VCC due to stuck port data_in      ;
+; game:GAME|ext_piece[0..1]              ; Stuck at GND due to stuck port data_in      ;
 ; square:inst21|c_x[0]                   ; Stuck at VCC due to stuck port data_in      ;
 ; square:inst21|c_y[0]                   ; Stuck at VCC due to stuck port data_in      ;
 ; square:inst21|sel_y[0]                 ; Merged with square:inst21|sel_x[0]          ;
@@ -531,16 +546,17 @@ Encoding Type:  One-Hot
 ; game:GAME|state.st_Code                ; Lost fanout                                 ;
 ; game:GAME|state.sT_FR_R                ; Lost fanout                                 ;
 ; game:GAME|state.st_S_GRorSM            ; Lost fanout                                 ;
-; game:GAME|state.st_W_FR                ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_TX3               ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_TX2               ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_W_Code              ; Stuck at GND due to stuck port data_in      ;
+; game:GAME|state.st_W_TX2               ; Stuck at GND due to stuck port data_in      ;
+; game:GAME|state.st_W_TX3               ; Stuck at GND due to stuck port data_in      ;
+; game:GAME|state.st_W_FR                ; Stuck at GND due to stuck port data_in      ;
+; square:inst21|st_square.s00            ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_S_DT                ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_S_EQ                ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_eq          ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_dt          ; Stuck at GND due to stuck port data_in      ;
-; game:GAME|state.st_W_FR2               ; Stuck at GND due to stuck port data_in      ;
 ; game:GAME|state.st_W_DT                ; Stuck at GND due to stuck port data_in      ;
+; game:GAME|state.st_W_FR2               ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|frame_type[1..2]     ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|tx_data[2]           ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_s3          ; Stuck at GND due to stuck port data_in      ;
@@ -549,7 +565,7 @@ Encoding Type:  One-Hot
 ; protocol_tx:inst3|state.pr_w4          ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_s5          ; Stuck at GND due to stuck port data_in      ;
 ; protocol_tx:inst3|state.pr_w5          ; Stuck at GND due to stuck port data_in      ;
-; Total Number of Removed Registers = 53 ;                                             ;
+; Total Number of Removed Registers = 57 ;                                             ;
 +----------------------------------------+---------------------------------------------+
 
 
@@ -561,7 +577,7 @@ Encoding Type:  One-Hot
 ; protocol_tx:inst3|frame_type[2] ; Stuck at GND              ; protocol_tx:inst3|state.pr_s3, protocol_tx:inst3|state.pr_w3, ;
 ;                                 ; due to stuck port data_in ; protocol_tx:inst3|state.pr_s4, protocol_tx:inst3|state.pr_w4, ;
 ;                                 ;                           ; protocol_tx:inst3|state.pr_s5                                 ;
-; game:GAME|state.st_W_FR         ; Stuck at GND              ; game:GAME|state.st_W_FR2, game:GAME|state.st_W_DT             ;
+; game:GAME|state.st_W_Code       ; Stuck at GND              ; game:GAME|state.st_W_DT, game:GAME|state.st_W_FR2             ;
 ;                                 ; due to stuck port data_in ;                                                               ;
 ; game:GAME|state.st_W_TX3        ; Stuck at GND              ; game:GAME|state.st_S_EQ, protocol_tx:inst3|state.pr_eq        ;
 ;                                 ; due to stuck port data_in ;                                                               ;
@@ -577,12 +593,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 324   ;
-; Number of registers using Synchronous Clear  ; 26    ;
-; Number of registers using Synchronous Load   ; 20    ;
-; Number of registers using Asynchronous Clear ; 137   ;
+; Total registers                              ; 354   ;
+; Number of registers using Synchronous Clear  ; 28    ;
+; Number of registers using Synchronous Load   ; 21    ;
+; Number of registers using Asynchronous Clear ; 152   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 132   ;
+; Number of registers using Clock Enable       ; 149   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -594,15 +610,15 @@ Encoding Type:  One-Hot
 +-----------------------------------------+---------+
 ; tx_module:inst6|tx                      ; 1       ;
 ; main_control:inst|LED_ON                ; 2       ;
-; protocol_tx:inst3|ready_to_TX           ; 2       ;
-; tx_module:inst6|tx_empty                ; 8       ;
+; tx_module:inst6|tx_empty                ; 7       ;
+; protocol_tx:inst3|ready_to_TX           ; 3       ;
+; kb_xy_module:inst8|x_int[2]             ; 7       ;
+; kb_xy_module:inst8|y_int[2]             ; 8       ;
+; square:inst21|c_x[6]                    ; 2       ;
+; square:inst21|c_x[1]                    ; 2       ;
 ; square:inst21|c_y[5]                    ; 2       ;
 ; square:inst21|c_y[4]                    ; 2       ;
-; square:inst21|c_x[1]                    ; 2       ;
-; square:inst21|c_x[6]                    ; 2       ;
 ; square:inst21|c_y[3]                    ; 2       ;
-; kb_xy_module:inst8|y_int[2]             ; 6       ;
-; kb_xy_module:inst8|x_int[2]             ; 5       ;
 ; Total number of inverted registers = 11 ;         ;
 +-----------------------------------------+---------+
 
@@ -612,27 +628,32 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[10]    ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|game:GAME|count[2]                ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[8]     ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|data[0]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 0 LEs                ; 6 LEs                  ; Yes        ; |P1_BOARD_vga|game:GAME|temp_piece[0]           ;
+; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |P1_BOARD_vga|square:inst21|x_out[5]            ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|square:inst21|color_t[2]          ;
-; 5:1                ; 13 bits   ; 39 LEs        ; 26 LEs               ; 13 LEs                 ; Yes        ; |P1_BOARD_vga|square:inst21|x_out[2]            ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[1]     ;
-; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[2]          ;
-; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[2]      ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 8 LEs                ; 16 LEs                 ; Yes        ; |P1_BOARD_vga|wr_memory:inst16|address_t[6]     ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|baud[0]          ;
+; 8:1                ; 4 bits    ; 20 LEs        ; 8 LEs                ; 12 LEs                 ; Yes        ; |P1_BOARD_vga|protocol_tx:inst3|tx_data[6]      ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 3 LEs                ; 15 LEs                 ; Yes        ; |P1_BOARD_vga|rx_module2:inst5|bit_count[0]     ;
 ; 12:1               ; 2 bits    ; 16 LEs        ; 14 LEs               ; 2 LEs                  ; Yes        ; |P1_BOARD_vga|keytest_h_v2:inst7|keycode_int[3] ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|bit_count         ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |P1_BOARD_vga|kb_xy_module:inst8|s_xy           ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector2       ;
-; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.check1    ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; No         ; |P1_BOARD_vga|kb_xy_module:inst8|s_xy           ;
+; 7:1                ; 3 bits    ; 12 LEs        ; 9 LEs                ; 3 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector0       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|keypad:inst2|next_state.wait0     ;
 ; 8:1                ; 2 bits    ; 10 LEs        ; 4 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|main_control:inst|Selector6       ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector10        ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector8         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|tx_module:inst6|Selector7         ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector7        ;
 ; 9:1                ; 2 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; No         ; |P1_BOARD_vga|rx_module2:inst5|Selector6        ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|square:inst21|Selector9           ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector10      ;
-; 14:1               ; 8 bits    ; 72 LEs        ; 32 LEs               ; 40 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector1               ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; No         ; |P1_BOARD_vga|square:inst21|Selector10          ;
+; 9:1                ; 5 bits    ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; No         ; |P1_BOARD_vga|protocol_rx:inst4|Selector6       ;
+; 16:1               ; 7 bits    ; 70 LEs        ; 21 LEs               ; 49 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector16              ;
+; 17:1               ; 2 bits    ; 22 LEs        ; 4 LEs                ; 18 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector10              ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector15              ;
+; 18:1               ; 2 bits    ; 24 LEs        ; 4 LEs                ; 20 LEs                 ; No         ; |P1_BOARD_vga|game:GAME|Selector11              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -864,7 +885,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Dec 20 19:13:05 2023
+    Info: Processing started: Thu Dec 21 13:59:28 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -968,6 +989,11 @@ Info: Found 2 design units, including 1 entities, in source file inverse_square_
     Info: Found entity 1: inverse_square_map
 Info: Found 1 design units, including 1 entities, in source file sender1.bdf
     Info: Found entity 1: sender1
+Info: Found 2 design units, including 1 entities, in source file mux_ram.vhd
+    Info: Found design unit 1: mux_ram-Behavioral
+    Info: Found entity 1: mux_ram
+Info: Found 1 design units, including 1 entities, in source file sim_game.bdf
+    Info: Found entity 1: sim_game
 Info: Elaborating entity "P1_BOARD_vga" for the top level hierarchy
 Warning: Not all bits in bus "LED_GREEN[7..0]" are used
 Warning: Not all bits in bus "LED_RED[17..0]" are used
@@ -1013,22 +1039,23 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
 Info: Elaborating entity "mux_kib" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5"
 Info: Elaborating entity "wr_memory" for hierarchy "wr_memory:inst16"
 Info: Elaborating entity "square" for hierarchy "square:inst21"
-Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
-Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
-Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
-Info: Elaborating entity "count4b" for hierarchy "keypad:inst2|count4b:counter"
 Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
+Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
 Warning: Using design file game.vhd, which is not specified as a design file for the current project, but contains definitions for 2 design units and 1 entities in project
     Info: Found design unit 1: game-main
     Info: Found entity 1: game
 Info: Elaborating entity "game" for hierarchy "game:GAME"
-Warning (10036): Verilog HDL or VHDL warning at game.vhd(26): object "s_white" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(36): object "oldX" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(36): object "oldY" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(37): object "aux_piece" assigned a value but never read
 Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
+Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
+Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
+Info: Elaborating entity "count4b" for hierarchy "keypad:inst2|count4b:counter"
 Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
 Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
 Info: Elaborating entity "protocol_tx" for hierarchy "protocol_tx:inst3"
 Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
-Info: Elaborating entity "square_map" for hierarchy "square_map:inst9"
 Info: Elaborating entity "ram64" for hierarchy "ram64:inst14"
 Info: Elaborating entity "altsyncram" for hierarchy "ram64:inst14|altsyncram:altsyncram_component"
 Info: Elaborated megafunction instantiation "ram64:inst14|altsyncram:altsyncram_component"
@@ -1061,8 +1088,10 @@ Info: Instantiated megafunction "ram64:inst14|altsyncram:altsyncram_component" w
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_5h72.tdf
     Info: Found entity 1: altsyncram_5h72
 Info: Elaborating entity "altsyncram_5h72" for hierarchy "ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated"
-Info: Elaborating entity "add64_gen" for hierarchy "add64_gen:inst22"
+Info: Elaborating entity "mux_ram" for hierarchy "mux_ram:inst15"
+Info: Elaborating entity "add64_gen" for hierarchy "add64_gen:inst24"
 Info: Elaborating entity "inverse_square_map" for hierarchy "inverse_square_map:inst23"
+Info: Elaborating entity "square_map" for hierarchy "square_map:inst9"
 Info: Elaborating entity "add_generator" for hierarchy "add_generator:inst12"
 Info: Inferred 2 megafunctions from design logic
     Info: Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "inverse_square_map:inst23|Div0"
@@ -1108,22 +1137,22 @@ Info: DEV_CLRn pin will set, and not reset, register with preset signal due to N
 Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_BLANK" is stuck at VCC
 Critical Warning: Ignored Power-Up Level option on the following registers
-    Critical Warning (18010): Register kb_xy_module:inst8|y_int[2] will power up to High
     Critical Warning (18010): Register kb_xy_module:inst8|x_int[2] will power up to High
+    Critical Warning (18010): Register kb_xy_module:inst8|y_int[2] will power up to High
 Info: 4 registers lost all their fanouts during netlist optimizations. The first 4 are displayed below.
     Info: Register "protocol_tx:inst3|state.pr_sm" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.st_Code" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.sT_FR_R" lost all its fanouts during netlist optimizations.
     Info: Register "game:GAME|state.st_S_GRorSM" lost all its fanouts during netlist optimizations.
-Info: Implemented 891 device resources after synthesis - the final resource count might be different
+Info: Implemented 948 device resources after synthesis - the final resource count might be different
     Info: Implemented 7 input pins
-    Info: Implemented 44 output pins
-    Info: Implemented 811 logic cells
+    Info: Implemented 45 output pins
+    Info: Implemented 867 logic cells
     Info: Implemented 27 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 12 warnings
     Info: Peak virtual memory: 258 megabytes
-    Info: Processing ended: Wed Dec 20 19:13:18 2023
+    Info: Processing ended: Thu Dec 21 13:59:41 2023
     Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:08
+    Info: Total CPU time (on all processors): 00:00:06
 
 

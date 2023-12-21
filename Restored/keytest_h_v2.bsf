@@ -96,15 +96,15 @@ applicable agreement for further details.
 	(port
 		(pt 192 112)
 		(output)
-		(text "select_key" (rect 0 0 54 12)(font "Arial" ))
-		(text "select_key" (rect 117 107 171 119)(font "Arial" ))
+		(text "key_o" (rect 0 0 30 12)(font "Arial" ))
+		(text "key_o" (rect 141 107 171 119)(font "Arial" ))
 		(line (pt 192 112)(pt 176 112)(line_width 1))
 	)
 	(port
 		(pt 192 128)
 		(output)
-		(text "key_o" (rect 0 0 30 12)(font "Arial" ))
-		(text "key_o" (rect 141 123 171 135)(font "Arial" ))
+		(text "select_key" (rect 0 0 54 12)(font "Arial" ))
+		(text "select_key" (rect 117 123 171 135)(font "Arial" ))
 		(line (pt 192 128)(pt 176 128)(line_width 1))
 	)
 	(port
