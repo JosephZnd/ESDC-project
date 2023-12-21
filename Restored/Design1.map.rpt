@@ -1,5 +1,9 @@
 Analysis & Synthesis report for Design1
+<<<<<<< Updated upstream
 Wed Dec 20 19:13:18 2023
+=======
+Wed Dec 20 12:09:59 2023
+>>>>>>> Stashed changes
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,6 +14,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
+<<<<<<< Updated upstream
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
@@ -38,6 +43,14 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
  30. Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div1
  31. altsyncram Parameter Settings by Entity Instance
  32. Analysis & Synthesis Messages
+=======
+  5. Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated
+  6. Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1
+  7. Source assignments for ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated
+  8. Parameter Settings for User Entity Instance: Video_Memory:inst18|altsyncram:altsyncram_component
+  9. Parameter Settings for User Entity Instance: ram64:inst14|altsyncram:altsyncram_component
+ 10. Analysis & Synthesis Messages
+>>>>>>> Stashed changes
 
 
 
@@ -63,7 +76,11 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
+<<<<<<< Updated upstream
 ; Analysis & Synthesis Status        ; Successful - Wed Dec 20 19:13:18 2023        ;
+=======
+; Analysis & Synthesis Status        ; Failed - Wed Dec 20 12:09:59 2023            ;
+>>>>>>> Stashed changes
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
@@ -85,7 +102,10 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
+<<<<<<< Updated upstream
 ; Device                                                                     ; EP2C35F672C6       ;                    ;
+=======
+>>>>>>> Stashed changes
 ; Top-level entity name                                                      ; P1_BOARD_vga       ; Design1            ;
 ; Family name                                                                ; Cyclone II         ; Stratix II         ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
@@ -164,11 +184,12 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 ; Processors                 ; Number ;
 +----------------------------+--------+
-; Number detected on machine ; 4      ;
+; Number detected on machine ; 6      ;
 ; Maximum allowed            ; 1      ;
 +----------------------------+--------+
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Source Files Read                                                                                                                       ;
 +----------------------------------+-----------------+----------------------------------------+----------------------------------------------------------------+
@@ -636,6 +657,8 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
+=======
+>>>>>>> Stashed changes
 +-----------------------------------------------------------------------------------------------------------+
 ; Source assignments for Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------+
@@ -781,6 +804,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
+<<<<<<< Updated upstream
 +--------------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: inverse_square_map:inst23|lpm_divide:Div0 ;
 +------------------------+----------------+--------------------------------------------------+
@@ -858,20 +882,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------------------+-----------------------------------------------------+
 
 
+=======
+>>>>>>> Stashed changes
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+<<<<<<< Updated upstream
     Info: Processing started: Wed Dec 20 19:13:05 2023
+=======
+    Info: Processing started: Wed Dec 20 12:09:57 2023
+>>>>>>> Stashed changes
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
 Info: Found 1 design units, including 1 entities, in source file vga_test_board.bdf
     Info: Found entity 1: VGA_TEST_BOARD
+<<<<<<< Updated upstream
 Info: Found 1 design units, including 1 entities, in source file vga_visualisation.bdf
     Info: Found entity 1: VGA_visualisation
+=======
+>>>>>>> Stashed changes
 Info: Found 2 design units, including 1 entities, in source file i_o_manager_vga.vhd
     Info: Found design unit 1: i_o_manager_vga-bdf_type
     Info: Found entity 1: i_o_manager_vga
@@ -966,6 +999,7 @@ Info: Found 1 design units, including 1 entities, in source file trash.bdf
 Info: Found 2 design units, including 1 entities, in source file inverse_square_map.vhd
     Info: Found design unit 1: inverse_square_map-inv_functional
     Info: Found entity 1: inverse_square_map
+<<<<<<< Updated upstream
 Info: Found 1 design units, including 1 entities, in source file sender1.bdf
     Info: Found entity 1: sender1
 Info: Elaborating entity "P1_BOARD_vga" for the top level hierarchy
@@ -974,6 +1008,23 @@ Warning: Not all bits in bus "LED_RED[17..0]" are used
 Info: Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst19"
 Info: Elaborating entity "clk_video" for hierarchy "clk_video:inst20"
 Info: Elaborating entity "clk_video_altclkctrl_6df" for hierarchy "clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component"
+=======
+Info: Found 1 design units, including 1 entities, in source file sender_receiver.bdf
+    Info: Found entity 1: sender_receiver
+Info: Elaborating entity "P1_BOARD_vga" for the top level hierarchy
+Warning: Primitive "OR3" of instance "inst11" not used
+Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
+Info: Elaborating entity "clk_video" for hierarchy "clk_video:inst10"
+Info: Elaborating entity "clk_video_altclkctrl_6df" for hierarchy "clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component"
+Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
+Info: Elaborating entity "protocol_tx" for hierarchy "protocol_tx:inst3"
+Info: Elaborating entity "game" for hierarchy "game:GAME"
+Info: Elaborating entity "main_control" for hierarchy "main_control:inst"
+Info: Elaborating entity "register_bank2" for hierarchy "register_bank2:USER_CODE"
+Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
+Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
+Info: Elaborating entity "VGA_SYNC" for hierarchy "VGA_SYNC:inst19"
+>>>>>>> Stashed changes
 Info: Elaborating entity "clk_div_two" for hierarchy "clk_div_two:inst17"
 Info: Elaborating entity "Video_Memory" for hierarchy "Video_Memory:inst18"
 Info: Elaborating entity "altsyncram" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component"
@@ -1013,6 +1064,7 @@ Info: Found 1 design units, including 1 entities, in source file db/mux_kib.tdf
 Info: Elaborating entity "mux_kib" for hierarchy "Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5"
 Info: Elaborating entity "wr_memory" for hierarchy "wr_memory:inst16"
 Info: Elaborating entity "square" for hierarchy "square:inst21"
+<<<<<<< Updated upstream
 Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
 Info: Elaborating entity "f_div" for hierarchy "f_div:inst1"
 Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
@@ -1028,6 +1080,13 @@ Info: Elaborating entity "protocol_rx" for hierarchy "protocol_rx:inst4"
 Info: Elaborating entity "rx_module2" for hierarchy "rx_module2:inst5"
 Info: Elaborating entity "protocol_tx" for hierarchy "protocol_tx:inst3"
 Info: Elaborating entity "tx_module" for hierarchy "tx_module:inst6"
+=======
+Warning (10541): VHDL Signal Declaration warning at square.vhd(33): used implicit default value for signal "adr_memo" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Info: Elaborating entity "keytest_h_v2" for hierarchy "keytest_h_v2:inst7"
+Info: Elaborating entity "keypad" for hierarchy "keypad:inst2"
+Info: Elaborating entity "count4b" for hierarchy "keypad:inst2|count4b:counter"
+Info: Elaborating entity "kb_xy_module" for hierarchy "kb_xy_module:inst8"
+>>>>>>> Stashed changes
 Info: Elaborating entity "square_map" for hierarchy "square_map:inst9"
 Info: Elaborating entity "ram64" for hierarchy "ram64:inst14"
 Info: Elaborating entity "altsyncram" for hierarchy "ram64:inst14|altsyncram:altsyncram_component"
@@ -1061,6 +1120,7 @@ Info: Instantiated megafunction "ram64:inst14|altsyncram:altsyncram_component" w
 Info: Found 1 design units, including 1 entities, in source file db/altsyncram_5h72.tdf
     Info: Found entity 1: altsyncram_5h72
 Info: Elaborating entity "altsyncram_5h72" for hierarchy "ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated"
+<<<<<<< Updated upstream
 Info: Elaborating entity "add64_gen" for hierarchy "add64_gen:inst22"
 Info: Elaborating entity "inverse_square_map" for hierarchy "inverse_square_map:inst23"
 Info: Elaborating entity "add_generator" for hierarchy "add_generator:inst12"
@@ -1125,5 +1185,30 @@ Info: Quartus II Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Processing ended: Wed Dec 20 19:13:18 2023
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:08
+=======
+Info: Elaborating entity "mux_write" for hierarchy "mux_write:inst26"
+Info: Elaborating entity "mux_address" for hierarchy "mux_address:inst24"
+Info: Elaborating entity "Main_Checkers" for hierarchy "Main_Checkers:inst13"
+Warning (10036): Verilog HDL or VHDL warning at Main_Checkers.vhd(13): object "hash_int" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Main_Checkers.vhd(13): object "whit_rx_int" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at Main_Checkers.vhd(13): object "enable_Ram_wr" assigned a value but never read
+Info (10041): Inferred latch for "frame_read" at Main_Checkers.vhd(106)
+Info (10041): Inferred latch for "SEND_rdy" at Main_Checkers.vhd(100)
+Info: Elaborating entity "protocol_rx_checkers" for hierarchy "protocol_rx_checkers:inst30"
+Info: Elaborating entity "Game_Checkers" for hierarchy "Game_Checkers:inst15"
+Warning (10036): Verilog HDL or VHDL warning at Game_Checkers.vhd(21): object "new_game" assigned a value but never read
+Info: Elaborating entity "add64_gen" for hierarchy "add64_gen:inst22"
+Info: Elaborating entity "inverse_square_map" for hierarchy "inverse_square_map:inst23"
+Info: Elaborating entity "mux_piece" for hierarchy "mux_piece:inst25"
+Info: Elaborating entity "add_generator" for hierarchy "add_generator:inst12"
+Info: Elaborating entity "protocol_tx_checkers" for hierarchy "protocol_tx_checkers:inst27"
+Error: Node "wen_game" is missing source
+Error: Node "M_mux_write" is missing source
+Error: Quartus II Analysis & Synthesis was unsuccessful. 2 errors, 7 warnings
+    Error: Peak virtual memory: 253 megabytes
+    Error: Processing ended: Wed Dec 20 12:09:59 2023
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:02
+>>>>>>> Stashed changes
 
 

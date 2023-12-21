@@ -202,9 +202,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1064 328 1240 344)
+	(rect 1072 376 1248 392)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "vga_syn1" (rect 90 0 139 12)(font "Arial" ))
+	(text "VGA_CLK" (rect 90 0 139 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
@@ -218,9 +218,9 @@ applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 1072 376 1248 392)
+	(rect 1064 328 1240 344)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "VGA_CLK" (rect 90 0 139 12)(font "Arial" ))
+	(text "vga_syn" (rect 90 0 133 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8)(line_width 1))
