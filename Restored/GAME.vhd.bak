@@ -16,7 +16,7 @@ entity game is
 		frame_received : out std_logic;
 		enterCode, led_turn, turn_read, freeze_kb : out std_logic;
 		Addr_W, Addr_R : out std_logic_vector(5 downto 0);
-		X_To_Sent, Y_To_Sent: out std_logic_vector(2 downto 0));
+		X_To_Sent, Y_To_Sent, Write_Piece: out std_logic_vector(2 downto 0));
 end game;
 
 
@@ -145,7 +145,6 @@ process (clk50, nrst, In_Piece)
 				int_To_Move_Y := to_integer(unsigned(to_Move_Y));
 				int_Old_X := to_integer(unsigned(old_X));
 				int_Old_Y := to_integer(unsigned(old_Y));
-				assert false report "Current value of my_integer: " & integer'image(int_To_Move_X) severity note;
 				if (int_To_Move_X = int_Old_X+1 and int_To_Move_Y = int_Old_Y+1) then	
 					if arriving_cell = "100" then
 						state <= st_Move_Piece;

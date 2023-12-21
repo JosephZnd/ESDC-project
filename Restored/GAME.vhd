@@ -16,7 +16,7 @@ entity game is
 		frame_received : out std_logic;
 		enterCode, led_turn, turn_read, freeze_kb : out std_logic;
 		Addr_W, Addr_R : out std_logic_vector(5 downto 0);
-		X_To_Sent, Y_To_Sent: out std_logic_vector(2 downto 0));
+		X_To_Sent, Y_To_Sent, Write_Piece: out std_logic_vector(2 downto 0));
 end game;
 
 
@@ -279,6 +279,7 @@ process (clk50, nrst, In_Piece)
 end process;
 Addr_W <= s_Addr_W when state = st_Write_Ram;
 Addr_R <= s_Addr_W when state = st_Read_Ram;
+Write_Piece <= piece_To_Write when state = st_Write_Ram;
 
 Y_TO_Sent <= s_Addr_W(5 downto 3) when state = st_Write_Ram;
 X_To_Sent <= s_Addr_W(2 downto 0) when state = st_Write_Ram;
