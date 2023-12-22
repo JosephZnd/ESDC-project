@@ -1,5 +1,5 @@
 Simulator report for Design1
-Thu Dec 21 13:06:31 2023
+Fri Dec 22 11:48:15 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -44,43 +44,43 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 3.0 us       ;
-; Simulation Netlist Size     ; 253 nodes    ;
-; Simulation Coverage         ;      72.53 % ;
-; Total Number of Transitions ; 2116         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 104 nodes    ;
+; Simulation Coverage         ;      73.08 % ;
+; Total Number of Transitions ; 573          ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C35F672C6 ;
 +-----------------------------+--------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Simulator Settings                                                                                                      ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Option                                                                                     ; Setting    ; Default Value ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
-; Simulation mode                                                                            ; Timing     ; Timing        ;
-; Start time                                                                                 ; 0 ns       ; 0 ns          ;
-; Simulation results format                                                                  ; CVWF       ;               ;
-; Vector input source                                                                        ; game.vwf   ;               ;
-; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
-; Check outputs                                                                              ; Off        ; Off           ;
-; Report simulation coverage                                                                 ; On         ; On            ;
-; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
-; Display missing 1-value coverage report                                                    ; On         ; On            ;
-; Display missing 0-value coverage report                                                    ; On         ; On            ;
-; Detect setup and hold time violations                                                      ; Off        ; Off           ;
-; Detect glitches                                                                            ; Off        ; Off           ;
-; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
-; Generate Signal Activity File                                                              ; Off        ; Off           ;
-; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
-; Group bus channels in simulation results                                                   ; Off        ; Off           ;
-; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
-; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
-; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
-; Overwrite Waveform Inputs With Simulation Outputs                                          ; On         ;               ;
-; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
-+--------------------------------------------------------------------------------------------+------------+---------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                           ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Option                                                                                     ; Setting         ; Default Value ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
+; Simulation mode                                                                            ; Timing          ; Timing        ;
+; Start time                                                                                 ; 0 ns            ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF            ;               ;
+; Vector input source                                                                        ; protocol_tx.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On              ; On            ;
+; Check outputs                                                                              ; Off             ; Off           ;
+; Report simulation coverage                                                                 ; On              ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On              ; On            ;
+; Display missing 1-value coverage report                                                    ; On              ; On            ;
+; Display missing 0-value coverage report                                                    ; On              ; On            ;
+; Detect setup and hold time violations                                                      ; Off             ; Off           ;
+; Detect glitches                                                                            ; Off             ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off             ; Off           ;
+; Generate Signal Activity File                                                              ; Off             ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off             ; Off           ;
+; Group bus channels in simulation results                                                   ; Off             ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On              ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE      ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off             ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On              ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto            ; Auto          ;
++--------------------------------------------------------------------------------------------+-----------------+---------------+
 
 
 +----------------------+
@@ -95,314 +95,162 @@ Please use Quartus II to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      72.53 % ;
-; Total nodes checked                                 ; 253          ;
-; Total output ports checked                          ; 233          ;
-; Total output ports with complete 1/0-value coverage ; 169          ;
-; Total output ports with no 1/0-value coverage       ; 40           ;
-; Total output ports with no 1-value coverage         ; 43           ;
-; Total output ports with no 0-value coverage         ; 61           ;
+; Total coverage as a percentage                      ;      73.08 % ;
+; Total nodes checked                                 ; 104          ;
+; Total output ports checked                          ; 104          ;
+; Total output ports with complete 1/0-value coverage ; 76           ;
+; Total output ports with no 1/0-value coverage       ; 17           ;
+; Total output ports with no 1-value coverage         ; 17           ;
+; Total output ports with no 0-value coverage         ; 28           ;
 +-----------------------------------------------------+--------------+
 
 
 The following table displays output ports that toggle between 1 and 0 during simulation.
-+------------------------------------------------------------------------------------------------------+
-; Complete 1/0-Value Coverage                                                                          ;
-+-----------------------------------------+-----------------------------------------+------------------+
-; Node Name                               ; Output Port Name                        ; Output Port Type ;
-+-----------------------------------------+-----------------------------------------+------------------+
-; |game|state.st_Write_Ram                ; |game|state.st_Write_Ram                ; regout           ;
-; |game|state.st_Turn                     ; |game|state.st_Turn                     ; regout           ;
-; |game|state.st_Move_Piece               ; |game|state.st_Move_Piece               ; regout           ;
-; |game|counter[3]                        ; |game|counter[3]                        ; regout           ;
-; |game|counter[2]                        ; |game|counter[2]                        ; regout           ;
-; |game|counter[1]                        ; |game|counter[1]                        ; regout           ;
-; |game|counter[0]                        ; |game|counter[0]                        ; regout           ;
-; |game|Equal18~0                         ; |game|Equal18~0                         ; combout          ;
-; |game|Selector13~0                      ; |game|Selector13~0                      ; combout          ;
-; |game|state.st_Invalid_Move             ; |game|state.st_Invalid_Move             ; regout           ;
-; |game|state.st_Wait_Turn                ; |game|state.st_Wait_Turn                ; regout           ;
-; |game|Selector5~0                       ; |game|Selector5~0                       ; combout          ;
-; |game|piece_To_Move[0]                  ; |game|piece_To_Move[0]                  ; regout           ;
-; |game|state~37                          ; |game|state~37                          ; combout          ;
-; |game|state.st_Check_Piece              ; |game|state.st_Check_Piece              ; regout           ;
-; |game|Selector5~1                       ; |game|Selector5~1                       ; combout          ;
-; |game|s_Ram_X[0]                        ; |game|s_Ram_X[0]                        ; regout           ;
-; |game|state.st_Read_Ram                 ; |game|state.st_Read_Ram                 ; regout           ;
-; |game|WideOr9~0                         ; |game|WideOr9~0                         ; combout          ;
-; |game|s_Ram_X[1]                        ; |game|s_Ram_X[1]                        ; regout           ;
-; |game|s_Ram_X[2]                        ; |game|s_Ram_X[2]                        ; regout           ;
-; |game|s_Ram_y[0]                        ; |game|s_Ram_y[0]                        ; regout           ;
-; |game|s_Ram_y[1]                        ; |game|s_Ram_y[1]                        ; regout           ;
-; |game|s_Ram_y[2]                        ; |game|s_Ram_y[2]                        ; regout           ;
-; |game|piece_To_Write[0]                 ; |game|piece_To_Write[0]                 ; regout           ;
-; |game|piece_To_Write[2]                 ; |game|piece_To_Write[2]                 ; regout           ;
-; |game|old_Y[2]                          ; |game|old_Y[2]                          ; regout           ;
-; |game|Equal6~0                          ; |game|Equal6~0                          ; combout          ;
-; |game|Equal8~1                          ; |game|Equal8~1                          ; combout          ;
-; |game|state.st_Check_Second_Move        ; |game|state.st_Check_Second_Move        ; regout           ;
-; |game|old_X[2]                          ; |game|old_X[2]                          ; regout           ;
-; |game|Equal7~0                          ; |game|Equal7~0                          ; combout          ;
-; |game|Equal5~0                          ; |game|Equal5~0                          ; combout          ;
-; |game|state.st_Check_capture            ; |game|state.st_Check_capture            ; regout           ;
-; |game|while_Capturing                   ; |game|while_Capturing                   ; regout           ;
-; |game|piece_Moved                       ; |game|piece_Moved                       ; regout           ;
-; |game|Selector12~1                      ; |game|Selector12~1                      ; combout          ;
-; |game|Selector12~2                      ; |game|Selector12~2                      ; combout          ;
-; |game|Selector12~3                      ; |game|Selector12~3                      ; combout          ;
-; |game|Add0~0                            ; |game|Add0~0                            ; combout          ;
-; |game|state.st_Capture                  ; |game|state.st_Capture                  ; regout           ;
-; |game|state.st_Assign_Position          ; |game|state.st_Assign_Position          ; regout           ;
-; |game|WideOr9~1                         ; |game|WideOr9~1                         ; combout          ;
-; |game|Selector24~0                      ; |game|Selector24~0                      ; combout          ;
-; |game|Selector25~0                      ; |game|Selector25~0                      ; combout          ;
-; |game|Selector14~0                      ; |game|Selector14~0                      ; combout          ;
-; |game|state~39                          ; |game|state~39                          ; combout          ;
-; |game|pos_To_Capture_Y[0]~0             ; |game|pos_To_Capture_Y[0]~0             ; combout          ;
-; |game|Selector14~1                      ; |game|Selector14~1                      ; combout          ;
-; |game|Selector14~2                      ; |game|Selector14~2                      ; combout          ;
-; |game|state.st_Start_Game               ; |game|state.st_Start_Game               ; regout           ;
-; |game|state.st_Finish_Turn              ; |game|state.st_Finish_Turn              ; regout           ;
-; |game|Selector6~0                       ; |game|Selector6~0                       ; combout          ;
-; |game|Equal0~0                          ; |game|Equal0~0                          ; combout          ;
-; |game|sel_Selected                      ; |game|sel_Selected                      ; regout           ;
-; |game|piece_To_Move[2]~0                ; |game|piece_To_Move[2]~0                ; combout          ;
-; |game|state.st_W_Tx1                    ; |game|state.st_W_Tx1                    ; regout           ;
-; |game|Selector8~0                       ; |game|Selector8~0                       ; combout          ;
-; |game|s_Ram_X[0]~0                      ; |game|s_Ram_X[0]~0                      ; combout          ;
-; |game|s_Ram_X[0]~2                      ; |game|s_Ram_X[0]~2                      ; combout          ;
-; |game|Selector19~0                      ; |game|Selector19~0                      ; combout          ;
-; |game|Selector19~1                      ; |game|Selector19~1                      ; combout          ;
-; |game|s_Ram_X[0]~3                      ; |game|s_Ram_X[0]~3                      ; combout          ;
-; |game|Selector7~0                       ; |game|Selector7~0                       ; combout          ;
-; |game|sel_X[1]                          ; |game|sel_X[1]                          ; regout           ;
-; |game|Selector18~0                      ; |game|Selector18~0                      ; combout          ;
-; |game|Selector18~1                      ; |game|Selector18~1                      ; combout          ;
-; |game|sel_X[2]                          ; |game|sel_X[2]                          ; regout           ;
-; |game|s_Ram_X~5                         ; |game|s_Ram_X~5                         ; combout          ;
-; |game|Selector17~0                      ; |game|Selector17~0                      ; combout          ;
-; |game|Selector17~1                      ; |game|Selector17~1                      ; combout          ;
-; |game|Selector22~0                      ; |game|Selector22~0                      ; combout          ;
-; |game|Selector22~1                      ; |game|Selector22~1                      ; combout          ;
-; |game|sel_Y[1]                          ; |game|sel_Y[1]                          ; regout           ;
-; |game|Selector21~0                      ; |game|Selector21~0                      ; combout          ;
-; |game|Selector21~1                      ; |game|Selector21~1                      ; combout          ;
-; |game|sel_Y[2]                          ; |game|sel_Y[2]                          ; regout           ;
-; |game|s_Ram_y~2                         ; |game|s_Ram_y~2                         ; combout          ;
-; |game|Selector20~0                      ; |game|Selector20~0                      ; combout          ;
-; |game|Selector20~1                      ; |game|Selector20~1                      ; combout          ;
-; |game|piece_To_Write~0                  ; |game|piece_To_Write~0                  ; combout          ;
-; |game|piece_To_Write[0]~1               ; |game|piece_To_Write[0]~1               ; combout          ;
-; |game|piece_To_Write~3                  ; |game|piece_To_Write~3                  ; combout          ;
-; |game|to_Move_X[0]~0                    ; |game|to_Move_X[0]~0                    ; combout          ;
-; |game|old_X[0]~0                        ; |game|old_X[0]~0                        ; combout          ;
-; |game|arriving_Cell[2]~0                ; |game|arriving_Cell[2]~0                ; combout          ;
-; |game|arriving_Cell[2]~1                ; |game|arriving_Cell[2]~1                ; combout          ;
-; |game|piece_To_Capture[2]~0             ; |game|piece_To_Capture[2]~0             ; combout          ;
-; |game|piece_To_Capture[2]~1             ; |game|piece_To_Capture[2]~1             ; combout          ;
-; |game|Selector29~0                      ; |game|Selector29~0                      ; combout          ;
-; |game|Selector28~0                      ; |game|Selector28~0                      ; combout          ;
-; |game|Selector29~1                      ; |game|Selector29~1                      ; combout          ;
-; |game|Selector29~2                      ; |game|Selector29~2                      ; combout          ;
-; |game|Equal9~0                          ; |game|Equal9~0                          ; combout          ;
-; |game|Equal11~1                         ; |game|Equal11~1                         ; combout          ;
-; |game|Selector10~0                      ; |game|Selector10~0                      ; combout          ;
-; |game|Selector10~1                      ; |game|Selector10~1                      ; combout          ;
-; |game|Selector16~0                      ; |game|Selector16~0                      ; combout          ;
-; |game|state.st_W_Rdy                    ; |game|state.st_W_Rdy                    ; regout           ;
-; |game|Selector4~0                       ; |game|Selector4~0                       ; combout          ;
-; |game|Selector15~0                      ; |game|Selector15~0                      ; combout          ;
-; |game|Selector29~3                      ; |game|Selector29~3                      ; combout          ;
-; |game|Selector27~0                      ; |game|Selector27~0                      ; combout          ;
-; |game|Selector0~0                       ; |game|Selector0~0                       ; combout          ;
-; |game|Selector0~1                       ; |game|Selector0~1                       ; combout          ;
-; |game|Selector0~2                       ; |game|Selector0~2                       ; combout          ;
-; |game|Selector0~3                       ; |game|Selector0~3                       ; combout          ;
-; |game|state.st_S_Rdy                    ; |game|state.st_S_Rdy                    ; regout           ;
-; |game|Selector0~4                       ; |game|Selector0~4                       ; combout          ;
-; |game|Selector0~5                       ; |game|Selector0~5                       ; combout          ;
-; |game|Selector0~6                       ; |game|Selector0~6                       ; combout          ;
-; |game|Selector0~7                       ; |game|Selector0~7                       ; combout          ;
-; |game|Selector1~2                       ; |game|Selector1~2                       ; combout          ;
-; |game|pos_To_Capture_X[0]~1             ; |game|pos_To_Capture_X[0]~1             ; combout          ;
-; |game|pos_To_Capture_X[0]~2             ; |game|pos_To_Capture_X[0]~2             ; combout          ;
-; |game|pos_To_Capture_X~3                ; |game|pos_To_Capture_X~3                ; combout          ;
-; |game|pos_To_Capture_X[2]~4             ; |game|pos_To_Capture_X[2]~4             ; combout          ;
-; |game|pos_To_Capture_X~5                ; |game|pos_To_Capture_X~5                ; combout          ;
-; |game|Equal10~0                         ; |game|Equal10~0                         ; combout          ;
-; |game|pos_To_Capture_Y[2]~1             ; |game|pos_To_Capture_Y[2]~1             ; combout          ;
-; |game|pos_To_Capture_Y~2                ; |game|pos_To_Capture_Y~2                ; combout          ;
-; |game|pos_To_Capture_Y~3                ; |game|pos_To_Capture_Y~3                ; combout          ;
-; |game|Selector3~0                       ; |game|Selector3~0                       ; combout          ;
-; |game|Selector2~0                       ; |game|Selector2~0                       ; combout          ;
-; |game|Selector23~2                      ; |game|Selector23~2                      ; combout          ;
-; |game|counter[3]~2                      ; |game|counter[3]~2                      ; combout          ;
-; |game|Selector26~2                      ; |game|Selector26~2                      ; combout          ;
-; |game|Selector1~3                       ; |game|Selector1~3                       ; combout          ;
-; |game|SEND_DT                           ; |game|SEND_DT                           ; padio            ;
-; |game|led_turn                          ; |game|led_turn                          ; padio            ;
-; |game|turn_read                         ; |game|turn_read                         ; padio            ;
-; |game|freeze_kb                         ; |game|freeze_kb                         ; padio            ;
-; |game|Ram_X[0]                          ; |game|Ram_X[0]                          ; padio            ;
-; |game|Ram_X[1]                          ; |game|Ram_X[1]                          ; padio            ;
-; |game|Ram_X[2]                          ; |game|Ram_X[2]                          ; padio            ;
-; |game|Ram_Y[0]                          ; |game|Ram_Y[0]                          ; padio            ;
-; |game|Ram_Y[1]                          ; |game|Ram_Y[1]                          ; padio            ;
-; |game|Ram_Y[2]                          ; |game|Ram_Y[2]                          ; padio            ;
-; |game|X_To_Sent[0]                      ; |game|X_To_Sent[0]                      ; padio            ;
-; |game|X_To_Sent[1]                      ; |game|X_To_Sent[1]                      ; padio            ;
-; |game|Y_To_Sent[0]                      ; |game|Y_To_Sent[0]                      ; padio            ;
-; |game|Y_To_Sent[1]                      ; |game|Y_To_Sent[1]                      ; padio            ;
-; |game|Write_Piece[0]                    ; |game|Write_Piece[0]                    ; padio            ;
-; |game|Write_Piece[2]                    ; |game|Write_Piece[2]                    ; padio            ;
-; |game|clk50                             ; |game|clk50~corein                      ; combout          ;
-; |game|Turn                              ; |game|Turn~corein                       ; combout          ;
-; |game|Sel                               ; |game|Sel~corein                        ; combout          ;
-; |game|In_Piece[1]                       ; |game|In_Piece[1]~corein                ; combout          ;
-; |game|In_Piece[0]                       ; |game|In_Piece[0]~corein                ; combout          ;
-; |game|In_Piece[2]                       ; |game|In_Piece[2]~corein                ; combout          ;
-; |game|Color                             ; |game|Color~corein                      ; combout          ;
-; |game|RDY_RECEIVED                      ; |game|RDY_RECEIVED~corein               ; combout          ;
-; |game|New_Game                          ; |game|New_Game~corein                   ; combout          ;
-; |game|ready_to_TX                       ; |game|ready_to_TX~corein                ; combout          ;
-; |game|Pos_X[1]                          ; |game|Pos_X[1]~corein                   ; combout          ;
-; |game|Pos_X[2]                          ; |game|Pos_X[2]~corein                   ; combout          ;
-; |game|Pos_Y[1]                          ; |game|Pos_Y[1]~corein                   ; combout          ;
-; |game|Pos_Y[2]                          ; |game|Pos_Y[2]~corein                   ; combout          ;
-; |game|clk50~clkctrl                     ; |game|clk50~clkctrl                     ; outclk           ;
-; |game|state.st_Write_Ram~clkctrl        ; |game|state.st_Write_Ram~clkctrl        ; outclk           ;
-; |game|WideOr9~0clkctrl                  ; |game|WideOr9~0clkctrl                  ; outclk           ;
-; |game|state.st_Check_Second_Move~feeder ; |game|state.st_Check_Second_Move~feeder ; combout          ;
-; |game|arriving_Cell[1]~feeder           ; |game|arriving_Cell[1]~feeder           ; combout          ;
-; |game|piece_To_Capture[1]~feeder        ; |game|piece_To_Capture[1]~feeder        ; combout          ;
-; |game|piece_To_Capture[0]~feeder        ; |game|piece_To_Capture[0]~feeder        ; combout          ;
-; |game|piece_To_Move[2]~feeder           ; |game|piece_To_Move[2]~feeder           ; combout          ;
-; |game|sel_X[1]~feeder                   ; |game|sel_X[1]~feeder                   ; combout          ;
-; |game|sel_X[2]~feeder                   ; |game|sel_X[2]~feeder                   ; combout          ;
-; |game|sel_Y[2]~feeder                   ; |game|sel_Y[2]~feeder                   ; combout          ;
-+-----------------------------------------+-----------------------------------------+------------------+
++----------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                              ;
++-------------------------------------------+-------------------------------------------+------------------+
+; Node Name                                 ; Output Port Name                          ; Output Port Type ;
++-------------------------------------------+-------------------------------------------+------------------+
+; |protocol_tx|Tx_Data[0]~reg0              ; |protocol_tx|Tx_Data[0]~reg0              ; regout           ;
+; |protocol_tx|Tx_Data[1]~reg0              ; |protocol_tx|Tx_Data[1]~reg0              ; regout           ;
+; |protocol_tx|Ready_To_Tx~reg0             ; |protocol_tx|Ready_To_Tx~reg0             ; regout           ;
+; |protocol_tx|Tx_Data[3]~reg0              ; |protocol_tx|Tx_Data[3]~reg0              ; regout           ;
+; |protocol_tx|Tx_Data[7]~reg0              ; |protocol_tx|Tx_Data[7]~reg0              ; regout           ;
+; |protocol_tx|state.st_finish_Tx           ; |protocol_tx|state.st_finish_Tx           ; regout           ;
+; |protocol_tx|state.st_pr_rdy              ; |protocol_tx|state.st_pr_rdy              ; regout           ;
+; |protocol_tx|state.st_pr_dt               ; |protocol_tx|state.st_pr_dt               ; regout           ;
+; |protocol_tx|Selector14~0                 ; |protocol_tx|Selector14~0                 ; combout          ;
+; |protocol_tx|state.st_send_x              ; |protocol_tx|state.st_send_x              ; regout           ;
+; |protocol_tx|state.st_send_y              ; |protocol_tx|state.st_send_y              ; regout           ;
+; |protocol_tx|Selector14~1                 ; |protocol_tx|Selector14~1                 ; combout          ;
+; |protocol_tx|Selector24~1                 ; |protocol_tx|Selector24~1                 ; combout          ;
+; |protocol_tx|state.st_send_figure         ; |protocol_tx|state.st_send_figure         ; regout           ;
+; |protocol_tx|Tx_Data[0]~0                 ; |protocol_tx|Tx_Data[0]~0                 ; combout          ;
+; |protocol_tx|state.st_send_type           ; |protocol_tx|state.st_send_type           ; regout           ;
+; |protocol_tx|state.st_send_rdy            ; |protocol_tx|state.st_send_rdy            ; regout           ;
+; |protocol_tx|Tx_Data[0]~1                 ; |protocol_tx|Tx_Data[0]~1                 ; combout          ;
+; |protocol_tx|state.st_to_send_rdy         ; |protocol_tx|state.st_to_send_rdy         ; regout           ;
+; |protocol_tx|state.st_to_send_type        ; |protocol_tx|state.st_to_send_type        ; regout           ;
+; |protocol_tx|state.st_to_send_x           ; |protocol_tx|state.st_to_send_x           ; regout           ;
+; |protocol_tx|state.st_pr_wait             ; |protocol_tx|state.st_pr_wait             ; regout           ;
+; |protocol_tx|WideOr12~2                   ; |protocol_tx|WideOr12~2                   ; combout          ;
+; |protocol_tx|state.st_to_send_y           ; |protocol_tx|state.st_to_send_y           ; regout           ;
+; |protocol_tx|state.st_to_send_figure      ; |protocol_tx|state.st_to_send_figure      ; regout           ;
+; |protocol_tx|WideOr12~3                   ; |protocol_tx|WideOr12~3                   ; combout          ;
+; |protocol_tx|Tx_Data[0]~2                 ; |protocol_tx|Tx_Data[0]~2                 ; combout          ;
+; |protocol_tx|Selector23~1                 ; |protocol_tx|Selector23~1                 ; combout          ;
+; |protocol_tx|Selector17~0                 ; |protocol_tx|Selector17~0                 ; combout          ;
+; |protocol_tx|Selector22~2                 ; |protocol_tx|Selector22~2                 ; combout          ;
+; |protocol_tx|Selector22~3                 ; |protocol_tx|Selector22~3                 ; combout          ;
+; |protocol_tx|Selector22~4                 ; |protocol_tx|Selector22~4                 ; combout          ;
+; |protocol_tx|Selector22~5                 ; |protocol_tx|Selector22~5                 ; combout          ;
+; |protocol_tx|Selector22~6                 ; |protocol_tx|Selector22~6                 ; combout          ;
+; |protocol_tx|Selector21~0                 ; |protocol_tx|Selector21~0                 ; combout          ;
+; |protocol_tx|Selector17~1                 ; |protocol_tx|Selector17~1                 ; combout          ;
+; |protocol_tx|Selector21~1                 ; |protocol_tx|Selector21~1                 ; combout          ;
+; |protocol_tx|Selector21~2                 ; |protocol_tx|Selector21~2                 ; combout          ;
+; |protocol_tx|Selector17~2                 ; |protocol_tx|Selector17~2                 ; combout          ;
+; |protocol_tx|Selector17~3                 ; |protocol_tx|Selector17~3                 ; combout          ;
+; |protocol_tx|Selector13~0                 ; |protocol_tx|Selector13~0                 ; combout          ;
+; |protocol_tx|Selector1~0                  ; |protocol_tx|Selector1~0                  ; combout          ;
+; |protocol_tx|i_Pos_X[0]~0                 ; |protocol_tx|i_Pos_X[0]~0                 ; combout          ;
+; |protocol_tx|i_Pos_X[0]~1                 ; |protocol_tx|i_Pos_X[0]~1                 ; combout          ;
+; |protocol_tx|Selector8~0                  ; |protocol_tx|Selector8~0                  ; combout          ;
+; |protocol_tx|Selector10~0                 ; |protocol_tx|Selector10~0                 ; combout          ;
+; |protocol_tx|Selector12~0                 ; |protocol_tx|Selector12~0                 ; combout          ;
+; |protocol_tx|Selector5~0                  ; |protocol_tx|Selector5~0                  ; combout          ;
+; |protocol_tx|Selector3~0                  ; |protocol_tx|Selector3~0                  ; combout          ;
+; |protocol_tx|Selector7~0                  ; |protocol_tx|Selector7~0                  ; combout          ;
+; |protocol_tx|Selector0~0                  ; |protocol_tx|Selector0~0                  ; combout          ;
+; |protocol_tx|Selector9~0                  ; |protocol_tx|Selector9~0                  ; combout          ;
+; |protocol_tx|Selector11~0                 ; |protocol_tx|Selector11~0                 ; combout          ;
+; |protocol_tx|WideOr12                     ; |protocol_tx|WideOr12                     ; combout          ;
+; |protocol_tx|Selector22~7                 ; |protocol_tx|Selector22~7                 ; combout          ;
+; |protocol_tx|Ready_To_Tx                  ; |protocol_tx|Ready_To_Tx                  ; padio            ;
+; |protocol_tx|Tx_Data[0]                   ; |protocol_tx|Tx_Data[0]                   ; padio            ;
+; |protocol_tx|Tx_Data[1]                   ; |protocol_tx|Tx_Data[1]                   ; padio            ;
+; |protocol_tx|Tx_Data[3]                   ; |protocol_tx|Tx_Data[3]                   ; padio            ;
+; |protocol_tx|Tx_Data[5]                   ; |protocol_tx|Tx_Data[5]                   ; padio            ;
+; |protocol_tx|Tx_Data[7]                   ; |protocol_tx|Tx_Data[7]                   ; padio            ;
+; |protocol_tx|clk50                        ; |protocol_tx|clk50~corein                 ; combout          ;
+; |protocol_tx|tx_empty                     ; |protocol_tx|tx_empty~corein              ; combout          ;
+; |protocol_tx|Send_Rdy                     ; |protocol_tx|Send_Rdy~corein              ; combout          ;
+; |protocol_tx|Send_Dt                      ; |protocol_tx|Send_Dt~corein               ; combout          ;
+; |protocol_tx|Figure[0]                    ; |protocol_tx|Figure[0]~corein             ; combout          ;
+; |protocol_tx|Figure[1]                    ; |protocol_tx|Figure[1]~corein             ; combout          ;
+; |protocol_tx|Pos_X[2]                     ; |protocol_tx|Pos_X[2]~corein              ; combout          ;
+; |protocol_tx|Figure[2]                    ; |protocol_tx|Figure[2]~corein             ; combout          ;
+; |protocol_tx|Pos_Y[2]                     ; |protocol_tx|Pos_Y[2]~corein              ; combout          ;
+; |protocol_tx|clk50~clkctrl                ; |protocol_tx|clk50~clkctrl                ; outclk           ;
+; |protocol_tx|state.st_to_send_type~feeder ; |protocol_tx|state.st_to_send_type~feeder ; combout          ;
+; |protocol_tx|Tx_Data[0]~reg0feeder        ; |protocol_tx|Tx_Data[0]~reg0feeder        ; combout          ;
+; |protocol_tx|Tx_Data[1]~reg0feeder        ; |protocol_tx|Tx_Data[1]~reg0feeder        ; combout          ;
+; |protocol_tx|i_Figure[0]~feeder           ; |protocol_tx|i_Figure[0]~feeder           ; combout          ;
+; |protocol_tx|i_Figure[1]~feeder           ; |protocol_tx|i_Figure[1]~feeder           ; combout          ;
++-------------------------------------------+-------------------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 1 during simulation.
-+------------------------------------------------------------------------------+
-; Missing 1-Value Coverage                                                     ;
-+-----------------------------+-----------------------------+------------------+
-; Node Name                   ; Output Port Name            ; Output Port Type ;
-+-----------------------------+-----------------------------+------------------+
-; |game|piece_To_Move[1]      ; |game|piece_To_Move[1]      ; regout           ;
-; |game|piece_To_Move[2]      ; |game|piece_To_Move[2]      ; regout           ;
-; |game|piece_To_Write[1]     ; |game|piece_To_Write[1]     ; regout           ;
-; |game|old_Y[1]              ; |game|old_Y[1]              ; regout           ;
-; |game|old_Y[0]              ; |game|old_Y[0]              ; regout           ;
-; |game|to_Move_Y[0]          ; |game|to_Move_Y[0]          ; regout           ;
-; |game|Equal6~1              ; |game|Equal6~1              ; combout          ;
-; |game|Equal8~2              ; |game|Equal8~2              ; combout          ;
-; |game|old_X[1]              ; |game|old_X[1]              ; regout           ;
-; |game|old_X[0]              ; |game|old_X[0]              ; regout           ;
-; |game|to_Move_X[0]          ; |game|to_Move_X[0]          ; regout           ;
-; |game|Equal7~2              ; |game|Equal7~2              ; combout          ;
-; |game|Equal5~1              ; |game|Equal5~1              ; combout          ;
-; |game|arriving_Cell[1]      ; |game|arriving_Cell[1]      ; regout           ;
-; |game|arriving_Cell[0]      ; |game|arriving_Cell[0]      ; regout           ;
-; |game|Equal13~0             ; |game|Equal13~0             ; combout          ;
-; |game|Selector12~0          ; |game|Selector12~0          ; combout          ;
-; |game|piece_To_Capture[0]   ; |game|piece_To_Capture[0]   ; regout           ;
-; |game|state~38              ; |game|state~38              ; combout          ;
-; |game|pos_To_Capture_X[0]~0 ; |game|pos_To_Capture_X[0]~0 ; combout          ;
-; |game|sel_X[0]              ; |game|sel_X[0]              ; regout           ;
-; |game|s_Ram_X~1             ; |game|s_Ram_X~1             ; combout          ;
-; |game|pos_To_Capture_X[0]   ; |game|pos_To_Capture_X[0]   ; regout           ;
-; |game|s_Ram_X~4             ; |game|s_Ram_X~4             ; combout          ;
-; |game|pos_To_Capture_X[2]   ; |game|pos_To_Capture_X[2]   ; regout           ;
-; |game|sel_Y[0]              ; |game|sel_Y[0]              ; regout           ;
-; |game|s_Ram_y~0             ; |game|s_Ram_y~0             ; combout          ;
-; |game|pos_To_Capture_Y[0]   ; |game|pos_To_Capture_Y[0]   ; regout           ;
-; |game|s_Ram_y~1             ; |game|s_Ram_y~1             ; combout          ;
-; |game|pos_To_Capture_Y[2]   ; |game|pos_To_Capture_Y[2]   ; regout           ;
-; |game|piece_To_Write~2      ; |game|piece_To_Write~2      ; combout          ;
-; |game|SEND_RDY              ; |game|SEND_RDY              ; padio            ;
-; |game|SEND_GR               ; |game|SEND_GR               ; padio            ;
-; |game|SEND_EQ               ; |game|SEND_EQ               ; padio            ;
-; |game|SEND_SM               ; |game|SEND_SM               ; padio            ;
-; |game|frame_received        ; |game|frame_received        ; padio            ;
-; |game|enterCode             ; |game|enterCode             ; padio            ;
-; |game|Write_Piece[1]        ; |game|Write_Piece[1]        ; padio            ;
-; |game|Pos_X[0]              ; |game|Pos_X[0]~corein       ; combout          ;
-; |game|Pos_Y[0]              ; |game|Pos_Y[0]~corein       ; combout          ;
-; |game|to_Move_X[0]~feeder   ; |game|to_Move_X[0]~feeder   ; combout          ;
-; |game|to_Move_Y[0]~feeder   ; |game|to_Move_Y[0]~feeder   ; combout          ;
-; |game|sel_X[0]~feeder       ; |game|sel_X[0]~feeder       ; combout          ;
-+-----------------------------+-----------------------------+------------------+
++------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |protocol_tx|Tx_Data[6]~reg0   ; |protocol_tx|Tx_Data[6]~reg0   ; regout           ;
+; |protocol_tx|i_Pos_Y[0]        ; |protocol_tx|i_Pos_Y[0]        ; regout           ;
+; |protocol_tx|i_Pos_X[0]        ; |protocol_tx|i_Pos_X[0]        ; regout           ;
+; |protocol_tx|Selector24~0      ; |protocol_tx|Selector24~0      ; combout          ;
+; |protocol_tx|i_Pos_Y[1]        ; |protocol_tx|i_Pos_Y[1]        ; regout           ;
+; |protocol_tx|i_Pos_X[1]        ; |protocol_tx|i_Pos_X[1]        ; regout           ;
+; |protocol_tx|Selector23~0      ; |protocol_tx|Selector23~0      ; combout          ;
+; |protocol_tx|Selector18~0      ; |protocol_tx|Selector18~0      ; combout          ;
+; |protocol_tx|Send              ; |protocol_tx|Send              ; padio            ;
+; |protocol_tx|Tx_Data[4]        ; |protocol_tx|Tx_Data[4]        ; padio            ;
+; |protocol_tx|Tx_Data[6]        ; |protocol_tx|Tx_Data[6]        ; padio            ;
+; |protocol_tx|Pos_Y[0]          ; |protocol_tx|Pos_Y[0]~corein   ; combout          ;
+; |protocol_tx|Pos_X[0]          ; |protocol_tx|Pos_X[0]~corein   ; combout          ;
+; |protocol_tx|Pos_Y[1]          ; |protocol_tx|Pos_Y[1]~corein   ; combout          ;
+; |protocol_tx|Pos_X[1]          ; |protocol_tx|Pos_X[1]~corein   ; combout          ;
+; |protocol_tx|i_Pos_Y[0]~feeder ; |protocol_tx|i_Pos_Y[0]~feeder ; combout          ;
+; |protocol_tx|i_Pos_Y[1]~feeder ; |protocol_tx|i_Pos_Y[1]~feeder ; combout          ;
++--------------------------------+--------------------------------+------------------+
 
 
 The following table displays output ports that do not toggle to 0 during simulation.
-+------------------------------------------------------------------------------+
-; Missing 0-Value Coverage                                                     ;
-+-----------------------------+-----------------------------+------------------+
-; Node Name                   ; Output Port Name            ; Output Port Type ;
-+-----------------------------+-----------------------------+------------------+
-; |game|piece_To_Move[1]      ; |game|piece_To_Move[1]      ; regout           ;
-; |game|piece_To_Move[2]      ; |game|piece_To_Move[2]      ; regout           ;
-; |game|s_whites              ; |game|s_whites              ; regout           ;
-; |game|piece_To_Write[1]     ; |game|piece_To_Write[1]     ; regout           ;
-; |game|to_Move_Y[2]          ; |game|to_Move_Y[2]          ; regout           ;
-; |game|old_Y[1]              ; |game|old_Y[1]              ; regout           ;
-; |game|old_Y[0]              ; |game|old_Y[0]              ; regout           ;
-; |game|to_Move_Y[0]          ; |game|to_Move_Y[0]          ; regout           ;
-; |game|to_Move_Y[1]          ; |game|to_Move_Y[1]          ; regout           ;
-; |game|Equal8~0              ; |game|Equal8~0              ; combout          ;
-; |game|Equal6~1              ; |game|Equal6~1              ; combout          ;
-; |game|Equal8~2              ; |game|Equal8~2              ; combout          ;
-; |game|to_Move_X[2]          ; |game|to_Move_X[2]          ; regout           ;
-; |game|old_X[1]              ; |game|old_X[1]              ; regout           ;
-; |game|old_X[0]              ; |game|old_X[0]              ; regout           ;
-; |game|to_Move_X[1]          ; |game|to_Move_X[1]          ; regout           ;
-; |game|Equal7~1              ; |game|Equal7~1              ; combout          ;
-; |game|to_Move_X[0]          ; |game|to_Move_X[0]          ; regout           ;
-; |game|Equal7~2              ; |game|Equal7~2              ; combout          ;
-; |game|Equal5~1              ; |game|Equal5~1              ; combout          ;
-; |game|arriving_Cell[1]      ; |game|arriving_Cell[1]      ; regout           ;
-; |game|arriving_Cell[0]      ; |game|arriving_Cell[0]      ; regout           ;
-; |game|arriving_Cell[2]      ; |game|arriving_Cell[2]      ; regout           ;
-; |game|Selector12~0          ; |game|Selector12~0          ; combout          ;
-; |game|piece_To_Capture[0]   ; |game|piece_To_Capture[0]   ; regout           ;
-; |game|piece_To_Capture[2]   ; |game|piece_To_Capture[2]   ; regout           ;
-; |game|piece_To_Capture[1]   ; |game|piece_To_Capture[1]   ; regout           ;
-; |game|pos_To_Capture_X[0]~0 ; |game|pos_To_Capture_X[0]~0 ; combout          ;
-; |game|Equal12~0             ; |game|Equal12~0             ; combout          ;
-; |game|Equal11~0             ; |game|Equal11~0             ; combout          ;
-; |game|s_whites~0            ; |game|s_whites~0            ; combout          ;
-; |game|sel_X[0]              ; |game|sel_X[0]              ; regout           ;
-; |game|s_Ram_X~1             ; |game|s_Ram_X~1             ; combout          ;
-; |game|pos_To_Capture_X[0]   ; |game|pos_To_Capture_X[0]   ; regout           ;
-; |game|s_Ram_X~4             ; |game|s_Ram_X~4             ; combout          ;
-; |game|pos_To_Capture_X[1]   ; |game|pos_To_Capture_X[1]   ; regout           ;
-; |game|pos_To_Capture_X[2]   ; |game|pos_To_Capture_X[2]   ; regout           ;
-; |game|sel_Y[0]              ; |game|sel_Y[0]              ; regout           ;
-; |game|s_Ram_y~0             ; |game|s_Ram_y~0             ; combout          ;
-; |game|pos_To_Capture_Y[0]   ; |game|pos_To_Capture_Y[0]   ; regout           ;
-; |game|s_Ram_y~1             ; |game|s_Ram_y~1             ; combout          ;
-; |game|pos_To_Capture_Y[1]   ; |game|pos_To_Capture_Y[1]   ; regout           ;
-; |game|pos_To_Capture_Y[2]   ; |game|pos_To_Capture_Y[2]   ; regout           ;
-; |game|piece_To_Write~2      ; |game|piece_To_Write~2      ; combout          ;
-; |game|state.st_Wait_Game    ; |game|state.st_Wait_Game    ; regout           ;
-; |game|state.st_Wait_Game~0  ; |game|state.st_Wait_Game~0  ; combout          ;
-; |game|SEND_RDY              ; |game|SEND_RDY              ; padio            ;
-; |game|SEND_GR               ; |game|SEND_GR               ; padio            ;
-; |game|SEND_EQ               ; |game|SEND_EQ               ; padio            ;
-; |game|SEND_SM               ; |game|SEND_SM               ; padio            ;
-; |game|frame_received        ; |game|frame_received        ; padio            ;
-; |game|enterCode             ; |game|enterCode             ; padio            ;
-; |game|X_To_Sent[2]          ; |game|X_To_Sent[2]          ; padio            ;
-; |game|Y_To_Sent[2]          ; |game|Y_To_Sent[2]          ; padio            ;
-; |game|nrst                  ; |game|nrst~corein           ; combout          ;
-; |game|Pos_X[0]              ; |game|Pos_X[0]~corein       ; combout          ;
-; |game|Pos_Y[0]              ; |game|Pos_Y[0]~corein       ; combout          ;
-; |game|nrst~clkctrl          ; |game|nrst~clkctrl          ; outclk           ;
-; |game|to_Move_X[0]~feeder   ; |game|to_Move_X[0]~feeder   ; combout          ;
-; |game|to_Move_Y[0]~feeder   ; |game|to_Move_Y[0]~feeder   ; combout          ;
-; |game|sel_X[0]~feeder       ; |game|sel_X[0]~feeder       ; combout          ;
-+-----------------------------+-----------------------------+------------------+
++------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                           ;
++--------------------------------+--------------------------------+------------------+
+; Node Name                      ; Output Port Name               ; Output Port Type ;
++--------------------------------+--------------------------------+------------------+
+; |protocol_tx|Tx_Data[2]~reg0   ; |protocol_tx|Tx_Data[2]~reg0   ; regout           ;
+; |protocol_tx|Tx_Data[6]~reg0   ; |protocol_tx|Tx_Data[6]~reg0   ; regout           ;
+; |protocol_tx|i_Pos_Y[0]        ; |protocol_tx|i_Pos_Y[0]        ; regout           ;
+; |protocol_tx|i_Pos_X[0]        ; |protocol_tx|i_Pos_X[0]        ; regout           ;
+; |protocol_tx|Selector24~0      ; |protocol_tx|Selector24~0      ; combout          ;
+; |protocol_tx|i_Figure[0]       ; |protocol_tx|i_Figure[0]       ; regout           ;
+; |protocol_tx|i_Pos_Y[1]        ; |protocol_tx|i_Pos_Y[1]        ; regout           ;
+; |protocol_tx|i_Pos_X[1]        ; |protocol_tx|i_Pos_X[1]        ; regout           ;
+; |protocol_tx|Selector23~0      ; |protocol_tx|Selector23~0      ; combout          ;
+; |protocol_tx|i_Figure[1]       ; |protocol_tx|i_Figure[1]       ; regout           ;
+; |protocol_tx|i_Pos_X[2]        ; |protocol_tx|i_Pos_X[2]        ; regout           ;
+; |protocol_tx|frame_type[3]     ; |protocol_tx|frame_type[3]     ; regout           ;
+; |protocol_tx|i_Figure[2]       ; |protocol_tx|i_Figure[2]       ; regout           ;
+; |protocol_tx|i_Pos_Y[2]        ; |protocol_tx|i_Pos_Y[2]        ; regout           ;
+; |protocol_tx|Selector18~0      ; |protocol_tx|Selector18~0      ; combout          ;
+; |protocol_tx|Selector15~0      ; |protocol_tx|Selector15~0      ; combout          ;
+; |protocol_tx|Send              ; |protocol_tx|Send              ; padio            ;
+; |protocol_tx|Tx_Data[2]        ; |protocol_tx|Tx_Data[2]        ; padio            ;
+; |protocol_tx|Tx_Data[4]        ; |protocol_tx|Tx_Data[4]        ; padio            ;
+; |protocol_tx|Tx_Data[6]        ; |protocol_tx|Tx_Data[6]        ; padio            ;
+; |protocol_tx|nrst              ; |protocol_tx|nrst~corein       ; combout          ;
+; |protocol_tx|Pos_Y[0]          ; |protocol_tx|Pos_Y[0]~corein   ; combout          ;
+; |protocol_tx|Pos_X[0]          ; |protocol_tx|Pos_X[0]~corein   ; combout          ;
+; |protocol_tx|Pos_Y[1]          ; |protocol_tx|Pos_Y[1]~corein   ; combout          ;
+; |protocol_tx|Pos_X[1]          ; |protocol_tx|Pos_X[1]~corein   ; combout          ;
+; |protocol_tx|nrst~clkctrl      ; |protocol_tx|nrst~clkctrl      ; outclk           ;
+; |protocol_tx|i_Pos_Y[0]~feeder ; |protocol_tx|i_Pos_Y[0]~feeder ; combout          ;
+; |protocol_tx|i_Pos_Y[1]~feeder ; |protocol_tx|i_Pos_Y[1]~feeder ; combout          ;
++--------------------------------+--------------------------------+------------------+
 
 
 +---------------------+
@@ -418,34 +266,23 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 13:06:31 2023
+    Info: Processing started: Fri Dec 22 11:48:14 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Design1 -c Design1
-Info: Using vector source file "C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/game.vwf"
+Info: Using vector source file "C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/protocol_tx.vwf"
 Info: Overwriting simulation input file with simulation results
-    Info: A backup of game.vwf called Design1.sim_ori.vwf has been created in the db folder
+    Info: A backup of protocol_tx.vwf called Design1.sim_ori.vwf has been created in the db folder
 Info: Inverted registers were found during simulation
-    Info: Register: |game|s_Ram_X[0]
-    Info: Register: |game|s_Ram_X[1]
-    Info: Register: |game|s_Ram_X[2]
-    Info: Register: |game|s_Ram_y[0]
-    Info: Register: |game|s_Ram_y[1]
-    Info: Register: |game|s_Ram_y[2]
-    Info: Register: |game|pos_To_Capture_X[0]
-    Info: Register: |game|pos_To_Capture_X[1]
-    Info: Register: |game|pos_To_Capture_X[2]
-    Info: Register: |game|pos_To_Capture_Y[0]
-    Info: Register: |game|pos_To_Capture_Y[1]
-    Info: Register: |game|pos_To_Capture_Y[2]
+    Info: Register: |protocol_tx|Ready_To_Tx~reg0
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      72.53 %
-Info: Number of transitions in simulation is 2116
-Info: Vector file game.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Simulation coverage is      73.08 %
+Info: Number of transitions in simulation is 573
+Info: Vector file protocol_tx.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 159 megabytes
-    Info: Processing ended: Thu Dec 21 13:06:31 2023
-    Info: Elapsed time: 00:00:00
+    Info: Peak virtual memory: 158 megabytes
+    Info: Processing ended: Fri Dec 22 11:48:15 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

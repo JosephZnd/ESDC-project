@@ -10,7 +10,7 @@
 
 <CENTER>
 <H1>Classic Timing Analyzer report for Design1</H1>
-<H3>Thu Dec 21 12:56:20 2023<BR>
+<H3>Fri Dec 22 11:43:17 2023<BR>
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition</H3>
 </CENTER>
 
@@ -25,11 +25,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition</H3>
 <LI><A HREF="#4">Clock Settings Summary</A></LI>
 <LI><A HREF="#5">Parallel Compilation</A></LI>
 <LI><A HREF="#6">Clock Setup: 'clk50'</A></LI>
-<LI><A HREF="#7">Clock Hold: 'clk50'</A></LI>
-<LI><A HREF="#8">tsu</A></LI>
-<LI><A HREF="#9">tco</A></LI>
-<LI><A HREF="#10">th</A></LI>
-<LI><A HREF="#11">Timing Analyzer Messages</A></LI>
+<LI><A HREF="#7">tsu</A></LI>
+<LI><A HREF="#8">tco</A></LI>
+<LI><A HREF="#9">th</A></LI>
+<LI><A HREF="#10">Timing Analyzer Messages</A></LI>
 </OL>
 
 <P><A NAME="1"><HR></A></P>
@@ -71,9 +70,9 @@ applicable agreement for further details.
 <TD ALIGN="LEFT">Worst-case tsu</TD>
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.652 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">5.182 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">--</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">0</TD>
@@ -82,9 +81,9 @@ applicable agreement for further details.
 <TD ALIGN="LEFT">Worst-case tco</TD>
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">12.224 ns</TD>
-<TD ALIGN="LEFT">X_To_Sent[1]$latch</TD>
-<TD ALIGN="LEFT">X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">8.194 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">--</TD>
 <TD ALIGN="LEFT">0</TD>
@@ -93,9 +92,9 @@ applicable agreement for further details.
 <TD ALIGN="LEFT">Worst-case th</TD>
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.500 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_whites</TD>
+<TD ALIGN="LEFT">0.290 ns</TD>
+<TD ALIGN="LEFT">Send_Rdy</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
 <TD ALIGN="LEFT">--</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">0</TD>
@@ -104,25 +103,14 @@ applicable agreement for further details.
 <TD ALIGN="LEFT">Clock Setup: 'clk50'</TD>
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">332.56 MHz ( period = 3.007 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">0</TD>
 </TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Clock Hold: 'clk50'</TD>
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">piece_To_Write[0]</TD>
-<TD ALIGN="LEFT">Write_Piece[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">15</TD>
-</TR>
-<TR valign="middle" style="color: RED">
+<TR valign="middle">
 <TD ALIGN="LEFT">Total number of failed paths</TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
@@ -131,7 +119,7 @@ applicable agreement for further details.
 <TD ALIGN="LEFT">&nbsp;</TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
 <TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">15</TD>
+<TD ALIGN="LEFT">0</TD>
 </TR>
 </TABLE>
 <P><A NAME="3"><HR></A></P>
@@ -384,1846 +372,361 @@ Parallel compilation was disabled, but you have multiple processors available. E
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">332.56 MHz ( period = 3.007 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.793 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">332.56 MHz ( period = 3.007 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.793 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">342.58 MHz ( period = 2.919 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.705 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">347.46 MHz ( period = 2.878 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.664 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">353.36 MHz ( period = 2.830 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.616 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">250.82 MHz ( period = 3.987 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">353.36 MHz ( period = 2.830 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.772 ns</TD>
+<TD ALIGN="LEFT">2.616 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">251.95 MHz ( period = 3.969 ns )</TD>
-<TD ALIGN="LEFT">state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">358.17 MHz ( period = 2.792 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.062 ns</TD>
+<TD ALIGN="LEFT">2.578 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">358.17 MHz ( period = 2.792 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.578 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">358.29 MHz ( period = 2.791 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.577 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">358.29 MHz ( period = 2.791 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.577 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">360.49 MHz ( period = 2.774 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.560 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">360.49 MHz ( period = 2.774 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.560 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">257.73 MHz ( period = 3.880 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">369.96 MHz ( period = 2.703 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.667 ns</TD>
+<TD ALIGN="LEFT">2.489 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">371.06 MHz ( period = 2.695 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.481 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">371.06 MHz ( period = 2.695 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.481 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">372.72 MHz ( period = 2.683 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.469 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">372.72 MHz ( period = 2.683 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.469 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">375.66 MHz ( period = 2.662 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.448 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">260.62 MHz ( period = 3.837 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">377.79 MHz ( period = 2.647 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.622 ns</TD>
+<TD ALIGN="LEFT">2.433 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">383.73 MHz ( period = 2.606 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.392 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">391.39 MHz ( period = 2.555 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.341 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">392.00 MHz ( period = 2.551 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.337 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">392.00 MHz ( period = 2.551 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.337 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">395.10 MHz ( period = 2.531 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.317 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">265.82 MHz ( period = 3.762 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">398.25 MHz ( period = 2.511 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.549 ns</TD>
+<TD ALIGN="LEFT">2.297 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">398.25 MHz ( period = 2.511 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.297 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">402.09 MHz ( period = 2.487 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.273 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">407.17 MHz ( period = 2.456 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.242 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">407.17 MHz ( period = 2.456 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.242 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">407.50 MHz ( period = 2.454 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.240 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">266.95 MHz ( period = 3.746 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">410.00 MHz ( period = 2.439 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.533 ns</TD>
+<TD ALIGN="LEFT">2.225 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">410.34 MHz ( period = 2.437 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
+<TD ALIGN="LEFT">2.223 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">268.17 MHz ( period = 3.729 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.514 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">269.11 MHz ( period = 3.716 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.508 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">271.30 MHz ( period = 3.686 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.471 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">272.78 MHz ( period = 3.666 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.462 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">274.88 MHz ( period = 3.638 ns )</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.425 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.01 MHz ( period = 3.610 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.396 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">277.93 MHz ( period = 3.598 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.390 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">279.25 MHz ( period = 3.581 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.367 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">280.43 MHz ( period = 3.566 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.653 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">280.43 MHz ( period = 3.566 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.653 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">280.43 MHz ( period = 3.566 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.653 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">280.74 MHz ( period = 3.562 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.353 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">281.21 MHz ( period = 3.556 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.343 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">282.81 MHz ( period = 3.536 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.629 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">282.81 MHz ( period = 3.536 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.629 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">282.81 MHz ( period = 3.536 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.629 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">284.90 MHz ( period = 3.510 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.297 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">284.98 MHz ( period = 3.509 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.301 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">285.31 MHz ( period = 3.505 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.296 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">285.31 MHz ( period = 3.505 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.296 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">285.31 MHz ( period = 3.505 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.296 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">288.35 MHz ( period = 3.468 ns )</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.255 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">288.60 MHz ( period = 3.465 ns )</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.258 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">289.60 MHz ( period = 3.453 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.239 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.19 MHz ( period = 3.446 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.237 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.70 MHz ( period = 3.440 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.225 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">290.78 MHz ( period = 3.439 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.231 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">293.08 MHz ( period = 3.412 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.203 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.12 MHz ( period = 3.400 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.187 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.20 MHz ( period = 3.399 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.186 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">294.81 MHz ( period = 3.392 ns )</TD>
-<TD ALIGN="LEFT">s_whites</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.179 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">295.16 MHz ( period = 3.388 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.180 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">295.42 MHz ( period = 3.385 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.167 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">295.42 MHz ( period = 3.385 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.167 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">295.42 MHz ( period = 3.385 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.167 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">295.86 MHz ( period = 3.380 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.167 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">296.91 MHz ( period = 3.368 ns )</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.164 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">297.18 MHz ( period = 3.365 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.155 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">297.80 MHz ( period = 3.358 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.148 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">297.80 MHz ( period = 3.358 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.148 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">297.80 MHz ( period = 3.358 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.148 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">298.33 MHz ( period = 3.352 ns )</TD>
-<TD ALIGN="LEFT">state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.435 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">299.04 MHz ( period = 3.344 ns )</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.137 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">299.31 MHz ( period = 3.341 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.137 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">299.85 MHz ( period = 3.335 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.127 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.75 MHz ( period = 3.325 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.121 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.75 MHz ( period = 3.325 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.121 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.75 MHz ( period = 3.325 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.121 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.84 MHz ( period = 3.324 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.106 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.84 MHz ( period = 3.324 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.106 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">300.84 MHz ( period = 3.324 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.106 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">301.11 MHz ( period = 3.321 ns )</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.114 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">302.39 MHz ( period = 3.307 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.097 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">302.39 MHz ( period = 3.307 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.097 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">302.39 MHz ( period = 3.307 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.097 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">302.66 MHz ( period = 3.304 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.095 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">303.86 MHz ( period = 3.291 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.379 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">303.86 MHz ( period = 3.291 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.379 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">303.86 MHz ( period = 3.291 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.379 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">304.51 MHz ( period = 3.284 ns )</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.071 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">306.65 MHz ( period = 3.261 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.052 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.41 MHz ( period = 3.253 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.049 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.41 MHz ( period = 3.253 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.049 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.41 MHz ( period = 3.253 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.049 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.60 MHz ( period = 3.251 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.036 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.60 MHz ( period = 3.251 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.036 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">307.60 MHz ( period = 3.251 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.036 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">308.07 MHz ( period = 3.246 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.032 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">308.83 MHz ( period = 3.238 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.019 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">308.83 MHz ( period = 3.238 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.019 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">308.83 MHz ( period = 3.238 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.019 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">309.02 MHz ( period = 3.236 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.018 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">309.02 MHz ( period = 3.236 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.018 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">309.02 MHz ( period = 3.236 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.018 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">309.12 MHz ( period = 3.235 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.027 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.27 MHz ( period = 3.223 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.006 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.85 MHz ( period = 3.217 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.007 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.85 MHz ( period = 3.217 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.007 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.85 MHz ( period = 3.217 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.007 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.85 MHz ( period = 3.217 ns )</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.004 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">310.95 MHz ( period = 3.216 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.013 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">311.04 MHz ( period = 3.215 ns )</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.005 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">311.33 MHz ( period = 3.212 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.003 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">312.01 MHz ( period = 3.205 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.992 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">312.01 MHz ( period = 3.205 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.992 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">312.01 MHz ( period = 3.205 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.992 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">313.68 MHz ( period = 3.188 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.984 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">313.68 MHz ( period = 3.188 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.984 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">313.68 MHz ( period = 3.188 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.984 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">313.97 MHz ( period = 3.185 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.977 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">314.76 MHz ( period = 3.177 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.958 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">314.76 MHz ( period = 3.177 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.958 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">314.76 MHz ( period = 3.177 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.958 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">315.66 MHz ( period = 3.168 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.960 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">315.96 MHz ( period = 3.165 ns )</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.950 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">315.96 MHz ( period = 3.165 ns )</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.950 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">315.96 MHz ( period = 3.165 ns )</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.950 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">317.06 MHz ( period = 3.154 ns )</TD>
-<TD ALIGN="LEFT">state.st_W_Rdy</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.941 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">317.16 MHz ( period = 3.153 ns )</TD>
-<TD ALIGN="LEFT">sel_X[0]</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.946 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">317.66 MHz ( period = 3.148 ns )</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.941 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">318.07 MHz ( period = 3.144 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.931 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">318.07 MHz ( period = 3.144 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.931 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">318.07 MHz ( period = 3.144 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.931 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">318.88 MHz ( period = 3.136 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.913 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">319.18 MHz ( period = 3.133 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.916 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">319.49 MHz ( period = 3.130 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.913 ns</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">320.20 MHz ( period = 3.123 ns )</TD>
-<TD ALIGN="LEFT">state.st_Read_Ram</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">411.35 MHz ( period = 2.431 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
@@ -2232,535 +735,1062 @@ Parallel compilation was disabled, but you have multiple processors available. E
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">321.13 MHz ( period = 3.114 ns )</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">411.86 MHz ( period = 2.428 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.901 ns</TD>
+<TD ALIGN="LEFT">2.214 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">321.85 MHz ( period = 3.107 ns )</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
+<TD ALIGN="LEFT">411.86 MHz ( period = 2.428 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.897 ns</TD>
+<TD ALIGN="LEFT">2.214 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">321.96 MHz ( period = 3.106 ns )</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">411.86 MHz ( period = 2.428 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.894 ns</TD>
+<TD ALIGN="LEFT">2.214 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">322.68 MHz ( period = 3.099 ns )</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">412.71 MHz ( period = 2.423 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.896 ns</TD>
+<TD ALIGN="LEFT">2.209 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.31 MHz ( period = 3.093 ns )</TD>
-<TD ALIGN="LEFT">s_whites</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">412.88 MHz ( period = 2.422 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.879 ns</TD>
+<TD ALIGN="LEFT">2.208 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.31 MHz ( period = 3.093 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">418.41 MHz ( period = 2.390 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.885 ns</TD>
+<TD ALIGN="LEFT">2.176 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.62 MHz ( period = 3.090 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
+<TD ALIGN="LEFT">419.82 MHz ( period = 2.382 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.867 ns</TD>
+<TD ALIGN="LEFT">2.168 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.73 MHz ( period = 3.089 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.870 ns</TD>
+<TD ALIGN="LEFT">2.159 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.73 MHz ( period = 3.089 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.870 ns</TD>
+<TD ALIGN="LEFT">2.159 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">323.73 MHz ( period = 3.089 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.870 ns</TD>
+<TD ALIGN="LEFT">2.130 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">325.52 MHz ( period = 3.072 ns )</TD>
-<TD ALIGN="LEFT">state.st_Invalid_Move</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.858 ns</TD>
+<TD ALIGN="LEFT">2.103 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">326.37 MHz ( period = 3.064 ns )</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">state.st_Capture</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.854 ns</TD>
+<TD ALIGN="LEFT">2.101 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">326.69 MHz ( period = 3.061 ns )</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.851 ns</TD>
+<TD ALIGN="LEFT">2.089 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">326.80 MHz ( period = 3.060 ns )</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.848 ns</TD>
+<TD ALIGN="LEFT">2.076 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">327.23 MHz ( period = 3.056 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.843 ns</TD>
+<TD ALIGN="LEFT">2.071 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">327.23 MHz ( period = 3.056 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.843 ns</TD>
+<TD ALIGN="LEFT">2.062 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">327.23 MHz ( period = 3.056 ns )</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.843 ns</TD>
+<TD ALIGN="LEFT">2.046 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.52 MHz ( period = 3.044 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.830 ns</TD>
+<TD ALIGN="LEFT">2.045 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.52 MHz ( period = 3.044 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.830 ns</TD>
+<TD ALIGN="LEFT">2.030 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.52 MHz ( period = 3.044 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.830 ns</TD>
+<TD ALIGN="LEFT">2.020 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.52 MHz ( period = 3.044 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.830 ns</TD>
+<TD ALIGN="LEFT">2.009 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.52 MHz ( period = 3.044 ns )</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.830 ns</TD>
+<TD ALIGN="LEFT">1.998 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">328.95 MHz ( period = 3.040 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.823 ns</TD>
+<TD ALIGN="LEFT">1.991 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">329.38 MHz ( period = 3.036 ns )</TD>
-<TD ALIGN="LEFT">state.st_Wait_Turn</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.822 ns</TD>
+<TD ALIGN="LEFT">1.991 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">329.49 MHz ( period = 3.035 ns )</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.828 ns</TD>
+<TD ALIGN="LEFT">1.991 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.988 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.987 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.974 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.973 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.973 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.03 MHz ( period = 3.030 ns )</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.811 ns</TD>
+<TD ALIGN="LEFT">1.951 ns</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">330.47 MHz ( period = 3.026 ns )</TD>
-<TD ALIGN="LEFT">state.st_Move_Piece</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">clk50</TD>
 <TD ALIGN="LEFT">None</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.813 ns</TD>
+<TD ALIGN="LEFT">1.951 ns</TD>
 </TR>
 <TR valign="middle">
-<TD ALIGN="LEFT">Timing analysis restricted to 200 rows.</TD>
-<TD ALIGN="LEFT">To change the limit use Settings (Assignments menu)</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
-<TD ALIGN="LEFT">&nbsp;</TD>
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.947 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.940 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.937 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.936 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.908 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.896 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.892 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.889 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.878 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.807 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.804 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.799 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.758 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.745 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.745 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.714 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.707 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.705 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.679 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.595 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.551 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.551 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.551 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.551 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.514 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.499 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.493 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.435 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.385 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.382 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.340 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.280 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.227 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.107 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.081 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.036 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.007 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.000 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.999 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.862 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.860 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.851 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_rdy</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.844 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.839 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.823 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.804 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.796 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.795 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.788 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.768 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
+<TD ALIGN="LEFT">state.st_to_send_type</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.767 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.672 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">Restricted to 420.17 MHz ( period = 2.380 ns )</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">clk50</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.407 ns</TD>
 </TR>
 </TABLE>
 <P><A NAME="7"><HR></A></P>
-<TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
-<TD><H2>Clock Hold: 'clk50'</H2></TD>
-<TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
-<TABLE BORDER="1" cellspacing="1" cellpadding="2">
-<TR valign="middle" bgcolor="#C0C0C0">
-<TH>Minimum Slack</TH>
-<TH>From</TH>
-<TH>To</TH>
-<TH>From Clock</TH>
-<TH>To Clock</TH>
-<TH>Required Hold Relationship</TH>
-<TH>Required Shortest P2P Time</TH>
-<TH>Actual Shortest P2P Time</TH>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">piece_To_Write[0]</TD>
-<TD ALIGN="LEFT">Write_Piece[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.584 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
-<TD ALIGN="LEFT">Ram_Y[1]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.711 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
-<TD ALIGN="LEFT">Ram_X[1]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.712 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
-<TD ALIGN="LEFT">Ram_Y[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.747 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
-<TD ALIGN="LEFT">Ram_X[2]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.746 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
-<TD ALIGN="LEFT">Ram_X[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.750 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
-<TD ALIGN="LEFT">Y_To_Sent[1]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.735 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
-<TD ALIGN="LEFT">X_To_Sent[1]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.738 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">piece_To_Write[1]</TD>
-<TD ALIGN="LEFT">Write_Piece[1]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.724 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">piece_To_Write[2]</TD>
-<TD ALIGN="LEFT">Write_Piece[2]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.735 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
-<TD ALIGN="LEFT">X_To_Sent[2]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.771 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
-<TD ALIGN="LEFT">Y_To_Sent[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.773 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
-<TD ALIGN="LEFT">X_To_Sent[0]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.774 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">Ram_Y[2]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.986 ns</TD>
-</TR>
-<TR valign="middle" style="color: RED">
-<TD ALIGN="LEFT">Not operational: Clock Skew > Data Delay</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">Y_To_Sent[2]$latch</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">clk50</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.987 ns</TD>
-</TR>
-</TABLE>
-<P><A NAME="8"><HR></A></P>
 <TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
 <TD><H2>tsu</H2></TD>
 <TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
@@ -2776,717 +1806,437 @@ Parallel compilation was disabled, but you have multiple processors available. E
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.652 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">5.182 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.465 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">5.182 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.298 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">5.182 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.179 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">4.935 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">6.111 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">4.935 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.825 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">4.742 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.823 ns</TD>
-<TD ALIGN="LEFT">New_Game</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">4.742 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.691 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">4.742 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.469 ns</TD>
-<TD ALIGN="LEFT">New_Game</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">4.742 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
+<TD ALIGN="LEFT">4.074 ns</TD>
+<TD ALIGN="LEFT">Figure[0]</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
+<TD ALIGN="LEFT">3.910 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">3.807 ns</TD>
+<TD ALIGN="LEFT">Figure[2]</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
+<TD ALIGN="LEFT">3.776 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
+<TD ALIGN="LEFT">3.776 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.369 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">5.337 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.741 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.584 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_S_Rdy</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.302 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.302 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.214 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.162 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.124 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.047 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.040 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_Start_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.011 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_W_Rdy</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">4.001 ns</TD>
-<TD ALIGN="LEFT">Pos_Y[1]</TD>
-<TD ALIGN="LEFT">sel_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.995 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.943 ns</TD>
-<TD ALIGN="LEFT">Pos_Y[2]</TD>
-<TD ALIGN="LEFT">sel_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.937 ns</TD>
-<TD ALIGN="LEFT">Color</TD>
-<TD ALIGN="LEFT">s_whites</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.868 ns</TD>
+<TD ALIGN="LEFT">3.739 ns</TD>
 <TD ALIGN="LEFT">Pos_X[2]</TD>
-<TD ALIGN="LEFT">sel_X[2]</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.860 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Wait_Turn</TD>
+<TD ALIGN="LEFT">3.725 ns</TD>
+<TD ALIGN="LEFT">Pos_Y[1]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.819 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.816 ns</TD>
-<TD ALIGN="LEFT">Pos_X[1]</TD>
-<TD ALIGN="LEFT">sel_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.724 ns</TD>
-<TD ALIGN="LEFT">Pos_Y[0]</TD>
-<TD ALIGN="LEFT">sel_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.717 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.618 ns</TD>
+<TD ALIGN="LEFT">3.723 ns</TD>
 <TD ALIGN="LEFT">Pos_X[0]</TD>
-<TD ALIGN="LEFT">sel_X[0]</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.617 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">3.722 ns</TD>
+<TD ALIGN="LEFT">Pos_Y[2]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">3.576 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">3.695 ns</TD>
+<TD ALIGN="LEFT">Pos_X[1]</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
+<TD ALIGN="LEFT">3.694 ns</TD>
+<TD ALIGN="LEFT">Pos_Y[0]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">3.637 ns</TD>
+<TD ALIGN="LEFT">Figure[1]</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">1.816 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
+<TD ALIGN="LEFT">1.816 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">1.485 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
+<TD ALIGN="LEFT">1.485 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
+<TD ALIGN="LEFT">1.422 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.245 ns</TD>
+<TD ALIGN="LEFT">1.422 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.080 ns</TD>
+<TD ALIGN="LEFT">1.422 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.080 ns</TD>
+<TD ALIGN="LEFT">1.175 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.080 ns</TD>
+<TD ALIGN="LEFT">1.175 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.066 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
+<TD ALIGN="LEFT">1.126 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.066 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
+<TD ALIGN="LEFT">1.011 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.028 ns</TD>
+<TD ALIGN="LEFT">0.982 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.028 ns</TD>
+<TD ALIGN="LEFT">0.982 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">2.028 ns</TD>
+<TD ALIGN="LEFT">0.982 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.960 ns</TD>
+<TD ALIGN="LEFT">0.982 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[0]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.960 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[1]</TD>
+<TD ALIGN="LEFT">0.958 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.960 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[2]</TD>
+<TD ALIGN="LEFT">0.942 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
+<TD ALIGN="LEFT">0.630 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
+<TD ALIGN="LEFT">0.630 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
+<TD ALIGN="LEFT">0.630 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
+<TD ALIGN="LEFT">0.630 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
+<TD ALIGN="LEFT">0.384 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.907 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
+<TD ALIGN="LEFT">0.022 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.774 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
+<TD ALIGN="LEFT">0.021 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.774 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">0.020 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.774 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
+<TD ALIGN="LEFT">0.020 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.754 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
+<TD ALIGN="LEFT">0.017 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.735 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
+<TD ALIGN="LEFT">0.015 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.735 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
+<TD ALIGN="LEFT">0.014 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.735 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
+<TD ALIGN="LEFT">0.013 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.661 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">0.012 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.661 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">-0.057 ns</TD>
+<TD ALIGN="LEFT">Send_Rdy</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.661 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.536 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.536 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.536 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.332 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.332 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">1.332 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.908 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">0.730 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_whites</TD>
+<TD ALIGN="LEFT">-0.060 ns</TD>
+<TD ALIGN="LEFT">Send_Rdy</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 </TABLE>
-<P><A NAME="9"><HR></A></P>
+<P><A NAME="8"><HR></A></P>
 <TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
 <TD><H2>tco</H2></TD>
 <TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
@@ -3502,157 +2252,77 @@ Parallel compilation was disabled, but you have multiple processors available. E
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">12.224 ns</TD>
-<TD ALIGN="LEFT">X_To_Sent[1]$latch</TD>
-<TD ALIGN="LEFT">X_To_Sent[1]</TD>
+<TD ALIGN="LEFT">8.194 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.904 ns</TD>
-<TD ALIGN="LEFT">Write_Piece[2]$latch</TD>
-<TD ALIGN="LEFT">Write_Piece[2]</TD>
+<TD ALIGN="LEFT">7.955 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[6]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.881 ns</TD>
-<TD ALIGN="LEFT">Write_Piece[1]$latch</TD>
-<TD ALIGN="LEFT">Write_Piece[1]</TD>
+<TD ALIGN="LEFT">7.955 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[4]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.664 ns</TD>
-<TD ALIGN="LEFT">X_To_Sent[2]$latch</TD>
-<TD ALIGN="LEFT">X_To_Sent[2]</TD>
+<TD ALIGN="LEFT">7.602 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[3]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.607 ns</TD>
-<TD ALIGN="LEFT">X_To_Sent[0]$latch</TD>
-<TD ALIGN="LEFT">X_To_Sent[0]</TD>
+<TD ALIGN="LEFT">7.581 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[7]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.587 ns</TD>
-<TD ALIGN="LEFT">Ram_X[1]$latch</TD>
-<TD ALIGN="LEFT">Ram_X[1]</TD>
+<TD ALIGN="LEFT">7.570 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[5]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.551 ns</TD>
-<TD ALIGN="LEFT">Ram_X[0]$latch</TD>
-<TD ALIGN="LEFT">Ram_X[0]</TD>
+<TD ALIGN="LEFT">7.524 ns</TD>
+<TD ALIGN="LEFT">Ready_To_Tx~reg0</TD>
+<TD ALIGN="LEFT">Ready_To_Tx</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.532 ns</TD>
-<TD ALIGN="LEFT">Y_To_Sent[1]$latch</TD>
-<TD ALIGN="LEFT">Y_To_Sent[1]</TD>
+<TD ALIGN="LEFT">7.324 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.478 ns</TD>
-<TD ALIGN="LEFT">Write_Piece[0]$latch</TD>
-<TD ALIGN="LEFT">Write_Piece[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.366 ns</TD>
-<TD ALIGN="LEFT">Ram_Y[0]$latch</TD>
-<TD ALIGN="LEFT">Ram_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.352 ns</TD>
-<TD ALIGN="LEFT">Ram_Y[1]$latch</TD>
-<TD ALIGN="LEFT">Ram_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.331 ns</TD>
-<TD ALIGN="LEFT">Ram_X[2]$latch</TD>
-<TD ALIGN="LEFT">Ram_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.324 ns</TD>
-<TD ALIGN="LEFT">Y_To_Sent[0]$latch</TD>
-<TD ALIGN="LEFT">Y_To_Sent[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.261 ns</TD>
-<TD ALIGN="LEFT">Ram_Y[2]$latch</TD>
-<TD ALIGN="LEFT">Ram_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">11.210 ns</TD>
-<TD ALIGN="LEFT">Y_To_Sent[2]$latch</TD>
-<TD ALIGN="LEFT">Y_To_Sent[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">8.148 ns</TD>
-<TD ALIGN="LEFT">state.st_Write_Ram</TD>
-<TD ALIGN="LEFT">SEND_DT</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">7.695 ns</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">led_turn</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">7.675 ns</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">turn_read</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">7.478 ns</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
-<TD ALIGN="LEFT">freeze_kb</TD>
+<TD ALIGN="LEFT">7.267 ns</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">Tx_Data[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 </TABLE>
-<P><A NAME="10"><HR></A></P>
+<P><A NAME="9"><HR></A></P>
 <TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
 <TD><H2>th</H2></TD>
 <TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
@@ -3668,717 +2338,437 @@ Parallel compilation was disabled, but you have multiple processors available. E
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.500 ns</TD>
+<TD ALIGN="LEFT">0.290 ns</TD>
+<TD ALIGN="LEFT">Send_Rdy</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.287 ns</TD>
+<TD ALIGN="LEFT">Send_Rdy</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.218 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_x</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.217 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_y</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.216 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_finish_Tx</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.215 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_x</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.213 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_figure</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.210 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_figure</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.210 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_to_send_y</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.209 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_type</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">0.208 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">state.st_send_rdy</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-0.080 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-0.154 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_whites</TD>
+<TD ALIGN="LEFT">frame_type[3]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.400 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.400 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_Moved</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.400 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">while_Capturing</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.400 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[0]</TD>
+<TD ALIGN="LEFT">Tx_Data[7]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.464 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[3]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-0.472 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[2]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-0.712 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[6]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-0.752 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Selected</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.752 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[1]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.752 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_Y[2]</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.752 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[1]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.945 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[0]</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-0.678 ns</TD>
+<TD ALIGN="LEFT">-0.945 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">sel_X[2]</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.102 ns</TD>
+<TD ALIGN="LEFT">-1.078 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-1.078 ns</TD>
+<TD ALIGN="LEFT">tx_empty</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
+<TD ALIGN="LEFT">clk50</TD>
+</TR>
+<TR valign="middle">
+<TD ALIGN="LEFT">N/A</TD>
+<TD ALIGN="LEFT">None</TD>
+<TD ALIGN="LEFT">-1.192 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[0]</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.102 ns</TD>
+<TD ALIGN="LEFT">-1.192 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[1]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.102 ns</TD>
+<TD ALIGN="LEFT">-1.192 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_X[2]</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.306 ns</TD>
+<TD ALIGN="LEFT">-1.586 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[1]</TD>
+<TD ALIGN="LEFT">Tx_Data[0]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.306 ns</TD>
+<TD ALIGN="LEFT">-1.586 ns</TD>
 <TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[3]</TD>
+<TD ALIGN="LEFT">Tx_Data[1]~reg0</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.306 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">counter[2]</TD>
+<TD ALIGN="LEFT">-3.407 ns</TD>
+<TD ALIGN="LEFT">Figure[1]</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.431 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.431 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.431 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.505 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.505 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.505 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">old_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.524 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.544 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.544 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.544 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.677 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">pos_To_Capture_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.730 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.730 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.730 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Write[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.798 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.798 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.798 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.836 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.836 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.850 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_Y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.850 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-1.850 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">to_Move_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-2.015 ns</TD>
-<TD ALIGN="LEFT">nrst</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.346 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.387 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.388 ns</TD>
-<TD ALIGN="LEFT">Pos_X[0]</TD>
-<TD ALIGN="LEFT">sel_X[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.487 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">piece_To_Move[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.494 ns</TD>
+<TD ALIGN="LEFT">-3.464 ns</TD>
 <TD ALIGN="LEFT">Pos_Y[0]</TD>
-<TD ALIGN="LEFT">sel_Y[0]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.586 ns</TD>
+<TD ALIGN="LEFT">-3.465 ns</TD>
 <TD ALIGN="LEFT">Pos_X[1]</TD>
-<TD ALIGN="LEFT">sel_X[1]</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.589 ns</TD>
-<TD ALIGN="LEFT">In_Piece[1]</TD>
-<TD ALIGN="LEFT">arriving_Cell[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.630 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Wait_Turn</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.638 ns</TD>
-<TD ALIGN="LEFT">Pos_X[2]</TD>
-<TD ALIGN="LEFT">sel_X[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.707 ns</TD>
-<TD ALIGN="LEFT">Color</TD>
-<TD ALIGN="LEFT">s_whites</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.713 ns</TD>
-<TD ALIGN="LEFT">New_Game</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.713 ns</TD>
+<TD ALIGN="LEFT">-3.492 ns</TD>
 <TD ALIGN="LEFT">Pos_Y[2]</TD>
-<TD ALIGN="LEFT">sel_Y[2]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.765 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">piece_To_Move[0]</TD>
+<TD ALIGN="LEFT">-3.493 ns</TD>
+<TD ALIGN="LEFT">Pos_X[0]</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.771 ns</TD>
+<TD ALIGN="LEFT">-3.495 ns</TD>
 <TD ALIGN="LEFT">Pos_Y[1]</TD>
-<TD ALIGN="LEFT">sel_Y[1]</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.781 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_W_Rdy</TD>
+<TD ALIGN="LEFT">-3.509 ns</TD>
+<TD ALIGN="LEFT">Pos_X[2]</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.810 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_Start_Game</TD>
+<TD ALIGN="LEFT">-3.546 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_dt</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.817 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">piece_To_Capture[2]</TD>
+<TD ALIGN="LEFT">-3.546 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_rdy</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.894 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Assign_Position</TD>
+<TD ALIGN="LEFT">-3.577 ns</TD>
+<TD ALIGN="LEFT">Figure[2]</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.932 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">piece_To_Move[2]</TD>
+<TD ALIGN="LEFT">-3.680 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">state.st_pr_wait</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-3.984 ns</TD>
-<TD ALIGN="LEFT">In_Piece[0]</TD>
-<TD ALIGN="LEFT">arriving_Cell[0]</TD>
+<TD ALIGN="LEFT">-3.844 ns</TD>
+<TD ALIGN="LEFT">Figure[0]</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-4.072 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
+<TD ALIGN="LEFT">-4.512 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-4.072 ns</TD>
-<TD ALIGN="LEFT">In_Piece[2]</TD>
-<TD ALIGN="LEFT">arriving_Cell[2]</TD>
+<TD ALIGN="LEFT">-4.512 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-4.354 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_S_Rdy</TD>
+<TD ALIGN="LEFT">-4.512 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-4.511 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Turn</TD>
+<TD ALIGN="LEFT">-4.512 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.107 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
+<TD ALIGN="LEFT">-4.705 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[0]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[0]</TD>
+<TD ALIGN="LEFT">-4.705 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[1]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[1]</TD>
+<TD ALIGN="LEFT">-4.952 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_X[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_X[2]</TD>
+<TD ALIGN="LEFT">-4.952 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Pos_Y[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 <TR valign="middle">
 <TD ALIGN="LEFT">N/A</TD>
 <TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[0]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[1]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.139 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">s_Ram_y[2]</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.239 ns</TD>
-<TD ALIGN="LEFT">New_Game</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.461 ns</TD>
-<TD ALIGN="LEFT">Turn</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.595 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.881 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-5.949 ns</TD>
-<TD ALIGN="LEFT">Sel</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-6.068 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_Wait_Game</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-6.235 ns</TD>
-<TD ALIGN="LEFT">ready_to_TX</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
-<TD ALIGN="LEFT">clk50</TD>
-</TR>
-<TR valign="middle">
-<TD ALIGN="LEFT">N/A</TD>
-<TD ALIGN="LEFT">None</TD>
-<TD ALIGN="LEFT">-6.422 ns</TD>
-<TD ALIGN="LEFT">RDY_RECEIVED</TD>
-<TD ALIGN="LEFT">state.st_W_Tx1</TD>
+<TD ALIGN="LEFT">-4.952 ns</TD>
+<TD ALIGN="LEFT">Send_Dt</TD>
+<TD ALIGN="LEFT">i_Figure[2]</TD>
 <TD ALIGN="LEFT">clk50</TD>
 </TR>
 </TABLE>
-<P><A NAME="11"><HR></A></P>
+<P><A NAME="10"><HR></A></P>
 <TABLE WIDTH="100%" BORDER="0"><TR VALIGN="TOP">
 <TD><H2>Timing Analyzer Messages</H2></TD>
 <TD ALIGN="RIGHT"><A HREF="#top">Top</a></TD></TR></TABLE>
@@ -4386,128 +2776,77 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 12:56:20 2023
+    Info: Processing started: Fri Dec 22 11:43:17 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Design1 -c Design1 --timing_analysis_only
-Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "Ram_X[0]$latch" is a latch
-    Warning: Node "Ram_X[1]$latch" is a latch
-    Warning: Node "Ram_X[2]$latch" is a latch
-    Warning: Node "Ram_Y[0]$latch" is a latch
-    Warning: Node "Ram_Y[1]$latch" is a latch
-    Warning: Node "Ram_Y[2]$latch" is a latch
-    Warning: Node "X_To_Sent[0]$latch" is a latch
-    Warning: Node "X_To_Sent[1]$latch" is a latch
-    Warning: Node "X_To_Sent[2]$latch" is a latch
-    Warning: Node "Y_To_Sent[0]$latch" is a latch
-    Warning: Node "Y_To_Sent[1]$latch" is a latch
-    Warning: Node "Y_To_Sent[2]$latch" is a latch
-    Warning: Node "Write_Piece[0]$latch" is a latch
-    Warning: Node "Write_Piece[1]$latch" is a latch
-    Warning: Node "Write_Piece[2]$latch" is a latch
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk50" is an undefined clock
-Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected gated clock "WideOr9~0" as buffer
-    Info: Detected ripple clock "state.st_Read_Ram" as buffer
-    Info: Detected ripple clock "state.st_Write_Ram" as buffer
-Info: Clock "clk50" has Internal fmax of 250.82 MHz between source register "old_Y[0]" and destination register "pos_To_Capture_X[0]" (period= 3.987 ns)
-    Info: + Longest register to register delay is 3.772 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X42_Y24_N7; Fanout = 11; REG Node = 'old_Y[0]'
-        Info: 2: + IC(0.348 ns) + CELL(0.438 ns) = 0.786 ns; Loc. = LCCOMB_X42_Y24_N12; Fanout = 2; COMB Node = 'Equal8~0'
-        Info: 3: + IC(0.441 ns) + CELL(0.389 ns) = 1.616 ns; Loc. = LCCOMB_X41_Y24_N20; Fanout = 2; COMB Node = 'Equal8~2'
-        Info: 4: + IC(0.276 ns) + CELL(0.438 ns) = 2.330 ns; Loc. = LCCOMB_X41_Y24_N16; Fanout = 3; COMB Node = 'pos_To_Capture_X[0]~0'
-        Info: 5: + IC(0.278 ns) + CELL(0.275 ns) = 2.883 ns; Loc. = LCCOMB_X41_Y24_N6; Fanout = 6; COMB Node = 'pos_To_Capture_X[0]~2'
-        Info: 6: + IC(0.229 ns) + CELL(0.660 ns) = 3.772 ns; Loc. = LCFF_X41_Y24_N15; Fanout = 1; REG Node = 'pos_To_Capture_X[0]'
-        Info: Total cell delay = 2.200 ns ( 58.32 % )
-        Info: Total interconnect delay = 1.572 ns ( 41.68 % )
-    Info: - Smallest clock skew is -0.001 ns
-        Info: + Shortest clock path from clock "clk50" to destination register is 2.665 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.011 ns) + CELL(0.537 ns) = 2.665 ns; Loc. = LCFF_X41_Y24_N15; Fanout = 1; REG Node = 'pos_To_Capture_X[0]'
-            Info: Total cell delay = 1.536 ns ( 57.64 % )
-            Info: Total interconnect delay = 1.129 ns ( 42.36 % )
-        Info: - Longest clock path from clock "clk50" to source register is 2.666 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.012 ns) + CELL(0.537 ns) = 2.666 ns; Loc. = LCFF_X42_Y24_N7; Fanout = 11; REG Node = 'old_Y[0]'
-            Info: Total cell delay = 1.536 ns ( 57.61 % )
-            Info: Total interconnect delay = 1.130 ns ( 42.39 % )
+Info: Clock "clk50" has Internal fmax of 332.56 MHz between source register "state.st_pr_wait" and destination register "Tx_Data[0]~reg0" (period= 3.007 ns)
+    Info: + Longest register to register delay is 2.793 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X28_Y22_N9; Fanout = 5; REG Node = 'state.st_pr_wait'
+        Info: 2: + IC(0.519 ns) + CELL(0.438 ns) = 0.957 ns; Loc. = LCCOMB_X28_Y22_N24; Fanout = 3; COMB Node = 'WideOr12~2'
+        Info: 3: + IC(0.672 ns) + CELL(0.275 ns) = 1.904 ns; Loc. = LCCOMB_X29_Y22_N16; Fanout = 2; COMB Node = 'Tx_Data[0]~2'
+        Info: 4: + IC(0.229 ns) + CELL(0.660 ns) = 2.793 ns; Loc. = LCFF_X29_Y22_N9; Fanout = 1; REG Node = 'Tx_Data[0]~reg0'
+        Info: Total cell delay = 1.373 ns ( 49.16 % )
+        Info: Total interconnect delay = 1.420 ns ( 50.84 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk50" to destination register is 2.689 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+            Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X29_Y22_N9; Fanout = 1; REG Node = 'Tx_Data[0]~reg0'
+            Info: Total cell delay = 1.536 ns ( 57.12 % )
+            Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+        Info: - Longest clock path from clock "clk50" to source register is 2.689 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+            Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X28_Y22_N9; Fanout = 5; REG Node = 'state.st_pr_wait'
+            Info: Total cell delay = 1.536 ns ( 57.12 % )
+            Info: Total interconnect delay = 1.153 ns ( 42.88 % )
     Info: + Micro clock to output delay of source is 0.250 ns
     Info: + Micro setup delay of destination is -0.036 ns
-Warning: Circuit may not operate. Detected 15 non-operational path(s) clocked by clock "clk50" with clock skew larger than data delay. See Compilation Report for details.
-Info: Found hold time violation between source  pin or register "piece_To_Write[0]" and destination pin or register "Write_Piece[0]$latch" for clock "clk50" (Hold time is 3.695 ns)
-    Info: + Largest clock skew is 4.529 ns
-        Info: + Longest clock path from clock "clk50" to destination register is 7.194 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(1.827 ns) + CELL(0.787 ns) = 3.613 ns; Loc. = LCFF_X40_Y23_N5; Fanout = 11; REG Node = 'state.st_Write_Ram'
-            Info: 3: + IC(2.099 ns) + CELL(0.000 ns) = 5.712 ns; Loc. = CLKCTRL_G4; Fanout = 9; COMB Node = 'state.st_Write_Ram~clkctrl'
-            Info: 4: + IC(1.332 ns) + CELL(0.150 ns) = 7.194 ns; Loc. = LCCOMB_X38_Y23_N10; Fanout = 1; REG Node = 'Write_Piece[0]$latch'
-            Info: Total cell delay = 1.936 ns ( 26.91 % )
-            Info: Total interconnect delay = 5.258 ns ( 73.09 % )
-        Info: - Shortest clock path from clock "clk50" to source register is 2.665 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.011 ns) + CELL(0.537 ns) = 2.665 ns; Loc. = LCFF_X38_Y23_N9; Fanout = 1; REG Node = 'piece_To_Write[0]'
-            Info: Total cell delay = 1.536 ns ( 57.64 % )
-            Info: Total interconnect delay = 1.129 ns ( 42.36 % )
-    Info: - Micro clock to output delay of source is 0.250 ns
-    Info: - Shortest register to register delay is 0.584 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X38_Y23_N9; Fanout = 1; REG Node = 'piece_To_Write[0]'
-        Info: 2: + IC(0.313 ns) + CELL(0.271 ns) = 0.584 ns; Loc. = LCCOMB_X38_Y23_N10; Fanout = 1; REG Node = 'Write_Piece[0]$latch'
-        Info: Total cell delay = 0.271 ns ( 46.40 % )
-        Info: Total interconnect delay = 0.313 ns ( 53.60 % )
-    Info: + Micro hold delay of destination is 0.000 ns
-    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
-Info: tsu for register "state.st_W_Tx1" (data pin = "RDY_RECEIVED", clock pin = "clk50") is 6.652 ns
-    Info: + Longest pin to register delay is 9.359 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_L24; Fanout = 3; PIN Node = 'RDY_RECEIVED'
-        Info: 2: + IC(5.815 ns) + CELL(0.419 ns) = 7.076 ns; Loc. = LCCOMB_X42_Y23_N10; Fanout = 1; COMB Node = 'Selector0~3'
-        Info: 3: + IC(0.274 ns) + CELL(0.438 ns) = 7.788 ns; Loc. = LCCOMB_X42_Y23_N2; Fanout = 1; COMB Node = 'Selector0~6'
-        Info: 4: + IC(0.264 ns) + CELL(0.149 ns) = 8.201 ns; Loc. = LCCOMB_X42_Y23_N20; Fanout = 2; COMB Node = 'Selector0~7'
-        Info: 5: + IC(0.272 ns) + CELL(0.275 ns) = 8.748 ns; Loc. = LCCOMB_X42_Y23_N14; Fanout = 1; COMB Node = 'Selector1~3'
-        Info: 6: + IC(0.252 ns) + CELL(0.275 ns) = 9.275 ns; Loc. = LCCOMB_X42_Y23_N24; Fanout = 1; COMB Node = 'Selector1~2'
-        Info: 7: + IC(0.000 ns) + CELL(0.084 ns) = 9.359 ns; Loc. = LCFF_X42_Y23_N25; Fanout = 4; REG Node = 'state.st_W_Tx1'
-        Info: Total cell delay = 2.482 ns ( 26.52 % )
-        Info: Total interconnect delay = 6.877 ns ( 73.48 % )
+Info: tsu for register "i_Pos_X[2]" (data pin = "Send_Dt", clock pin = "clk50") is 5.182 ns
+    Info: + Longest pin to register delay is 7.907 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_C11; Fanout = 4; PIN Node = 'Send_Dt'
+        Info: 2: + IC(5.284 ns) + CELL(0.438 ns) = 6.572 ns; Loc. = LCCOMB_X29_Y22_N26; Fanout = 9; COMB Node = 'i_Pos_X[0]~1'
+        Info: 3: + IC(0.675 ns) + CELL(0.660 ns) = 7.907 ns; Loc. = LCFF_X27_Y22_N13; Fanout = 1; REG Node = 'i_Pos_X[2]'
+        Info: Total cell delay = 1.948 ns ( 24.64 % )
+        Info: Total interconnect delay = 5.959 ns ( 75.36 % )
     Info: + Micro setup delay of destination is -0.036 ns
-    Info: - Shortest clock path from clock "clk50" to destination register is 2.671 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-        Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X42_Y23_N25; Fanout = 4; REG Node = 'state.st_W_Tx1'
-        Info: Total cell delay = 1.536 ns ( 57.51 % )
-        Info: Total interconnect delay = 1.135 ns ( 42.49 % )
-Info: tco from clock "clk50" to destination pin "X_To_Sent[1]" through register "X_To_Sent[1]$latch" is 12.224 ns
-    Info: + Longest clock path from clock "clk50" to source register is 7.230 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(1.827 ns) + CELL(0.787 ns) = 3.613 ns; Loc. = LCFF_X40_Y23_N5; Fanout = 11; REG Node = 'state.st_Write_Ram'
-        Info: 3: + IC(2.099 ns) + CELL(0.000 ns) = 5.712 ns; Loc. = CLKCTRL_G4; Fanout = 9; COMB Node = 'state.st_Write_Ram~clkctrl'
-        Info: 4: + IC(1.368 ns) + CELL(0.150 ns) = 7.230 ns; Loc. = LCCOMB_X43_Y24_N24; Fanout = 1; REG Node = 'X_To_Sent[1]$latch'
-        Info: Total cell delay = 1.936 ns ( 26.78 % )
-        Info: Total interconnect delay = 5.294 ns ( 73.22 % )
-    Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Longest register to pin delay is 4.994 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X43_Y24_N24; Fanout = 1; REG Node = 'X_To_Sent[1]$latch'
-        Info: 2: + IC(2.226 ns) + CELL(2.768 ns) = 4.994 ns; Loc. = PIN_W15; Fanout = 0; PIN Node = 'X_To_Sent[1]'
-        Info: Total cell delay = 2.768 ns ( 55.43 % )
-        Info: Total interconnect delay = 2.226 ns ( 44.57 % )
-Info: th for register "s_whites" (data pin = "nrst", clock pin = "clk50") is -0.500 ns
-    Info: + Longest clock path from clock "clk50" to destination register is 2.670 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-        Info: 3: + IC(1.016 ns) + CELL(0.537 ns) = 2.670 ns; Loc. = LCFF_X41_Y23_N29; Fanout = 3; REG Node = 's_whites'
-        Info: Total cell delay = 1.536 ns ( 57.53 % )
-        Info: Total interconnect delay = 1.134 ns ( 42.47 % )
+    Info: - Shortest clock path from clock "clk50" to destination register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X27_Y22_N13; Fanout = 1; REG Node = 'i_Pos_X[2]'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+Info: tco from clock "clk50" to destination pin "Tx_Data[1]" through register "Tx_Data[1]~reg0" is 8.194 ns
+    Info: + Longest clock path from clock "clk50" to source register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X29_Y22_N11; Fanout = 1; REG Node = 'Tx_Data[1]~reg0'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.255 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X29_Y22_N11; Fanout = 1; REG Node = 'Tx_Data[1]~reg0'
+        Info: 2: + IC(2.633 ns) + CELL(2.622 ns) = 5.255 ns; Loc. = PIN_M4; Fanout = 0; PIN Node = 'Tx_Data[1]'
+        Info: Total cell delay = 2.622 ns ( 49.90 % )
+        Info: Total interconnect delay = 2.633 ns ( 50.10 % )
+Info: th for register "state.st_pr_rdy" (data pin = "Send_Rdy", clock pin = "clk50") is 0.290 ns
+    Info: + Longest clock path from clock "clk50" to destination register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X28_Y22_N19; Fanout = 4; REG Node = 'state.st_pr_rdy'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
     Info: + Micro hold delay of destination is 0.266 ns
-    Info: - Shortest pin to register delay is 3.436 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P1; Fanout = 21; PIN Node = 'nrst'
-        Info: 2: + IC(1.915 ns) + CELL(0.438 ns) = 3.352 ns; Loc. = LCCOMB_X41_Y23_N28; Fanout = 1; COMB Node = 's_whites~0'
-        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 3.436 ns; Loc. = LCFF_X41_Y23_N29; Fanout = 3; REG Node = 's_whites'
-        Info: Total cell delay = 1.521 ns ( 44.27 % )
-        Info: Total interconnect delay = 1.915 ns ( 55.73 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 190 megabytes
-    Info: Processing ended: Thu Dec 21 12:56:20 2023
+    Info: - Shortest pin to register delay is 2.665 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; PIN Node = 'Send_Rdy'
+        Info: 2: + IC(1.452 ns) + CELL(0.150 ns) = 2.581 ns; Loc. = LCCOMB_X28_Y22_N18; Fanout = 1; COMB Node = 'Selector1~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 2.665 ns; Loc. = LCFF_X28_Y22_N19; Fanout = 4; REG Node = 'state.st_pr_rdy'
+        Info: Total cell delay = 1.213 ns ( 45.52 % )
+        Info: Total interconnect delay = 1.452 ns ( 54.48 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Fri Dec 22 11:43:17 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 </PRE>

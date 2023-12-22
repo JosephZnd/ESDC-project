@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for Design1
-Thu Dec 21 12:56:20 2023
+Fri Dec 22 11:43:17 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -12,11 +12,10 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   4. Clock Settings Summary
   5. Parallel Compilation
   6. Clock Setup: 'clk50'
-  7. Clock Hold: 'clk50'
-  8. tsu
-  9. tco
- 10. th
- 11. Timing Analyzer Messages
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
 
 
 
@@ -39,18 +38,17 @@ applicable agreement for further details.
 
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                                                       ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+--------------------+----------------------+------------+----------+--------------+
-; Type                         ; Slack                                    ; Required Time ; Actual Time                      ; From               ; To                   ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+--------------------+----------------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A                                      ; None          ; 6.652 ns                         ; RDY_RECEIVED       ; state.st_W_Tx1       ; --         ; clk50    ; 0            ;
-; Worst-case tco               ; N/A                                      ; None          ; 12.224 ns                        ; X_To_Sent[1]$latch ; X_To_Sent[1]         ; clk50      ; --       ; 0            ;
-; Worst-case th                ; N/A                                      ; None          ; -0.500 ns                        ; nrst               ; s_whites             ; --         ; clk50    ; 0            ;
-; Clock Setup: 'clk50'         ; N/A                                      ; None          ; 250.82 MHz ( period = 3.987 ns ) ; old_Y[0]           ; pos_To_Capture_Y[2]  ; clk50      ; clk50    ; 0            ;
-; Clock Hold: 'clk50'          ; Not operational: Clock Skew > Data Delay ; None          ; N/A                              ; piece_To_Write[0]  ; Write_Piece[0]$latch ; clk50      ; clk50    ; 15           ;
-; Total number of failed paths ;                                          ;               ;                                  ;                    ;                      ;            ;          ; 15           ;
-+------------------------------+------------------------------------------+---------------+----------------------------------+--------------------+----------------------+------------+----------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                             ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From             ; To              ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 5.182 ns                         ; Send_Dt          ; i_Figure[2]     ; --         ; clk50    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 8.194 ns                         ; Tx_Data[1]~reg0  ; Tx_Data[1]      ; clk50      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; 0.290 ns                         ; Send_Rdy         ; state.st_pr_rdy ; --         ; clk50    ; 0            ;
+; Clock Setup: 'clk50'         ; N/A   ; None          ; 332.56 MHz ( period = 3.007 ns ) ; state.st_pr_wait ; Tx_Data[1]~reg0 ; clk50      ; clk50    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                  ;                 ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+------------------+-----------------+------------+----------+--------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -105,457 +103,282 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'clk50'                                                                                                                                                                                                                                         ;
-+-----------------------------------------+-----------------------------------------------------+--------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack                                   ; Actual fmax (period)                                ; From                     ; To                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-----------------------------------------+-----------------------------------------------------+--------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 250.82 MHz ( period = 3.987 ns )                    ; old_Y[0]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.772 ns                ;
-; N/A                                     ; 251.95 MHz ( period = 3.969 ns )                    ; state.st_Write_Ram       ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.062 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 257.73 MHz ( period = 3.880 ns )                    ; old_X[1]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.667 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 260.62 MHz ( period = 3.837 ns )                    ; old_Y[1]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.622 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 265.82 MHz ( period = 3.762 ns )                    ; old_X[0]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.549 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 266.95 MHz ( period = 3.746 ns )                    ; old_X[2]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.533 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 268.17 MHz ( period = 3.729 ns )                    ; old_Y[2]                 ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.514 ns                ;
-; N/A                                     ; 269.11 MHz ( period = 3.716 ns )                    ; old_X[1]                 ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.508 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 271.30 MHz ( period = 3.686 ns )                    ; to_Move_Y[1]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.471 ns                ;
-; N/A                                     ; 272.78 MHz ( period = 3.666 ns )                    ; counter[0]               ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.462 ns                ;
-; N/A                                     ; 274.88 MHz ( period = 3.638 ns )                    ; state.st_Assign_Position ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 3.425 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.01 MHz ( period = 3.610 ns )                    ; to_Move_X[1]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.396 ns                ;
-; N/A                                     ; 277.93 MHz ( period = 3.598 ns )                    ; old_X[0]                 ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.390 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 279.25 MHz ( period = 3.581 ns )                    ; to_Move_Y[0]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.367 ns                ;
-; N/A                                     ; 280.43 MHz ( period = 3.566 ns )                    ; state.st_Read_Ram        ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.653 ns                ;
-; N/A                                     ; 280.43 MHz ( period = 3.566 ns )                    ; state.st_Read_Ram        ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.653 ns                ;
-; N/A                                     ; 280.43 MHz ( period = 3.566 ns )                    ; state.st_Read_Ram        ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.653 ns                ;
-; N/A                                     ; 280.74 MHz ( period = 3.562 ns )                    ; old_Y[0]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.353 ns                ;
-; N/A                                     ; 281.21 MHz ( period = 3.556 ns )                    ; counter[1]               ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.343 ns                ;
-; N/A                                     ; 282.81 MHz ( period = 3.536 ns )                    ; state.st_Read_Ram        ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.629 ns                ;
-; N/A                                     ; 282.81 MHz ( period = 3.536 ns )                    ; state.st_Read_Ram        ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.629 ns                ;
-; N/A                                     ; 282.81 MHz ( period = 3.536 ns )                    ; state.st_Read_Ram        ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.629 ns                ;
-; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; counter[3]               ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.297 ns                ;
-; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; old_X[1]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.301 ns                ;
-; N/A                                     ; 285.31 MHz ( period = 3.505 ns )                    ; counter[0]               ; piece_To_Move[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.296 ns                ;
-; N/A                                     ; 285.31 MHz ( period = 3.505 ns )                    ; counter[0]               ; piece_To_Move[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.296 ns                ;
-; N/A                                     ; 285.31 MHz ( period = 3.505 ns )                    ; counter[0]               ; piece_To_Move[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.296 ns                ;
-; N/A                                     ; 288.35 MHz ( period = 3.468 ns )                    ; state.st_Turn            ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 3.255 ns                ;
-; N/A                                     ; 288.60 MHz ( period = 3.465 ns )                    ; old_X[1]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.258 ns                ;
-; N/A                                     ; 289.60 MHz ( period = 3.453 ns )                    ; to_Move_X[0]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.239 ns                ;
-; N/A                                     ; 290.19 MHz ( period = 3.446 ns )                    ; to_Move_X[1]             ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.237 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; to_Move_Y[2]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.225 ns                ;
-; N/A                                     ; 290.78 MHz ( period = 3.439 ns )                    ; old_X[2]                 ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.231 ns                ;
-; N/A                                     ; 293.08 MHz ( period = 3.412 ns )                    ; old_Y[1]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.203 ns                ;
-; N/A                                     ; 294.12 MHz ( period = 3.400 ns )                    ; counter[2]               ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.187 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; to_Move_X[2]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.186 ns                ;
-; N/A                                     ; 294.81 MHz ( period = 3.392 ns )                    ; s_whites                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.179 ns                ;
-; N/A                                     ; 295.16 MHz ( period = 3.388 ns )                    ; old_X[0]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.180 ns                ;
-; N/A                                     ; 295.42 MHz ( period = 3.385 ns )                    ; counter[1]               ; piece_To_Move[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.167 ns                ;
-; N/A                                     ; 295.42 MHz ( period = 3.385 ns )                    ; counter[1]               ; piece_To_Move[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.167 ns                ;
-; N/A                                     ; 295.42 MHz ( period = 3.385 ns )                    ; counter[1]               ; piece_To_Move[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.167 ns                ;
-; N/A                                     ; 295.86 MHz ( period = 3.380 ns )                    ; state.st_Move_Piece      ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 3.167 ns                ;
-; N/A                                     ; 296.91 MHz ( period = 3.368 ns )                    ; piece_Moved              ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.164 ns                ;
-; N/A                                     ; 297.18 MHz ( period = 3.365 ns )                    ; old_Y[0]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.155 ns                ;
-; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; counter[0]               ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.148 ns                ;
-; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; counter[0]               ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.148 ns                ;
-; N/A                                     ; 297.80 MHz ( period = 3.358 ns )                    ; counter[0]               ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.148 ns                ;
-; N/A                                     ; 298.33 MHz ( period = 3.352 ns )                    ; state.st_Write_Ram       ; piece_Moved           ; clk50      ; clk50    ; None                        ; None                      ; 2.435 ns                ;
-; N/A                                     ; 299.04 MHz ( period = 3.344 ns )                    ; old_X[0]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.137 ns                ;
-; N/A                                     ; 299.31 MHz ( period = 3.341 ns )                    ; while_Capturing          ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 3.137 ns                ;
-; N/A                                     ; 299.85 MHz ( period = 3.335 ns )                    ; old_X[2]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.127 ns                ;
-; N/A                                     ; 300.75 MHz ( period = 3.325 ns )                    ; counter[0]               ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.121 ns                ;
-; N/A                                     ; 300.75 MHz ( period = 3.325 ns )                    ; counter[0]               ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.121 ns                ;
-; N/A                                     ; 300.75 MHz ( period = 3.325 ns )                    ; counter[0]               ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.121 ns                ;
-; N/A                                     ; 300.84 MHz ( period = 3.324 ns )                    ; counter[3]               ; piece_To_Move[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.106 ns                ;
-; N/A                                     ; 300.84 MHz ( period = 3.324 ns )                    ; counter[3]               ; piece_To_Move[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.106 ns                ;
-; N/A                                     ; 300.84 MHz ( period = 3.324 ns )                    ; counter[3]               ; piece_To_Move[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.106 ns                ;
-; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; old_X[2]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.114 ns                ;
-; N/A                                     ; 302.39 MHz ( period = 3.307 ns )                    ; while_Capturing          ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.097 ns                ;
-; N/A                                     ; 302.39 MHz ( period = 3.307 ns )                    ; while_Capturing          ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.097 ns                ;
-; N/A                                     ; 302.39 MHz ( period = 3.307 ns )                    ; while_Capturing          ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.097 ns                ;
-; N/A                                     ; 302.66 MHz ( period = 3.304 ns )                    ; old_Y[2]                 ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.095 ns                ;
-; N/A                                     ; 303.86 MHz ( period = 3.291 ns )                    ; state.st_Read_Ram        ; piece_To_Move[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.379 ns                ;
-; N/A                                     ; 303.86 MHz ( period = 3.291 ns )                    ; state.st_Read_Ram        ; piece_To_Move[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.379 ns                ;
-; N/A                                     ; 303.86 MHz ( period = 3.291 ns )                    ; state.st_Read_Ram        ; piece_To_Move[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.379 ns                ;
-; N/A                                     ; 304.51 MHz ( period = 3.284 ns )                    ; state.st_Assign_Position ; state.st_Wait_Game    ; clk50      ; clk50    ; None                        ; None                      ; 3.071 ns                ;
-; N/A                                     ; 306.65 MHz ( period = 3.261 ns )                    ; to_Move_Y[1]             ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.052 ns                ;
-; N/A                                     ; 307.41 MHz ( period = 3.253 ns )                    ; while_Capturing          ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.049 ns                ;
-; N/A                                     ; 307.41 MHz ( period = 3.253 ns )                    ; while_Capturing          ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.049 ns                ;
-; N/A                                     ; 307.41 MHz ( period = 3.253 ns )                    ; while_Capturing          ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.049 ns                ;
-; N/A                                     ; 307.60 MHz ( period = 3.251 ns )                    ; state.st_Move_Piece      ; counter[1]            ; clk50      ; clk50    ; None                        ; None                      ; 3.036 ns                ;
-; N/A                                     ; 307.60 MHz ( period = 3.251 ns )                    ; state.st_Move_Piece      ; counter[3]            ; clk50      ; clk50    ; None                        ; None                      ; 3.036 ns                ;
-; N/A                                     ; 307.60 MHz ( period = 3.251 ns )                    ; state.st_Move_Piece      ; counter[2]            ; clk50      ; clk50    ; None                        ; None                      ; 3.036 ns                ;
-; N/A                                     ; 308.07 MHz ( period = 3.246 ns )                    ; counter[0]               ; piece_Moved           ; clk50      ; clk50    ; None                        ; None                      ; 3.032 ns                ;
-; N/A                                     ; 308.83 MHz ( period = 3.238 ns )                    ; counter[1]               ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.019 ns                ;
-; N/A                                     ; 308.83 MHz ( period = 3.238 ns )                    ; counter[1]               ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.019 ns                ;
-; N/A                                     ; 308.83 MHz ( period = 3.238 ns )                    ; counter[1]               ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.019 ns                ;
-; N/A                                     ; 309.02 MHz ( period = 3.236 ns )                    ; counter[2]               ; piece_To_Move[2]      ; clk50      ; clk50    ; None                        ; None                      ; 3.018 ns                ;
-; N/A                                     ; 309.02 MHz ( period = 3.236 ns )                    ; counter[2]               ; piece_To_Move[0]      ; clk50      ; clk50    ; None                        ; None                      ; 3.018 ns                ;
-; N/A                                     ; 309.02 MHz ( period = 3.236 ns )                    ; counter[2]               ; piece_To_Move[1]      ; clk50      ; clk50    ; None                        ; None                      ; 3.018 ns                ;
-; N/A                                     ; 309.12 MHz ( period = 3.235 ns )                    ; to_Move_Y[0]             ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 3.027 ns                ;
-; N/A                                     ; 310.27 MHz ( period = 3.223 ns )                    ; state.st_Move_Piece      ; s_Ram_y[2]            ; clk50      ; clk50    ; None                        ; None                      ; 3.006 ns                ;
-; N/A                                     ; 310.85 MHz ( period = 3.217 ns )                    ; sel_Selected             ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 3.007 ns                ;
-; N/A                                     ; 310.85 MHz ( period = 3.217 ns )                    ; sel_Selected             ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 3.007 ns                ;
-; N/A                                     ; 310.85 MHz ( period = 3.217 ns )                    ; sel_Selected             ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 3.007 ns                ;
-; N/A                                     ; 310.85 MHz ( period = 3.217 ns )                    ; state.st_Capture         ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 3.004 ns                ;
-; N/A                                     ; 310.95 MHz ( period = 3.216 ns )                    ; counter[0]               ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 3.013 ns                ;
-; N/A                                     ; 311.04 MHz ( period = 3.215 ns )                    ; old_Y[1]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.005 ns                ;
-; N/A                                     ; 311.33 MHz ( period = 3.212 ns )                    ; to_Move_X[0]             ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 3.003 ns                ;
-; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; counter[1]               ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.992 ns                ;
-; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; counter[1]               ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.992 ns                ;
-; N/A                                     ; 312.01 MHz ( period = 3.205 ns )                    ; counter[1]               ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.992 ns                ;
-; N/A                                     ; 313.68 MHz ( period = 3.188 ns )                    ; sel_Selected             ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.984 ns                ;
-; N/A                                     ; 313.68 MHz ( period = 3.188 ns )                    ; sel_Selected             ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.984 ns                ;
-; N/A                                     ; 313.68 MHz ( period = 3.188 ns )                    ; sel_Selected             ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.984 ns                ;
-; N/A                                     ; 313.97 MHz ( period = 3.185 ns )                    ; to_Move_X[1]             ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 2.977 ns                ;
-; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[3]               ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.958 ns                ;
-; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[3]               ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.958 ns                ;
-; N/A                                     ; 314.76 MHz ( period = 3.177 ns )                    ; counter[3]               ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.958 ns                ;
-; N/A                                     ; 315.66 MHz ( period = 3.168 ns )                    ; to_Move_X[0]             ; state.st_Invalid_Move ; clk50      ; clk50    ; None                        ; None                      ; 2.960 ns                ;
-; N/A                                     ; 315.96 MHz ( period = 3.165 ns )                    ; state.st_Assign_Position ; counter[1]            ; clk50      ; clk50    ; None                        ; None                      ; 2.950 ns                ;
-; N/A                                     ; 315.96 MHz ( period = 3.165 ns )                    ; state.st_Assign_Position ; counter[3]            ; clk50      ; clk50    ; None                        ; None                      ; 2.950 ns                ;
-; N/A                                     ; 315.96 MHz ( period = 3.165 ns )                    ; state.st_Assign_Position ; counter[2]            ; clk50      ; clk50    ; None                        ; None                      ; 2.950 ns                ;
-; N/A                                     ; 317.06 MHz ( period = 3.154 ns )                    ; state.st_W_Rdy           ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.941 ns                ;
-; N/A                                     ; 317.16 MHz ( period = 3.153 ns )                    ; sel_X[0]                 ; s_Ram_X[0]            ; clk50      ; clk50    ; None                        ; None                      ; 2.946 ns                ;
-; N/A                                     ; 317.66 MHz ( period = 3.148 ns )                    ; sel_Selected             ; s_Ram_X[0]            ; clk50      ; clk50    ; None                        ; None                      ; 2.941 ns                ;
-; N/A                                     ; 318.07 MHz ( period = 3.144 ns )                    ; counter[3]               ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.931 ns                ;
-; N/A                                     ; 318.07 MHz ( period = 3.144 ns )                    ; counter[3]               ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.931 ns                ;
-; N/A                                     ; 318.07 MHz ( period = 3.144 ns )                    ; counter[3]               ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.931 ns                ;
-; N/A                                     ; 318.88 MHz ( period = 3.136 ns )                    ; counter[1]               ; piece_Moved           ; clk50      ; clk50    ; None                        ; None                      ; 2.913 ns                ;
-; N/A                                     ; 319.18 MHz ( period = 3.133 ns )                    ; state.st_Move_Piece      ; s_Ram_y[1]            ; clk50      ; clk50    ; None                        ; None                      ; 2.916 ns                ;
-; N/A                                     ; 319.49 MHz ( period = 3.130 ns )                    ; state.st_Move_Piece      ; s_Ram_y[0]            ; clk50      ; clk50    ; None                        ; None                      ; 2.913 ns                ;
-; N/A                                     ; 320.20 MHz ( period = 3.123 ns )                    ; state.st_Read_Ram        ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.217 ns                ;
-; N/A                                     ; 321.13 MHz ( period = 3.114 ns )                    ; state.st_Turn            ; state.st_Wait_Game    ; clk50      ; clk50    ; None                        ; None                      ; 2.901 ns                ;
-; N/A                                     ; 321.85 MHz ( period = 3.107 ns )                    ; old_Y[2]                 ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 2.897 ns                ;
-; N/A                                     ; 321.96 MHz ( period = 3.106 ns )                    ; counter[1]               ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.894 ns                ;
-; N/A                                     ; 322.68 MHz ( period = 3.099 ns )                    ; counter[0]               ; state.st_Wait_Game    ; clk50      ; clk50    ; None                        ; None                      ; 2.896 ns                ;
-; N/A                                     ; 323.31 MHz ( period = 3.093 ns )                    ; s_whites                 ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 2.879 ns                ;
-; N/A                                     ; 323.31 MHz ( period = 3.093 ns )                    ; to_Move_X[2]             ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 2.885 ns                ;
-; N/A                                     ; 323.62 MHz ( period = 3.090 ns )                    ; counter[3]               ; piece_Moved           ; clk50      ; clk50    ; None                        ; None                      ; 2.867 ns                ;
-; N/A                                     ; 323.73 MHz ( period = 3.089 ns )                    ; counter[2]               ; piece_To_Capture[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.870 ns                ;
-; N/A                                     ; 323.73 MHz ( period = 3.089 ns )                    ; counter[2]               ; piece_To_Capture[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.870 ns                ;
-; N/A                                     ; 323.73 MHz ( period = 3.089 ns )                    ; counter[2]               ; piece_To_Capture[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.870 ns                ;
-; N/A                                     ; 325.52 MHz ( period = 3.072 ns )                    ; state.st_Invalid_Move    ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.858 ns                ;
-; N/A                                     ; 326.37 MHz ( period = 3.064 ns )                    ; to_Move_Y[1]             ; state.st_Capture      ; clk50      ; clk50    ; None                        ; None                      ; 2.854 ns                ;
-; N/A                                     ; 326.69 MHz ( period = 3.061 ns )                    ; old_Y[0]                 ; state.st_Move_Piece   ; clk50      ; clk50    ; None                        ; None                      ; 2.851 ns                ;
-; N/A                                     ; 326.80 MHz ( period = 3.060 ns )                    ; counter[3]               ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.848 ns                ;
-; N/A                                     ; 327.23 MHz ( period = 3.056 ns )                    ; counter[2]               ; arriving_Cell[2]      ; clk50      ; clk50    ; None                        ; None                      ; 2.843 ns                ;
-; N/A                                     ; 327.23 MHz ( period = 3.056 ns )                    ; counter[2]               ; arriving_Cell[0]      ; clk50      ; clk50    ; None                        ; None                      ; 2.843 ns                ;
-; N/A                                     ; 327.23 MHz ( period = 3.056 ns )                    ; counter[2]               ; arriving_Cell[1]      ; clk50      ; clk50    ; None                        ; None                      ; 2.843 ns                ;
-; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; to_Move_X[0]             ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.830 ns                ;
-; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; to_Move_X[0]             ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.830 ns                ;
-; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; to_Move_X[0]             ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.830 ns                ;
-; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; to_Move_X[0]             ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.830 ns                ;
-; N/A                                     ; 328.52 MHz ( period = 3.044 ns )                    ; to_Move_X[0]             ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.830 ns                ;
-; N/A                                     ; 328.95 MHz ( period = 3.040 ns )                    ; state.st_Move_Piece      ; s_Ram_X[2]            ; clk50      ; clk50    ; None                        ; None                      ; 2.823 ns                ;
-; N/A                                     ; 329.38 MHz ( period = 3.036 ns )                    ; state.st_Wait_Turn       ; state.st_W_Tx1        ; clk50      ; clk50    ; None                        ; None                      ; 2.822 ns                ;
-; N/A                                     ; 329.49 MHz ( period = 3.035 ns )                    ; while_Capturing          ; s_Ram_y[2]            ; clk50      ; clk50    ; None                        ; None                      ; 2.828 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_X[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_X[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_X[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_Y[0]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_Y[1]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.03 MHz ( period = 3.030 ns )                    ; arriving_Cell[2]         ; pos_To_Capture_Y[2]   ; clk50      ; clk50    ; None                        ; None                      ; 2.811 ns                ;
-; N/A                                     ; 330.47 MHz ( period = 3.026 ns )                    ; state.st_Move_Piece      ; state.st_Wait_Game    ; clk50      ; clk50    ; None                        ; None                      ; 2.813 ns                ;
-; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                          ;                       ;            ;          ;                             ;                           ;                         ;
-+-----------------------------------------+-----------------------------------------------------+--------------------------+-----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk50'                                                                                                                                                                                                   ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                    ; To                      ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 332.56 MHz ( period = 3.007 ns )               ; state.st_pr_wait        ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.793 ns                ;
+; N/A   ; 332.56 MHz ( period = 3.007 ns )               ; state.st_pr_wait        ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.793 ns                ;
+; N/A   ; 342.58 MHz ( period = 2.919 ns )               ; state.st_pr_wait        ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.705 ns                ;
+; N/A   ; 347.46 MHz ( period = 2.878 ns )               ; state.st_pr_wait        ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.664 ns                ;
+; N/A   ; 353.36 MHz ( period = 2.830 ns )               ; state.st_send_x         ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.616 ns                ;
+; N/A   ; 353.36 MHz ( period = 2.830 ns )               ; state.st_send_x         ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.616 ns                ;
+; N/A   ; 358.17 MHz ( period = 2.792 ns )               ; state.st_to_send_figure ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.578 ns                ;
+; N/A   ; 358.17 MHz ( period = 2.792 ns )               ; state.st_to_send_figure ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.578 ns                ;
+; N/A   ; 358.29 MHz ( period = 2.791 ns )               ; state.st_to_send_type   ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.577 ns                ;
+; N/A   ; 358.29 MHz ( period = 2.791 ns )               ; state.st_to_send_type   ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.577 ns                ;
+; N/A   ; 360.49 MHz ( period = 2.774 ns )               ; state.st_send_y         ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.560 ns                ;
+; N/A   ; 360.49 MHz ( period = 2.774 ns )               ; state.st_send_y         ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.560 ns                ;
+; N/A   ; 369.96 MHz ( period = 2.703 ns )               ; state.st_to_send_type   ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.489 ns                ;
+; N/A   ; 371.06 MHz ( period = 2.695 ns )               ; state.st_send_type      ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.481 ns                ;
+; N/A   ; 371.06 MHz ( period = 2.695 ns )               ; state.st_send_type      ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.481 ns                ;
+; N/A   ; 372.72 MHz ( period = 2.683 ns )               ; state.st_finish_Tx      ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.469 ns                ;
+; N/A   ; 372.72 MHz ( period = 2.683 ns )               ; state.st_finish_Tx      ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.469 ns                ;
+; N/A   ; 375.66 MHz ( period = 2.662 ns )               ; state.st_to_send_type   ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.448 ns                ;
+; N/A   ; 377.79 MHz ( period = 2.647 ns )               ; state.st_pr_wait        ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.433 ns                ;
+; N/A   ; 383.73 MHz ( period = 2.606 ns )               ; state.st_pr_wait        ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.392 ns                ;
+; N/A   ; 391.39 MHz ( period = 2.555 ns )               ; state.st_send_x         ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.341 ns                ;
+; N/A   ; 392.00 MHz ( period = 2.551 ns )               ; state.st_to_send_y      ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.337 ns                ;
+; N/A   ; 392.00 MHz ( period = 2.551 ns )               ; state.st_to_send_y      ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.337 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; state.st_to_send_figure ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.317 ns                ;
+; N/A   ; 398.25 MHz ( period = 2.511 ns )               ; state.st_to_send_x      ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.297 ns                ;
+; N/A   ; 398.25 MHz ( period = 2.511 ns )               ; state.st_to_send_x      ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.297 ns                ;
+; N/A   ; 402.09 MHz ( period = 2.487 ns )               ; state.st_send_x         ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.273 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; state.st_send_figure    ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.242 ns                ;
+; N/A   ; 407.17 MHz ( period = 2.456 ns )               ; state.st_send_figure    ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.242 ns                ;
+; N/A   ; 407.50 MHz ( period = 2.454 ns )               ; state.st_send_figure    ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.240 ns                ;
+; N/A   ; 410.00 MHz ( period = 2.439 ns )               ; state.st_send_figure    ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.225 ns                ;
+; N/A   ; 410.34 MHz ( period = 2.437 ns )               ; state.st_to_send_figure ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.223 ns                ;
+; N/A   ; 411.35 MHz ( period = 2.431 ns )               ; state.st_to_send_type   ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.217 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; state.st_send_rdy       ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.214 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; state.st_send_rdy       ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.214 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; state.st_send_type      ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.214 ns                ;
+; N/A   ; 412.71 MHz ( period = 2.423 ns )               ; state.st_to_send_x      ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.209 ns                ;
+; N/A   ; 412.88 MHz ( period = 2.422 ns )               ; state.st_finish_Tx      ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.208 ns                ;
+; N/A   ; 418.41 MHz ( period = 2.390 ns )               ; state.st_to_send_type   ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.176 ns                ;
+; N/A   ; 419.82 MHz ( period = 2.382 ns )               ; state.st_to_send_x      ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.168 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.159 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.159 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.130 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_x         ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.103 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.101 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_x         ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.089 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_y      ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.076 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.071 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.062 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_rdy         ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.046 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_figure ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.045 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.030 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_rdy         ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.020 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_Y[0]              ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 2.009 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_Y[2]              ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.998 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_X[2]              ; clk50      ; clk50    ; None                        ; None                      ; 1.991 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_Y[2]              ; clk50      ; clk50    ; None                        ; None                      ; 1.991 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Figure[2]             ; clk50      ; clk50    ; None                        ; None                      ; 1.991 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.988 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_figure    ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.987 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_Y[1]              ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.974 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_dt          ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.973 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_figure    ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.973 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_y      ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.951 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_figure ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.951 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_dt          ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.947 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_type      ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.940 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_x      ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.937 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.936 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; frame_type[3]           ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.908 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_x      ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.896 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.892 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_type      ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.889 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.878 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.807 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_y      ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.804 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.799 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.758 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_X[0]              ; clk50      ; clk50    ; None                        ; None                      ; 1.745 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_X[1]              ; clk50      ; clk50    ; None                        ; None                      ; 1.745 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.714 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.707 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_type      ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.705 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_y      ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.679 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Figure[2]             ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.595 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Figure[0]             ; clk50      ; clk50    ; None                        ; None                      ; 1.551 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_Y[0]              ; clk50      ; clk50    ; None                        ; None                      ; 1.551 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Figure[1]             ; clk50      ; clk50    ; None                        ; None                      ; 1.551 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; i_Pos_Y[1]              ; clk50      ; clk50    ; None                        ; None                      ; 1.551 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; frame_type[3]           ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.514 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_figure ; state.st_send_figure    ; clk50      ; clk50    ; None                        ; None                      ; 1.499 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_figure    ; state.st_finish_Tx      ; clk50      ; clk50    ; None                        ; None                      ; 1.493 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.435 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_X[0]              ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.385 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_X[1]              ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.382 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_type      ; state.st_to_send_x      ; clk50      ; clk50    ; None                        ; None                      ; 1.340 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_rdy         ; Ready_To_Tx~reg0        ; clk50      ; clk50    ; None                        ; None                      ; 1.280 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Tx_Data[7]~reg0         ; Tx_Data[7]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 1.227 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_rdy         ; state.st_to_send_rdy    ; clk50      ; clk50    ; None                        ; None                      ; 1.107 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_type   ; state.st_send_type      ; clk50      ; clk50    ; None                        ; None                      ; 1.081 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_dt          ; frame_type[3]           ; clk50      ; clk50    ; None                        ; None                      ; 1.036 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_rdy         ; frame_type[3]           ; clk50      ; clk50    ; None                        ; None                      ; 1.007 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; Ready_To_Tx~reg0        ; clk50      ; clk50    ; None                        ; None                      ; 1.000 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; state.st_pr_wait        ; clk50      ; clk50    ; None                        ; None                      ; 0.999 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; state.st_finish_Tx      ; clk50      ; clk50    ; None                        ; None                      ; 0.862 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Figure[0]             ; Tx_Data[0]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.860 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_x      ; state.st_send_x         ; clk50      ; clk50    ; None                        ; None                      ; 0.851 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_rdy    ; state.st_send_rdy       ; clk50      ; clk50    ; None                        ; None                      ; 0.844 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_x         ; state.st_to_send_y      ; clk50      ; clk50    ; None                        ; None                      ; 0.839 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_to_send_y      ; state.st_send_y         ; clk50      ; clk50    ; None                        ; None                      ; 0.823 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Pos_X[2]              ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.804 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; state.st_to_send_figure ; clk50      ; clk50    ; None                        ; None                      ; 0.796 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; state.st_pr_dt          ; clk50      ; clk50    ; None                        ; None                      ; 0.795 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; state.st_pr_rdy         ; clk50      ; clk50    ; None                        ; None                      ; 0.788 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_dt          ; Ready_To_Tx~reg0        ; clk50      ; clk50    ; None                        ; None                      ; 0.768 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_dt          ; state.st_to_send_type   ; clk50      ; clk50    ; None                        ; None                      ; 0.767 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; i_Figure[1]             ; Tx_Data[1]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.672 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_figure    ; state.st_send_figure    ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_y         ; state.st_send_y         ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_x         ; state.st_send_x         ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_pr_wait        ; state.st_pr_wait        ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_type      ; state.st_send_type      ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_send_rdy       ; state.st_send_rdy       ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; state.st_finish_Tx      ; state.st_finish_Tx      ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Ready_To_Tx~reg0        ; Ready_To_Tx~reg0        ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Tx_Data[2]~reg0         ; Tx_Data[2]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; frame_type[3]           ; frame_type[3]           ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Tx_Data[3]~reg0         ; Tx_Data[3]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 420.17 MHz ( period = 2.380 ns ) ; Tx_Data[6]~reg0         ; Tx_Data[6]~reg0         ; clk50      ; clk50    ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+-------------------------+-------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Hold: 'clk50'                                                                                                                                                                              ;
-+------------------------------------------+-------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Minimum Slack                            ; From              ; To                   ; From Clock ; To Clock ; Required Hold Relationship ; Required Shortest P2P Time ; Actual Shortest P2P Time ;
-+------------------------------------------+-------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
-; Not operational: Clock Skew > Data Delay ; piece_To_Write[0] ; Write_Piece[0]$latch ; clk50      ; clk50    ; None                       ; None                       ; 0.584 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[1]        ; Ram_Y[1]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.711 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[1]        ; Ram_X[1]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.712 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[0]        ; Ram_Y[0]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.747 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[2]        ; Ram_X[2]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.746 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[0]        ; Ram_X[0]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.750 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[1]        ; Y_To_Sent[1]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.735 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[1]        ; X_To_Sent[1]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.738 ns                 ;
-; Not operational: Clock Skew > Data Delay ; piece_To_Write[1] ; Write_Piece[1]$latch ; clk50      ; clk50    ; None                       ; None                       ; 0.724 ns                 ;
-; Not operational: Clock Skew > Data Delay ; piece_To_Write[2] ; Write_Piece[2]$latch ; clk50      ; clk50    ; None                       ; None                       ; 0.735 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[2]        ; X_To_Sent[2]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.771 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[0]        ; Y_To_Sent[0]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.773 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_X[0]        ; X_To_Sent[0]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.774 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[2]        ; Ram_Y[2]$latch       ; clk50      ; clk50    ; None                       ; None                       ; 0.986 ns                 ;
-; Not operational: Clock Skew > Data Delay ; s_Ram_y[2]        ; Y_To_Sent[2]$latch   ; clk50      ; clk50    ; None                       ; None                       ; 0.987 ns                 ;
-+------------------------------------------+-------------------+----------------------+------------+----------+----------------------------+----------------------------+--------------------------+
++------------------------------------------------------------------------------------+
+; tsu                                                                                ;
++-------+--------------+------------+-----------+-------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From      ; To                      ; To Clock ;
++-------+--------------+------------+-----------+-------------------------+----------+
+; N/A   ; None         ; 5.182 ns   ; Send_Dt   ; i_Pos_X[2]              ; clk50    ;
+; N/A   ; None         ; 5.182 ns   ; Send_Dt   ; i_Pos_Y[2]              ; clk50    ;
+; N/A   ; None         ; 5.182 ns   ; Send_Dt   ; i_Figure[2]             ; clk50    ;
+; N/A   ; None         ; 4.935 ns   ; Send_Dt   ; i_Pos_X[0]              ; clk50    ;
+; N/A   ; None         ; 4.935 ns   ; Send_Dt   ; i_Pos_X[1]              ; clk50    ;
+; N/A   ; None         ; 4.742 ns   ; Send_Dt   ; i_Figure[0]             ; clk50    ;
+; N/A   ; None         ; 4.742 ns   ; Send_Dt   ; i_Pos_Y[0]              ; clk50    ;
+; N/A   ; None         ; 4.742 ns   ; Send_Dt   ; i_Figure[1]             ; clk50    ;
+; N/A   ; None         ; 4.742 ns   ; Send_Dt   ; i_Pos_Y[1]              ; clk50    ;
+; N/A   ; None         ; 4.074 ns   ; Figure[0] ; i_Figure[0]             ; clk50    ;
+; N/A   ; None         ; 3.910 ns   ; Send_Dt   ; state.st_pr_wait        ; clk50    ;
+; N/A   ; None         ; 3.807 ns   ; Figure[2] ; i_Figure[2]             ; clk50    ;
+; N/A   ; None         ; 3.776 ns   ; Send_Dt   ; state.st_pr_dt          ; clk50    ;
+; N/A   ; None         ; 3.776 ns   ; Send_Dt   ; state.st_pr_rdy         ; clk50    ;
+; N/A   ; None         ; 3.739 ns   ; Pos_X[2]  ; i_Pos_X[2]              ; clk50    ;
+; N/A   ; None         ; 3.725 ns   ; Pos_Y[1]  ; i_Pos_Y[1]              ; clk50    ;
+; N/A   ; None         ; 3.723 ns   ; Pos_X[0]  ; i_Pos_X[0]              ; clk50    ;
+; N/A   ; None         ; 3.722 ns   ; Pos_Y[2]  ; i_Pos_Y[2]              ; clk50    ;
+; N/A   ; None         ; 3.695 ns   ; Pos_X[1]  ; i_Pos_X[1]              ; clk50    ;
+; N/A   ; None         ; 3.694 ns   ; Pos_Y[0]  ; i_Pos_Y[0]              ; clk50    ;
+; N/A   ; None         ; 3.637 ns   ; Figure[1] ; i_Figure[1]             ; clk50    ;
+; N/A   ; None         ; 1.816 ns   ; nrst      ; Tx_Data[0]~reg0         ; clk50    ;
+; N/A   ; None         ; 1.816 ns   ; nrst      ; Tx_Data[1]~reg0         ; clk50    ;
+; N/A   ; None         ; 1.485 ns   ; tx_empty  ; Tx_Data[0]~reg0         ; clk50    ;
+; N/A   ; None         ; 1.485 ns   ; tx_empty  ; Tx_Data[1]~reg0         ; clk50    ;
+; N/A   ; None         ; 1.422 ns   ; nrst      ; i_Pos_X[2]              ; clk50    ;
+; N/A   ; None         ; 1.422 ns   ; nrst      ; i_Pos_Y[2]              ; clk50    ;
+; N/A   ; None         ; 1.422 ns   ; nrst      ; i_Figure[2]             ; clk50    ;
+; N/A   ; None         ; 1.175 ns   ; nrst      ; i_Pos_X[0]              ; clk50    ;
+; N/A   ; None         ; 1.175 ns   ; nrst      ; i_Pos_X[1]              ; clk50    ;
+; N/A   ; None         ; 1.126 ns   ; tx_empty  ; Tx_Data[2]~reg0         ; clk50    ;
+; N/A   ; None         ; 1.011 ns   ; tx_empty  ; Tx_Data[3]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.982 ns   ; nrst      ; i_Figure[0]             ; clk50    ;
+; N/A   ; None         ; 0.982 ns   ; nrst      ; i_Pos_Y[0]              ; clk50    ;
+; N/A   ; None         ; 0.982 ns   ; nrst      ; i_Figure[1]             ; clk50    ;
+; N/A   ; None         ; 0.982 ns   ; nrst      ; i_Pos_Y[1]              ; clk50    ;
+; N/A   ; None         ; 0.958 ns   ; tx_empty  ; Tx_Data[7]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.942 ns   ; tx_empty  ; Tx_Data[6]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.630 ns   ; nrst      ; Tx_Data[2]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.630 ns   ; nrst      ; Tx_Data[3]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.630 ns   ; nrst      ; Tx_Data[6]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.630 ns   ; nrst      ; Tx_Data[7]~reg0         ; clk50    ;
+; N/A   ; None         ; 0.384 ns   ; nrst      ; frame_type[3]           ; clk50    ;
+; N/A   ; None         ; 0.022 ns   ; tx_empty  ; state.st_send_rdy       ; clk50    ;
+; N/A   ; None         ; 0.021 ns   ; tx_empty  ; state.st_send_type      ; clk50    ;
+; N/A   ; None         ; 0.020 ns   ; tx_empty  ; state.st_send_figure    ; clk50    ;
+; N/A   ; None         ; 0.020 ns   ; tx_empty  ; state.st_to_send_y      ; clk50    ;
+; N/A   ; None         ; 0.017 ns   ; tx_empty  ; state.st_to_send_figure ; clk50    ;
+; N/A   ; None         ; 0.015 ns   ; tx_empty  ; state.st_send_x         ; clk50    ;
+; N/A   ; None         ; 0.014 ns   ; tx_empty  ; state.st_finish_Tx      ; clk50    ;
+; N/A   ; None         ; 0.013 ns   ; tx_empty  ; state.st_send_y         ; clk50    ;
+; N/A   ; None         ; 0.012 ns   ; tx_empty  ; state.st_to_send_x      ; clk50    ;
+; N/A   ; None         ; -0.057 ns  ; Send_Rdy  ; state.st_pr_wait        ; clk50    ;
+; N/A   ; None         ; -0.060 ns  ; Send_Rdy  ; state.st_pr_rdy         ; clk50    ;
++-------+--------------+------------+-----------+-------------------------+----------+
 
 
-+----------------------------------------------------------------------------------------+
-; tsu                                                                                    ;
-+-------+--------------+------------+--------------+--------------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From         ; To                       ; To Clock ;
-+-------+--------------+------------+--------------+--------------------------+----------+
-; N/A   ; None         ; 6.652 ns   ; RDY_RECEIVED ; state.st_W_Tx1           ; clk50    ;
-; N/A   ; None         ; 6.465 ns   ; ready_to_TX  ; state.st_W_Tx1           ; clk50    ;
-; N/A   ; None         ; 6.298 ns   ; RDY_RECEIVED ; state.st_Wait_Game       ; clk50    ;
-; N/A   ; None         ; 6.179 ns   ; Sel          ; state.st_W_Tx1           ; clk50    ;
-; N/A   ; None         ; 6.111 ns   ; ready_to_TX  ; state.st_Wait_Game       ; clk50    ;
-; N/A   ; None         ; 5.825 ns   ; Sel          ; state.st_Wait_Game       ; clk50    ;
-; N/A   ; None         ; 5.823 ns   ; New_Game     ; state.st_W_Tx1           ; clk50    ;
-; N/A   ; None         ; 5.691 ns   ; Turn         ; state.st_W_Tx1           ; clk50    ;
-; N/A   ; None         ; 5.469 ns   ; New_Game     ; state.st_Wait_Game       ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_X[0]               ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_X[1]               ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_X[2]               ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_y[0]               ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_y[1]               ; clk50    ;
-; N/A   ; None         ; 5.369 ns   ; Sel          ; s_Ram_y[2]               ; clk50    ;
-; N/A   ; None         ; 5.337 ns   ; Turn         ; state.st_Wait_Game       ; clk50    ;
-; N/A   ; None         ; 4.741 ns   ; Sel          ; state.st_Turn            ; clk50    ;
-; N/A   ; None         ; 4.584 ns   ; ready_to_TX  ; state.st_S_Rdy           ; clk50    ;
-; N/A   ; None         ; 4.302 ns   ; Turn         ; state.st_Turn            ; clk50    ;
-; N/A   ; None         ; 4.302 ns   ; In_Piece[2]  ; arriving_Cell[2]         ; clk50    ;
-; N/A   ; None         ; 4.214 ns   ; In_Piece[0]  ; arriving_Cell[0]         ; clk50    ;
-; N/A   ; None         ; 4.162 ns   ; In_Piece[2]  ; piece_To_Move[2]         ; clk50    ;
-; N/A   ; None         ; 4.124 ns   ; Sel          ; state.st_Assign_Position ; clk50    ;
-; N/A   ; None         ; 4.047 ns   ; In_Piece[2]  ; piece_To_Capture[2]      ; clk50    ;
-; N/A   ; None         ; 4.040 ns   ; RDY_RECEIVED ; state.st_Start_Game      ; clk50    ;
-; N/A   ; None         ; 4.011 ns   ; RDY_RECEIVED ; state.st_W_Rdy           ; clk50    ;
-; N/A   ; None         ; 4.001 ns   ; Pos_Y[1]     ; sel_Y[1]                 ; clk50    ;
-; N/A   ; None         ; 3.995 ns   ; In_Piece[0]  ; piece_To_Move[0]         ; clk50    ;
-; N/A   ; None         ; 3.943 ns   ; Pos_Y[2]     ; sel_Y[2]                 ; clk50    ;
-; N/A   ; None         ; 3.937 ns   ; Color        ; s_whites                 ; clk50    ;
-; N/A   ; None         ; 3.868 ns   ; Pos_X[2]     ; sel_X[2]                 ; clk50    ;
-; N/A   ; None         ; 3.860 ns   ; Turn         ; state.st_Wait_Turn       ; clk50    ;
-; N/A   ; None         ; 3.819 ns   ; In_Piece[1]  ; arriving_Cell[1]         ; clk50    ;
-; N/A   ; None         ; 3.816 ns   ; Pos_X[1]     ; sel_X[1]                 ; clk50    ;
-; N/A   ; None         ; 3.724 ns   ; Pos_Y[0]     ; sel_Y[0]                 ; clk50    ;
-; N/A   ; None         ; 3.717 ns   ; In_Piece[1]  ; piece_To_Move[1]         ; clk50    ;
-; N/A   ; None         ; 3.618 ns   ; Pos_X[0]     ; sel_X[0]                 ; clk50    ;
-; N/A   ; None         ; 3.617 ns   ; In_Piece[0]  ; piece_To_Capture[0]      ; clk50    ;
-; N/A   ; None         ; 3.576 ns   ; In_Piece[1]  ; piece_To_Capture[1]      ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_X[0]               ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_X[1]               ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_X[2]               ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_y[0]               ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_y[1]               ; clk50    ;
-; N/A   ; None         ; 2.245 ns   ; nrst         ; s_Ram_y[2]               ; clk50    ;
-; N/A   ; None         ; 2.080 ns   ; nrst         ; to_Move_Y[0]             ; clk50    ;
-; N/A   ; None         ; 2.080 ns   ; nrst         ; to_Move_X[0]             ; clk50    ;
-; N/A   ; None         ; 2.080 ns   ; nrst         ; to_Move_X[1]             ; clk50    ;
-; N/A   ; None         ; 2.066 ns   ; nrst         ; to_Move_Y[1]             ; clk50    ;
-; N/A   ; None         ; 2.066 ns   ; nrst         ; to_Move_Y[2]             ; clk50    ;
-; N/A   ; None         ; 2.028 ns   ; nrst         ; piece_To_Move[2]         ; clk50    ;
-; N/A   ; None         ; 2.028 ns   ; nrst         ; piece_To_Move[0]         ; clk50    ;
-; N/A   ; None         ; 2.028 ns   ; nrst         ; piece_To_Move[1]         ; clk50    ;
-; N/A   ; None         ; 1.960 ns   ; nrst         ; piece_To_Write[0]        ; clk50    ;
-; N/A   ; None         ; 1.960 ns   ; nrst         ; piece_To_Write[1]        ; clk50    ;
-; N/A   ; None         ; 1.960 ns   ; nrst         ; piece_To_Write[2]        ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_X[0]      ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_X[1]      ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_X[2]      ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_Y[0]      ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_Y[1]      ; clk50    ;
-; N/A   ; None         ; 1.907 ns   ; nrst         ; pos_To_Capture_Y[2]      ; clk50    ;
-; N/A   ; None         ; 1.774 ns   ; nrst         ; piece_To_Capture[1]      ; clk50    ;
-; N/A   ; None         ; 1.774 ns   ; nrst         ; piece_To_Capture[2]      ; clk50    ;
-; N/A   ; None         ; 1.774 ns   ; nrst         ; piece_To_Capture[0]      ; clk50    ;
-; N/A   ; None         ; 1.754 ns   ; nrst         ; to_Move_X[2]             ; clk50    ;
-; N/A   ; None         ; 1.735 ns   ; nrst         ; old_Y[0]                 ; clk50    ;
-; N/A   ; None         ; 1.735 ns   ; nrst         ; old_Y[1]                 ; clk50    ;
-; N/A   ; None         ; 1.735 ns   ; nrst         ; old_Y[2]                 ; clk50    ;
-; N/A   ; None         ; 1.661 ns   ; nrst         ; arriving_Cell[2]         ; clk50    ;
-; N/A   ; None         ; 1.661 ns   ; nrst         ; arriving_Cell[0]         ; clk50    ;
-; N/A   ; None         ; 1.661 ns   ; nrst         ; arriving_Cell[1]         ; clk50    ;
-; N/A   ; None         ; 1.536 ns   ; nrst         ; counter[1]               ; clk50    ;
-; N/A   ; None         ; 1.536 ns   ; nrst         ; counter[3]               ; clk50    ;
-; N/A   ; None         ; 1.536 ns   ; nrst         ; counter[2]               ; clk50    ;
-; N/A   ; None         ; 1.332 ns   ; nrst         ; old_X[0]                 ; clk50    ;
-; N/A   ; None         ; 1.332 ns   ; nrst         ; old_X[1]                 ; clk50    ;
-; N/A   ; None         ; 1.332 ns   ; nrst         ; old_X[2]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; counter[0]               ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; piece_Moved              ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; while_Capturing          ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_Y[0]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_Selected             ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_Y[1]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_Y[2]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_X[1]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_X[0]                 ; clk50    ;
-; N/A   ; None         ; 0.908 ns   ; nrst         ; sel_X[2]                 ; clk50    ;
-; N/A   ; None         ; 0.730 ns   ; nrst         ; s_whites                 ; clk50    ;
-+-------+--------------+------------+--------------+--------------------------+----------+
++---------------------------------------------------------------------------------+
+; tco                                                                             ;
++-------+--------------+------------+------------------+-------------+------------+
+; Slack ; Required tco ; Actual tco ; From             ; To          ; From Clock ;
++-------+--------------+------------+------------------+-------------+------------+
+; N/A   ; None         ; 8.194 ns   ; Tx_Data[1]~reg0  ; Tx_Data[1]  ; clk50      ;
+; N/A   ; None         ; 7.955 ns   ; Tx_Data[6]~reg0  ; Tx_Data[6]  ; clk50      ;
+; N/A   ; None         ; 7.955 ns   ; Tx_Data[6]~reg0  ; Tx_Data[4]  ; clk50      ;
+; N/A   ; None         ; 7.602 ns   ; Tx_Data[3]~reg0  ; Tx_Data[3]  ; clk50      ;
+; N/A   ; None         ; 7.581 ns   ; Tx_Data[7]~reg0  ; Tx_Data[7]  ; clk50      ;
+; N/A   ; None         ; 7.570 ns   ; Tx_Data[7]~reg0  ; Tx_Data[5]  ; clk50      ;
+; N/A   ; None         ; 7.524 ns   ; Ready_To_Tx~reg0 ; Ready_To_Tx ; clk50      ;
+; N/A   ; None         ; 7.324 ns   ; Tx_Data[0]~reg0  ; Tx_Data[0]  ; clk50      ;
+; N/A   ; None         ; 7.267 ns   ; Tx_Data[2]~reg0  ; Tx_Data[2]  ; clk50      ;
++-------+--------------+------------+------------------+-------------+------------+
 
 
-+----------------------------------------------------------------------------------------+
-; tco                                                                                    ;
-+-------+--------------+------------+----------------------+----------------+------------+
-; Slack ; Required tco ; Actual tco ; From                 ; To             ; From Clock ;
-+-------+--------------+------------+----------------------+----------------+------------+
-; N/A   ; None         ; 12.224 ns  ; X_To_Sent[1]$latch   ; X_To_Sent[1]   ; clk50      ;
-; N/A   ; None         ; 11.904 ns  ; Write_Piece[2]$latch ; Write_Piece[2] ; clk50      ;
-; N/A   ; None         ; 11.881 ns  ; Write_Piece[1]$latch ; Write_Piece[1] ; clk50      ;
-; N/A   ; None         ; 11.664 ns  ; X_To_Sent[2]$latch   ; X_To_Sent[2]   ; clk50      ;
-; N/A   ; None         ; 11.607 ns  ; X_To_Sent[0]$latch   ; X_To_Sent[0]   ; clk50      ;
-; N/A   ; None         ; 11.587 ns  ; Ram_X[1]$latch       ; Ram_X[1]       ; clk50      ;
-; N/A   ; None         ; 11.551 ns  ; Ram_X[0]$latch       ; Ram_X[0]       ; clk50      ;
-; N/A   ; None         ; 11.532 ns  ; Y_To_Sent[1]$latch   ; Y_To_Sent[1]   ; clk50      ;
-; N/A   ; None         ; 11.478 ns  ; Write_Piece[0]$latch ; Write_Piece[0] ; clk50      ;
-; N/A   ; None         ; 11.366 ns  ; Ram_Y[0]$latch       ; Ram_Y[0]       ; clk50      ;
-; N/A   ; None         ; 11.352 ns  ; Ram_Y[1]$latch       ; Ram_Y[1]       ; clk50      ;
-; N/A   ; None         ; 11.331 ns  ; Ram_X[2]$latch       ; Ram_X[2]       ; clk50      ;
-; N/A   ; None         ; 11.324 ns  ; Y_To_Sent[0]$latch   ; Y_To_Sent[0]   ; clk50      ;
-; N/A   ; None         ; 11.261 ns  ; Ram_Y[2]$latch       ; Ram_Y[2]       ; clk50      ;
-; N/A   ; None         ; 11.210 ns  ; Y_To_Sent[2]$latch   ; Y_To_Sent[2]   ; clk50      ;
-; N/A   ; None         ; 8.148 ns   ; state.st_Write_Ram   ; SEND_DT        ; clk50      ;
-; N/A   ; None         ; 7.695 ns   ; state.st_Turn        ; led_turn       ; clk50      ;
-; N/A   ; None         ; 7.675 ns   ; state.st_Turn        ; turn_read      ; clk50      ;
-; N/A   ; None         ; 7.478 ns   ; state.st_Turn        ; freeze_kb      ; clk50      ;
-+-------+--------------+------------+----------------------+----------------+------------+
-
-
-+----------------------------------------------------------------------------------------------+
-; th                                                                                           ;
-+---------------+-------------+-----------+--------------+--------------------------+----------+
-; Minimum Slack ; Required th ; Actual th ; From         ; To                       ; To Clock ;
-+---------------+-------------+-----------+--------------+--------------------------+----------+
-; N/A           ; None        ; -0.500 ns ; nrst         ; s_whites                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; counter[0]               ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; piece_Moved              ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; while_Capturing          ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_Y[0]                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_Selected             ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_Y[1]                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_Y[2]                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_X[1]                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_X[0]                 ; clk50    ;
-; N/A           ; None        ; -0.678 ns ; nrst         ; sel_X[2]                 ; clk50    ;
-; N/A           ; None        ; -1.102 ns ; nrst         ; old_X[0]                 ; clk50    ;
-; N/A           ; None        ; -1.102 ns ; nrst         ; old_X[1]                 ; clk50    ;
-; N/A           ; None        ; -1.102 ns ; nrst         ; old_X[2]                 ; clk50    ;
-; N/A           ; None        ; -1.306 ns ; nrst         ; counter[1]               ; clk50    ;
-; N/A           ; None        ; -1.306 ns ; nrst         ; counter[3]               ; clk50    ;
-; N/A           ; None        ; -1.306 ns ; nrst         ; counter[2]               ; clk50    ;
-; N/A           ; None        ; -1.431 ns ; nrst         ; arriving_Cell[2]         ; clk50    ;
-; N/A           ; None        ; -1.431 ns ; nrst         ; arriving_Cell[0]         ; clk50    ;
-; N/A           ; None        ; -1.431 ns ; nrst         ; arriving_Cell[1]         ; clk50    ;
-; N/A           ; None        ; -1.505 ns ; nrst         ; old_Y[0]                 ; clk50    ;
-; N/A           ; None        ; -1.505 ns ; nrst         ; old_Y[1]                 ; clk50    ;
-; N/A           ; None        ; -1.505 ns ; nrst         ; old_Y[2]                 ; clk50    ;
-; N/A           ; None        ; -1.524 ns ; nrst         ; to_Move_X[2]             ; clk50    ;
-; N/A           ; None        ; -1.544 ns ; nrst         ; piece_To_Capture[1]      ; clk50    ;
-; N/A           ; None        ; -1.544 ns ; nrst         ; piece_To_Capture[2]      ; clk50    ;
-; N/A           ; None        ; -1.544 ns ; nrst         ; piece_To_Capture[0]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_X[0]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_X[1]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_X[2]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_Y[0]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_Y[1]      ; clk50    ;
-; N/A           ; None        ; -1.677 ns ; nrst         ; pos_To_Capture_Y[2]      ; clk50    ;
-; N/A           ; None        ; -1.730 ns ; nrst         ; piece_To_Write[0]        ; clk50    ;
-; N/A           ; None        ; -1.730 ns ; nrst         ; piece_To_Write[1]        ; clk50    ;
-; N/A           ; None        ; -1.730 ns ; nrst         ; piece_To_Write[2]        ; clk50    ;
-; N/A           ; None        ; -1.798 ns ; nrst         ; piece_To_Move[2]         ; clk50    ;
-; N/A           ; None        ; -1.798 ns ; nrst         ; piece_To_Move[0]         ; clk50    ;
-; N/A           ; None        ; -1.798 ns ; nrst         ; piece_To_Move[1]         ; clk50    ;
-; N/A           ; None        ; -1.836 ns ; nrst         ; to_Move_Y[1]             ; clk50    ;
-; N/A           ; None        ; -1.836 ns ; nrst         ; to_Move_Y[2]             ; clk50    ;
-; N/A           ; None        ; -1.850 ns ; nrst         ; to_Move_Y[0]             ; clk50    ;
-; N/A           ; None        ; -1.850 ns ; nrst         ; to_Move_X[0]             ; clk50    ;
-; N/A           ; None        ; -1.850 ns ; nrst         ; to_Move_X[1]             ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_X[0]               ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_X[1]               ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_X[2]               ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_y[0]               ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_y[1]               ; clk50    ;
-; N/A           ; None        ; -2.015 ns ; nrst         ; s_Ram_y[2]               ; clk50    ;
-; N/A           ; None        ; -3.346 ns ; In_Piece[1]  ; piece_To_Capture[1]      ; clk50    ;
-; N/A           ; None        ; -3.387 ns ; In_Piece[0]  ; piece_To_Capture[0]      ; clk50    ;
-; N/A           ; None        ; -3.388 ns ; Pos_X[0]     ; sel_X[0]                 ; clk50    ;
-; N/A           ; None        ; -3.487 ns ; In_Piece[1]  ; piece_To_Move[1]         ; clk50    ;
-; N/A           ; None        ; -3.494 ns ; Pos_Y[0]     ; sel_Y[0]                 ; clk50    ;
-; N/A           ; None        ; -3.586 ns ; Pos_X[1]     ; sel_X[1]                 ; clk50    ;
-; N/A           ; None        ; -3.589 ns ; In_Piece[1]  ; arriving_Cell[1]         ; clk50    ;
-; N/A           ; None        ; -3.630 ns ; Turn         ; state.st_Wait_Turn       ; clk50    ;
-; N/A           ; None        ; -3.638 ns ; Pos_X[2]     ; sel_X[2]                 ; clk50    ;
-; N/A           ; None        ; -3.707 ns ; Color        ; s_whites                 ; clk50    ;
-; N/A           ; None        ; -3.713 ns ; New_Game     ; state.st_W_Tx1           ; clk50    ;
-; N/A           ; None        ; -3.713 ns ; Pos_Y[2]     ; sel_Y[2]                 ; clk50    ;
-; N/A           ; None        ; -3.765 ns ; In_Piece[0]  ; piece_To_Move[0]         ; clk50    ;
-; N/A           ; None        ; -3.771 ns ; Pos_Y[1]     ; sel_Y[1]                 ; clk50    ;
-; N/A           ; None        ; -3.781 ns ; RDY_RECEIVED ; state.st_W_Rdy           ; clk50    ;
-; N/A           ; None        ; -3.810 ns ; RDY_RECEIVED ; state.st_Start_Game      ; clk50    ;
-; N/A           ; None        ; -3.817 ns ; In_Piece[2]  ; piece_To_Capture[2]      ; clk50    ;
-; N/A           ; None        ; -3.894 ns ; Sel          ; state.st_Assign_Position ; clk50    ;
-; N/A           ; None        ; -3.932 ns ; In_Piece[2]  ; piece_To_Move[2]         ; clk50    ;
-; N/A           ; None        ; -3.984 ns ; In_Piece[0]  ; arriving_Cell[0]         ; clk50    ;
-; N/A           ; None        ; -4.072 ns ; Turn         ; state.st_Turn            ; clk50    ;
-; N/A           ; None        ; -4.072 ns ; In_Piece[2]  ; arriving_Cell[2]         ; clk50    ;
-; N/A           ; None        ; -4.354 ns ; ready_to_TX  ; state.st_S_Rdy           ; clk50    ;
-; N/A           ; None        ; -4.511 ns ; Sel          ; state.st_Turn            ; clk50    ;
-; N/A           ; None        ; -5.107 ns ; Turn         ; state.st_Wait_Game       ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_X[0]               ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_X[1]               ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_X[2]               ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_y[0]               ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_y[1]               ; clk50    ;
-; N/A           ; None        ; -5.139 ns ; Sel          ; s_Ram_y[2]               ; clk50    ;
-; N/A           ; None        ; -5.239 ns ; New_Game     ; state.st_Wait_Game       ; clk50    ;
-; N/A           ; None        ; -5.461 ns ; Turn         ; state.st_W_Tx1           ; clk50    ;
-; N/A           ; None        ; -5.595 ns ; Sel          ; state.st_Wait_Game       ; clk50    ;
-; N/A           ; None        ; -5.881 ns ; ready_to_TX  ; state.st_Wait_Game       ; clk50    ;
-; N/A           ; None        ; -5.949 ns ; Sel          ; state.st_W_Tx1           ; clk50    ;
-; N/A           ; None        ; -6.068 ns ; RDY_RECEIVED ; state.st_Wait_Game       ; clk50    ;
-; N/A           ; None        ; -6.235 ns ; ready_to_TX  ; state.st_W_Tx1           ; clk50    ;
-; N/A           ; None        ; -6.422 ns ; RDY_RECEIVED ; state.st_W_Tx1           ; clk50    ;
-+---------------+-------------+-----------+--------------+--------------------------+----------+
++------------------------------------------------------------------------------------------+
+; th                                                                                       ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From      ; To                      ; To Clock ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
+; N/A           ; None        ; 0.290 ns  ; Send_Rdy  ; state.st_pr_rdy         ; clk50    ;
+; N/A           ; None        ; 0.287 ns  ; Send_Rdy  ; state.st_pr_wait        ; clk50    ;
+; N/A           ; None        ; 0.218 ns  ; tx_empty  ; state.st_to_send_x      ; clk50    ;
+; N/A           ; None        ; 0.217 ns  ; tx_empty  ; state.st_send_y         ; clk50    ;
+; N/A           ; None        ; 0.216 ns  ; tx_empty  ; state.st_finish_Tx      ; clk50    ;
+; N/A           ; None        ; 0.215 ns  ; tx_empty  ; state.st_send_x         ; clk50    ;
+; N/A           ; None        ; 0.213 ns  ; tx_empty  ; state.st_to_send_figure ; clk50    ;
+; N/A           ; None        ; 0.210 ns  ; tx_empty  ; state.st_send_figure    ; clk50    ;
+; N/A           ; None        ; 0.210 ns  ; tx_empty  ; state.st_to_send_y      ; clk50    ;
+; N/A           ; None        ; 0.209 ns  ; tx_empty  ; state.st_send_type      ; clk50    ;
+; N/A           ; None        ; 0.208 ns  ; tx_empty  ; state.st_send_rdy       ; clk50    ;
+; N/A           ; None        ; -0.080 ns ; tx_empty  ; Tx_Data[7]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.154 ns ; nrst      ; frame_type[3]           ; clk50    ;
+; N/A           ; None        ; -0.400 ns ; nrst      ; Tx_Data[2]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.400 ns ; nrst      ; Tx_Data[3]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.400 ns ; nrst      ; Tx_Data[6]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.400 ns ; nrst      ; Tx_Data[7]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.464 ns ; tx_empty  ; Tx_Data[3]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.472 ns ; tx_empty  ; Tx_Data[2]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.712 ns ; tx_empty  ; Tx_Data[6]~reg0         ; clk50    ;
+; N/A           ; None        ; -0.752 ns ; nrst      ; i_Figure[0]             ; clk50    ;
+; N/A           ; None        ; -0.752 ns ; nrst      ; i_Pos_Y[0]              ; clk50    ;
+; N/A           ; None        ; -0.752 ns ; nrst      ; i_Figure[1]             ; clk50    ;
+; N/A           ; None        ; -0.752 ns ; nrst      ; i_Pos_Y[1]              ; clk50    ;
+; N/A           ; None        ; -0.945 ns ; nrst      ; i_Pos_X[0]              ; clk50    ;
+; N/A           ; None        ; -0.945 ns ; nrst      ; i_Pos_X[1]              ; clk50    ;
+; N/A           ; None        ; -1.078 ns ; tx_empty  ; Tx_Data[0]~reg0         ; clk50    ;
+; N/A           ; None        ; -1.078 ns ; tx_empty  ; Tx_Data[1]~reg0         ; clk50    ;
+; N/A           ; None        ; -1.192 ns ; nrst      ; i_Pos_X[2]              ; clk50    ;
+; N/A           ; None        ; -1.192 ns ; nrst      ; i_Pos_Y[2]              ; clk50    ;
+; N/A           ; None        ; -1.192 ns ; nrst      ; i_Figure[2]             ; clk50    ;
+; N/A           ; None        ; -1.586 ns ; nrst      ; Tx_Data[0]~reg0         ; clk50    ;
+; N/A           ; None        ; -1.586 ns ; nrst      ; Tx_Data[1]~reg0         ; clk50    ;
+; N/A           ; None        ; -3.407 ns ; Figure[1] ; i_Figure[1]             ; clk50    ;
+; N/A           ; None        ; -3.464 ns ; Pos_Y[0]  ; i_Pos_Y[0]              ; clk50    ;
+; N/A           ; None        ; -3.465 ns ; Pos_X[1]  ; i_Pos_X[1]              ; clk50    ;
+; N/A           ; None        ; -3.492 ns ; Pos_Y[2]  ; i_Pos_Y[2]              ; clk50    ;
+; N/A           ; None        ; -3.493 ns ; Pos_X[0]  ; i_Pos_X[0]              ; clk50    ;
+; N/A           ; None        ; -3.495 ns ; Pos_Y[1]  ; i_Pos_Y[1]              ; clk50    ;
+; N/A           ; None        ; -3.509 ns ; Pos_X[2]  ; i_Pos_X[2]              ; clk50    ;
+; N/A           ; None        ; -3.546 ns ; Send_Dt   ; state.st_pr_dt          ; clk50    ;
+; N/A           ; None        ; -3.546 ns ; Send_Dt   ; state.st_pr_rdy         ; clk50    ;
+; N/A           ; None        ; -3.577 ns ; Figure[2] ; i_Figure[2]             ; clk50    ;
+; N/A           ; None        ; -3.680 ns ; Send_Dt   ; state.st_pr_wait        ; clk50    ;
+; N/A           ; None        ; -3.844 ns ; Figure[0] ; i_Figure[0]             ; clk50    ;
+; N/A           ; None        ; -4.512 ns ; Send_Dt   ; i_Figure[0]             ; clk50    ;
+; N/A           ; None        ; -4.512 ns ; Send_Dt   ; i_Pos_Y[0]              ; clk50    ;
+; N/A           ; None        ; -4.512 ns ; Send_Dt   ; i_Figure[1]             ; clk50    ;
+; N/A           ; None        ; -4.512 ns ; Send_Dt   ; i_Pos_Y[1]              ; clk50    ;
+; N/A           ; None        ; -4.705 ns ; Send_Dt   ; i_Pos_X[0]              ; clk50    ;
+; N/A           ; None        ; -4.705 ns ; Send_Dt   ; i_Pos_X[1]              ; clk50    ;
+; N/A           ; None        ; -4.952 ns ; Send_Dt   ; i_Pos_X[2]              ; clk50    ;
+; N/A           ; None        ; -4.952 ns ; Send_Dt   ; i_Pos_Y[2]              ; clk50    ;
+; N/A           ; None        ; -4.952 ns ; Send_Dt   ; i_Figure[2]             ; clk50    ;
++---------------+-------------+-----------+-----------+-------------------------+----------+
 
 
 +--------------------------+
@@ -564,128 +387,77 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Info: *******************************************************************
 Info: Running Quartus II Classic Timing Analyzer
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 12:56:20 2023
+    Info: Processing started: Fri Dec 22 11:43:17 2023
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Design1 -c Design1 --timing_analysis_only
-Warning: Timing Analysis is analyzing one or more combinational loops as latches
-    Warning: Node "Ram_X[0]$latch" is a latch
-    Warning: Node "Ram_X[1]$latch" is a latch
-    Warning: Node "Ram_X[2]$latch" is a latch
-    Warning: Node "Ram_Y[0]$latch" is a latch
-    Warning: Node "Ram_Y[1]$latch" is a latch
-    Warning: Node "Ram_Y[2]$latch" is a latch
-    Warning: Node "X_To_Sent[0]$latch" is a latch
-    Warning: Node "X_To_Sent[1]$latch" is a latch
-    Warning: Node "X_To_Sent[2]$latch" is a latch
-    Warning: Node "Y_To_Sent[0]$latch" is a latch
-    Warning: Node "Y_To_Sent[1]$latch" is a latch
-    Warning: Node "Y_To_Sent[2]$latch" is a latch
-    Warning: Node "Write_Piece[0]$latch" is a latch
-    Warning: Node "Write_Piece[1]$latch" is a latch
-    Warning: Node "Write_Piece[2]$latch" is a latch
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk50" is an undefined clock
-Warning: Found 3 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
-    Info: Detected gated clock "WideOr9~0" as buffer
-    Info: Detected ripple clock "state.st_Read_Ram" as buffer
-    Info: Detected ripple clock "state.st_Write_Ram" as buffer
-Info: Clock "clk50" has Internal fmax of 250.82 MHz between source register "old_Y[0]" and destination register "pos_To_Capture_X[0]" (period= 3.987 ns)
-    Info: + Longest register to register delay is 3.772 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X42_Y24_N7; Fanout = 11; REG Node = 'old_Y[0]'
-        Info: 2: + IC(0.348 ns) + CELL(0.438 ns) = 0.786 ns; Loc. = LCCOMB_X42_Y24_N12; Fanout = 2; COMB Node = 'Equal8~0'
-        Info: 3: + IC(0.441 ns) + CELL(0.389 ns) = 1.616 ns; Loc. = LCCOMB_X41_Y24_N20; Fanout = 2; COMB Node = 'Equal8~2'
-        Info: 4: + IC(0.276 ns) + CELL(0.438 ns) = 2.330 ns; Loc. = LCCOMB_X41_Y24_N16; Fanout = 3; COMB Node = 'pos_To_Capture_X[0]~0'
-        Info: 5: + IC(0.278 ns) + CELL(0.275 ns) = 2.883 ns; Loc. = LCCOMB_X41_Y24_N6; Fanout = 6; COMB Node = 'pos_To_Capture_X[0]~2'
-        Info: 6: + IC(0.229 ns) + CELL(0.660 ns) = 3.772 ns; Loc. = LCFF_X41_Y24_N15; Fanout = 1; REG Node = 'pos_To_Capture_X[0]'
-        Info: Total cell delay = 2.200 ns ( 58.32 % )
-        Info: Total interconnect delay = 1.572 ns ( 41.68 % )
-    Info: - Smallest clock skew is -0.001 ns
-        Info: + Shortest clock path from clock "clk50" to destination register is 2.665 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.011 ns) + CELL(0.537 ns) = 2.665 ns; Loc. = LCFF_X41_Y24_N15; Fanout = 1; REG Node = 'pos_To_Capture_X[0]'
-            Info: Total cell delay = 1.536 ns ( 57.64 % )
-            Info: Total interconnect delay = 1.129 ns ( 42.36 % )
-        Info: - Longest clock path from clock "clk50" to source register is 2.666 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.012 ns) + CELL(0.537 ns) = 2.666 ns; Loc. = LCFF_X42_Y24_N7; Fanout = 11; REG Node = 'old_Y[0]'
-            Info: Total cell delay = 1.536 ns ( 57.61 % )
-            Info: Total interconnect delay = 1.130 ns ( 42.39 % )
+Info: Clock "clk50" has Internal fmax of 332.56 MHz between source register "state.st_pr_wait" and destination register "Tx_Data[0]~reg0" (period= 3.007 ns)
+    Info: + Longest register to register delay is 2.793 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X28_Y22_N9; Fanout = 5; REG Node = 'state.st_pr_wait'
+        Info: 2: + IC(0.519 ns) + CELL(0.438 ns) = 0.957 ns; Loc. = LCCOMB_X28_Y22_N24; Fanout = 3; COMB Node = 'WideOr12~2'
+        Info: 3: + IC(0.672 ns) + CELL(0.275 ns) = 1.904 ns; Loc. = LCCOMB_X29_Y22_N16; Fanout = 2; COMB Node = 'Tx_Data[0]~2'
+        Info: 4: + IC(0.229 ns) + CELL(0.660 ns) = 2.793 ns; Loc. = LCFF_X29_Y22_N9; Fanout = 1; REG Node = 'Tx_Data[0]~reg0'
+        Info: Total cell delay = 1.373 ns ( 49.16 % )
+        Info: Total interconnect delay = 1.420 ns ( 50.84 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "clk50" to destination register is 2.689 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+            Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X29_Y22_N9; Fanout = 1; REG Node = 'Tx_Data[0]~reg0'
+            Info: Total cell delay = 1.536 ns ( 57.12 % )
+            Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+        Info: - Longest clock path from clock "clk50" to source register is 2.689 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+            Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X28_Y22_N9; Fanout = 5; REG Node = 'state.st_pr_wait'
+            Info: Total cell delay = 1.536 ns ( 57.12 % )
+            Info: Total interconnect delay = 1.153 ns ( 42.88 % )
     Info: + Micro clock to output delay of source is 0.250 ns
     Info: + Micro setup delay of destination is -0.036 ns
-Warning: Circuit may not operate. Detected 15 non-operational path(s) clocked by clock "clk50" with clock skew larger than data delay. See Compilation Report for details.
-Info: Found hold time violation between source  pin or register "piece_To_Write[0]" and destination pin or register "Write_Piece[0]$latch" for clock "clk50" (Hold time is 3.695 ns)
-    Info: + Largest clock skew is 4.529 ns
-        Info: + Longest clock path from clock "clk50" to destination register is 7.194 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(1.827 ns) + CELL(0.787 ns) = 3.613 ns; Loc. = LCFF_X40_Y23_N5; Fanout = 11; REG Node = 'state.st_Write_Ram'
-            Info: 3: + IC(2.099 ns) + CELL(0.000 ns) = 5.712 ns; Loc. = CLKCTRL_G4; Fanout = 9; COMB Node = 'state.st_Write_Ram~clkctrl'
-            Info: 4: + IC(1.332 ns) + CELL(0.150 ns) = 7.194 ns; Loc. = LCCOMB_X38_Y23_N10; Fanout = 1; REG Node = 'Write_Piece[0]$latch'
-            Info: Total cell delay = 1.936 ns ( 26.91 % )
-            Info: Total interconnect delay = 5.258 ns ( 73.09 % )
-        Info: - Shortest clock path from clock "clk50" to source register is 2.665 ns
-            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-            Info: 3: + IC(1.011 ns) + CELL(0.537 ns) = 2.665 ns; Loc. = LCFF_X38_Y23_N9; Fanout = 1; REG Node = 'piece_To_Write[0]'
-            Info: Total cell delay = 1.536 ns ( 57.64 % )
-            Info: Total interconnect delay = 1.129 ns ( 42.36 % )
-    Info: - Micro clock to output delay of source is 0.250 ns
-    Info: - Shortest register to register delay is 0.584 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X38_Y23_N9; Fanout = 1; REG Node = 'piece_To_Write[0]'
-        Info: 2: + IC(0.313 ns) + CELL(0.271 ns) = 0.584 ns; Loc. = LCCOMB_X38_Y23_N10; Fanout = 1; REG Node = 'Write_Piece[0]$latch'
-        Info: Total cell delay = 0.271 ns ( 46.40 % )
-        Info: Total interconnect delay = 0.313 ns ( 53.60 % )
-    Info: + Micro hold delay of destination is 0.000 ns
-    Info: Delay path is controlled by inverted clocks -- if clock duty cycle is 50%, fmax is divided by two
-Info: tsu for register "state.st_W_Tx1" (data pin = "RDY_RECEIVED", clock pin = "clk50") is 6.652 ns
-    Info: + Longest pin to register delay is 9.359 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_L24; Fanout = 3; PIN Node = 'RDY_RECEIVED'
-        Info: 2: + IC(5.815 ns) + CELL(0.419 ns) = 7.076 ns; Loc. = LCCOMB_X42_Y23_N10; Fanout = 1; COMB Node = 'Selector0~3'
-        Info: 3: + IC(0.274 ns) + CELL(0.438 ns) = 7.788 ns; Loc. = LCCOMB_X42_Y23_N2; Fanout = 1; COMB Node = 'Selector0~6'
-        Info: 4: + IC(0.264 ns) + CELL(0.149 ns) = 8.201 ns; Loc. = LCCOMB_X42_Y23_N20; Fanout = 2; COMB Node = 'Selector0~7'
-        Info: 5: + IC(0.272 ns) + CELL(0.275 ns) = 8.748 ns; Loc. = LCCOMB_X42_Y23_N14; Fanout = 1; COMB Node = 'Selector1~3'
-        Info: 6: + IC(0.252 ns) + CELL(0.275 ns) = 9.275 ns; Loc. = LCCOMB_X42_Y23_N24; Fanout = 1; COMB Node = 'Selector1~2'
-        Info: 7: + IC(0.000 ns) + CELL(0.084 ns) = 9.359 ns; Loc. = LCFF_X42_Y23_N25; Fanout = 4; REG Node = 'state.st_W_Tx1'
-        Info: Total cell delay = 2.482 ns ( 26.52 % )
-        Info: Total interconnect delay = 6.877 ns ( 73.48 % )
+Info: tsu for register "i_Pos_X[2]" (data pin = "Send_Dt", clock pin = "clk50") is 5.182 ns
+    Info: + Longest pin to register delay is 7.907 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.850 ns) = 0.850 ns; Loc. = PIN_C11; Fanout = 4; PIN Node = 'Send_Dt'
+        Info: 2: + IC(5.284 ns) + CELL(0.438 ns) = 6.572 ns; Loc. = LCCOMB_X29_Y22_N26; Fanout = 9; COMB Node = 'i_Pos_X[0]~1'
+        Info: 3: + IC(0.675 ns) + CELL(0.660 ns) = 7.907 ns; Loc. = LCFF_X27_Y22_N13; Fanout = 1; REG Node = 'i_Pos_X[2]'
+        Info: Total cell delay = 1.948 ns ( 24.64 % )
+        Info: Total interconnect delay = 5.959 ns ( 75.36 % )
     Info: + Micro setup delay of destination is -0.036 ns
-    Info: - Shortest clock path from clock "clk50" to destination register is 2.671 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-        Info: 3: + IC(1.017 ns) + CELL(0.537 ns) = 2.671 ns; Loc. = LCFF_X42_Y23_N25; Fanout = 4; REG Node = 'state.st_W_Tx1'
-        Info: Total cell delay = 1.536 ns ( 57.51 % )
-        Info: Total interconnect delay = 1.135 ns ( 42.49 % )
-Info: tco from clock "clk50" to destination pin "X_To_Sent[1]" through register "X_To_Sent[1]$latch" is 12.224 ns
-    Info: + Longest clock path from clock "clk50" to source register is 7.230 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(1.827 ns) + CELL(0.787 ns) = 3.613 ns; Loc. = LCFF_X40_Y23_N5; Fanout = 11; REG Node = 'state.st_Write_Ram'
-        Info: 3: + IC(2.099 ns) + CELL(0.000 ns) = 5.712 ns; Loc. = CLKCTRL_G4; Fanout = 9; COMB Node = 'state.st_Write_Ram~clkctrl'
-        Info: 4: + IC(1.368 ns) + CELL(0.150 ns) = 7.230 ns; Loc. = LCCOMB_X43_Y24_N24; Fanout = 1; REG Node = 'X_To_Sent[1]$latch'
-        Info: Total cell delay = 1.936 ns ( 26.78 % )
-        Info: Total interconnect delay = 5.294 ns ( 73.22 % )
-    Info: + Micro clock to output delay of source is 0.000 ns
-    Info: + Longest register to pin delay is 4.994 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCCOMB_X43_Y24_N24; Fanout = 1; REG Node = 'X_To_Sent[1]$latch'
-        Info: 2: + IC(2.226 ns) + CELL(2.768 ns) = 4.994 ns; Loc. = PIN_W15; Fanout = 0; PIN Node = 'X_To_Sent[1]'
-        Info: Total cell delay = 2.768 ns ( 55.43 % )
-        Info: Total interconnect delay = 2.226 ns ( 44.57 % )
-Info: th for register "s_whites" (data pin = "nrst", clock pin = "clk50") is -0.500 ns
-    Info: + Longest clock path from clock "clk50" to destination register is 2.670 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 3; CLK Node = 'clk50'
-        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 65; COMB Node = 'clk50~clkctrl'
-        Info: 3: + IC(1.016 ns) + CELL(0.537 ns) = 2.670 ns; Loc. = LCFF_X41_Y23_N29; Fanout = 3; REG Node = 's_whites'
-        Info: Total cell delay = 1.536 ns ( 57.53 % )
-        Info: Total interconnect delay = 1.134 ns ( 42.47 % )
+    Info: - Shortest clock path from clock "clk50" to destination register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X27_Y22_N13; Fanout = 1; REG Node = 'i_Pos_X[2]'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+Info: tco from clock "clk50" to destination pin "Tx_Data[1]" through register "Tx_Data[1]~reg0" is 8.194 ns
+    Info: + Longest clock path from clock "clk50" to source register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X29_Y22_N11; Fanout = 1; REG Node = 'Tx_Data[1]~reg0'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 5.255 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X29_Y22_N11; Fanout = 1; REG Node = 'Tx_Data[1]~reg0'
+        Info: 2: + IC(2.633 ns) + CELL(2.622 ns) = 5.255 ns; Loc. = PIN_M4; Fanout = 0; PIN Node = 'Tx_Data[1]'
+        Info: Total cell delay = 2.622 ns ( 49.90 % )
+        Info: Total interconnect delay = 2.633 ns ( 50.10 % )
+Info: th for register "state.st_pr_rdy" (data pin = "Send_Rdy", clock pin = "clk50") is 0.290 ns
+    Info: + Longest clock path from clock "clk50" to destination register is 2.689 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P2; Fanout = 1; CLK Node = 'clk50'
+        Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G3; Fanout = 31; COMB Node = 'clk50~clkctrl'
+        Info: 3: + IC(1.035 ns) + CELL(0.537 ns) = 2.689 ns; Loc. = LCFF_X28_Y22_N19; Fanout = 4; REG Node = 'state.st_pr_rdy'
+        Info: Total cell delay = 1.536 ns ( 57.12 % )
+        Info: Total interconnect delay = 1.153 ns ( 42.88 % )
     Info: + Micro hold delay of destination is 0.266 ns
-    Info: - Shortest pin to register delay is 3.436 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_P1; Fanout = 21; PIN Node = 'nrst'
-        Info: 2: + IC(1.915 ns) + CELL(0.438 ns) = 3.352 ns; Loc. = LCCOMB_X41_Y23_N28; Fanout = 1; COMB Node = 's_whites~0'
-        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 3.436 ns; Loc. = LCFF_X41_Y23_N29; Fanout = 3; REG Node = 's_whites'
-        Info: Total cell delay = 1.521 ns ( 44.27 % )
-        Info: Total interconnect delay = 1.915 ns ( 55.73 % )
-Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 19 warnings
-    Info: Peak virtual memory: 190 megabytes
-    Info: Processing ended: Thu Dec 21 12:56:20 2023
+    Info: - Shortest pin to register delay is 2.665 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.979 ns) = 0.979 ns; Loc. = PIN_D13; Fanout = 2; PIN Node = 'Send_Rdy'
+        Info: 2: + IC(1.452 ns) + CELL(0.150 ns) = 2.581 ns; Loc. = LCCOMB_X28_Y22_N18; Fanout = 1; COMB Node = 'Selector1~0'
+        Info: 3: + IC(0.000 ns) + CELL(0.084 ns) = 2.665 ns; Loc. = LCFF_X28_Y22_N19; Fanout = 4; REG Node = 'state.st_pr_rdy'
+        Info: Total cell delay = 1.213 ns ( 45.52 % )
+        Info: Total interconnect delay = 1.452 ns ( 54.48 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 189 megabytes
+    Info: Processing ended: Fri Dec 22 11:43:17 2023
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:01
 

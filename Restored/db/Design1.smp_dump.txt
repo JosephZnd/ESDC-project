@@ -1,20 +1,17 @@
 
-State Machine - |game|state
-Name state.st_Assign_Position state.st_Finish_Turn state.st_Invalid_Move state.st_Write_Ram state.st_Move_Piece state.st_Check_capture state.st_Capture state.st_Check_Second_Move state.st_Check_Piece state.st_Read_Ram state.st_Wait_Turn state.st_Turn state.st_Start_Game state.st_W_Rdy state.st_S_Rdy state.st_W_Tx1 state.st_Wait_Game 
-state.st_Wait_Game 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
-state.st_W_Tx1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
-state.st_S_Rdy 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
-state.st_W_Rdy 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
-state.st_Start_Game 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
-state.st_Turn 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
-state.st_Wait_Turn 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
-state.st_Read_Ram 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
-state.st_Check_Piece 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
-state.st_Check_Second_Move 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
-state.st_Capture 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
-state.st_Check_capture 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
-state.st_Move_Piece 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_Write_Ram 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_Invalid_Move 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_Finish_Turn 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
-state.st_Assign_Position 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+State Machine - |protocol_tx|state
+Name state.st_finish_Tx state.st_send_figure state.st_to_send_figure state.st_send_y state.st_to_send_y state.st_send_x state.st_to_send_x state.st_pr_dt state.st_send_type state.st_to_send_type state.st_send_rdy state.st_to_send_rdy state.st_pr_rdy state.st_pr_wait 
+state.st_pr_wait 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+state.st_pr_rdy 0 0 0 0 0 0 0 0 0 0 0 0 1 1 
+state.st_to_send_rdy 0 0 0 0 0 0 0 0 0 0 0 1 0 1 
+state.st_send_rdy 0 0 0 0 0 0 0 0 0 0 1 0 0 1 
+state.st_to_send_type 0 0 0 0 0 0 0 0 0 1 0 0 0 1 
+state.st_send_type 0 0 0 0 0 0 0 0 1 0 0 0 0 1 
+state.st_pr_dt 0 0 0 0 0 0 0 1 0 0 0 0 0 1 
+state.st_to_send_x 0 0 0 0 0 0 1 0 0 0 0 0 0 1 
+state.st_send_x 0 0 0 0 0 1 0 0 0 0 0 0 0 1 
+state.st_to_send_y 0 0 0 0 1 0 0 0 0 0 0 0 0 1 
+state.st_send_y 0 0 0 1 0 0 0 0 0 0 0 0 0 1 
+state.st_to_send_figure 0 0 1 0 0 0 0 0 0 0 0 0 0 1 
+state.st_send_figure 0 1 0 0 0 0 0 0 0 0 0 0 0 1 
+state.st_finish_Tx 1 0 0 0 0 0 0 0 0 0 0 0 0 1 

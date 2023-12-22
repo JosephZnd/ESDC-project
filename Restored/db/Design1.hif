@@ -1414,7 +1414,7 @@ AUTO
 
 # end
 # entity
-game
+protocol_tx
 # storage
 db|Design1.(32).cnf
 db|Design1.(32).cnf
@@ -1424,8 +1424,8 @@ ON
 }
 # case_insensitive
 # source_file
-game.vhd
-e66a64ad47cc1a1f4a2e3ffb56ee8b5
+protocol_tx.vhd
+dbd46850885745daf241ad12c7253787
 5
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT

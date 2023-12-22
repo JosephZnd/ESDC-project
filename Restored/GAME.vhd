@@ -12,7 +12,7 @@ entity game is
 		Pos_X, Pos_Y : in integer range 7 downto 0;
 		In_Piece : in std_logic_vector(2 downto 0);
 		ready_to_TX, Turn, Color: in std_logic;  
-		SEND_RDY : out std_logic;
+		SEND_RDY, SEND_DT : out std_logic;
 		led_turn, turn_read, freeze_kb : out std_logic;
 		Ram_X, Ram_Y : out integer range 7 downto 0;
 		X_To_Sent, Y_To_Sent: out integer range 7 downto 0;
@@ -298,7 +298,7 @@ freeze_kb <='0' when state = st_Turn else '1';
 
 --enterCode <= '1' when state = st_Code else '0';
 
-frame_received <= '1' when state= st_Start_Game; --or state = st_Code or state = st_FR_R or ((state = st_W_FR or state = st_W_FR2 ) and 
+--frame_received <= '1' when state= st_Start_Game; --or state = st_Code or state = st_FR_R or ((state = st_W_FR or state = st_W_FR2 ) and 
 --(EQ_RECEIVED = '1' or GR_RECEIVED = '1' or SM_RECEIVED = '1')) else '0';
 
 end;
