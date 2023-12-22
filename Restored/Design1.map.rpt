@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Design1
-Fri Dec 22 11:43:05 2023
+Fri Dec 22 11:57:38 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,15 +10,7 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |protocol_tx|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Inverted Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -44,20 +36,20 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Dec 22 11:43:05 2023        ;
+; Analysis & Synthesis Status        ; Failed - Fri Dec 22 11:57:38 2023            ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; protocol_tx                                  ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 51                                           ;
-;     Total combinational functions  ; 40                                           ;
-;     Dedicated logic registers      ; 31                                           ;
-; Total registers                    ; 31                                           ;
-; Total pins                         ; 24                                           ;
-; Total virtual pins                 ; 0                                            ;
-; Total memory bits                  ; 0                                            ;
-; Embedded Multiplier 9-bit elements ; 0                                            ;
-; Total PLLs                         ; 0                                            ;
+; Total logic elements               ; N/A until Partition Merge                    ;
+;     Total combinational functions  ; N/A until Partition Merge                    ;
+;     Dedicated logic registers      ; N/A until Partition Merge                    ;
+; Total registers                    ; N/A until Partition Merge                    ;
+; Total pins                         ; N/A until Partition Merge                    ;
+; Total virtual pins                 ; N/A until Partition Merge                    ;
+; Total memory bits                  ; N/A until Partition Merge                    ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                    ;
+; Total PLLs                         ; N/A until Partition Merge                    ;
 +------------------------------------+----------------------------------------------+
 
 
@@ -150,135 +142,13 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                            ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-; protocol_tx.vhd                  ; yes             ; User VHDL File  ; C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/protocol_tx.vhd ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-; Estimated Total logic elements              ; 51    ;
-;                                             ;       ;
-; Total combinational functions               ; 40    ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 21    ;
-;     -- 3 input functions                    ; 13    ;
-;     -- <=2 input functions                  ; 6     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 40    ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 31    ;
-;     -- Dedicated logic registers            ; 31    ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 24    ;
-; Maximum fan-out node                        ; clk50 ;
-; Maximum fan-out                             ; 31    ;
-; Total fan-out                               ; 241   ;
-; Average fan-out                             ; 2.54  ;
-+---------------------------------------------+-------+
-
-
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |protocol_tx               ; 40 (40)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 24   ; 0            ; |protocol_tx        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |protocol_tx|state                                                                                                                                                                                                                                                                                        ;
-+-------------------------+--------------------+----------------------+-------------------------+-----------------+--------------------+-----------------+--------------------+----------------+--------------------+-----------------------+-------------------+----------------------+-----------------+------------------+
-; Name                    ; state.st_finish_Tx ; state.st_send_figure ; state.st_to_send_figure ; state.st_send_y ; state.st_to_send_y ; state.st_send_x ; state.st_to_send_x ; state.st_pr_dt ; state.st_send_type ; state.st_to_send_type ; state.st_send_rdy ; state.st_to_send_rdy ; state.st_pr_rdy ; state.st_pr_wait ;
-+-------------------------+--------------------+----------------------+-------------------------+-----------------+--------------------+-----------------+--------------------+----------------+--------------------+-----------------------+-------------------+----------------------+-----------------+------------------+
-; state.st_pr_wait        ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 0                ;
-; state.st_pr_rdy         ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 1               ; 1                ;
-; state.st_to_send_rdy    ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 1                    ; 0               ; 1                ;
-; state.st_send_rdy       ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 1                 ; 0                    ; 0               ; 1                ;
-; state.st_to_send_type   ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 1                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_send_type      ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 1                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_pr_dt          ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 1              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_to_send_x      ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 1                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_send_x         ; 0                  ; 0                    ; 0                       ; 0               ; 0                  ; 1               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_to_send_y      ; 0                  ; 0                    ; 0                       ; 0               ; 1                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_send_y         ; 0                  ; 0                    ; 0                       ; 1               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_to_send_figure ; 0                  ; 0                    ; 1                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_send_figure    ; 0                  ; 1                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-; state.st_finish_Tx      ; 1                  ; 0                    ; 0                       ; 0               ; 0                  ; 0               ; 0                  ; 0              ; 0                  ; 0                     ; 0                 ; 0                    ; 0               ; 1                ;
-+-------------------------+--------------------+----------------------+-------------------------+-----------------+--------------------+-----------------+--------------------+----------------+--------------------+-----------------------+-------------------+----------------------+-----------------+------------------+
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; frame_type[7]                         ; Stuck at VCC due to stuck port data_in ;
-; frame_type[6]                         ; Stuck at GND due to stuck port data_in ;
-; frame_type[5]                         ; Stuck at VCC due to stuck port data_in ;
-; frame_type[1,4]                       ; Stuck at GND due to stuck port data_in ;
-; frame_type[0]                         ; Stuck at VCC due to stuck port data_in ;
-; frame_type[2]                         ; Merged with frame_type[3]              ;
-; Tx_Data[5]~reg0                       ; Merged with Tx_Data[7]~reg0            ;
-; Tx_Data[4]~reg0                       ; Merged with Tx_Data[6]~reg0            ;
-; Total Number of Removed Registers = 9 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 31    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 2     ;
-; Number of registers using Asynchronous Clear ; 15    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 16    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------+
-; Inverted Register Statistics                     ;
-+----------------------------------------+---------+
-; Inverted Register                      ; Fan out ;
-+----------------------------------------+---------+
-; Ready_To_Tx~reg0                       ; 2       ;
-; Total number of inverted registers = 1 ;         ;
-+----------------------------------------+---------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-; 10:1               ; 2 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |protocol_tx|Tx_Data[0]~reg0 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Fri Dec 22 11:43:02 2023
+    Info: Processing started: Fri Dec 22 11:57:36 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Found 1 design units, including 1 entities, in source file p1_board_vga.bdf
     Info: Found entity 1: P1_BOARD_vga
@@ -385,20 +255,11 @@ Info: Found 1 design units, including 1 entities, in source file sender1.bdf
 Info: Found 2 design units, including 1 entities, in source file game.vhd
     Info: Found design unit 1: game-main
     Info: Found entity 1: game
-Info: Elaborating entity "protocol_tx" for the top level hierarchy
-Info (10041): Inferred latch for "Send" at protocol_tx.vhd(128)
-Info: Registers with preset signals will power-up high
-Info: DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
-Warning: Output pins are stuck at VCC or GND
-    Warning (13410): Pin "Send" is stuck at VCC
-Info: Implemented 75 device resources after synthesis - the final resource count might be different
-    Info: Implemented 14 input pins
-    Info: Implemented 10 output pins
-    Info: Implemented 51 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 250 megabytes
-    Info: Processing ended: Fri Dec 22 11:43:05 2023
-    Info: Elapsed time: 00:00:03
-    Info: Total CPU time (on all processors): 00:00:03
+Error (10482): VHDL error at protocol_rx.vhd(81): object "SMALLER" is used but not declared File: C:/Users/Isaac/Desktop/Estudis I Feina/MET/MET/Electronic System Design for Communications (ESDC)/ESDC-project/Restored/protocol_rx.vhd Line: 81
+Error: Quartus II Analysis & Synthesis was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 240 megabytes
+    Error: Processing ended: Fri Dec 22 11:57:38 2023
+    Error: Elapsed time: 00:00:02
+    Error: Total CPU time (on all processors): 00:00:03
 
 

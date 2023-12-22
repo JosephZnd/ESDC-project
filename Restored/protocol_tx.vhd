@@ -16,7 +16,7 @@ end protocol_tx;
 
 
 architecture main of protocol_tx is
-	type state_type is (st_pr_wait, st_pr_rdy, st_to_send_rdy, st_send_rdy, st_to_send_type, st_send_type, st_pr_dt,
+	type state_type is (st_pr_wait, st_pr_rdy, st_pr_whites, st_to_send_whites, st_send_whites, st_to_send_rdy, st_send_rdy, st_to_send_type, st_send_type, st_pr_dt,
 	st_to_send_x, st_send_x, st_to_send_y, st_send_y, st_to_send_figure, st_send_figure, st_finish_Tx );
 	 
 	 -- Definition of the diferent FRAME TYPE
@@ -57,7 +57,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 					i_Pos_X <= Pos_X;
 					i_Pos_Y <= Pos_Y;
 					i_Figure <= Figure;
-				if New_Game = '1' =>
+				elsif New_Game = '1' then
 					state <= st_pr_whites;
 				elsif Send_Rdy = '1' then
 					state <= st_pr_rdy;
