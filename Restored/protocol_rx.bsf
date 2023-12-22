@@ -96,22 +96,22 @@ applicable agreement for further details.
 	(port
 		(pt 200 112)
 		(output)
-		(text "dataH[3..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "dataH[3..0]" (rect 124 107 179 119)(font "Arial" ))
+		(text "dataH[2..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "dataH[2..0]" (rect 124 107 179 119)(font "Arial" ))
 		(line (pt 200 112)(pt 184 112)(line_width 3))
 	)
 	(port
 		(pt 200 128)
 		(output)
-		(text "dataT[3..0]" (rect 0 0 53 12)(font "Arial" ))
-		(text "dataT[3..0]" (rect 126 123 179 135)(font "Arial" ))
+		(text "dataT[2..0]" (rect 0 0 53 12)(font "Arial" ))
+		(text "dataT[2..0]" (rect 126 123 179 135)(font "Arial" ))
 		(line (pt 200 128)(pt 184 128)(line_width 3))
 	)
 	(port
 		(pt 200 144)
 		(output)
-		(text "dataU[3..0]" (rect 0 0 55 12)(font "Arial" ))
-		(text "dataU[3..0]" (rect 124 139 179 151)(font "Arial" ))
+		(text "dataU[2..0]" (rect 0 0 55 12)(font "Arial" ))
+		(text "dataU[2..0]" (rect 124 139 179 151)(font "Arial" ))
 		(line (pt 200 144)(pt 184 144)(line_width 3))
 	)
 	(port

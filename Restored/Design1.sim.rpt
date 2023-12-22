@@ -1,5 +1,5 @@
 Simulator report for Design1
-Thu Dec 21 12:50:57 2023
+Fri Dec 22 12:47:56 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -46,9 +46,9 @@ applicable agreement for further details.
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
 ; Simulation End Time         ; 5.0 us       ;
-; Simulation Netlist Size     ; 132 nodes    ;
-; Simulation Coverage         ;      56.72 % ;
-; Total Number of Transitions ; 1285         ;
+; Simulation Netlist Size     ; 315 nodes    ;
+; Simulation Coverage         ;      58.36 % ;
+; Total Number of Transitions ; 2239         ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; Cyclone II   ;
 ; Device                      ; EP2C35F672C6 ;
@@ -102,13 +102,13 @@ Please refer to fitter text-based report (*.fit.rpt) to view logical memory repo
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      56.72 % ;
-; Total nodes checked                                 ; 132          ;
-; Total output ports checked                          ; 134          ;
-; Total output ports with complete 1/0-value coverage ; 76           ;
-; Total output ports with no 1/0-value coverage       ; 37           ;
-; Total output ports with no 1-value coverage         ; 37           ;
-; Total output ports with no 0-value coverage         ; 58           ;
+; Total coverage as a percentage                      ;      58.36 % ;
+; Total nodes checked                                 ; 315          ;
+; Total output ports checked                          ; 317          ;
+; Total output ports with complete 1/0-value coverage ; 185          ;
+; Total output ports with no 1/0-value coverage       ; 77           ;
+; Total output ports with no 1-value coverage         ; 90           ;
+; Total output ports with no 0-value coverage         ; 119          ;
 +-----------------------------------------------------+--------------+
 
 
@@ -118,82 +118,191 @@ The following table displays output ports that toggle between 1 and 0 during sim
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                          ; Output Port Name                                                                             ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |sim_game|game:GAME|ext_piece[2]                                                                   ; |sim_game|game:GAME|ext_piece[2]                                                             ; regout           ;
 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|q_a[1] ; portadataout1    ;
 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|q_a[2] ; portadataout2    ;
-; |sim_game|game:GAME|count[2]                                                                       ; |sim_game|game:GAME|count[2]                                                                 ; regout           ;
-; |sim_game|game:GAME|count[1]                                                                       ; |sim_game|game:GAME|count[1]                                                                 ; regout           ;
-; |sim_game|game:GAME|count[0]                                                                       ; |sim_game|game:GAME|count[0]                                                                 ; regout           ;
-; |sim_game|game:GAME|count[0]~0                                                                     ; |sim_game|game:GAME|count[0]~0                                                               ; combout          ;
 ; |sim_game|game:GAME|state.st_S_RDY                                                                 ; |sim_game|game:GAME|state.st_S_RDY                                                           ; regout           ;
-; |sim_game|game:GAME|state.S_Place_Figure                                                           ; |sim_game|game:GAME|state.S_Place_Figure                                                     ; regout           ;
+; |sim_game|game:GAME|state.st_wrFigure                                                              ; |sim_game|game:GAME|state.st_wrFigure                                                        ; regout           ;
+; |sim_game|game:GAME|out_piece[2]~0                                                                 ; |sim_game|game:GAME|out_piece[2]~0                                                           ; combout          ;
+; |sim_game|game:GAME|out_piece[1]~1                                                                 ; |sim_game|game:GAME|out_piece[1]~1                                                           ; combout          ;
 ; |sim_game|mux_ram:inst15|O[5]~0                                                                    ; |sim_game|mux_ram:inst15|O[5]~0                                                              ; combout          ;
 ; |sim_game|mux_ram:inst15|O[3]~2                                                                    ; |sim_game|mux_ram:inst15|O[3]~2                                                              ; combout          ;
+; |sim_game|mux_ram:inst15|O[1]~4                                                                    ; |sim_game|mux_ram:inst15|O[1]~4                                                              ; combout          ;
 ; |sim_game|mux_ram:inst15|O[0]~5                                                                    ; |sim_game|mux_ram:inst15|O[0]~5                                                              ; combout          ;
+; |sim_game|game:GAME|s_sendfig[2]                                                                   ; |sim_game|game:GAME|s_sendfig[2]                                                             ; regout           ;
+; |sim_game|game:GAME|s_sendx[0]                                                                     ; |sim_game|game:GAME|s_sendx[0]                                                               ; regout           ;
+; |sim_game|game:GAME|s_sendy[0]                                                                     ; |sim_game|game:GAME|s_sendy[0]                                                               ; regout           ;
 ; |sim_game|game:GAME|state.st_W_TX1                                                                 ; |sim_game|game:GAME|state.st_W_TX1                                                           ; regout           ;
 ; |sim_game|game:GAME|Selector2~0                                                                    ; |sim_game|game:GAME|Selector2~0                                                              ; combout          ;
-; |sim_game|game:GAME|state.S_Validate                                                               ; |sim_game|game:GAME|state.S_Validate                                                         ; regout           ;
-; |sim_game|game:GAME|Selector15~0                                                                   ; |sim_game|game:GAME|Selector15~0                                                             ; combout          ;
-; |sim_game|game:GAME|Selector14~0                                                                   ; |sim_game|game:GAME|Selector14~0                                                             ; combout          ;
-; |sim_game|game:GAME|s_y_out[2]~0                                                                   ; |sim_game|game:GAME|s_y_out[2]~0                                                             ; combout          ;
-; |sim_game|game:GAME|state.S_End_Turn                                                               ; |sim_game|game:GAME|state.S_End_Turn                                                         ; regout           ;
-; |sim_game|game:GAME|Selector1~0                                                                    ; |sim_game|game:GAME|Selector1~0                                                              ; combout          ;
+; |sim_game|game:GAME|count[1]                                                                       ; |sim_game|game:GAME|count[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|count[0]                                                                       ; |sim_game|game:GAME|count[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|count[2]                                                                       ; |sim_game|game:GAME|count[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|Selector17~0                                                                   ; |sim_game|game:GAME|Selector17~0                                                             ; combout          ;
+; |sim_game|game:GAME|state.S_Place_Figure                                                           ; |sim_game|game:GAME|state.S_Place_Figure                                                     ; regout           ;
+; |sim_game|game:GAME|state.st_Refresh                                                               ; |sim_game|game:GAME|state.st_Refresh                                                         ; regout           ;
+; |sim_game|game:GAME|Selector17~1                                                                   ; |sim_game|game:GAME|Selector17~1                                                             ; combout          ;
+; |sim_game|game:GAME|s_y_out[0]                                                                     ; |sim_game|game:GAME|s_y_out[0]                                                               ; regout           ;
+; |sim_game|game:GAME|s_x_out[1]                                                                     ; |sim_game|game:GAME|s_x_out[1]                                                               ; regout           ;
+; |sim_game|game:GAME|s_x_out[0]                                                                     ; |sim_game|game:GAME|s_x_out[0]                                                               ; regout           ;
 ; |sim_game|game:GAME|state.st_Wait_Turn                                                             ; |sim_game|game:GAME|state.st_Wait_Turn                                                       ; regout           ;
-; |sim_game|game:GAME|Selector5~0                                                                    ; |sim_game|game:GAME|Selector5~0                                                              ; combout          ;
-; |sim_game|game:GAME|state.st_Turn                                                                  ; |sim_game|game:GAME|state.st_Turn                                                            ; regout           ;
+; |sim_game|game:GAME|state.S_Validate                                                               ; |sim_game|game:GAME|state.S_Validate                                                         ; regout           ;
+; |sim_game|game:GAME|SelMode                                                                        ; |sim_game|game:GAME|SelMode                                                                  ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]~4                                                                 ; |sim_game|game:GAME|ext_piece[0]~4                                                           ; combout          ;
+; |sim_game|game:GAME|ext_piece[2]~5                                                                 ; |sim_game|game:GAME|ext_piece[2]~5                                                           ; combout          ;
+; |sim_game|game:GAME|state.S_Move_White                                                             ; |sim_game|game:GAME|state.S_Move_White                                                       ; regout           ;
+; |sim_game|game:GAME|ext_piece[2]~6                                                                 ; |sim_game|game:GAME|ext_piece[2]~6                                                           ; combout          ;
+; |sim_game|game:GAME|ext_piece[2]~7                                                                 ; |sim_game|game:GAME|ext_piece[2]~7                                                           ; combout          ;
+; |sim_game|game:GAME|Equal5~0                                                                       ; |sim_game|game:GAME|Equal5~0                                                                 ; combout          ;
+; |sim_game|game:GAME|Add4~1                                                                         ; |sim_game|game:GAME|Add4~1                                                                   ; combout          ;
+; |sim_game|game:GAME|Add1~1                                                                         ; |sim_game|game:GAME|Add1~1                                                                   ; combout          ;
+; |sim_game|game:GAME|LessThan4~2                                                                    ; |sim_game|game:GAME|LessThan4~2                                                              ; combout          ;
+; |sim_game|game:GAME|state~59                                                                       ; |sim_game|game:GAME|state~59                                                                 ; combout          ;
+; |sim_game|game:GAME|Equal8~0                                                                       ; |sim_game|game:GAME|Equal8~0                                                                 ; combout          ;
+; |sim_game|game:GAME|state~60                                                                       ; |sim_game|game:GAME|state~60                                                                 ; combout          ;
+; |sim_game|game:GAME|state~61                                                                       ; |sim_game|game:GAME|state~61                                                                 ; combout          ;
+; |sim_game|game:GAME|temp_piece[1]                                                                  ; |sim_game|game:GAME|temp_piece[1]                                                            ; regout           ;
+; |sim_game|game:GAME|ext_piece[2]~13                                                                ; |sim_game|game:GAME|ext_piece[2]~13                                                          ; combout          ;
+; |sim_game|game:GAME|state.st_Send_1                                                                ; |sim_game|game:GAME|state.st_Send_1                                                          ; regout           ;
+; |sim_game|game:GAME|state.st_Send_2                                                                ; |sim_game|game:GAME|state.st_Send_2                                                          ; regout           ;
+; |sim_game|game:GAME|Selector43~0                                                                   ; |sim_game|game:GAME|Selector43~0                                                             ; combout          ;
+; |sim_game|game:GAME|s_sendx[2]~0                                                                   ; |sim_game|game:GAME|s_sendx[2]~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector47~0                                                                   ; |sim_game|game:GAME|Selector47~0                                                             ; combout          ;
+; |sim_game|game:GAME|selX[0]                                                                        ; |sim_game|game:GAME|selX[0]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector48~0                                                                   ; |sim_game|game:GAME|Selector48~0                                                             ; combout          ;
+; |sim_game|game:GAME|selY[0]                                                                        ; |sim_game|game:GAME|selY[0]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector51~0                                                                   ; |sim_game|game:GAME|Selector51~0                                                             ; combout          ;
 ; |sim_game|game:GAME|state.st_W_RDY                                                                 ; |sim_game|game:GAME|state.st_W_RDY                                                           ; regout           ;
-; |sim_game|game:GAME|Selector1~1                                                                    ; |sim_game|game:GAME|Selector1~1                                                              ; combout          ;
+; |sim_game|game:GAME|WideOr0~0                                                                      ; |sim_game|game:GAME|WideOr0~0                                                                ; combout          ;
+; |sim_game|game:GAME|state.st_Turn                                                                  ; |sim_game|game:GAME|state.st_Turn                                                            ; regout           ;
+; |sim_game|game:GAME|WideOr0~1                                                                      ; |sim_game|game:GAME|WideOr0~1                                                                ; combout          ;
 ; |sim_game|game:GAME|state.st_rFigure                                                               ; |sim_game|game:GAME|state.st_rFigure                                                         ; regout           ;
-; |sim_game|game:GAME|Selector0~0                                                                    ; |sim_game|game:GAME|Selector0~0                                                              ; combout          ;
-; |sim_game|game:GAME|Selector0~1                                                                    ; |sim_game|game:GAME|Selector0~1                                                              ; combout          ;
-; |sim_game|game:GAME|Selector1~2                                                                    ; |sim_game|game:GAME|Selector1~2                                                              ; combout          ;
+; |sim_game|game:GAME|state.st_Pre_Send                                                              ; |sim_game|game:GAME|state.st_Pre_Send                                                        ; regout           ;
+; |sim_game|game:GAME|Selector26~0                                                                   ; |sim_game|game:GAME|Selector26~0                                                             ; combout          ;
+; |sim_game|game:GAME|state.S_Tx_1                                                                   ; |sim_game|game:GAME|state.S_Tx_1                                                             ; regout           ;
+; |sim_game|game:GAME|state.S_Tx_End                                                                 ; |sim_game|game:GAME|state.S_Tx_End                                                           ; regout           ;
+; |sim_game|game:GAME|Selector26~1                                                                   ; |sim_game|game:GAME|Selector26~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~2                                                                   ; |sim_game|game:GAME|Selector26~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector18~0                                                                   ; |sim_game|game:GAME|Selector18~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~3                                                                   ; |sim_game|game:GAME|Selector26~3                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~4                                                                   ; |sim_game|game:GAME|Selector26~4                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~5                                                                   ; |sim_game|game:GAME|Selector26~5                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~6                                                                   ; |sim_game|game:GAME|Selector26~6                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~7                                                                   ; |sim_game|game:GAME|Selector26~7                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~8                                                                   ; |sim_game|game:GAME|Selector26~8                                                             ; combout          ;
+; |sim_game|game:GAME|oldX[0]~0                                                                      ; |sim_game|game:GAME|oldX[0]~0                                                                ; combout          ;
+; |sim_game|game:GAME|Selector26~9                                                                   ; |sim_game|game:GAME|Selector26~9                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~10                                                                  ; |sim_game|game:GAME|Selector26~10                                                            ; combout          ;
+; |sim_game|game:GAME|Selector26~11                                                                  ; |sim_game|game:GAME|Selector26~11                                                            ; combout          ;
+; |sim_game|game:GAME|Selector14~2                                                                   ; |sim_game|game:GAME|Selector14~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~12                                                                  ; |sim_game|game:GAME|Selector26~12                                                            ; combout          ;
+; |sim_game|game:GAME|Selector26~13                                                                  ; |sim_game|game:GAME|Selector26~13                                                            ; combout          ;
+; |sim_game|game:GAME|Selector1~0                                                                    ; |sim_game|game:GAME|Selector1~0                                                              ; combout          ;
 ; |sim_game|game:GAME|state.st_Move                                                                  ; |sim_game|game:GAME|state.st_Move                                                            ; regout           ;
-; |sim_game|game:GAME|Selector1~3                                                                    ; |sim_game|game:GAME|Selector1~3                                                              ; combout          ;
-; |sim_game|game:GAME|Selector1~4                                                                    ; |sim_game|game:GAME|Selector1~4                                                              ; combout          ;
-; |sim_game|game:GAME|state.st_Start_Game                                                            ; |sim_game|game:GAME|state.st_Start_Game                                                      ; regout           ;
-; |sim_game|game:GAME|state.s_Turn0                                                                  ; |sim_game|game:GAME|state.s_Turn0                                                            ; regout           ;
-; |sim_game|game:GAME|Selector1~5                                                                    ; |sim_game|game:GAME|Selector1~5                                                              ; combout          ;
-; |sim_game|game:GAME|Selector1~6                                                                    ; |sim_game|game:GAME|Selector1~6                                                              ; combout          ;
-; |sim_game|game:GAME|Selector1~7                                                                    ; |sim_game|game:GAME|Selector1~7                                                              ; combout          ;
-; |sim_game|game:GAME|Selector13~0                                                                   ; |sim_game|game:GAME|Selector13~0                                                             ; combout          ;
+; |sim_game|game:GAME|state.S_End_Turn                                                               ; |sim_game|game:GAME|state.S_End_Turn                                                         ; regout           ;
+; |sim_game|game:GAME|Selector37~0                                                                   ; |sim_game|game:GAME|Selector37~0                                                             ; combout          ;
+; |sim_game|game:GAME|WideOr17~0                                                                     ; |sim_game|game:GAME|WideOr17~0                                                               ; combout          ;
+; |sim_game|game:GAME|Selector38~0                                                                   ; |sim_game|game:GAME|Selector38~0                                                             ; combout          ;
 ; |sim_game|game:GAME|Add0~0                                                                         ; |sim_game|game:GAME|Add0~0                                                                   ; combout          ;
-; |sim_game|game:GAME|WideOr13~0                                                                     ; |sim_game|game:GAME|WideOr13~0                                                               ; combout          ;
-; |sim_game|game:GAME|Add0~1                                                                         ; |sim_game|game:GAME|Add0~1                                                                   ; combout          ;
-; |sim_game|game:GAME|WideOr13~1                                                                     ; |sim_game|game:GAME|WideOr13~1                                                               ; combout          ;
-; |sim_game|game:GAME|selY[2]~0                                                                      ; |sim_game|game:GAME|selY[2]~0                                                                ; combout          ;
-; |sim_game|game:GAME|Selector15~1                                                                   ; |sim_game|game:GAME|Selector15~1                                                             ; combout          ;
-; |sim_game|game:GAME|Selector6~0                                                                    ; |sim_game|game:GAME|Selector6~0                                                              ; combout          ;
+; |sim_game|game:GAME|Selector36~0                                                                   ; |sim_game|game:GAME|Selector36~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector14~3                                                                   ; |sim_game|game:GAME|Selector14~3                                                             ; combout          ;
+; |sim_game|game:GAME|Selector5~0                                                                    ; |sim_game|game:GAME|Selector5~0                                                              ; combout          ;
 ; |sim_game|game:GAME|Selector5~1                                                                    ; |sim_game|game:GAME|Selector5~1                                                              ; combout          ;
+; |sim_game|game:GAME|Selector14~4                                                                   ; |sim_game|game:GAME|Selector14~4                                                             ; combout          ;
+; |sim_game|game:GAME|state.st_Receive                                                               ; |sim_game|game:GAME|state.st_Receive                                                         ; regout           ;
+; |sim_game|game:GAME|Selector30~0                                                                   ; |sim_game|game:GAME|Selector30~0                                                             ; combout          ;
+; |sim_game|game:GAME|s_y_out[2]~0                                                                   ; |sim_game|game:GAME|s_y_out[2]~0                                                             ; combout          ;
+; |sim_game|game:GAME|s_y_out[2]~1                                                                   ; |sim_game|game:GAME|s_y_out[2]~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector32~0                                                                   ; |sim_game|game:GAME|Selector32~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector27~0                                                                   ; |sim_game|game:GAME|Selector27~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector28~0                                                                   ; |sim_game|game:GAME|Selector28~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector29~0                                                                   ; |sim_game|game:GAME|Selector29~0                                                             ; combout          ;
+; |sim_game|game:GAME|aux_piece[2]~0                                                                 ; |sim_game|game:GAME|aux_piece[2]~0                                                           ; combout          ;
+; |sim_game|game:GAME|state.S_Send_End                                                               ; |sim_game|game:GAME|state.S_Send_End                                                         ; regout           ;
+; |sim_game|game:GAME|state.st_Start_Game                                                            ; |sim_game|game:GAME|state.st_Start_Game                                                      ; regout           ;
+; |sim_game|game:GAME|Selector6~0                                                                    ; |sim_game|game:GAME|Selector6~0                                                              ; combout          ;
+; |sim_game|game:GAME|state.s_Turn0                                                                  ; |sim_game|game:GAME|state.s_Turn0                                                            ; regout           ;
+; |sim_game|game:GAME|state~65                                                                       ; |sim_game|game:GAME|state~65                                                                 ; combout          ;
+; |sim_game|game:GAME|Selector13~0                                                                   ; |sim_game|game:GAME|Selector13~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector42~0                                                                   ; |sim_game|game:GAME|Selector42~0                                                             ; combout          ;
+; |sim_game|game:GAME|state.S_Turn2                                                                  ; |sim_game|game:GAME|state.S_Turn2                                                            ; regout           ;
+; |sim_game|game:GAME|process_0~0                                                                    ; |sim_game|game:GAME|process_0~0                                                              ; combout          ;
+; |sim_game|game:GAME|process_0~1                                                                    ; |sim_game|game:GAME|process_0~1                                                              ; combout          ;
+; |sim_game|game:GAME|process_0~2                                                                    ; |sim_game|game:GAME|process_0~2                                                              ; combout          ;
+; |sim_game|game:GAME|Selector11~1                                                                   ; |sim_game|game:GAME|Selector11~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector16~0                                                                   ; |sim_game|game:GAME|Selector16~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector16~2                                                                   ; |sim_game|game:GAME|Selector16~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector16~3                                                                   ; |sim_game|game:GAME|Selector16~3                                                             ; combout          ;
+; |sim_game|game:GAME|ioldY[2]~0                                                                     ; |sim_game|game:GAME|ioldY[2]~0                                                               ; combout          ;
+; |sim_game|game:GAME|Selector40~0                                                                   ; |sim_game|game:GAME|Selector40~0                                                             ; combout          ;
+; |sim_game|game:GAME|temp_piece[2]~0                                                                ; |sim_game|game:GAME|temp_piece[2]~0                                                          ; combout          ;
+; |sim_game|game:GAME|temp_piece[2]~1                                                                ; |sim_game|game:GAME|temp_piece[2]~1                                                          ; combout          ;
+; |sim_game|game:GAME|Selector39~0                                                                   ; |sim_game|game:GAME|Selector39~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector26~14                                                                  ; |sim_game|game:GAME|Selector26~14                                                            ; combout          ;
+; |sim_game|game:GAME|Selector26~15                                                                  ; |sim_game|game:GAME|Selector26~15                                                            ; combout          ;
+; |sim_game|game:GAME|selX[0]~0                                                                      ; |sim_game|game:GAME|selX[0]~0                                                                ; combout          ;
+; |sim_game|game:GAME|oldX[0]~1                                                                      ; |sim_game|game:GAME|oldX[0]~1                                                                ; combout          ;
 ; |sim_game|game:GAME|Selector3~0                                                                    ; |sim_game|game:GAME|Selector3~0                                                              ; combout          ;
-; |sim_game|game:GAME|Selector7~0                                                                    ; |sim_game|game:GAME|Selector7~0                                                              ; combout          ;
-; |sim_game|game:GAME|Selector7~1                                                                    ; |sim_game|game:GAME|Selector7~1                                                              ; combout          ;
+; |sim_game|game:GAME|Selector5~2                                                                    ; |sim_game|game:GAME|Selector5~2                                                              ; combout          ;
+; |sim_game|game:GAME|Selector5~3                                                                    ; |sim_game|game:GAME|Selector5~3                                                              ; combout          ;
+; |sim_game|game:GAME|Selector5~5                                                                    ; |sim_game|game:GAME|Selector5~5                                                              ; combout          ;
+; |sim_game|game:GAME|Selector20~0                                                                   ; |sim_game|game:GAME|Selector20~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector21~0                                                                   ; |sim_game|game:GAME|Selector21~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector23~0                                                                   ; |sim_game|game:GAME|Selector23~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector18~1                                                                   ; |sim_game|game:GAME|Selector18~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector18~2                                                                   ; |sim_game|game:GAME|Selector18~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector18~3                                                                   ; |sim_game|game:GAME|Selector18~3                                                             ; combout          ;
+; |sim_game|game:GAME|Selector18~4                                                                   ; |sim_game|game:GAME|Selector18~4                                                             ; combout          ;
 ; |sim_game|game:GAME|Selector8~0                                                                    ; |sim_game|game:GAME|Selector8~0                                                              ; combout          ;
+; |sim_game|game:GAME|Selector8~1                                                                    ; |sim_game|game:GAME|Selector8~1                                                              ; combout          ;
+; |sim_game|game:GAME|Selector18~5                                                                   ; |sim_game|game:GAME|Selector18~5                                                             ; combout          ;
+; |sim_game|game:GAME|state.S_End_Turn~0                                                             ; |sim_game|game:GAME|state.S_End_Turn~0                                                       ; combout          ;
+; |sim_game|game:GAME|Selector26~16                                                                  ; |sim_game|game:GAME|Selector26~16                                                            ; combout          ;
+; |sim_game|game:GAME|Selector26~17                                                                  ; |sim_game|game:GAME|Selector26~17                                                            ; combout          ;
 ; |sim_game|game:GAME|Selector4~0                                                                    ; |sim_game|game:GAME|Selector4~0                                                              ; combout          ;
 ; |sim_game|game:GAME|Selector9~0                                                                    ; |sim_game|game:GAME|Selector9~0                                                              ; combout          ;
-; |sim_game|game:GAME|temp_piece[2]~0                                                                ; |sim_game|game:GAME|temp_piece[2]~0                                                          ; combout          ;
-; |sim_game|game:GAME|Selector33~0                                                                   ; |sim_game|game:GAME|Selector33~0                                                             ; combout          ;
-; |sim_game|game:GAME|count[0]~_wirecell                                                             ; |sim_game|game:GAME|count[0]~_wirecell                                                       ; combout          ;
+; |sim_game|game:GAME|state.s_Turn1                                                                  ; |sim_game|game:GAME|state.s_Turn1                                                            ; regout           ;
+; |sim_game|game:GAME|Selector10~0                                                                   ; |sim_game|game:GAME|Selector10~0                                                             ; combout          ;
+; |sim_game|game:GAME|ext_piece[2]~14                                                                ; |sim_game|game:GAME|ext_piece[2]~14                                                          ; combout          ;
+; |sim_game|game:GAME|y_out[0]                                                                       ; |sim_game|game:GAME|y_out[0]                                                                 ; combout          ;
+; |sim_game|game:GAME|x_out[1]                                                                       ; |sim_game|game:GAME|x_out[1]                                                                 ; combout          ;
+; |sim_game|game:GAME|x_out[0]                                                                       ; |sim_game|game:GAME|x_out[0]                                                                 ; combout          ;
 ; |sim_game|send_rdy                                                                                 ; |sim_game|send_rdy                                                                           ; padio            ;
 ; |sim_game|wen                                                                                      ; |sim_game|wen                                                                                ; padio            ;
 ; |sim_game|mux                                                                                      ; |sim_game|mux                                                                                ; padio            ;
+; |sim_game|y_o[0]                                                                                   ; |sim_game|y_o[0]                                                                             ; padio            ;
+; |sim_game|x_o[1]                                                                                   ; |sim_game|x_o[1]                                                                             ; padio            ;
+; |sim_game|x_o[0]                                                                                   ; |sim_game|x_o[0]                                                                             ; padio            ;
+; |sim_game|piece[2]                                                                                 ; |sim_game|piece[2]                                                                           ; padio            ;
+; |sim_game|piece[1]                                                                                 ; |sim_game|piece[1]                                                                           ; padio            ;
 ; |sim_game|address[5]                                                                               ; |sim_game|address[5]                                                                         ; padio            ;
 ; |sim_game|address[3]                                                                               ; |sim_game|address[3]                                                                         ; padio            ;
+; |sim_game|address[1]                                                                               ; |sim_game|address[1]                                                                         ; padio            ;
 ; |sim_game|address[0]                                                                               ; |sim_game|address[0]                                                                         ; padio            ;
 ; |sim_game|piece_read[2]                                                                            ; |sim_game|piece_read[2]                                                                      ; padio            ;
 ; |sim_game|piece_read[1]                                                                            ; |sim_game|piece_read[1]                                                                      ; padio            ;
+; |sim_game|s_p[2]                                                                                   ; |sim_game|s_p[2]                                                                             ; padio            ;
+; |sim_game|sx[0]                                                                                    ; |sim_game|sx[0]                                                                              ; padio            ;
+; |sim_game|sy[0]                                                                                    ; |sim_game|sy[0]                                                                              ; padio            ;
 ; |sim_game|posy[2]                                                                                  ; |sim_game|posy[2]~corein                                                                     ; combout          ;
 ; |sim_game|posy[0]                                                                                  ; |sim_game|posy[0]~corein                                                                     ; combout          ;
+; |sim_game|posx[1]                                                                                  ; |sim_game|posx[1]~corein                                                                     ; combout          ;
 ; |sim_game|posx[0]                                                                                  ; |sim_game|posx[0]~corein                                                                     ; combout          ;
 ; |sim_game|ready_tx                                                                                 ; |sim_game|ready_tx~corein                                                                    ; combout          ;
 ; |sim_game|clk                                                                                      ; |sim_game|clk~corein                                                                         ; combout          ;
-; |sim_game|new_game                                                                                 ; |sim_game|new_game~corein                                                                    ; combout          ;
+; |sim_game|dt_rx                                                                                    ; |sim_game|dt_rx~corein                                                                       ; combout          ;
+; |sim_game|f_rx[1]                                                                                  ; |sim_game|f_rx[1]~corein                                                                     ; combout          ;
 ; |sim_game|turn                                                                                     ; |sim_game|turn~corein                                                                        ; combout          ;
 ; |sim_game|sel                                                                                      ; |sim_game|sel~corein                                                                         ; combout          ;
+; |sim_game|new_game                                                                                 ; |sim_game|new_game~corein                                                                    ; combout          ;
 ; |sim_game|rdy_received                                                                             ; |sim_game|rdy_received~corein                                                                ; combout          ;
+; |sim_game|y_rx[2]                                                                                  ; |sim_game|y_rx[2]~corein                                                                     ; combout          ;
+; |sim_game|y_rx[0]                                                                                  ; |sim_game|y_rx[0]~corein                                                                     ; combout          ;
+; |sim_game|x_rx[2]                                                                                  ; |sim_game|x_rx[2]~corein                                                                     ; combout          ;
 ; |sim_game|clk~clkctrl                                                                              ; |sim_game|clk~clkctrl                                                                        ; outclk           ;
-; |sim_game|game:GAME|temp_piece[1]~feeder                                                           ; |sim_game|game:GAME|temp_piece[1]~feeder                                                     ; combout          ;
-; |sim_game|game:GAME|selY[2]~feeder                                                                 ; |sim_game|game:GAME|selY[2]~feeder                                                           ; combout          ;
-; |sim_game|game:GAME|selY[0]~feeder                                                                 ; |sim_game|game:GAME|selY[0]~feeder                                                           ; combout          ;
-; |sim_game|game:GAME|selX[0]~feeder                                                                 ; |sim_game|game:GAME|selX[0]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|state.S_Place_Figure~clkctrl                                                   ; |sim_game|game:GAME|state.S_Place_Figure~clkctrl                                             ; outclk           ;
+; |sim_game|game:GAME|aux_piece[1]~feeder                                                            ; |sim_game|game:GAME|aux_piece[1]~feeder                                                      ; combout          ;
+; |sim_game|game:GAME|state.st_Refresh~feeder                                                        ; |sim_game|game:GAME|state.st_Refresh~feeder                                                  ; combout          ;
+; |sim_game|game:GAME|selX[1]~feeder                                                                 ; |sim_game|game:GAME|selX[1]~feeder                                                           ; combout          ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 
 
@@ -203,43 +312,96 @@ The following table displays output ports that do not toggle to 1 during simulat
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                          ; Output Port Name                                                                             ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |sim_game|game:GAME|ext_piece[0]                                                                   ; |sim_game|game:GAME|ext_piece[0]                                                             ; regout           ;
 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|q_a[0] ; portadataout0    ;
-; |sim_game|game:GAME|s_y_out[1]                                                                     ; |sim_game|game:GAME|s_y_out[1]                                                               ; regout           ;
-; |sim_game|game:GAME|s_x_out[2]                                                                     ; |sim_game|game:GAME|s_x_out[2]                                                               ; regout           ;
-; |sim_game|game:GAME|s_x_out[1]                                                                     ; |sim_game|game:GAME|s_x_out[1]                                                               ; regout           ;
+; |sim_game|game:GAME|out_piece[0]~2                                                                 ; |sim_game|game:GAME|out_piece[0]~2                                                           ; combout          ;
 ; |sim_game|mux_ram:inst15|O[4]~1                                                                    ; |sim_game|mux_ram:inst15|O[4]~1                                                              ; combout          ;
 ; |sim_game|mux_ram:inst15|O[2]~3                                                                    ; |sim_game|mux_ram:inst15|O[2]~3                                                              ; combout          ;
-; |sim_game|mux_ram:inst15|O[1]~4                                                                    ; |sim_game|mux_ram:inst15|O[1]~4                                                              ; combout          ;
-; |sim_game|game:GAME|selY[1]                                                                        ; |sim_game|game:GAME|selY[1]                                                                  ; regout           ;
-; |sim_game|game:GAME|selX[2]                                                                        ; |sim_game|game:GAME|selX[2]                                                                  ; regout           ;
-; |sim_game|game:GAME|selX[1]                                                                        ; |sim_game|game:GAME|selX[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|s_sendfig[0]                                                                   ; |sim_game|game:GAME|s_sendfig[0]                                                             ; regout           ;
+; |sim_game|game:GAME|s_sendx[2]                                                                     ; |sim_game|game:GAME|s_sendx[2]                                                               ; regout           ;
+; |sim_game|game:GAME|s_sendy[1]                                                                     ; |sim_game|game:GAME|s_sendy[1]                                                               ; regout           ;
+; |sim_game|game:GAME|s_y_out[1]                                                                     ; |sim_game|game:GAME|s_y_out[1]                                                               ; regout           ;
+; |sim_game|game:GAME|aux_piece[2]                                                                   ; |sim_game|game:GAME|aux_piece[2]                                                             ; regout           ;
+; |sim_game|game:GAME|Selector33~0                                                                   ; |sim_game|game:GAME|Selector33~0                                                             ; combout          ;
 ; |sim_game|game:GAME|state.st_Invalid                                                               ; |sim_game|game:GAME|state.st_Invalid                                                         ; regout           ;
-; |sim_game|game:GAME|state.s_Turn1                                                                  ; |sim_game|game:GAME|state.s_Turn1                                                            ; regout           ;
+; |sim_game|game:GAME|state.S_Move_Black                                                             ; |sim_game|game:GAME|state.S_Move_Black                                                       ; regout           ;
+; |sim_game|game:GAME|iselY[1]                                                                       ; |sim_game|game:GAME|iselY[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldY[1]                                                                       ; |sim_game|game:GAME|ioldY[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|LessThan6~0                                                                    ; |sim_game|game:GAME|LessThan6~0                                                              ; combout          ;
+; |sim_game|game:GAME|LessThan3~0                                                                    ; |sim_game|game:GAME|LessThan3~0                                                              ; combout          ;
+; |sim_game|game:GAME|iselY[0]                                                                       ; |sim_game|game:GAME|iselY[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|Add2~0                                                                         ; |sim_game|game:GAME|Add2~0                                                                   ; combout          ;
+; |sim_game|game:GAME|iselX[0]                                                                       ; |sim_game|game:GAME|iselX[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]~8                                                                 ; |sim_game|game:GAME|ext_piece[0]~8                                                           ; combout          ;
+; |sim_game|game:GAME|aux_piece[0]                                                                   ; |sim_game|game:GAME|aux_piece[0]                                                             ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]~9                                                                 ; |sim_game|game:GAME|ext_piece[0]~9                                                           ; combout          ;
+; |sim_game|game:GAME|iselX[2]                                                                       ; |sim_game|game:GAME|iselX[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldX[1]                                                                       ; |sim_game|game:GAME|ioldX[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldX[2]                                                                       ; |sim_game|game:GAME|ioldX[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|LessThan4~0                                                                    ; |sim_game|game:GAME|LessThan4~0                                                              ; combout          ;
+; |sim_game|game:GAME|Add3~0                                                                         ; |sim_game|game:GAME|Add3~0                                                                   ; combout          ;
+; |sim_game|game:GAME|Add1~0                                                                         ; |sim_game|game:GAME|Add1~0                                                                   ; combout          ;
+; |sim_game|game:GAME|Add4~0                                                                         ; |sim_game|game:GAME|Add4~0                                                                   ; combout          ;
+; |sim_game|game:GAME|state~57                                                                       ; |sim_game|game:GAME|state~57                                                                 ; combout          ;
+; |sim_game|game:GAME|Add4~2                                                                         ; |sim_game|game:GAME|Add4~2                                                                   ; combout          ;
+; |sim_game|game:GAME|Add4~3                                                                         ; |sim_game|game:GAME|Add4~3                                                                   ; combout          ;
+; |sim_game|game:GAME|state~58                                                                       ; |sim_game|game:GAME|state~58                                                                 ; combout          ;
+; |sim_game|game:GAME|LessThan4~1                                                                    ; |sim_game|game:GAME|LessThan4~1                                                              ; combout          ;
+; |sim_game|game:GAME|Add3~1                                                                         ; |sim_game|game:GAME|Add3~1                                                                   ; combout          ;
+; |sim_game|game:GAME|Add3~2                                                                         ; |sim_game|game:GAME|Add3~2                                                                   ; combout          ;
+; |sim_game|game:GAME|ext_piece[0]~10                                                                ; |sim_game|game:GAME|ext_piece[0]~10                                                          ; combout          ;
+; |sim_game|game:GAME|LessThan3~1                                                                    ; |sim_game|game:GAME|LessThan3~1                                                              ; combout          ;
+; |sim_game|game:GAME|Add2~1                                                                         ; |sim_game|game:GAME|Add2~1                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~2                                                                         ; |sim_game|game:GAME|Add2~2                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~3                                                                         ; |sim_game|game:GAME|Add2~3                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~4                                                                         ; |sim_game|game:GAME|Add2~4                                                                   ; combout          ;
+; |sim_game|game:GAME|state~62                                                                       ; |sim_game|game:GAME|state~62                                                                 ; combout          ;
+; |sim_game|game:GAME|Equal4~0                                                                       ; |sim_game|game:GAME|Equal4~0                                                                 ; combout          ;
+; |sim_game|game:GAME|Equal3~0                                                                       ; |sim_game|game:GAME|Equal3~0                                                                 ; combout          ;
 ; |sim_game|game:GAME|temp_piece[0]                                                                  ; |sim_game|game:GAME|temp_piece[0]                                                            ; regout           ;
-; |sim_game|game:GAME|temp_piece[2]                                                                  ; |sim_game|game:GAME|temp_piece[2]                                                            ; regout           ;
-; |sim_game|game:GAME|Selector11~1                                                                   ; |sim_game|game:GAME|Selector11~1                                                             ; combout          ;
-; |sim_game|game:GAME|Selector10~0                                                                   ; |sim_game|game:GAME|Selector10~0                                                             ; combout          ;
+; |sim_game|game:GAME|Equal6~0                                                                       ; |sim_game|game:GAME|Equal6~0                                                                 ; combout          ;
+; |sim_game|game:GAME|Selector35~0                                                                   ; |sim_game|game:GAME|Selector35~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector45~0                                                                   ; |sim_game|game:GAME|Selector45~0                                                             ; combout          ;
+; |sim_game|game:GAME|selX[2]                                                                        ; |sim_game|game:GAME|selX[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldX[2]                                                                        ; |sim_game|game:GAME|oldX[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector46~0                                                                   ; |sim_game|game:GAME|Selector46~0                                                             ; combout          ;
+; |sim_game|game:GAME|oldX[1]                                                                        ; |sim_game|game:GAME|oldX[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|selY[1]                                                                        ; |sim_game|game:GAME|selY[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldY[1]                                                                        ; |sim_game|game:GAME|oldY[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector50~0                                                                   ; |sim_game|game:GAME|Selector50~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector31~0                                                                   ; |sim_game|game:GAME|Selector31~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector11~0                                                                   ; |sim_game|game:GAME|Selector11~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector11~2                                                                   ; |sim_game|game:GAME|Selector11~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~0                                                                   ; |sim_game|game:GAME|Selector15~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~2                                                                   ; |sim_game|game:GAME|Selector15~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~3                                                                   ; |sim_game|game:GAME|Selector15~3                                                             ; combout          ;
+; |sim_game|game:GAME|Selector16~1                                                                   ; |sim_game|game:GAME|Selector16~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector41~0                                                                   ; |sim_game|game:GAME|Selector41~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector5~4                                                                    ; |sim_game|game:GAME|Selector5~4                                                              ; combout          ;
+; |sim_game|game:GAME|Selector14~5                                                                   ; |sim_game|game:GAME|Selector14~5                                                             ; combout          ;
+; |sim_game|game:GAME|y_out[1]                                                                       ; |sim_game|game:GAME|y_out[1]                                                                 ; combout          ;
+; |sim_game|game:GAME|x_out[2]                                                                       ; |sim_game|game:GAME|x_out[2]                                                                 ; combout          ;
 ; |sim_game|~GND                                                                                     ; |sim_game|~GND                                                                               ; combout          ;
 ; |sim_game|y_o[1]                                                                                   ; |sim_game|y_o[1]                                                                             ; padio            ;
 ; |sim_game|x_o[2]                                                                                   ; |sim_game|x_o[2]                                                                             ; padio            ;
-; |sim_game|x_o[1]                                                                                   ; |sim_game|x_o[1]                                                                             ; padio            ;
-; |sim_game|piece[2]                                                                                 ; |sim_game|piece[2]                                                                           ; padio            ;
-; |sim_game|piece[1]                                                                                 ; |sim_game|piece[1]                                                                           ; padio            ;
 ; |sim_game|piece[0]                                                                                 ; |sim_game|piece[0]                                                                           ; padio            ;
 ; |sim_game|address[4]                                                                               ; |sim_game|address[4]                                                                         ; padio            ;
 ; |sim_game|address[2]                                                                               ; |sim_game|address[2]                                                                         ; padio            ;
-; |sim_game|address[1]                                                                               ; |sim_game|address[1]                                                                         ; padio            ;
 ; |sim_game|piece_read[0]                                                                            ; |sim_game|piece_read[0]                                                                      ; padio            ;
+; |sim_game|s_p[0]                                                                                   ; |sim_game|s_p[0]                                                                             ; padio            ;
+; |sim_game|sx[2]                                                                                    ; |sim_game|sx[2]                                                                              ; padio            ;
+; |sim_game|sy[1]                                                                                    ; |sim_game|sy[1]                                                                              ; padio            ;
 ; |sim_game|posy[1]                                                                                  ; |sim_game|posy[1]~corein                                                                     ; combout          ;
 ; |sim_game|posx[2]                                                                                  ; |sim_game|posx[2]~corein                                                                     ; combout          ;
-; |sim_game|posx[1]                                                                                  ; |sim_game|posx[1]~corein                                                                     ; combout          ;
+; |sim_game|f_rx[2]                                                                                  ; |sim_game|f_rx[2]~corein                                                                     ; combout          ;
+; |sim_game|f_rx[0]                                                                                  ; |sim_game|f_rx[0]~corein                                                                     ; combout          ;
+; |sim_game|y_rx[1]                                                                                  ; |sim_game|y_rx[1]~corein                                                                     ; combout          ;
+; |sim_game|x_rx[1]                                                                                  ; |sim_game|x_rx[1]~corein                                                                     ; combout          ;
+; |sim_game|x_rx[0]                                                                                  ; |sim_game|x_rx[0]~corein                                                                     ; combout          ;
 ; |sim_game|color                                                                                    ; |sim_game|color~corein                                                                       ; combout          ;
-; |sim_game|game:GAME|temp_piece[0]~feeder                                                           ; |sim_game|game:GAME|temp_piece[0]~feeder                                                     ; combout          ;
-; |sim_game|game:GAME|s_y_out[1]~feeder                                                              ; |sim_game|game:GAME|s_y_out[1]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_x_out[2]~feeder                                                              ; |sim_game|game:GAME|s_x_out[2]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_x_out[1]~feeder                                                              ; |sim_game|game:GAME|s_x_out[1]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|selY[1]~feeder                                                                 ; |sim_game|game:GAME|selY[1]~feeder                                                           ; combout          ;
-; |sim_game|game:GAME|selX[2]~feeder                                                                 ; |sim_game|game:GAME|selX[2]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|oldX[2]~feeder                                                                 ; |sim_game|game:GAME|oldX[2]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|oldY[1]~feeder                                                                 ; |sim_game|game:GAME|oldY[1]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|state.st_wait_game~feeder                                                      ; |sim_game|game:GAME|state.st_wait_game~feeder                                                ; combout          ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 
 
@@ -249,64 +411,125 @@ The following table displays output ports that do not toggle to 0 during simulat
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 ; Node Name                                                                                          ; Output Port Name                                                                             ; Output Port Type ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
+; |sim_game|game:GAME|ext_piece[1]                                                                   ; |sim_game|game:GAME|ext_piece[1]                                                             ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]                                                                   ; |sim_game|game:GAME|ext_piece[0]                                                             ; regout           ;
 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a0 ; |sim_game|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|q_a[0] ; portadataout0    ;
-; |sim_game|game:GAME|s_y_out[2]                                                                     ; |sim_game|game:GAME|s_y_out[2]                                                               ; regout           ;
-; |sim_game|game:GAME|s_y_out[1]                                                                     ; |sim_game|game:GAME|s_y_out[1]                                                               ; regout           ;
-; |sim_game|game:GAME|s_y_out[0]                                                                     ; |sim_game|game:GAME|s_y_out[0]                                                               ; regout           ;
-; |sim_game|game:GAME|s_x_out[2]                                                                     ; |sim_game|game:GAME|s_x_out[2]                                                               ; regout           ;
-; |sim_game|game:GAME|s_x_out[1]                                                                     ; |sim_game|game:GAME|s_x_out[1]                                                               ; regout           ;
-; |sim_game|game:GAME|s_x_out[0]                                                                     ; |sim_game|game:GAME|s_x_out[0]                                                               ; regout           ;
+; |sim_game|game:GAME|out_piece[0]~2                                                                 ; |sim_game|game:GAME|out_piece[0]~2                                                           ; combout          ;
 ; |sim_game|mux_ram:inst15|O[4]~1                                                                    ; |sim_game|mux_ram:inst15|O[4]~1                                                              ; combout          ;
 ; |sim_game|mux_ram:inst15|O[2]~3                                                                    ; |sim_game|mux_ram:inst15|O[2]~3                                                              ; combout          ;
-; |sim_game|mux_ram:inst15|O[1]~4                                                                    ; |sim_game|mux_ram:inst15|O[1]~4                                                              ; combout          ;
-; |sim_game|game:GAME|selY[2]                                                                        ; |sim_game|game:GAME|selY[2]                                                                  ; regout           ;
-; |sim_game|game:GAME|selY[1]                                                                        ; |sim_game|game:GAME|selY[1]                                                                  ; regout           ;
-; |sim_game|game:GAME|selY[0]                                                                        ; |sim_game|game:GAME|selY[0]                                                                  ; regout           ;
-; |sim_game|game:GAME|selX[2]                                                                        ; |sim_game|game:GAME|selX[2]                                                                  ; regout           ;
-; |sim_game|game:GAME|selX[1]                                                                        ; |sim_game|game:GAME|selX[1]                                                                  ; regout           ;
-; |sim_game|game:GAME|selX[0]                                                                        ; |sim_game|game:GAME|selX[0]                                                                  ; regout           ;
-; |sim_game|game:GAME|state.st_wait_game                                                             ; |sim_game|game:GAME|state.st_wait_game                                                       ; regout           ;
+; |sim_game|game:GAME|s_sendfig[1]                                                                   ; |sim_game|game:GAME|s_sendfig[1]                                                             ; regout           ;
+; |sim_game|game:GAME|s_sendfig[0]                                                                   ; |sim_game|game:GAME|s_sendfig[0]                                                             ; regout           ;
+; |sim_game|game:GAME|s_sendx[2]                                                                     ; |sim_game|game:GAME|s_sendx[2]                                                               ; regout           ;
+; |sim_game|game:GAME|s_sendx[1]                                                                     ; |sim_game|game:GAME|s_sendx[1]                                                               ; regout           ;
+; |sim_game|game:GAME|s_sendy[2]                                                                     ; |sim_game|game:GAME|s_sendy[2]                                                               ; regout           ;
+; |sim_game|game:GAME|s_sendy[1]                                                                     ; |sim_game|game:GAME|s_sendy[1]                                                               ; regout           ;
+; |sim_game|game:GAME|s_y_out[2]                                                                     ; |sim_game|game:GAME|s_y_out[2]                                                               ; regout           ;
+; |sim_game|game:GAME|s_y_out[1]                                                                     ; |sim_game|game:GAME|s_y_out[1]                                                               ; regout           ;
+; |sim_game|game:GAME|s_x_out[2]                                                                     ; |sim_game|game:GAME|s_x_out[2]                                                               ; regout           ;
+; |sim_game|game:GAME|aux_piece[2]                                                                   ; |sim_game|game:GAME|aux_piece[2]                                                             ; regout           ;
+; |sim_game|game:GAME|Selector33~0                                                                   ; |sim_game|game:GAME|Selector33~0                                                             ; combout          ;
 ; |sim_game|game:GAME|state.st_Invalid                                                               ; |sim_game|game:GAME|state.st_Invalid                                                         ; regout           ;
-; |sim_game|game:GAME|state.s_Turn1                                                                  ; |sim_game|game:GAME|state.s_Turn1                                                            ; regout           ;
-; |sim_game|game:GAME|temp_piece[1]                                                                  ; |sim_game|game:GAME|temp_piece[1]                                                            ; regout           ;
+; |sim_game|game:GAME|state.S_Move_Black                                                             ; |sim_game|game:GAME|state.S_Move_Black                                                       ; regout           ;
+; |sim_game|game:GAME|iselY[2]                                                                       ; |sim_game|game:GAME|iselY[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|iselY[1]                                                                       ; |sim_game|game:GAME|iselY[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldY[1]                                                                       ; |sim_game|game:GAME|ioldY[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldY[2]                                                                       ; |sim_game|game:GAME|ioldY[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|LessThan6~0                                                                    ; |sim_game|game:GAME|LessThan6~0                                                              ; combout          ;
+; |sim_game|game:GAME|LessThan3~0                                                                    ; |sim_game|game:GAME|LessThan3~0                                                              ; combout          ;
+; |sim_game|game:GAME|ioldY[0]                                                                       ; |sim_game|game:GAME|ioldY[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|iselY[0]                                                                       ; |sim_game|game:GAME|iselY[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|Add2~0                                                                         ; |sim_game|game:GAME|Add2~0                                                                   ; combout          ;
+; |sim_game|game:GAME|ioldX[0]                                                                       ; |sim_game|game:GAME|ioldX[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|iselX[0]                                                                       ; |sim_game|game:GAME|iselX[0]                                                                 ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]~8                                                                 ; |sim_game|game:GAME|ext_piece[0]~8                                                           ; combout          ;
+; |sim_game|game:GAME|aux_piece[1]                                                                   ; |sim_game|game:GAME|aux_piece[1]                                                             ; regout           ;
+; |sim_game|game:GAME|aux_piece[0]                                                                   ; |sim_game|game:GAME|aux_piece[0]                                                             ; regout           ;
+; |sim_game|game:GAME|ext_piece[0]~9                                                                 ; |sim_game|game:GAME|ext_piece[0]~9                                                           ; combout          ;
+; |sim_game|game:GAME|iselX[2]                                                                       ; |sim_game|game:GAME|iselX[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|iselX[1]                                                                       ; |sim_game|game:GAME|iselX[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldX[1]                                                                       ; |sim_game|game:GAME|ioldX[1]                                                                 ; regout           ;
+; |sim_game|game:GAME|ioldX[2]                                                                       ; |sim_game|game:GAME|ioldX[2]                                                                 ; regout           ;
+; |sim_game|game:GAME|LessThan2~0                                                                    ; |sim_game|game:GAME|LessThan2~0                                                              ; combout          ;
+; |sim_game|game:GAME|LessThan2~1                                                                    ; |sim_game|game:GAME|LessThan2~1                                                              ; combout          ;
+; |sim_game|game:GAME|Add3~0                                                                         ; |sim_game|game:GAME|Add3~0                                                                   ; combout          ;
+; |sim_game|game:GAME|Add1~0                                                                         ; |sim_game|game:GAME|Add1~0                                                                   ; combout          ;
+; |sim_game|game:GAME|state~57                                                                       ; |sim_game|game:GAME|state~57                                                                 ; combout          ;
+; |sim_game|game:GAME|Equal9~0                                                                       ; |sim_game|game:GAME|Equal9~0                                                                 ; combout          ;
+; |sim_game|game:GAME|state~58                                                                       ; |sim_game|game:GAME|state~58                                                                 ; combout          ;
+; |sim_game|game:GAME|LessThan4~1                                                                    ; |sim_game|game:GAME|LessThan4~1                                                              ; combout          ;
+; |sim_game|game:GAME|ext_piece[0]~10                                                                ; |sim_game|game:GAME|ext_piece[0]~10                                                          ; combout          ;
+; |sim_game|game:GAME|LessThan3~1                                                                    ; |sim_game|game:GAME|LessThan3~1                                                              ; combout          ;
+; |sim_game|game:GAME|LessThan3~2                                                                    ; |sim_game|game:GAME|LessThan3~2                                                              ; combout          ;
+; |sim_game|game:GAME|Add2~1                                                                         ; |sim_game|game:GAME|Add2~1                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~2                                                                         ; |sim_game|game:GAME|Add2~2                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~3                                                                         ; |sim_game|game:GAME|Add2~3                                                                   ; combout          ;
+; |sim_game|game:GAME|Add2~4                                                                         ; |sim_game|game:GAME|Add2~4                                                                   ; combout          ;
+; |sim_game|game:GAME|Equal5~1                                                                       ; |sim_game|game:GAME|Equal5~1                                                                 ; combout          ;
+; |sim_game|game:GAME|state~62                                                                       ; |sim_game|game:GAME|state~62                                                                 ; combout          ;
+; |sim_game|game:GAME|state~63                                                                       ; |sim_game|game:GAME|state~63                                                                 ; combout          ;
+; |sim_game|game:GAME|Equal4~0                                                                       ; |sim_game|game:GAME|Equal4~0                                                                 ; combout          ;
+; |sim_game|game:GAME|state~64                                                                       ; |sim_game|game:GAME|state~64                                                                 ; combout          ;
+; |sim_game|game:GAME|ext_piece[0]~11                                                                ; |sim_game|game:GAME|ext_piece[0]~11                                                          ; combout          ;
+; |sim_game|game:GAME|ext_piece[0]~12                                                                ; |sim_game|game:GAME|ext_piece[0]~12                                                          ; combout          ;
 ; |sim_game|game:GAME|temp_piece[0]                                                                  ; |sim_game|game:GAME|temp_piece[0]                                                            ; regout           ;
-; |sim_game|game:GAME|s_white                                                                        ; |sim_game|game:GAME|s_white                                                                  ; regout           ;
 ; |sim_game|game:GAME|temp_piece[2]                                                                  ; |sim_game|game:GAME|temp_piece[2]                                                            ; regout           ;
-; |sim_game|game:GAME|Selector11~0                                                                   ; |sim_game|game:GAME|Selector11~0                                                             ; combout          ;
-; |sim_game|game:GAME|state.st_wait_game~0                                                           ; |sim_game|game:GAME|state.st_wait_game~0                                                     ; combout          ;
-; |sim_game|game:GAME|Selector11~1                                                                   ; |sim_game|game:GAME|Selector11~1                                                             ; combout          ;
-; |sim_game|game:GAME|SelMode                                                                        ; |sim_game|game:GAME|SelMode                                                                  ; regout           ;
-; |sim_game|game:GAME|Selector10~0                                                                   ; |sim_game|game:GAME|Selector10~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector34~0                                                                   ; |sim_game|game:GAME|Selector34~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector35~0                                                                   ; |sim_game|game:GAME|Selector35~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector44~0                                                                   ; |sim_game|game:GAME|Selector44~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector45~0                                                                   ; |sim_game|game:GAME|Selector45~0                                                             ; combout          ;
+; |sim_game|game:GAME|selX[2]                                                                        ; |sim_game|game:GAME|selX[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldX[2]                                                                        ; |sim_game|game:GAME|oldX[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector46~0                                                                   ; |sim_game|game:GAME|Selector46~0                                                             ; combout          ;
+; |sim_game|game:GAME|selX[1]                                                                        ; |sim_game|game:GAME|selX[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldX[1]                                                                        ; |sim_game|game:GAME|oldX[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldX[0]                                                                        ; |sim_game|game:GAME|oldX[0]                                                                  ; regout           ;
+; |sim_game|game:GAME|selY[2]                                                                        ; |sim_game|game:GAME|selY[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldY[2]                                                                        ; |sim_game|game:GAME|oldY[2]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector49~0                                                                   ; |sim_game|game:GAME|Selector49~0                                                             ; combout          ;
+; |sim_game|game:GAME|selY[1]                                                                        ; |sim_game|game:GAME|selY[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|oldY[1]                                                                        ; |sim_game|game:GAME|oldY[1]                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector50~0                                                                   ; |sim_game|game:GAME|Selector50~0                                                             ; combout          ;
+; |sim_game|game:GAME|oldY[0]                                                                        ; |sim_game|game:GAME|oldY[0]                                                                  ; regout           ;
+; |sim_game|game:GAME|state.st_wait_game                                                             ; |sim_game|game:GAME|state.st_wait_game                                                       ; regout           ;
+; |sim_game|game:GAME|Selector31~0                                                                   ; |sim_game|game:GAME|Selector31~0                                                             ; combout          ;
+; |sim_game|game:GAME|s_white                                                                        ; |sim_game|game:GAME|s_white                                                                  ; regout           ;
+; |sim_game|game:GAME|Selector11~2                                                                   ; |sim_game|game:GAME|Selector11~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~0                                                                   ; |sim_game|game:GAME|Selector15~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~1                                                                   ; |sim_game|game:GAME|Selector15~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~2                                                                   ; |sim_game|game:GAME|Selector15~2                                                             ; combout          ;
+; |sim_game|game:GAME|Selector15~3                                                                   ; |sim_game|game:GAME|Selector15~3                                                             ; combout          ;
+; |sim_game|game:GAME|Selector16~1                                                                   ; |sim_game|game:GAME|Selector16~1                                                             ; combout          ;
+; |sim_game|game:GAME|Selector41~0                                                                   ; |sim_game|game:GAME|Selector41~0                                                             ; combout          ;
+; |sim_game|game:GAME|Selector5~4                                                                    ; |sim_game|game:GAME|Selector5~4                                                              ; combout          ;
 ; |sim_game|game:GAME|s_white~0                                                                      ; |sim_game|game:GAME|s_white~0                                                                ; combout          ;
+; |sim_game|game:GAME|Selector14~5                                                                   ; |sim_game|game:GAME|Selector14~5                                                             ; combout          ;
+; |sim_game|game:GAME|y_out[2]                                                                       ; |sim_game|game:GAME|y_out[2]                                                                 ; combout          ;
 ; |sim_game|~GND                                                                                     ; |sim_game|~GND                                                                               ; combout          ;
 ; |sim_game|y_o[2]                                                                                   ; |sim_game|y_o[2]                                                                             ; padio            ;
-; |sim_game|y_o[1]                                                                                   ; |sim_game|y_o[1]                                                                             ; padio            ;
-; |sim_game|y_o[0]                                                                                   ; |sim_game|y_o[0]                                                                             ; padio            ;
-; |sim_game|x_o[2]                                                                                   ; |sim_game|x_o[2]                                                                             ; padio            ;
-; |sim_game|x_o[1]                                                                                   ; |sim_game|x_o[1]                                                                             ; padio            ;
-; |sim_game|x_o[0]                                                                                   ; |sim_game|x_o[0]                                                                             ; padio            ;
-; |sim_game|piece[2]                                                                                 ; |sim_game|piece[2]                                                                           ; padio            ;
-; |sim_game|piece[1]                                                                                 ; |sim_game|piece[1]                                                                           ; padio            ;
 ; |sim_game|piece[0]                                                                                 ; |sim_game|piece[0]                                                                           ; padio            ;
 ; |sim_game|address[4]                                                                               ; |sim_game|address[4]                                                                         ; padio            ;
 ; |sim_game|address[2]                                                                               ; |sim_game|address[2]                                                                         ; padio            ;
-; |sim_game|address[1]                                                                               ; |sim_game|address[1]                                                                         ; padio            ;
 ; |sim_game|piece_read[0]                                                                            ; |sim_game|piece_read[0]                                                                      ; padio            ;
+; |sim_game|s_p[1]                                                                                   ; |sim_game|s_p[1]                                                                             ; padio            ;
+; |sim_game|s_p[0]                                                                                   ; |sim_game|s_p[0]                                                                             ; padio            ;
+; |sim_game|sx[2]                                                                                    ; |sim_game|sx[2]                                                                              ; padio            ;
+; |sim_game|sx[1]                                                                                    ; |sim_game|sx[1]                                                                              ; padio            ;
+; |sim_game|sy[2]                                                                                    ; |sim_game|sy[2]                                                                              ; padio            ;
+; |sim_game|sy[1]                                                                                    ; |sim_game|sy[1]                                                                              ; padio            ;
 ; |sim_game|posy[1]                                                                                  ; |sim_game|posy[1]~corein                                                                     ; combout          ;
 ; |sim_game|posx[2]                                                                                  ; |sim_game|posx[2]~corein                                                                     ; combout          ;
-; |sim_game|posx[1]                                                                                  ; |sim_game|posx[1]~corein                                                                     ; combout          ;
 ; |sim_game|nrst                                                                                     ; |sim_game|nrst~corein                                                                        ; combout          ;
+; |sim_game|f_rx[2]                                                                                  ; |sim_game|f_rx[2]~corein                                                                     ; combout          ;
+; |sim_game|f_rx[0]                                                                                  ; |sim_game|f_rx[0]~corein                                                                     ; combout          ;
+; |sim_game|y_rx[1]                                                                                  ; |sim_game|y_rx[1]~corein                                                                     ; combout          ;
+; |sim_game|x_rx[1]                                                                                  ; |sim_game|x_rx[1]~corein                                                                     ; combout          ;
+; |sim_game|x_rx[0]                                                                                  ; |sim_game|x_rx[0]~corein                                                                     ; combout          ;
 ; |sim_game|color                                                                                    ; |sim_game|color~corein                                                                       ; combout          ;
 ; |sim_game|nrst~clkctrl                                                                             ; |sim_game|nrst~clkctrl                                                                       ; outclk           ;
-; |sim_game|game:GAME|temp_piece[0]~feeder                                                           ; |sim_game|game:GAME|temp_piece[0]~feeder                                                     ; combout          ;
-; |sim_game|game:GAME|s_y_out[2]~feeder                                                              ; |sim_game|game:GAME|s_y_out[2]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_y_out[1]~feeder                                                              ; |sim_game|game:GAME|s_y_out[1]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_y_out[0]~feeder                                                              ; |sim_game|game:GAME|s_y_out[0]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_x_out[2]~feeder                                                              ; |sim_game|game:GAME|s_x_out[2]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_x_out[1]~feeder                                                              ; |sim_game|game:GAME|s_x_out[1]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|s_x_out[0]~feeder                                                              ; |sim_game|game:GAME|s_x_out[0]~feeder                                                        ; combout          ;
-; |sim_game|game:GAME|selY[1]~feeder                                                                 ; |sim_game|game:GAME|selY[1]~feeder                                                           ; combout          ;
-; |sim_game|game:GAME|selX[2]~feeder                                                                 ; |sim_game|game:GAME|selX[2]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|aux_piece[2]~feeder                                                            ; |sim_game|game:GAME|aux_piece[2]~feeder                                                      ; combout          ;
+; |sim_game|game:GAME|oldX[2]~feeder                                                                 ; |sim_game|game:GAME|oldX[2]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|oldY[1]~feeder                                                                 ; |sim_game|game:GAME|oldY[1]~feeder                                                           ; combout          ;
+; |sim_game|game:GAME|state.st_wait_game~feeder                                                      ; |sim_game|game:GAME|state.st_wait_game~feeder                                                ; combout          ;
 +----------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------+------------------+
 
 
@@ -323,32 +546,20 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 12:50:56 2023
+    Info: Processing started: Fri Dec 22 12:47:55 2023
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off Design1 -c Design1
 Info: Using vector source file "L:/Documentos/Github/Restored/sim_game.vwf"
 Info: Overwriting simulation input file with simulation results
     Info: A backup of sim_game.vwf called Design1.sim_ori.vwf has been created in the db folder
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_FR2" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_S_EQ" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_FR" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_S_GRorSM" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_TX3" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.sT_FR_R" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_DT" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_S_DT" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_TX2" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_W_Code" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.st_Code" was synthesized away
-Warning: Can't display state machine states -- register holding state machine bit "|sim_game|game:GAME|state.S_Turn2" was synthesized away
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      56.72 %
-Info: Number of transitions in simulation is 1285
+Info: Simulation coverage is      58.36 %
+Info: Number of transitions in simulation is 2239
 Info: Vector file sim_game.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
-Info: Quartus II Simulator was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 149 megabytes
-    Info: Processing ended: Thu Dec 21 12:50:57 2023
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Fri Dec 22 12:47:56 2023
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

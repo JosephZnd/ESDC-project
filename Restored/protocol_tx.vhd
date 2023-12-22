@@ -6,7 +6,7 @@ entity protocol_tx is
 		clk50, nrst: in std_logic;
 		SEND_RDY, SEND_WHITES, SEND_EQ, SEND_SM, SEND_DT: in std_logic;  -- Frame to transmit.
 		tx_data : out std_logic_vector(7 downto 0);  -- Byte sent to the UART TX for transmission
-		dataH, dataT, dataU : in std_logic_vector(3 downto 0);  -- Data to trasmit if FRAME is DATA.
+		dataH, dataT, dataU : in std_logic_vector(2 downto 0);  -- Data to trasmit if FRAME is DATA.
 		ready_to_TX, send : out std_logic;  -- Flag. Active high if protocol is ready to tx (not transmiting a frame)
 											-- send: to the UART. Active to send a new byte.
 		tx_empty : in std_logic  -- Signal from the UART TX. Active if new byte can be transmitted.
@@ -34,7 +34,7 @@ architecture main of protocol_tx is
 	-- Definition of the registers in the process unit
 	signal s_whites : std_logic:='0';
 	signal frame_type: std_logic_vector(7 downto 0);
-	signal dataH_i, dataT_i, dataU_i : std_logic_vector(3 downto 0);  -- Data to trasmit if FRAME is DATA.
+	signal dataH_i, dataT_i, dataU_i : std_logic_vector(2 downto 0);  -- Data to trasmit if FRAME is DATA.
 	
 begin
 
@@ -108,7 +108,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			when pr_check_data => 
 				if frame_type = CODE then
 					state <= pr_s3;
-					tx_data <= x"0" & dataH_i;
+					tx_data <= "00000" & dataH_i;
 				else
 					state <= pr_set_TX;
 				end if;
@@ -121,7 +121,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			when pr_w3 =>
 				if tx_empty = '1' then 
 					state <= pr_s4;
-					tx_data <= x"0" & dataT_i;
+					tx_data <= "00000" & dataT_i;
 				end if;
 				
 			when pr_s4 =>
@@ -130,7 +130,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			when pr_w4 =>
 				if tx_empty = '1' then 
 					state <= pr_s5;
-					tx_data <= x"0" & dataU_i;
+					tx_data <= "00000" & dataU_i;
 				end if;
 				
 			when pr_s5 =>

@@ -1,5 +1,5 @@
 Flow report for Design1
-Thu Dec 21 14:31:28 2023
+Fri Dec 22 13:03:58 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Flow Summary                                                                      ;
 +------------------------------------+----------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 21 14:31:28 2023        ;
+; Flow Status                        ; Successful - Fri Dec 22 13:03:57 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
@@ -46,10 +46,10 @@ applicable agreement for further details.
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
 ; Met timing requirements            ; No                                           ;
-; Total logic elements               ; 837 / 33,216 ( 3 % )                         ;
-;     Total combinational functions  ; 770 / 33,216 ( 2 % )                         ;
-;     Dedicated logic registers      ; 366 / 33,216 ( 1 % )                         ;
-; Total registers                    ; 366                                          ;
+; Total logic elements               ; 987 / 33,216 ( 3 % )                         ;
+;     Total combinational functions  ; 906 / 33,216 ( 3 % )                         ;
+;     Dedicated logic registers      ; 426 / 33,216 ( 1 % )                         ;
+; Total registers                    ; 426                                          ;
 ; Total pins                         ; 52 / 475 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,496 / 483,840 ( 20 % )                    ;
@@ -63,7 +63,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/21/2023 14:31:01 ;
+; Start date & time ; 12/22/2023 13:03:30 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Design1             ;
 +-------------------+---------------------+
@@ -74,7 +74,7 @@ applicable agreement for further details.
 +------------------------+-----------------------------------------------------------------------------------+---------------+--------------+------------+
 ; Assignment Name        ; Value                                                                             ; Default Value ; Entity Name  ; Section Id ;
 +------------------------+-----------------------------------------------------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID  ; 18587647032645.170316546116196                                                    ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID  ; 18587647032645.170324661005484                                                    ; --            ; --           ; --         ;
 ; IP_TOOL_NAME           ; RAM: 2-PORT                                                                       ; --            ; --           ; --         ;
 ; IP_TOOL_VERSION        ; 9.1                                                                               ; --            ; --           ; --         ;
 ; MISC_FILE              ; C:/Users/joseph.zandueta/Documents/Project ESDC/ESDC-project/Restored/Design1.dpf ; --            ; --           ; --         ;
@@ -92,11 +92,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:12     ; 1.0                     ; 259 MB              ; 00:00:06                           ;
-; Fitter                  ; 00:00:07     ; 1.0                     ; 284 MB              ; 00:00:06                           ;
+; Analysis & Synthesis    ; 00:00:14     ; 1.0                     ; 259 MB              ; 00:00:07                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 284 MB              ; 00:00:07                           ;
 ; Assembler               ; 00:00:02     ; 1.0                     ; 256 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 167 MB              ; 00:00:01                           ;
-; Total                   ; 00:00:22     ; --                      ; --                  ; 00:00:14                           ;
+; Classic Timing Analyzer ; 00:00:01     ; 1.0                     ; 168 MB              ; 00:00:01                           ;
+; Total                   ; 00:00:23     ; --                      ; --                  ; 00:00:16                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -7,48 +7,46 @@ entity game is
 	port (
 		clk50, nrst: in std_logic;
 		new_game : in std_logic;  
-		RDY_RECEIVED, GR_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: in std_logic;  
-		OponentH, OponentT, OponentU : in std_logic_vector(3 downto 0);
-		OurH, OurT, OurU : in std_logic_vector(3 downto 0);
+		RDY_RECEIVED, DT_RECEIVED: in std_logic;  
+		Oponent_x,Oponent_y: in integer range 0 to 7;
+		Oponent_fig: in std_logic_vector(2 downto 0);
 		bank_ready, ready_to_TX, Turn, Color: in std_logic; 
 		pos_x, pos_y : in integer range 0 to 7; 
 		Sel	: in std_logic;
 		in_piece :  in std_logic_vector(2 downto 0);
-		SEND_RDY, SEND_GR, SEND_EQ, SEND_SM, SEND_DT : out std_logic;
+		SEND_RDY, SEND_DT : out std_logic;
 		frame_received : out std_logic;
-		LightD, LightG, LightS, Light_WIN, Light_Loose, Light_Tie : out std_logic;
-		enterCode, led_turn, turn_read, freeze_kb, wen_game, mux_ram : out std_logic;
-		x_out, y_out : out integer range 0 to 7; 
-		out_piece :  out std_logic_vector(2 downto 0);
-		led_test : out std_logic);
+		led_turn, turn_read, freeze_kb, wen_game, mux_ram : out std_logic;
+		x_out, y_out, send_x, send_y : out integer range 0 to 7; 
+		out_piece, send_piece :  out std_logic_vector(2 downto 0);
+		led_test, clr_cursor : out std_logic);
 end game;
 
 
 architecture main of game is
 	type state_type is (st_wait_game, st_W_TX1, st_S_RDY, st_W_RDY, st_Start_Game, 
 	st_Turn, st_Wait_Turn, st_rFigure, st_Move, s_Turn0, s_Turn1, st_Invalid, 
-	S_Turn2, S_Validate, S_Place_Figure, S_End_Turn, st_Code, st_W_Code, st_W_TX2, st_S_DT, st_W_DT,
-	sT_FR_R, st_W_TX3, st_S_GRorSM, st_W_FR, st_S_EQ, st_W_FR2);
+	S_Turn2, S_Validate, S_Place_Figure, S_Move_Black ,S_Move_White, st_wrFigure, S_End_Turn,
+	st_Send_1, st_Pre_Send, S_Tx_1, st_Send_2, S_Tx_End, S_Send_End, st_Refresh, st_Receive
+	);
 	
 	signal state : state_type;
 	signal s_white, SelMode : std_logic;
 	signal Opponent_Gr_Our : std_logic;
-	signal selX, selY, oldX, oldY, s_x_out, s_y_out : integer range 0 to 7; 
-	signal temp_piece, aux_piece, ext_piece : std_logic_vector(2 downto 0);
+	signal selX, selY, oldX, oldY, s_x_out, s_y_out, iselX, iselY, ioldX, ioldY, iauX, iAuY, s_sendy,s_sendx : integer range 0 to 7:=0; 
+	signal temp_piece, aux_piece, ext_piece, s_sendfig : std_logic_vector(2 downto 0);
 	signal count : integer range 0 to 5; 
+	signal s_frame : std_logic;
 
 	
 begin
 
 process (clk50, nrst) begin
+--variable iselX, iselY, ioldX, ioldY, iauX, iAuY : integer range 0 to 7;
+
 	if nrst = '0' then
 		state <= st_wait_game;
-		LightD <= '0';
-		LightG <= '0';
-		LightS <= '0';
-		Light_WIN <= '0';
-		Light_Loose <= '0';
-		Light_Tie <= '0';
+		s_frame <='0';
 		s_white <= '0';
 		SelMode <= '0';
 		count<=0;
@@ -70,12 +68,7 @@ process (clk50, nrst) begin
 				
 			when st_S_RDY => 
 				state <= st_W_RDY;
-			
-			--when st_W_RDY =>
-				--if RDY_Received = '1' then
-					--state <= st_Code;
-				--end if;
-				
+	
 			when st_W_RDY =>
 				if RDY_Received = '1' then
 					state <= st_Start_Game;
@@ -85,29 +78,39 @@ process (clk50, nrst) begin
 			
 			when st_Start_Game => state <= st_Wait_Turn;
 				
-			when st_Wait_Turn => 
+			when st_Wait_Turn =>
+				s_frame <='0';
 				if Turn='1' then state <= st_Turn; end if;
+				if DT_RECEIVED ='1' then state <=  st_Receive; end if;
 			
 			when st_Turn =>
+				--selX <= pos_x; 		
+				--selY <= pos_y;
 				if( Sel='1')then 
-					selX <= pos_x; 		-- podemos hacer que x e y vayan tanto a RAM como input a Game
-					selY <= pos_y;
+					oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
+					oldY <= selY;
 					state <= st_rFigure;
 				end if;
 				
-			when st_rFigure => 
+			when st_rFigure =>
+				--oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
+				--oldY <= selY;
+				selX <= pos_x; 		-- podemos hacer que x e y vayan tanto a RAM como input a Game
+				selY <= pos_y;
 				count <= count + 1;
 				if (count = 4) then state <= st_Move ; end if;
 							
 			when st_Move => 
 				count <= 0;
+				temp_piece <= in_piece;
 				if(SelMode = '0') then
-					temp_piece <= in_piece;
-					oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
-					oldY <= selY;
+					--temp_piece <= in_piece;
+
+					--oldX <= selX; --pero que no se lea en Game hasta que no se pulsa Sel
+					--oldY <= selY;
 					state <= s_Turn0;
 				else 
-					aux_piece <= temp_piece;
+					--temp_piece <= in_piece;
 					state <= s_Turn1;
 				end if;
 				
@@ -119,25 +122,100 @@ process (clk50, nrst) begin
 					else state <= st_Invalid;
 					end if;
 					
-			when st_Invalid => state <= st_Turn;
-				SelMode <= '0';
-			
-			when s_Turn1 => state <= s_Turn2;
-				temp_piece <= in_piece;
-			
-			when s_Turn2 =>
-				if(selX = oldX and selY = oldY) then --piece back to where it came.
-					SelMode <= '0';
+			when st_Invalid => 
+				if SelMode='0' then state <= st_Turn;
+				else SelMode <= '0'; --piece back to where it came.
 					ext_piece <= aux_piece;
 					temp_piece <= "100";
 					state <= S_Place_Figure;
-							
-				--elsif (temp_piece < "100" and s_white ='1') then -- This to allow only white movements
-					--state <= S_Move_White;
-				--elsif (temp_piece > "100" and s_white ='0') then state <= S_Move_Black;
-				--else SelMode <= '0'; --cualquier otro caso, vuelves a elegir, no puedes elegir de otro color
-						--end if;
-					--end if;
+				end if;		
+				
+				SelMode <= '0';
+			
+			when s_Turn1 => 
+				--temp_piece <= in_piece;
+				--aux_piece <= temp_piece;
+				state <= s_Turn2;
+			
+			when s_Turn2 =>
+				if(selX = oldX and selY = oldY) then state <= st_Invalid;
+				elsif (aux_piece < "100" and s_white ='1') then -- This to allow only white movements
+					state <= S_Move_White;
+				elsif (aux_piece > "100" and s_white ='0') then state <= S_Move_Black;
+				else state <= st_Invalid; --cualquier otro caso, vuelves a elegir, no puedes elegir de otro color
+				end if;
+				
+			when S_Move_White =>
+				ioldX <= oldX;
+				ioldY <= oldY;
+				iselX <= selX;
+				iselY <= selY;
+				--peon blanco
+				if aux_piece = "010" then
+					-- primer cuadrante, dcha-arriba. 
+					if ((ioldY - iselY) = (iselX - ioldX)  and (iselY < ioldY) and (iselX > ioldX)) then --Quad1
+						if temp_piece > "100" then --se dispone a comer la pieza
+							iauY <= ioldY-1;
+							iauX <= ioldX+1;
+							--state <= S_Check;
+						elsif temp_piece = "100" then
+							--s_x_out <= selX; 
+							--s_y_out <= selY; 
+							ext_piece <= aux_piece;
+							state <= S_Place_Figure;
+						else state <= st_Turn;		
+						end if;
+						
+					-- segundo cuadrante, izda arriba
+					elsif ((ioldY - iselY) = (ioldX - iselX)  and iselY < ioldY and iselX < ioldX) then --Quad2
+						if temp_piece > "100" then
+								iauY <= ioldY-1;
+								iauX <= ioldX-1;
+								--state <= S_Check;
+						elsif temp_piece = "100" then
+							ext_piece <= aux_piece;
+							--s_addW <= selY & selX;
+							state <= S_Place_Figure;
+						else state <= st_Turn;
+						end if;
+					end if;
+				end if;
+				
+			when S_Move_Black =>
+				ioldX <= oldX;
+				ioldY <= oldY;
+				iselX <= selX;
+				iselY <= selY;
+				--peon negr
+				if aux_piece = "111" then
+					-- tercer cuadrante, izda abajo
+					if ((iselY - ioldY) = (ioldX - iselX)  and iselY > ioldY and iselX < ioldX) then --Quad3
+						if temp_piece < "100" then
+								iauY <= ioldY+1;
+								iauX <= ioldX-1;
+								--state <= S_Check;
+						elsif temp_piece = "100" then
+							ext_piece <= aux_piece;
+							--s_addW <= selY & selX;
+							state <= S_Place_Figure;
+						else state <= st_Turn;							
+						end if;
+					
+					-- cuarto cuadrante, dcha abajo
+					elsif ((iselY - ioldY) = (iselX - ioldX)  and iselY > ioldY and iselX > ioldX) then --Quad2
+						if temp_piece < "100" then
+								iauY <= ioldY+1;
+								iauX <= ioldX+1;
+								--state <= S_Check;
+						elsif temp_piece = "100" then
+							ext_piece <= aux_piece;
+							--s_addW <= selY & selX;
+							state <= S_Place_Figure;
+						else state <= st_Turn;		
+						end if;
+					end if;
+				end if;
+					
 				
 				
 				
@@ -148,132 +226,112 @@ process (clk50, nrst) begin
 				ext_piece <= "100"; --hay que poner como vacia la casilla
 				state <= S_Place_Figure;
 			
-			when S_Place_Figure =>
+			when S_Place_Figure => state <= st_wrFigure;
+				s_x_out <= selX; 
+				s_y_out <= selY;
+				
+			when st_wrFigure =>
 				count <= count + 1;
-				if (count = 4) then state <= S_End_Turn ; end if;
+				if (count = 4) then
+					if s_frame = '1' then state <= st_Wait_Turn ;
+					end if;
+					state <= S_End_Turn ; end if;
 			--ensure they wait enough time to write
 					
 				
 			when S_End_Turn => 
+				count <= 0;
 				SelMode <= not(SelMode);
-				state <= st_Turn;
+				if SelMode = '0' then state <= st_Turn; --cuando clickas una vez
+				else state <= st_Pre_Send; --mandas
+				end if;
+				
+			when st_Pre_Send =>
+				if ready_to_TX = '1' then state <= st_Send_1;
+				end if;
 			
+			when st_Send_1 =>
+			--send packet 1
+				s_sendfig <= "100";
+				s_sendx <= oldX;
+				s_sendy <= oldY;
+				state <= S_Tx_1;
+			
+			when S_Tx_1 =>
+				if ready_to_TX = '1' then state <= st_Send_2;
+					--if three_packets ='0' then
+						--state <= S_Send_2;
+					--elsif three_packets ='1' then
+						--state <= S_Send_3;
+					--end if;
+				end if;
+			
+			--when S_Send_3 =>
+				--s_x <= auX;
+				--s_y <= auY;
+				--s_figure <= temp_piece;
+				--state <= S_Tx_2;
+			
+			--when S_Tx_2 =>
+				--if s_tx_ready = '1' then
+				--state <= S_Send_2;
+				--end if;	
+				
+			when st_Send_2 =>
+				s_sendfig <= aux_piece;
+				s_sendx <= selX;
+				s_sendy <= selY;
+				--if three_packets ='0' then
+					--s_figure <= temp_piece;
+				--else
+					--s_figure <= "100";
+				--end if;
+				state <= S_Tx_End;
+								
+			when S_Tx_End =>
+				if ready_to_TX = '1' then
+				state <= S_Send_End;
+				end if;	
+				
+			when S_Send_End =>
+				--three_packets <= '0';
+				temp_piece <= "100";
+				state <= st_Wait_turn;
+				
+			when st_Receive =>
+				s_x_out <= Oponent_x; 
+				s_y_out <= Oponent_y;
+				ext_piece <= Oponent_fig;
+				state <= st_Refresh;
+			
+			when st_Refresh => 
+				s_frame <= '1';
+				state <= st_wrFigure;
 					
-			
-			when st_Code =>
-				state <= st_W_code;
-				--LightD <= '1';
-
-			when st_W_code =>
-				if bank_ready = '1' then
-					state <= st_W_TX2;
-					--LightD <= '0';
-				end if;	
-			
-			when st_W_TX2 =>
-				if ready_to_TX = '1' then
-					state <= st_S_DT;
-				end if;	
-			
-			when st_S_DT =>
-				state <= st_W_DT;
-			
-			when st_W_DT =>
-				if DT_RECEIVED = '1' then
-					state <= st_FR_R;
-				end if;	
-			
-			when st_FR_R =>
-				state <= st_W_TX3;
-				
-			when st_W_TX3 =>
-				if ready_to_TX = '1' then
-					if (OponentH=OurH and OponentT=OurT and OponentU=OurU) then
-						state <= st_S_EQ;
-					else
-						state <= st_S_GRorSM;
-					end if;
-				end if;	
-				
-			when st_S_GRorSM =>
-				state <= st_W_FR;
-				
-			when st_W_FR =>
-				if EQ_RECEIVED = '1' then
-					light_WIN <= '1';
-					light_Loose <= '0';
-					light_Tie <= '0';
-					lightG <= '0';
-					lightS <= '0';
-					lightD <= '0';
-					state <= st_wait_game;
-				elsif GR_RECEIVED = '1' then
-					light_WIN <= '0';
-					light_Loose <= '0';
-					light_Tie <= '0';
-					lightG <= '1';
-					lightS <= '0';
-					lightD <= '0';
-					state <= st_code;
-				elsif SM_RECEIVED = '1' then
-					light_WIN <= '0';
-					light_Loose <= '0';
-					light_Tie <= '0';
-					lightG <= '0';
-					lightS <= '1';
-					lightD <= '0';
-					state <= st_code;
-				end if;	
-			
-			when st_S_EQ =>
-				state <= st_W_FR2;
-				
-			when st_W_FR2 =>
-				if EQ_RECEIVED = '1' then
-					light_WIN <= '0';
-					light_Loose <= '0';
-					light_Tie <= '1';
-					lightG <= '0';
-					lightS <= '0';
-					lightD <= '0';
-					state <= st_wait_game;
-				elsif GR_RECEIVED = '1' or SM_RECEIVED = '1' then
-					light_WIN <= '0';
-					light_Loose <= '1';
-					light_Tie <= '0';
-					lightG <= '0';
-					lightS <= '0';
-					lightD <= '0';
-					state <= st_wait_game;
-				end if;	
-				
 			when others =>
 				end case; 
 	end if;
 end process;
-
-x_out <= s_x_out;
-y_out <= s_y_out;
-
+--selX <= pos_x; 		
+--selY <= pos_y;
+x_out <= s_x_out when state = S_Place_Figure ;
+y_out <= s_y_out  when state = S_Place_Figure ;
+send_y <= s_sendy; 
+send_x <= s_sendx;
+send_piece <= s_sendfig;
 led_turn <='1' when state = st_Turn else '0';
 led_test <='1' when state = S_End_Turn else '0';
 turn_read <='1' when state = st_Turn else '0';
 freeze_kb <='0' when state = st_Turn else '1';
+clr_cursor <='1' when state = S_Place_Figure or state = st_Invalid else '0';
 --s_sel <= Sel when state = st_Turn else '0';
-wen_game <= '1' when state = S_Place_Figure else '0';
-mux_ram <= '1' when state = S_Place_Figure else '0';
-out_piece <= ext_piece when state = S_Place_Figure else "000";
+wen_game <= '1' when state = st_wrFigure else '0';
+mux_ram <= '1' when state = st_wrFigure else '0';
+out_piece <= ext_piece when state = st_wrFigure else "000";
 SEND_RDY <= '1' when state = st_S_RDY else '0';
-SEND_DT <= '1' when state = st_S_DT else '0';
-SEND_EQ <= '1' when state = st_S_EQ else '0';
-SEND_GR <= '1' when state = st_S_GRorSM and Opponent_Gr_Our = '1' else '0';
-SEND_SM <= '1' when state = st_S_GRorSM and Opponent_Gr_Our = '0' else '0';
+SEND_DT <= '1' when state = st_Send_2 or state = st_Send_1 else '0';
 
-enterCode <= '1' when state = st_Code else '0';
+frame_received <= '1' when state= st_Start_Game or state = st_Receive else '0';
 
-frame_received <= '1' when state= st_Start_Game or state = st_Code or state = st_FR_R or ((state = st_W_FR or state = st_W_FR2 ) and 
-(EQ_RECEIVED = '1' or GR_RECEIVED = '1' or SM_RECEIVED = '1')) else '0';
-
-Opponent_Gr_Our <= '1' when (OponentH>OurH or (OponentH=OurH and OponentT>OurT) or (OponentH=OurH and OponentT=OurT and OponentU=OurU)) else '0';
 
 end;

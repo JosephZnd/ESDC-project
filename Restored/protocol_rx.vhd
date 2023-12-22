@@ -6,7 +6,7 @@ entity protocol_rx is
 		clk50, nrst: in std_logic;
 		RDY_RECEIVED, WH_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: out std_logic;  -- Frame received.
 		rx_data : in std_logic_vector(7 downto 0);  -- Byte received from the UART RX
-		dataH, dataT, dataU : out std_logic_vector(3 downto 0);  -- Data received if FRAME is DATA.
+		dataH, dataT, dataU : out std_logic_vector(2 downto 0);  -- Data received if FRAME is DATA.
 		data_read,new_frame : out std_logic;  -- Flag. Active high if protocol is ready to tx (not transmiting a frame)
 											-- new_frame: active if a new frame is received.
 		rx_new, frame_read : in std_logic  -- Signal from the UART RX. Active if new byte has been received.
@@ -102,7 +102,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			-- HUNDREDS ARRIVED. 
 			-- Data Read should be activated within a combinational system	
 			when pr_r3 => 
-				dataH <= rx_data(3 downto 0);
+				dataH <= rx_data(2 downto 0);
 				state <= pr_w4;
 				
 			-- Waiting for tens to arive
@@ -112,7 +112,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			-- TENS ARRIVED. 
 			-- Data Read should be activated within a combinational system	
 			when pr_r4 => 
-				dataT <= rx_data(3 downto 0);
+				dataT <= rx_data(2 downto 0);
 				state <= pr_w5;	
 				
 			-- Waiting for units to arive
@@ -122,7 +122,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 			-- UNITS ARRIVED. 
 			-- Data Read should be activated within a combinational system	
 			when pr_r5 => 
-				dataU <= rx_data(3 downto 0);
+				dataU <= rx_data(2 downto 0);
 				state <= pr_s_dt;
 				
 			-- Activation of the CODE Flag

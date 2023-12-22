@@ -1,5 +1,5 @@
 Fitter report for Design1
-Thu Dec 21 14:31:21 2023
+Fri Dec 22 13:03:50 2023
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -63,17 +63,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Thu Dec 21 14:31:21 2023        ;
+; Fitter Status                      ; Successful - Fri Dec 22 13:03:50 2023        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Design1                                      ;
 ; Top-level Entity Name              ; P1_BOARD_vga                                 ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C35F672C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Total logic elements               ; 837 / 33,216 ( 3 % )                         ;
-;     Total combinational functions  ; 770 / 33,216 ( 2 % )                         ;
-;     Dedicated logic registers      ; 366 / 33,216 ( 1 % )                         ;
-; Total registers                    ; 366                                          ;
+; Total logic elements               ; 987 / 33,216 ( 3 % )                         ;
+;     Total combinational functions  ; 906 / 33,216 ( 3 % )                         ;
+;     Dedicated logic registers      ; 426 / 33,216 ( 1 % )                         ;
+; Total registers                    ; 426                                          ;
 ; Total pins                         ; 52 / 475 ( 11 % )                            ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 98,496 / 483,840 ( 20 % )                    ;
@@ -531,8 +531,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Type                    ; Value               ;
 +-------------------------+---------------------+
 ; Placement               ;                     ;
-;     -- Requested        ; 0 / 1217 ( 0.00 % ) ;
-;     -- Achieved         ; 0 / 1217 ( 0.00 % ) ;
+;     -- Requested        ; 0 / 1414 ( 0.00 % ) ;
+;     -- Achieved         ; 0 / 1414 ( 0.00 % ) ;
 ;                         ;                     ;
 ; Routing (by Connection) ;                     ;
 ;     -- Requested        ; 0 / 0 ( 0.00 % )    ;
@@ -554,7 +554,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------+---------+-------------------+-------------------------+-------------------+
 ; Partition Name ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
 +----------------+---------+-------------------+-------------------------+-------------------+
-; Top            ; 1217    ; 0                 ; N/A                     ; Source File       ;
+; Top            ; 1414    ; 0                 ; N/A                     ; Source File       ;
 +----------------+---------+-------------------+-------------------------+-------------------+
 
 
@@ -564,54 +564,54 @@ Parallel compilation was disabled, but you have multiple processors available. E
 The pin-out file can be found in L:/Documentos/Github/Restored/Design1.pin.
 
 
-+--------------------------------------------------------------------------+
-; Fitter Resource Usage Summary                                            ;
-+---------------------------------------------+----------------------------+
-; Resource                                    ; Usage                      ;
-+---------------------------------------------+----------------------------+
-; Total logic elements                        ; 837 / 33,216 ( 3 % )       ;
-;     -- Combinational with no register       ; 471                        ;
-;     -- Register only                        ; 67                         ;
-;     -- Combinational with a register        ; 299                        ;
-;                                             ;                            ;
-; Logic element usage by number of LUT inputs ;                            ;
-;     -- 4 input functions                    ; 260                        ;
-;     -- 3 input functions                    ; 232                        ;
-;     -- <=2 input functions                  ; 278                        ;
-;     -- Register only                        ; 67                         ;
-;                                             ;                            ;
-; Logic elements by mode                      ;                            ;
-;     -- normal mode                          ; 622                        ;
-;     -- arithmetic mode                      ; 148                        ;
-;                                             ;                            ;
-; Total registers*                            ; 366 / 34,593 ( 1 % )       ;
-;     -- Dedicated logic registers            ; 366 / 33,216 ( 1 % )       ;
-;     -- I/O registers                        ; 0 / 1,377 ( 0 % )          ;
-;                                             ;                            ;
-; Total LABs:  partially or completely used   ; 66 / 2,076 ( 3 % )         ;
-; User inserted logic elements                ; 0                          ;
-; Virtual pins                                ; 0                          ;
-; I/O pins                                    ; 52 / 475 ( 11 % )          ;
-;     -- Clock pins                           ; 1 / 8 ( 13 % )             ;
-; Global signals                              ; 3                          ;
-; M4Ks                                        ; 25 / 105 ( 24 % )          ;
-; Total block memory bits                     ; 98,496 / 483,840 ( 20 % )  ;
-; Total block memory implementation bits      ; 115,200 / 483,840 ( 24 % ) ;
-; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )             ;
-; PLLs                                        ; 0 / 4 ( 0 % )              ;
-; Global clocks                               ; 3 / 16 ( 19 % )            ;
-; JTAGs                                       ; 0 / 1 ( 0 % )              ;
-; ASMI blocks                                 ; 0 / 1 ( 0 % )              ;
-; CRC blocks                                  ; 0 / 1 ( 0 % )              ;
-; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%               ;
-; Peak interconnect usage (total/H/V)         ; 6% / 5% / 7%               ;
-; Maximum fan-out node                        ; KEY[0]                     ;
-; Maximum fan-out                             ; 191                        ;
-; Highest non-global fan-out signal           ; KEY[0]                     ;
-; Highest non-global fan-out                  ; 191                        ;
-; Total fan-out                               ; 4184                       ;
-; Average fan-out                             ; 3.27                       ;
-+---------------------------------------------+----------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                                                                                                   ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Resource                                    ; Usage                                                                                             ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------+
+; Total logic elements                        ; 987 / 33,216 ( 3 % )                                                                              ;
+;     -- Combinational with no register       ; 561                                                                                               ;
+;     -- Register only                        ; 81                                                                                                ;
+;     -- Combinational with a register        ; 345                                                                                               ;
+;                                             ;                                                                                                   ;
+; Logic element usage by number of LUT inputs ;                                                                                                   ;
+;     -- 4 input functions                    ; 348                                                                                               ;
+;     -- 3 input functions                    ; 271                                                                                               ;
+;     -- <=2 input functions                  ; 287                                                                                               ;
+;     -- Register only                        ; 81                                                                                                ;
+;                                             ;                                                                                                   ;
+; Logic elements by mode                      ;                                                                                                   ;
+;     -- normal mode                          ; 758                                                                                               ;
+;     -- arithmetic mode                      ; 148                                                                                               ;
+;                                             ;                                                                                                   ;
+; Total registers*                            ; 426 / 34,593 ( 1 % )                                                                              ;
+;     -- Dedicated logic registers            ; 426 / 33,216 ( 1 % )                                                                              ;
+;     -- I/O registers                        ; 0 / 1,377 ( 0 % )                                                                                 ;
+;                                             ;                                                                                                   ;
+; Total LABs:  partially or completely used   ; 80 / 2,076 ( 4 % )                                                                                ;
+; User inserted logic elements                ; 0                                                                                                 ;
+; Virtual pins                                ; 0                                                                                                 ;
+; I/O pins                                    ; 52 / 475 ( 11 % )                                                                                 ;
+;     -- Clock pins                           ; 1 / 8 ( 13 % )                                                                                    ;
+; Global signals                              ; 4                                                                                                 ;
+; M4Ks                                        ; 25 / 105 ( 24 % )                                                                                 ;
+; Total block memory bits                     ; 98,496 / 483,840 ( 20 % )                                                                         ;
+; Total block memory implementation bits      ; 115,200 / 483,840 ( 24 % )                                                                        ;
+; Embedded Multiplier 9-bit elements          ; 0 / 70 ( 0 % )                                                                                    ;
+; PLLs                                        ; 0 / 4 ( 0 % )                                                                                     ;
+; Global clocks                               ; 4 / 16 ( 25 % )                                                                                   ;
+; JTAGs                                       ; 0 / 1 ( 0 % )                                                                                     ;
+; ASMI blocks                                 ; 0 / 1 ( 0 % )                                                                                     ;
+; CRC blocks                                  ; 0 / 1 ( 0 % )                                                                                     ;
+; Average interconnect usage (total/H/V)      ; 1% / 1% / 1%                                                                                      ;
+; Peak interconnect usage (total/H/V)         ; 9% / 11% / 7%                                                                                     ;
+; Maximum fan-out node                        ; clk_video:inst10|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component|wire_clkctrl1_outclk ;
+; Maximum fan-out                             ; 230                                                                                               ;
+; Highest non-global fan-out signal           ; KEY[0]                                                                                            ;
+; Highest non-global fan-out                  ; 217                                                                                               ;
+; Total fan-out                               ; 4854                                                                                              ;
+; Average fan-out                             ; 3.28                                                                                              ;
++---------------------------------------------+---------------------------------------------------------------------------------------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
 
@@ -625,7 +625,7 @@ The pin-out file can be found in L:/Documentos/Github/Restored/Design1.pin.
 ; COL[1]   ; G25   ; 5        ; 65           ; 27           ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; COL[2]   ; H23   ; 5        ; 65           ; 27           ; 2           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; COL[3]   ; H24   ; 5        ; 65           ; 27           ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; KEY[0]   ; G26   ; 5        ; 65           ; 27           ; 1           ; 191                   ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; KEY[0]   ; G26   ; 5        ; 65           ; 27           ; 1           ; 217                   ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; OSC_50   ; N2    ; 2        ; 0            ; 18           ; 0           ; 3                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; UART_RXD ; C25   ; 5        ; 65           ; 32           ; 2           ; 14                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +----------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
@@ -1423,14 +1423,14 @@ Note: User assignments will override these defaults. The user specified values a
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                          ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                              ; Library Name ;
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |P1_BOARD_vga                                                       ; 837 (1)     ; 366 (0)                   ; 0 (0)         ; 98496       ; 25   ; 0            ; 0       ; 0         ; 52   ; 0            ; 471 (1)      ; 67 (0)            ; 299 (0)          ; |P1_BOARD_vga                                                                                                                                    ; work         ;
+; |P1_BOARD_vga                                                       ; 987 (1)     ; 426 (0)                   ; 0 (0)         ; 98496       ; 25   ; 0            ; 0       ; 0         ; 52   ; 0            ; 561 (1)      ; 81 (0)            ; 345 (0)          ; |P1_BOARD_vga                                                                                                                                    ; work         ;
 ;    |VGA_SYNC:inst19|                                                ; 94 (94)     ; 74 (74)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 20 (20)      ; 47 (47)           ; 27 (27)          ; |P1_BOARD_vga|VGA_SYNC:inst19                                                                                                                    ;              ;
-;    |Video_Memory:inst18|                                            ; 37 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 1 (0)             ; 5 (0)            ; |P1_BOARD_vga|Video_Memory:inst18                                                                                                                ;              ;
-;       |altsyncram:altsyncram_component|                             ; 37 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 1 (0)             ; 5 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component                                                                                ;              ;
-;          |altsyncram_4jk1:auto_generated|                           ; 37 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 1 (0)             ; 5 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
-;             |altsyncram_fes1:altsyncram1|                           ; 37 (4)      ; 6 (6)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 31 (0)       ; 1 (1)             ; 5 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
+;    |Video_Memory:inst18|                                            ; 38 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 2 (0)             ; 4 (0)            ; |P1_BOARD_vga|Video_Memory:inst18                                                                                                                ;              ;
+;       |altsyncram:altsyncram_component|                             ; 38 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 2 (0)             ; 4 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component                                                                                ;              ;
+;          |altsyncram_4jk1:auto_generated|                           ; 38 (0)      ; 6 (0)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 2 (0)             ; 4 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated                                                 ;              ;
+;             |altsyncram_fes1:altsyncram1|                           ; 38 (4)      ; 6 (6)                     ; 0 (0)         ; 98304       ; 24   ; 0            ; 0       ; 0         ; 0    ; 0            ; 32 (0)       ; 2 (2)             ; 4 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1                     ;              ;
 ;                |decode_9oa:decode4|                                 ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4  ;              ;
-;                |decode_9oa:decode_a|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 3 (3)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
+;                |decode_9oa:decode_a|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 2 (2)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a ;              ;
 ;                |decode_9oa:decode_b|                                ; 8 (8)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b ;              ;
 ;                |mux_kib:mux5|                                       ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 2 (2)            ; |P1_BOARD_vga|Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|mux_kib:mux5        ;              ;
 ;    |clk_div_two:inst17|                                             ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 1 (1)            ; |P1_BOARD_vga|clk_div_two:inst17                                                                                                                 ;              ;
@@ -1439,7 +1439,7 @@ Note: User assignments will override these defaults. The user specified values a
 ;    |clk_video:inst20|                                               ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|clk_video:inst20                                                                                                                   ;              ;
 ;       |clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component| ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|clk_video:inst20|clk_video_altclkctrl_6df:clk_video_altclkctrl_6df_component                                                       ;              ;
 ;    |f_div:inst1|                                                    ; 22 (22)     ; 17 (17)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 17 (17)          ; |P1_BOARD_vga|f_div:inst1                                                                                                                        ;              ;
-;    |game:GAME|                                                      ; 76 (76)     ; 48 (48)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 9 (9)             ; 39 (39)          ; |P1_BOARD_vga|game:GAME                                                                                                                          ;              ;
+;    |game:GAME|                                                      ; 168 (168)   ; 80 (80)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 88 (88)      ; 8 (8)             ; 72 (72)          ; |P1_BOARD_vga|game:GAME                                                                                                                          ;              ;
 ;    |inverse_square_map:inst23|                                      ; 198 (16)    ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 198 (16)     ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23                                                                                                          ;              ;
 ;       |lpm_divide:Div0|                                             ; 99 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (0)       ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0                                                                                          ;              ;
 ;          |lpm_divide_3so:auto_generated|                            ; 99 (0)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 99 (0)       ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated                                                            ;              ;
@@ -1451,21 +1451,21 @@ Note: User assignments will override these defaults. The user specified values a
 ;             |abs_divider_8ag:divider|                               ; 83 (6)      ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 83 (6)       ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider                                    ;              ;
 ;                |alt_u_div_sve:divider|                              ; 68 (68)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 68 (68)      ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider              ;              ;
 ;                |lpm_abs_kq9:my_abs_num|                             ; 9 (9)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num             ;              ;
-;    |kb_xy_module:inst8|                                             ; 21 (21)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 8 (8)        ; 0 (0)             ; 13 (13)          ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
-;    |keypad:inst2|                                                   ; 47 (43)     ; 16 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 20 (16)          ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
+;    |kb_xy_module:inst8|                                             ; 22 (22)     ; 13 (13)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 13 (13)          ; |P1_BOARD_vga|kb_xy_module:inst8                                                                                                                 ;              ;
+;    |keypad:inst2|                                                   ; 48 (44)     ; 16 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 28 (28)      ; 0 (0)             ; 20 (16)          ; |P1_BOARD_vga|keypad:inst2                                                                                                                       ;              ;
 ;       |count4b:counter|                                             ; 4 (4)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |P1_BOARD_vga|keypad:inst2|count4b:counter                                                                                                       ;              ;
-;    |keytest_h_v2:inst7|                                             ; 9 (9)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 7 (7)            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
+;    |keytest_h_v2:inst7|                                             ; 7 (7)       ; 5 (5)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 6 (6)            ; |P1_BOARD_vga|keytest_h_v2:inst7                                                                                                                 ;              ;
 ;    |main_control:inst|                                              ; 17 (17)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 12 (12)          ; |P1_BOARD_vga|main_control:inst                                                                                                                  ;              ;
-;    |mux_ram:inst15|                                                 ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 6 (6)            ; |P1_BOARD_vga|mux_ram:inst15                                                                                                                     ;              ;
-;    |protocol_rx:inst4|                                              ; 33 (33)     ; 27 (27)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 3 (3)             ; 24 (24)          ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                  ;              ;
-;    |protocol_tx:inst3|                                              ; 25 (25)     ; 18 (18)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 18 (18)          ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
+;    |mux_ram:inst15|                                                 ; 6 (6)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|mux_ram:inst15                                                                                                                     ;              ;
+;    |protocol_rx:inst4|                                              ; 46 (46)     ; 37 (37)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 12 (12)           ; 25 (25)          ; |P1_BOARD_vga|protocol_rx:inst4                                                                                                                  ;              ;
+;    |protocol_tx:inst3|                                              ; 60 (60)     ; 36 (36)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 24 (24)      ; 6 (6)             ; 30 (30)          ; |P1_BOARD_vga|protocol_tx:inst3                                                                                                                  ;              ;
 ;    |ram64:inst14|                                                   ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|ram64:inst14                                                                                                                       ;              ;
 ;       |altsyncram:altsyncram_component|                             ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component                                                                                       ;              ;
 ;          |altsyncram_5h72:auto_generated|                           ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 192         ; 1    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |P1_BOARD_vga|ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated                                                        ;              ;
 ;    |rx_module2:inst5|                                               ; 46 (46)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 27 (27)      ; 0 (0)             ; 19 (19)          ; |P1_BOARD_vga|rx_module2:inst5                                                                                                                   ;              ;
-;    |square:inst21|                                                  ; 117 (117)   ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 52 (52)      ; 7 (7)             ; 58 (58)          ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
+;    |square:inst21|                                                  ; 118 (118)   ; 65 (65)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 53 (53)      ; 6 (6)             ; 59 (59)          ; |P1_BOARD_vga|square:inst21                                                                                                                      ;              ;
 ;    |square_map:inst9|                                               ; 16 (16)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 10 (10)          ; |P1_BOARD_vga|square_map:inst9                                                                                                                   ;              ;
-;    |tx_module:inst6|                                                ; 25 (25)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 13 (13)      ; 0 (0)             ; 12 (12)          ; |P1_BOARD_vga|tx_module:inst6                                                                                                                    ;              ;
+;    |tx_module:inst6|                                                ; 26 (26)     ; 12 (12)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 12 (12)          ; |P1_BOARD_vga|tx_module:inst6                                                                                                                    ;              ;
 ;    |wr_memory:inst16|                                               ; 68 (68)     ; 33 (33)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 35 (35)      ; 0 (0)             ; 33 (33)          ; |P1_BOARD_vga|wr_memory:inst16                                                                                                                   ;              ;
 +---------------------------------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -1523,10 +1523,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_R[0]     ; Output   ; --            ; --            ; --                    ; --  ;
 ; KEY[0]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; OSC_50       ; Input    ; (0) 299 ps    ; (0) 299 ps    ; --                    ; --  ;
+; COL[3]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; COL[0]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; COL[2]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; COL[1]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; COL[3]       ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; UART_RXD     ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 +--------------+----------+---------------+---------------+-----------------------+-----+
 
@@ -1537,221 +1537,247 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                          ; Pad To Core Index ; Setting ;
 +----------------------------------------------+-------------------+---------+
 ; KEY[0]                                       ;                   ;         ;
-;      - clk_div_two:inst17|clk_int            ; 0                 ; 6       ;
-;      - main_control:inst|LED_WHITE           ; 0                 ; 6       ;
-;      - main_control:inst|LED_BLACK           ; 0                 ; 6       ;
-;      - tx_module:inst6|bit_count[0]          ; 0                 ; 6       ;
-;      - tx_module:inst6|bit_count[2]          ; 0                 ; 6       ;
-;      - tx_module:inst6|bit_count[1]          ; 0                 ; 6       ;
-;      - protocol_tx:inst3|tx_data[3]          ; 0                 ; 6       ;
-;      - protocol_tx:inst3|tx_data[0]          ; 0                 ; 6       ;
-;      - game:GAME|count[2]                    ; 0                 ; 6       ;
-;      - game:GAME|count[1]                    ; 0                 ; 6       ;
-;      - tx_module:inst6|state.tx_idle         ; 0                 ; 6       ;
-;      - tx_module:inst6|state.tx_shift        ; 0                 ; 6       ;
-;      - tx_module:inst6|state.tx_stop         ; 0                 ; 6       ;
-;      - game:GAME|state.st_Turn               ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_sel         ; 0                 ; 6       ;
-;      - f_div:inst1|q[15]                     ; 0                 ; 6       ;
-;      - f_div:inst1|q[0]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[1]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[2]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[3]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[4]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[5]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[6]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[7]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[8]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[9]                      ; 0                 ; 6       ;
-;      - f_div:inst1|q[10]                     ; 0                 ; 6       ;
-;      - f_div:inst1|q[11]                     ; 0                 ; 6       ;
-;      - f_div:inst1|q[12]                     ; 0                 ; 6       ;
-;      - f_div:inst1|q[13]                     ; 0                 ; 6       ;
-;      - f_div:inst1|q[14]                     ; 0                 ; 6       ;
-;      - game:GAME|count[0]                    ; 0                 ; 6       ;
-;      - game:GAME|ext_piece[1]                ; 0                 ; 6       ;
-;      - game:GAME|ext_piece[0]                ; 0                 ; 6       ;
-;      - tx_module:inst6|tx                    ; 0                 ; 6       ;
-;      - main_control:inst|LED_ON              ; 0                 ; 6       ;
-;      - main_control:inst|state.st_P_First    ; 0                 ; 6       ;
-;      - main_control:inst|state.S_Change_Turn ; 0                 ; 6       ;
-;      - game:GAME|state.st_Wait_Turn          ; 0                 ; 6       ;
-;      - game:GAME|state.st_Invalid            ; 0                 ; 6       ;
-;      - game:GAME|state.S_End_Turn            ; 0                 ; 6       ;
-;      - keytest_h_v2:inst7|new_code_int       ; 0                 ; 6       ;
-;      - keytest_h_v2:inst7|keycode_int[1]     ; 0                 ; 6       ;
-;      - keytest_h_v2:inst7|keycode_int[2]     ; 0                 ; 6       ;
-;      - keytest_h_v2:inst7|keycode_int[0]     ; 0                 ; 6       ;
-;      - keytest_h_v2:inst7|keycode_int[3]     ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_wait        ; 0                 ; 6       ;
-;      - main_control:inst|state.st_send_color ; 0                 ; 6       ;
-;      - protocol_rx:inst4|WH_RECEIVED         ; 0                 ; 6       ;
-;      - main_control:inst|state.st_wait_hash  ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.kra3       ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.check0     ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.check1     ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.kra2       ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.kra1       ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.kra0       ; 0                 ; 6       ;
-;      - tx_module:inst6|baud[2]               ; 0                 ; 6       ;
-;      - tx_module:inst6|baud[1]               ; 0                 ; 6       ;
-;      - tx_module:inst6|baud[0]               ; 0                 ; 6       ;
-;      - tx_module:inst6|state.tx_start        ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_w1         ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_wait       ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_s1         ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_s2         ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_w2         ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_check_data ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_set_TX     ; 0                 ; 6       ;
-;      - tx_module:inst6|tx_empty              ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_rdy        ; 0                 ; 6       ;
-;      - protocol_tx:inst3|state.pr_gr         ; 0                 ; 6       ;
-;      - protocol_tx:inst3|tx_data[7]~1        ; 0                 ; 6       ;
-;      - protocol_tx:inst3|frame_type[7]       ; 0                 ; 6       ;
-;      - protocol_tx:inst3|frame_type[6]       ; 0                 ; 6       ;
-;      - f_div:inst1|clkout                    ; 0                 ; 6       ;
-;      - main_control:inst|state.S_Wait_Turn   ; 0                 ; 6       ;
-;      - main_control:inst|s_opp_first         ; 0                 ; 6       ;
-;      - main_control:inst|s_color_white       ; 0                 ; 6       ;
-;      - game:GAME|state.st_Start_Game         ; 0                 ; 6       ;
-;      - game:GAME|s_white                     ; 0                 ; 6       ;
-;      - game:GAME|state.s_Turn0               ; 0                 ; 6       ;
-;      - game:GAME|state.S_Place_Figure        ; 0                 ; 6       ;
-;      - keypad:inst2|colq[0]                  ; 0                 ; 6       ;
-;      - keypad:inst2|colq[2]                  ; 0                 ; 6       ;
-;      - keypad:inst2|colq[1]                  ; 0                 ; 6       ;
-;      - keypad:inst2|colq[3]                  ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.wait1      ; 0                 ; 6       ;
-;      - keypad:inst2|current_state.wait0      ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_end         ; 0                 ; 6       ;
-;      - main_control:inst|state.st_start_game ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_s_gr       ; 0                 ; 6       ;
-;      - keypad:inst2|count4b:counter|count[3] ; 0                 ; 6       ;
-;      - keypad:inst2|count4b:counter|count[2] ; 0                 ; 6       ;
-;      - keypad:inst2|count4b:counter|count[1] ; 0                 ; 6       ;
-;      - keypad:inst2|count4b:counter|count[0] ; 0                 ; 6       ;
-;      - game:GAME|state.st_S_RDY              ; 0                 ; 6       ;
-;      - main_control:inst|state.st_Op_First   ; 0                 ; 6       ;
-;      - protocol_rx:inst4|RDY_RECEIVED        ; 0                 ; 6       ;
-;      - game:GAME|state.st_W_RDY              ; 0                 ; 6       ;
-;      - game:GAME|state.st_W_TX1              ; 0                 ; 6       ;
-;      - protocol_tx:inst3|ready_to_TX         ; 0                 ; 6       ;
-;      - game:GAME|state.st_rFigure            ; 0                 ; 6       ;
-;      - game:GAME|state.S_Turn2               ; 0                 ; 6       ;
-;      - game:GAME|state.st_Move               ; 0                 ; 6       ;
-;      - game:GAME|state.s_Turn1               ; 0                 ; 6       ;
-;      - game:GAME|state.st_wait_game          ; 0                 ; 6       ;
-;      - game:GAME|state.S_Validate            ; 0                 ; 6       ;
-;      - game:GAME|SelMode                     ; 0                 ; 6       ;
-;      - game:GAME|temp_piece[2]~1             ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_f_type     ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_w5         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_w1         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_w2         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_w3         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_w4         ; 0                 ; 6       ;
-;      - rx_module2:inst5|rx_new_internal      ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s2          ; 0                 ; 6       ;
-;      - protocol_tx:inst3|s_whites~0          ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_s_rdy      ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|x_int[0]           ; 0                 ; 6       ;
-;      - game:GAME|selX[0]~1                   ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|x_int[1]           ; 0                 ; 6       ;
-;      - game:GAME|oldX[0]~1                   ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|x_int[2]           ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|y_int[0]           ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|y_int[1]           ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|y_int[2]           ; 0                 ; 6       ;
-;      - square:inst21|x_out[0]                ; 0                 ; 6       ;
-;      - game:GAME|ext_piece[2]                ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_r2         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|frame_type[7]~0     ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_r4         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_s_dt       ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_ini        ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_r1         ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_r3         ; 0                 ; 6       ;
-;      - rx_module2:inst5|state.rx_stop        ; 0                 ; 6       ;
-;      - rx_module2:inst5|baud[2]              ; 0                 ; 6       ;
-;      - rx_module2:inst5|baud[1]              ; 0                 ; 6       ;
-;      - rx_module2:inst5|baud[0]              ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_r5         ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s5          ; 0                 ; 6       ;
-;      - wr_memory:inst16|j[3]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|j[2]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|j[1]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s1          ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s3          ; 0                 ; 6       ;
-;      - wr_memory:inst16|i[3]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|i[2]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|i[1]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|address_t[12]~19     ; 0                 ; 6       ;
-;      - square:inst21|color_t[0]              ; 0                 ; 6       ;
-;      - wr_memory:inst16|i[0]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|j[0]                 ; 0                 ; 6       ;
-;      - wr_memory:inst16|data[0]~4            ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_right       ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_left        ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_down        ; 0                 ; 6       ;
-;      - kb_xy_module:inst8|s_xy.s_up          ; 0                 ; 6       ;
-;      - game:GAME|s_x_out[0]~0                ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_cursor_a    ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_select_a    ; 0                 ; 6       ;
-;      - square:inst21|st_square.s00a          ; 0                 ; 6       ;
-;      - square:inst21|x_out[1]~0              ; 0                 ; 6       ;
-;      - rx_module2:inst5|state.rx_shift       ; 0                 ; 6       ;
-;      - rx_module2:inst5|Decoder0~1           ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_s_sm       ; 0                 ; 6       ;
-;      - protocol_rx:inst4|state.pr_s_eq       ; 0                 ; 6       ;
-;      - rx_module2:inst5|state.rx_start       ; 0                 ; 6       ;
-;      - rx_module2:inst5|state.rx_idle        ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s4          ; 0                 ; 6       ;
-;      - square:inst21|st_square.s00b          ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_cursor_b    ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_select_b    ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s0          ; 0                 ; 6       ;
-;      - square:inst21|SelMode                 ; 0                 ; 6       ;
-;      - square:inst21|color_index             ; 0                 ; 6       ;
-;      - square:inst21|color_t[1]~0            ; 0                 ; 6       ;
-;      - game:GAME|aux_piece[2]~0              ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_cursor_wait ; 0                 ; 6       ;
-;      - square:inst21|c_x[7]~0                ; 0                 ; 6       ;
-;      - square:inst21|i[2]~0                  ; 0                 ; 6       ;
-;      - square:inst21|sel_x[0]~1              ; 0                 ; 6       ;
-;      - square:inst21|sel_selected            ; 0                 ; 6       ;
-;      - square:inst21|st_square.s00c          ; 0                 ; 6       ;
-;      - wr_memory:inst16|st_write.s6          ; 0                 ; 6       ;
-;      - square:inst21|j[2]~0                  ; 0                 ; 6       ;
-;      - rx_module2:inst5|bit_count[2]~2       ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_game_wait   ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_cursor_c    ; 0                 ; 6       ;
-;      - square:inst21|st_square.s_select_c    ; 0                 ; 6       ;
-;      - square:inst21|s_new_game              ; 0                 ; 6       ;
+;      - clk_div_two:inst17|clk_int            ; 1                 ; 6       ;
+;      - main_control:inst|LED_WHITE           ; 1                 ; 6       ;
+;      - main_control:inst|LED_BLACK           ; 1                 ; 6       ;
+;      - tx_module:inst6|bit_count[0]          ; 1                 ; 6       ;
+;      - tx_module:inst6|bit_count[2]          ; 1                 ; 6       ;
+;      - tx_module:inst6|bit_count[1]          ; 1                 ; 6       ;
+;      - protocol_tx:inst3|tx_data[3]          ; 1                 ; 6       ;
+;      - protocol_tx:inst3|tx_data[0]          ; 1                 ; 6       ;
+;      - tx_module:inst6|state.tx_idle         ; 1                 ; 6       ;
+;      - tx_module:inst6|state.tx_shift        ; 1                 ; 6       ;
+;      - tx_module:inst6|state.tx_stop         ; 1                 ; 6       ;
+;      - game:GAME|state.st_Turn               ; 1                 ; 6       ;
+;      - game:GAME|state.S_End_Turn            ; 1                 ; 6       ;
+;      - f_div:inst1|q[15]                     ; 1                 ; 6       ;
+;      - f_div:inst1|q[0]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[1]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[2]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[3]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[4]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[5]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[6]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[7]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[8]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[9]                      ; 1                 ; 6       ;
+;      - f_div:inst1|q[10]                     ; 1                 ; 6       ;
+;      - f_div:inst1|q[11]                     ; 1                 ; 6       ;
+;      - f_div:inst1|q[12]                     ; 1                 ; 6       ;
+;      - f_div:inst1|q[13]                     ; 1                 ; 6       ;
+;      - f_div:inst1|q[14]                     ; 1                 ; 6       ;
+;      - tx_module:inst6|tx                    ; 1                 ; 6       ;
+;      - main_control:inst|LED_ON              ; 1                 ; 6       ;
+;      - main_control:inst|state.st_P_First    ; 1                 ; 6       ;
+;      - game:GAME|state.st_Invalid            ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_sel         ; 1                 ; 6       ;
+;      - game:GAME|SelMode                     ; 1                 ; 6       ;
+;      - main_control:inst|state.S_Change_Turn ; 1                 ; 6       ;
+;      - game:GAME|state.st_Wait_Turn          ; 1                 ; 6       ;
+;      - protocol_rx:inst4|DT_RECEIVED         ; 1                 ; 6       ;
+;      - game:GAME|state.S_Move_Black          ; 1                 ; 6       ;
+;      - game:GAME|state.S_Move_White          ; 1                 ; 6       ;
+;      - game:GAME|state.st_wrFigure           ; 1                 ; 6       ;
+;      - game:GAME|count[2]                    ; 1                 ; 6       ;
+;      - game:GAME|count[1]                    ; 1                 ; 6       ;
+;      - game:GAME|count[0]                    ; 1                 ; 6       ;
+;      - game:GAME|state.st_W_RDY              ; 1                 ; 6       ;
+;      - protocol_tx:inst3|ready_to_TX         ; 1                 ; 6       ;
+;      - game:GAME|state.st_wait_game          ; 1                 ; 6       ;
+;      - main_control:inst|state.st_start_game ; 1                 ; 6       ;
+;      - protocol_rx:inst4|RDY_RECEIVED        ; 1                 ; 6       ;
+;      - game:GAME|state.st_rFigure            ; 1                 ; 6       ;
+;      - game:GAME|state.st_W_TX1              ; 1                 ; 6       ;
+;      - game:GAME|state.st_Pre_Send           ; 1                 ; 6       ;
+;      - game:GAME|state.S_Tx_1                ; 1                 ; 6       ;
+;      - game:GAME|state.S_Tx_End              ; 1                 ; 6       ;
+;      - main_control:inst|state.st_send_color ; 1                 ; 6       ;
+;      - protocol_rx:inst4|WH_RECEIVED         ; 1                 ; 6       ;
+;      - main_control:inst|state.st_wait_hash  ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.kra3       ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.check0     ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.check1     ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.kra2       ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.kra1       ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.kra0       ; 1                 ; 6       ;
+;      - tx_module:inst6|baud[2]               ; 1                 ; 6       ;
+;      - tx_module:inst6|baud[1]               ; 1                 ; 6       ;
+;      - tx_module:inst6|baud[0]               ; 1                 ; 6       ;
+;      - tx_module:inst6|state.tx_start        ; 1                 ; 6       ;
+;      - protocol_tx:inst3|frame_type[7]       ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_w1         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_gr         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_rdy        ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_dt         ; 1                 ; 6       ;
+;      - tx_module:inst6|tx_empty              ; 1                 ; 6       ;
+;      - protocol_tx:inst3|tx_data[2]~0        ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_check_data ; 1                 ; 6       ;
+;      - protocol_tx:inst3|frame_type[6]       ; 1                 ; 6       ;
+;      - protocol_tx:inst3|frame_type[1]       ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_s5         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_w2         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_w5         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_set_TX     ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_wait       ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_s1         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_s2         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_s3         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_s4         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_w4         ; 1                 ; 6       ;
+;      - protocol_tx:inst3|state.pr_w3         ; 1                 ; 6       ;
+;      - f_div:inst1|clkout                    ; 1                 ; 6       ;
+;      - main_control:inst|state.S_Wait_Turn   ; 1                 ; 6       ;
+;      - keytest_h_v2:inst7|keycode_int[0]     ; 1                 ; 6       ;
+;      - keytest_h_v2:inst7|keycode_int[2]     ; 1                 ; 6       ;
+;      - keytest_h_v2:inst7|keycode_int[1]     ; 1                 ; 6       ;
+;      - keytest_h_v2:inst7|keycode_int[3]     ; 1                 ; 6       ;
+;      - keytest_h_v2:inst7|new_code_int       ; 1                 ; 6       ;
+;      - main_control:inst|s_opp_first         ; 1                 ; 6       ;
+;      - game:GAME|state.S_Turn2               ; 1                 ; 6       ;
+;      - game:GAME|s_white                     ; 1                 ; 6       ;
+;      - game:GAME|state.s_Turn0               ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_wait        ; 1                 ; 6       ;
+;      - main_control:inst|s_color_white       ; 1                 ; 6       ;
+;      - game:GAME|state.st_Start_Game         ; 1                 ; 6       ;
+;      - game:GAME|state.S_Send_End            ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_s_dt       ; 1                 ; 6       ;
+;      - game:GAME|state.st_Receive            ; 1                 ; 6       ;
+;      - game:GAME|state.st_Move               ; 1                 ; 6       ;
+;      - game:GAME|temp_piece[2]~1             ; 1                 ; 6       ;
+;      - game:GAME|ioldY[2]~0                  ; 1                 ; 6       ;
+;      - game:GAME|state.S_Validate            ; 1                 ; 6       ;
+;      - game:GAME|aux_piece[2]~0              ; 1                 ; 6       ;
+;      - game:GAME|state.S_Place_Figure        ; 1                 ; 6       ;
+;      - game:GAME|state.st_Refresh            ; 1                 ; 6       ;
+;      - game:GAME|state.st_S_RDY              ; 1                 ; 6       ;
+;      - main_control:inst|state.st_Op_First   ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_s_rdy      ; 1                 ; 6       ;
+;      - game:GAME|state.st_Send_1             ; 1                 ; 6       ;
+;      - game:GAME|state.st_Send_2             ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_s_gr       ; 1                 ; 6       ;
+;      - keypad:inst2|colq[3]                  ; 1                 ; 6       ;
+;      - keypad:inst2|colq[0]                  ; 1                 ; 6       ;
+;      - keypad:inst2|colq[2]                  ; 1                 ; 6       ;
+;      - keypad:inst2|colq[1]                  ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.wait0      ; 1                 ; 6       ;
+;      - keypad:inst2|count4b:counter|count[3] ; 1                 ; 6       ;
+;      - keypad:inst2|count4b:counter|count[2] ; 1                 ; 6       ;
+;      - keypad:inst2|count4b:counter|count[1] ; 1                 ; 6       ;
+;      - keypad:inst2|count4b:counter|count[0] ; 1                 ; 6       ;
+;      - keypad:inst2|current_state.wait1      ; 1                 ; 6       ;
+;      - protocol_tx:inst3|dataH_i[2]~1        ; 1                 ; 6       ;
+;      - game:GAME|s_sendfig[2]                ; 1                 ; 6       ;
+;      - game:GAME|s_sendfig[1]                ; 1                 ; 6       ;
+;      - game:GAME|s_sendfig[0]                ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_end         ; 1                 ; 6       ;
+;      - game:GAME|state.s_Turn1               ; 1                 ; 6       ;
+;      - game:GAME|oldX[0]~1                   ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|x_int[1]           ; 1                 ; 6       ;
+;      - game:GAME|selX[0]~0                   ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|x_int[0]           ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|y_int[0]           ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|x_int[2]           ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|y_int[2]           ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|y_int[1]           ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_r5         ; 1                 ; 6       ;
+;      - square:inst21|x_out[0]                ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_f_type     ; 1                 ; 6       ;
+;      - rx_module2:inst5|rx_new_internal      ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_w5         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_w1         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_w2         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_w3         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_w4         ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s2          ; 1                 ; 6       ;
+;      - protocol_tx:inst3|s_whites~0          ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_left        ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_right       ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_down        ; 1                 ; 6       ;
+;      - kb_xy_module:inst8|s_xy.s_up          ; 1                 ; 6       ;
+;      - game:GAME|ext_piece[2]~0              ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_cursor_a    ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_select_a    ; 1                 ; 6       ;
+;      - square:inst21|st_square.s00a          ; 1                 ; 6       ;
+;      - square:inst21|x_out[1]~0              ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_r2         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|frame_type[7]~0     ; 1                 ; 6       ;
+;      - rx_module2:inst5|state.rx_stop        ; 1                 ; 6       ;
+;      - rx_module2:inst5|baud[2]              ; 1                 ; 6       ;
+;      - rx_module2:inst5|baud[1]              ; 1                 ; 6       ;
+;      - rx_module2:inst5|baud[0]              ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_r1         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_r3         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_r4         ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_ini        ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s5          ; 1                 ; 6       ;
+;      - wr_memory:inst16|j[3]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|j[2]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|j[1]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s1          ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s3          ; 1                 ; 6       ;
+;      - wr_memory:inst16|i[3]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|i[2]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|i[1]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|address_t[11]~19     ; 1                 ; 6       ;
+;      - square:inst21|color_t[0]              ; 1                 ; 6       ;
+;      - wr_memory:inst16|i[0]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|j[0]                 ; 1                 ; 6       ;
+;      - wr_memory:inst16|data[0]~4            ; 1                 ; 6       ;
+;      - protocol_rx:inst4|dataU[2]~0          ; 1                 ; 6       ;
+;      - game:GAME|s_x_out[0]~1                ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_cursor_wait ; 1                 ; 6       ;
+;      - square:inst21|c_x[7]~0                ; 1                 ; 6       ;
+;      - square:inst21|i[2]~0                  ; 1                 ; 6       ;
+;      - square:inst21|sel_x[0]~1              ; 1                 ; 6       ;
+;      - square:inst21|sel_selected            ; 1                 ; 6       ;
+;      - square:inst21|st_square.s00c          ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s6          ; 1                 ; 6       ;
+;      - square:inst21|st_square.s00b          ; 1                 ; 6       ;
+;      - square:inst21|j[2]~0                  ; 1                 ; 6       ;
+;      - rx_module2:inst5|state.rx_shift       ; 1                 ; 6       ;
+;      - rx_module2:inst5|Decoder0~1           ; 1                 ; 6       ;
+;      - rx_module2:inst5|state.rx_start       ; 1                 ; 6       ;
+;      - rx_module2:inst5|state.rx_idle        ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_s_sm       ; 1                 ; 6       ;
+;      - protocol_rx:inst4|state.pr_s_eq       ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s4          ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_cursor_b    ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_select_b    ; 1                 ; 6       ;
+;      - wr_memory:inst16|st_write.s0          ; 1                 ; 6       ;
+;      - square:inst21|SelMode                 ; 1                 ; 6       ;
+;      - square:inst21|color_index             ; 1                 ; 6       ;
+;      - square:inst21|color_t[1]~0            ; 1                 ; 6       ;
+;      - protocol_rx:inst4|dataH[0]~0          ; 1                 ; 6       ;
+;      - protocol_rx:inst4|dataT[0]~0          ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_game_wait   ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_cursor_c    ; 1                 ; 6       ;
+;      - square:inst21|st_square.s_select_c    ; 1                 ; 6       ;
+;      - square:inst21|s_new_game              ; 1                 ; 6       ;
+;      - rx_module2:inst5|bit_count[2]~2       ; 1                 ; 6       ;
 ; OSC_50                                       ;                   ;         ;
+; COL[3]                                       ;                   ;         ;
+;      - keypad:inst2|colq[3]                  ; 1                 ; 6       ;
 ; COL[0]                                       ;                   ;         ;
 ;      - keypad:inst2|colq[0]                  ; 0                 ; 6       ;
 ; COL[2]                                       ;                   ;         ;
 ;      - keypad:inst2|colq[2]                  ; 0                 ; 6       ;
 ; COL[1]                                       ;                   ;         ;
 ;      - keypad:inst2|colq[1]                  ; 0                 ; 6       ;
-; COL[3]                                       ;                   ;         ;
-;      - keypad:inst2|colq[3]                  ; 1                 ; 6       ;
 ; UART_RXD                                     ;                   ;         ;
-;      - rx_module2:inst5|rx_data[0]~0         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[6]~1         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[3]~2         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[7]~3         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[4]~4         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[2]~5         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[5]~6         ; 1                 ; 6       ;
-;      - rx_module2:inst5|rx_data[1]~7         ; 1                 ; 6       ;
-;      - rx_module2:inst5|baud[2]~1            ; 1                 ; 6       ;
-;      - rx_module2:inst5|bit_count[2]~1       ; 1                 ; 6       ;
-;      - rx_module2:inst5|Selector6~1          ; 1                 ; 6       ;
-;      - rx_module2:inst5|Selector8~0          ; 1                 ; 6       ;
-;      - rx_module2:inst5|Selector7~3          ; 1                 ; 6       ;
-;      - rx_module2:inst5|Selector6~3          ; 1                 ; 6       ;
+;      - rx_module2:inst5|rx_data[5]~0         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[0]~1         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[7]~2         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[3]~3         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[6]~4         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[2]~5         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[4]~6         ; 0                 ; 6       ;
+;      - rx_module2:inst5|rx_data[1]~7         ; 0                 ; 6       ;
+;      - rx_module2:inst5|baud[0]~1            ; 0                 ; 6       ;
+;      - rx_module2:inst5|bit_count[2]~1       ; 0                 ; 6       ;
+;      - rx_module2:inst5|Selector8~1          ; 0                 ; 6       ;
+;      - rx_module2:inst5|Selector8~3          ; 0                 ; 6       ;
+;      - rx_module2:inst5|Selector7~3          ; 0                 ; 6       ;
+;      - rx_module2:inst5|Selector6~0          ; 0                 ; 6       ;
 +----------------------------------------------+-------------------+---------+
 
 
@@ -1760,81 +1786,90 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 ; Name                                                                                                                                                ; Location           ; Fan-Out ; Usage                      ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
-; KEY[0]                                                                                                                                              ; PIN_G26            ; 191     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
-; OSC_50                                                                                                                                              ; PIN_N2             ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; KEY[0]                                                                                                                                              ; PIN_G26            ; 217     ; Async. clear, Clock enable ; no     ; --                   ; --               ; --                        ;
 ; OSC_50                                                                                                                                              ; PIN_N2             ; 139     ; Clock                      ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; VGA_SYNC:inst19|LessThan6~0                                                                                                                         ; LCCOMB_X28_Y23_N6  ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC:inst19|LessThan7~1                                                                                                                         ; LCCOMB_X27_Y23_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; VGA_SYNC:inst19|process_0~11                                                                                                                        ; LCCOMB_X28_Y23_N26 ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode367w[3]    ; LCCOMB_X30_Y24_N8  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode384w[3]    ; LCCOMB_X31_Y23_N10 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode394w[3]    ; LCCOMB_X31_Y23_N6  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode404w[3]    ; LCCOMB_X30_Y24_N28 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode414w[3]    ; LCCOMB_X31_Y23_N2  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode424w[3]    ; LCCOMB_X31_Y25_N0  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode434w[3]    ; LCCOMB_X31_Y26_N0  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode444w[3]    ; LCCOMB_X31_Y23_N14 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode367w[3]   ; LCCOMB_X27_Y21_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode384w[3]~0 ; LCCOMB_X27_Y21_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode394w[3]~0 ; LCCOMB_X27_Y21_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode404w[3]~0 ; LCCOMB_X27_Y21_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode414w[3]~0 ; LCCOMB_X27_Y21_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode424w[3]~0 ; LCCOMB_X27_Y21_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode434w[3]~0 ; LCCOMB_X27_Y21_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode444w[3]~0 ; LCCOMB_X27_Y21_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode367w[3]   ; LCCOMB_X30_Y24_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode384w[3]~0 ; LCCOMB_X31_Y23_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode394w[3]~0 ; LCCOMB_X31_Y23_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode404w[3]~0 ; LCCOMB_X30_Y24_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode414w[3]~0 ; LCCOMB_X31_Y23_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode424w[3]~0 ; LCCOMB_X31_Y23_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode434w[3]~0 ; LCCOMB_X31_Y26_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode444w[3]~0 ; LCCOMB_X31_Y23_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; clk_div_two:inst17|clk_int                                                                                                                          ; LCFF_X31_Y18_N11   ; 105     ; Clock                      ; yes    ; Global Clock         ; GCLK1            ; VCC                       ;
-; f_div:inst1|LessThan0~4                                                                                                                             ; LCCOMB_X7_Y20_N14  ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; f_div:inst1|clkout                                                                                                                                  ; LCFF_X7_Y20_N21    ; 170     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; VCC                       ;
-; game:GAME|Selector16~9                                                                                                                              ; LCCOMB_X30_Y18_N6  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|WideOr13~0                                                                                                                                ; LCCOMB_X31_Y18_N4  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|aux_piece[2]~0                                                                                                                            ; LCCOMB_X31_Y18_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|oldX[0]~1                                                                                                                                 ; LCCOMB_X31_Y18_N2  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|s_x_out[0]~0                                                                                                                              ; LCCOMB_X32_Y19_N4  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|selX[0]~1                                                                                                                                 ; LCCOMB_X30_Y18_N18 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; game:GAME|state.S_Place_Figure                                                                                                                      ; LCFF_X31_Y19_N29   ; 16      ; Sync. load, Write enable   ; no     ; --                   ; --               ; --                        ;
-; game:GAME|state.S_Turn2                                                                                                                             ; LCFF_X30_Y19_N27   ; 13      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; game:GAME|state.st_Move                                                                                                                             ; LCFF_X31_Y19_N31   ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
-; game:GAME|temp_piece[2]~1                                                                                                                           ; LCCOMB_X32_Y19_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; kb_xy_module:inst8|WideOr1~0                                                                                                                        ; LCCOMB_X35_Y20_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; kb_xy_module:inst8|WideOr2~0                                                                                                                        ; LCCOMB_X30_Y26_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; keypad:inst2|key~1                                                                                                                                  ; LCCOMB_X36_Y19_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; main_control:inst|LED_BLACK~0                                                                                                                       ; LCCOMB_X30_Y19_N20 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|Selector9~2                                                                                                                       ; LCCOMB_X29_Y26_N8  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_rx:inst4|frame_type[7]~0                                                                                                                   ; LCCOMB_X28_Y26_N24 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; protocol_tx:inst3|tx_data[7]~1                                                                                                                      ; LCCOMB_X34_Y19_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; rx_module2:inst5|baud[2]~1                                                                                                                          ; LCCOMB_X29_Y25_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; rx_module2:inst5|bit_count[2]~2                                                                                                                     ; LCCOMB_X28_Y25_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|c_x[7]~0                                                                                                                              ; LCCOMB_X33_Y27_N0  ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|color_t[1]~0                                                                                                                          ; LCCOMB_X33_Y27_N22 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|i[2]~0                                                                                                                                ; LCCOMB_X32_Y24_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|j[2]~3                                                                                                                                ; LCCOMB_X32_Y26_N22 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|sel_x[0]~1                                                                                                                            ; LCCOMB_X32_Y26_N4  ; 14      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; square:inst21|st_square.s_select_a                                                                                                                  ; LCFF_X33_Y27_N21   ; 18      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
-; square:inst21|x_out[1]~0                                                                                                                            ; LCCOMB_X33_Y27_N16 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; wr_memory:inst16|address_t[0]~22                                                                                                                    ; LCCOMB_X32_Y25_N8  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; wr_memory:inst16|address_t[12]~19                                                                                                                   ; LCCOMB_X34_Y26_N16 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; wr_memory:inst16|data[0]~4                                                                                                                          ; LCCOMB_X31_Y26_N2  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
-; wr_memory:inst16|st_write.s5                                                                                                                        ; LCFF_X34_Y26_N25   ; 11      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; OSC_50                                                                                                                                              ; PIN_N2             ; 3       ; Clock                      ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC:inst19|LessThan6~0                                                                                                                         ; LCCOMB_X20_Y31_N14 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC:inst19|LessThan7~1                                                                                                                         ; LCCOMB_X21_Y31_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; VGA_SYNC:inst19|process_0~11                                                                                                                        ; LCCOMB_X20_Y31_N10 ; 10      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode367w[3]    ; LCCOMB_X44_Y31_N18 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode384w[3]    ; LCCOMB_X41_Y31_N18 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode394w[3]    ; LCCOMB_X44_Y31_N14 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode404w[3]    ; LCCOMB_X44_Y31_N22 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode414w[3]    ; LCCOMB_X41_Y31_N2  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode424w[3]    ; LCCOMB_X41_Y31_N6  ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode434w[3]    ; LCCOMB_X41_Y31_N24 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode4|w_anode444w[3]    ; LCCOMB_X41_Y31_N30 ; 3       ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode367w[3]   ; LCCOMB_X25_Y29_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode384w[3]~0 ; LCCOMB_X25_Y29_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode394w[3]~0 ; LCCOMB_X25_Y29_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode404w[3]~0 ; LCCOMB_X25_Y29_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode414w[3]~0 ; LCCOMB_X25_Y29_N18 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode424w[3]~0 ; LCCOMB_X25_Y29_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode434w[3]~0 ; LCCOMB_X25_Y29_N26 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_a|w_anode444w[3]~0 ; LCCOMB_X25_Y29_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode367w[3]   ; LCCOMB_X44_Y31_N20 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode384w[3]~0 ; LCCOMB_X41_Y31_N12 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode394w[3]~0 ; LCCOMB_X44_Y31_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode404w[3]~0 ; LCCOMB_X44_Y31_N24 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode414w[3]~0 ; LCCOMB_X41_Y31_N28 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode424w[3]~0 ; LCCOMB_X41_Y31_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode434w[3]~0 ; LCCOMB_X41_Y31_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|decode_9oa:decode_b|w_anode444w[3]~0 ; LCCOMB_X41_Y31_N16 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; clk_div_two:inst17|clk_int                                                                                                                          ; LCFF_X46_Y30_N23   ; 105     ; Clock                      ; yes    ; Global Clock         ; GCLK1            ; VCC                       ;
+; f_div:inst1|LessThan0~4                                                                                                                             ; LCCOMB_X1_Y23_N14  ; 16      ; Sync. clear                ; no     ; --                   ; --               ; --                        ;
+; f_div:inst1|clkout                                                                                                                                  ; LCFF_X1_Y23_N29    ; 230     ; Clock                      ; yes    ; Global Clock         ; GCLK0            ; VCC                       ;
+; game:GAME|Selector4~19                                                                                                                              ; LCCOMB_X48_Y30_N28 ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|WideOr17~0                                                                                                                                ; LCCOMB_X48_Y27_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|aux_piece[2]~0                                                                                                                            ; LCCOMB_X47_Y30_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|ext_piece[2]~3                                                                                                                            ; LCCOMB_X50_Y30_N14 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|ioldY[2]~0                                                                                                                                ; LCCOMB_X45_Y29_N0  ; 12      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|oldX[0]~1                                                                                                                                 ; LCCOMB_X46_Y28_N22 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|s_x_out[0]~1                                                                                                                              ; LCCOMB_X50_Y30_N4  ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|selX[0]~0                                                                                                                                 ; LCCOMB_X48_Y27_N14 ; 6       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|state.S_Place_Figure                                                                                                                      ; LCFF_X46_Y30_N5    ; 6       ; Latch enable               ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; game:GAME|state.S_Validate                                                                                                                          ; LCFF_X45_Y30_N31   ; 12      ; Sync. clear, Sync. load    ; no     ; --                   ; --               ; --                        ;
+; game:GAME|state.st_wrFigure                                                                                                                         ; LCFF_X51_Y30_N25   ; 16      ; Write enable               ; no     ; --                   ; --               ; --                        ;
+; game:GAME|temp_piece[2]~1                                                                                                                           ; LCCOMB_X48_Y27_N10 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; kb_xy_module:inst8|WideOr1~0                                                                                                                        ; LCCOMB_X49_Y28_N22 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; kb_xy_module:inst8|WideOr2~0                                                                                                                        ; LCCOMB_X47_Y32_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; keypad:inst2|key~1                                                                                                                                  ; LCCOMB_X49_Y28_N6  ; 4       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; main_control:inst|LED_BLACK~0                                                                                                                       ; LCCOMB_X46_Y28_N20 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|Selector7~2                                                                                                                       ; LCCOMB_X40_Y29_N2  ; 5       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataH[0]~0                                                                                                                        ; LCCOMB_X42_Y27_N30 ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataT[0]~0                                                                                                                        ; LCCOMB_X43_Y29_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|dataU[2]~0                                                                                                                        ; LCCOMB_X47_Y30_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_rx:inst4|frame_type[7]~0                                                                                                                   ; LCCOMB_X43_Y29_N14 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|dataH_i[2]~1                                                                                                                      ; LCCOMB_X46_Y28_N4  ; 7       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|dataH_i[2]~2                                                                                                                      ; LCCOMB_X46_Y28_N14 ; 9       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|tx_data[2]~8                                                                                                                      ; LCCOMB_X45_Y28_N10 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; protocol_tx:inst3|tx_data[7]~5                                                                                                                      ; LCCOMB_X45_Y28_N6  ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; rx_module2:inst5|baud[0]~1                                                                                                                          ; LCCOMB_X42_Y29_N8  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; rx_module2:inst5|bit_count[2]~2                                                                                                                     ; LCCOMB_X42_Y29_N6  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|c_x[7]~0                                                                                                                              ; LCCOMB_X46_Y31_N24 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|color_t[1]~0                                                                                                                          ; LCCOMB_X48_Y31_N14 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|i[2]~0                                                                                                                                ; LCCOMB_X43_Y31_N0  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|j[2]~3                                                                                                                                ; LCCOMB_X49_Y31_N30 ; 2       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|sel_x[0]~1                                                                                                                            ; LCCOMB_X54_Y31_N0  ; 14      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; square:inst21|st_square.s_select_a                                                                                                                  ; LCFF_X46_Y31_N27   ; 20      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
+; square:inst21|x_out[1]~0                                                                                                                            ; LCCOMB_X48_Y31_N22 ; 13      ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; wr_memory:inst16|address_t[0]~22                                                                                                                    ; LCCOMB_X44_Y31_N30 ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; wr_memory:inst16|address_t[11]~19                                                                                                                   ; LCCOMB_X45_Y31_N0  ; 8       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; wr_memory:inst16|data[0]~4                                                                                                                          ; LCCOMB_X45_Y31_N4  ; 3       ; Clock enable               ; no     ; --                   ; --               ; --                        ;
+; wr_memory:inst16|st_write.s5                                                                                                                        ; LCFF_X45_Y31_N1    ; 11      ; Sync. load                 ; no     ; --                   ; --               ; --                        ;
 +-----------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+----------------------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                   ;
-+----------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; Name                       ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------+------------------+---------+----------------------+------------------+---------------------------+
-; OSC_50                     ; PIN_N2           ; 139     ; Global Clock         ; GCLK2            ; --                        ;
-; clk_div_two:inst17|clk_int ; LCFF_X31_Y18_N11 ; 105     ; Global Clock         ; GCLK1            ; VCC                       ;
-; f_div:inst1|clkout         ; LCFF_X7_Y20_N21  ; 170     ; Global Clock         ; GCLK0            ; VCC                       ;
-+----------------------------+------------------+---------+----------------------+------------------+---------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                       ;
++--------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; Name                           ; Location         ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++--------------------------------+------------------+---------+----------------------+------------------+---------------------------+
+; OSC_50                         ; PIN_N2           ; 139     ; Global Clock         ; GCLK2            ; --                        ;
+; clk_div_two:inst17|clk_int     ; LCFF_X46_Y30_N23 ; 105     ; Global Clock         ; GCLK1            ; VCC                       ;
+; f_div:inst1|clkout             ; LCFF_X1_Y23_N29  ; 230     ; Global Clock         ; GCLK0            ; VCC                       ;
+; game:GAME|state.S_Place_Figure ; LCFF_X46_Y30_N5  ; 6       ; Global Clock         ; GCLK9            ; --                        ;
++--------------------------------+------------------+---------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1842,7 +1877,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                                             ; Fan-Out ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
-; KEY[0]                                                                                                                                           ; 191     ;
+; KEY[0]                                                                                                                                           ; 217     ;
 ; wr_memory:inst16|address_t[11]                                                                                                                   ; 26      ;
 ; wr_memory:inst16|address_t[10]                                                                                                                   ; 26      ;
 ; wr_memory:inst16|address_t[9]                                                                                                                    ; 26      ;
@@ -1868,30 +1903,30 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; VGA_SYNC:inst19|pixel_column[3]                                                                                                                  ; 24      ;
 ; VGA_SYNC:inst19|pixel_column[2]                                                                                                                  ; 24      ;
 ; square:inst21|st_square.s_cursor_a                                                                                                               ; 21      ;
-; square:inst21|st_square.s_select_a                                                                                                               ; 18      ;
+; square:inst21|st_square.s_select_a                                                                                                               ; 20      ;
 ; wr_memory:inst16|st_write.s3                                                                                                                     ; 18      ;
 ; wr_memory:inst16|address_t[12]                                                                                                                   ; 18      ;
 ; wr_memory:inst16|address_t[14]                                                                                                                   ; 18      ;
 ; wr_memory:inst16|address_t[13]                                                                                                                   ; 18      ;
+; tx_module:inst6|tx_empty                                                                                                                         ; 17      ;
 ; f_div:inst1|LessThan0~4                                                                                                                          ; 16      ;
 ; wr_memory:inst16|st_write.s2                                                                                                                     ; 16      ;
-; game:GAME|state.S_Place_Figure                                                                                                                   ; 16      ;
+; game:GAME|state.st_wrFigure                                                                                                                      ; 16      ;
 ; kb_xy_module:inst8|x_int[0]                                                                                                                      ; 15      ;
 ; inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[6]~10 ; 15      ;
 ; inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|alt_u_div_c2f:divider|add_sub_7_result_int[6]~10 ; 15      ;
 ; UART_RXD                                                                                                                                         ; 14      ;
 ; square:inst21|sel_x[0]~1                                                                                                                         ; 14      ;
 ; kb_xy_module:inst8|y_int[0]                                                                                                                      ; 14      ;
-; square:inst21|c_x[7]~0                                                                                                                           ; 13      ;
 ; rx_module2:inst5|bit_count[0]                                                                                                                    ; 13      ;
+; square:inst21|c_x[7]~0                                                                                                                           ; 13      ;
 ; square:inst21|x_out[1]~0                                                                                                                         ; 13      ;
-; game:GAME|state.S_Turn2                                                                                                                          ; 13      ;
+; game:GAME|state.st_Send_2                                                                                                                        ; 13      ;
+; game:GAME|state.st_Invalid                                                                                                                       ; 13      ;
+; game:GAME|state.st_Turn                                                                                                                          ; 13      ;
 ; inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[6]~10 ; 13      ;
 ; inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|alt_u_div_c2f:divider|add_sub_6_result_int[6]~10 ; 13      ;
 ; inverse_square_map:inst23|lpm_divide:Div0|lpm_divide_3so:auto_generated|abs_divider_gbg:divider|alt_u_div_c2f:divider|add_sub_5_result_int[6]~10 ; 13      ;
-; rx_module2:inst5|bit_count[1]                                                                                                                    ; 12      ;
-; square:inst21|i[0]                                                                                                                               ; 12      ;
-; kb_xy_module:inst8|x_int[1]                                                                                                                      ; 12      ;
 +--------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -1900,8 +1935,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Name                                                                                                                      ; Type ; Mode           ; Clock Mode   ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Port A Input Registers ; Port A Output Registers ; Port B Input Registers ; Port B Output Registers ; Size  ; Implementation Port A Depth ; Implementation Port A Width ; Implementation Port B Depth ; Implementation Port B Width ; Implementation Bits ; M4Ks ; MIF          ; Location                                                                                                                                                                                                                                                                                                               ;
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks  ; 32768        ; 3            ; 32768        ; 3            ; yes                    ; yes                     ; yes                    ; no                      ; 98304 ; 32768                       ; 3                           ; 32768                       ; 3                           ; 98304               ; 24   ; None         ; M4K_X52_Y24, M4K_X26_Y23, M4K_X26_Y18, M4K_X52_Y22, M4K_X13_Y19, M4K_X26_Y21, M4K_X26_Y17, M4K_X13_Y23, M4K_X52_Y25, M4K_X26_Y25, M4K_X52_Y18, M4K_X52_Y21, M4K_X13_Y18, M4K_X26_Y22, M4K_X13_Y21, M4K_X13_Y24, M4K_X52_Y23, M4K_X26_Y24, M4K_X26_Y19, M4K_X52_Y20, M4K_X13_Y22, M4K_X26_Y20, M4K_X13_Y17, M4K_X13_Y20 ;
-; ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ALTSYNCRAM                                    ; AUTO ; True Dual Port ; Single Clock ; 64           ; 3            ; 64           ; 3            ; yes                    ; yes                     ; yes                    ; yes                     ; 192   ; 64                          ; 3                           ; 64                          ; 3                           ; 192                 ; 1    ; ram_init.mif ; M4K_X26_Y28                                                                                                                                                                                                                                                                                                            ;
+; Video_Memory:inst18|altsyncram:altsyncram_component|altsyncram_4jk1:auto_generated|altsyncram_fes1:altsyncram1|ALTSYNCRAM ; AUTO ; True Dual Port ; Dual Clocks  ; 32768        ; 3            ; 32768        ; 3            ; yes                    ; yes                     ; yes                    ; no                      ; 98304 ; 32768                       ; 3                           ; 32768                       ; 3                           ; 98304               ; 24   ; None         ; M4K_X13_Y30, M4K_X26_Y31, M4K_X26_Y30, M4K_X13_Y28, M4K_X13_Y29, M4K_X26_Y23, M4K_X26_Y24, M4K_X52_Y31, M4K_X13_Y27, M4K_X52_Y25, M4K_X26_Y28, M4K_X13_Y25, M4K_X26_Y33, M4K_X52_Y27, M4K_X26_Y27, M4K_X52_Y29, M4K_X13_Y26, M4K_X26_Y29, M4K_X26_Y32, M4K_X26_Y26, M4K_X13_Y31, M4K_X52_Y28, M4K_X26_Y25, M4K_X52_Y30 ;
+; ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ALTSYNCRAM                                    ; AUTO ; True Dual Port ; Single Clock ; 64           ; 3            ; 64           ; 3            ; yes                    ; yes                     ; yes                    ; yes                     ; 192   ; 64                          ; 3                           ; 64                          ; 3                           ; 192                 ; 1    ; ram_init.mif ; M4K_X52_Y34                                                                                                                                                                                                                                                                                                            ;
 +---------------------------------------------------------------------------------------------------------------------------+------+----------------+--------------+--------------+--------------+--------------+--------------+------------------------+-------------------------+------------------------+-------------------------+-------+-----------------------------+-----------------------------+-----------------------------+-----------------------------+---------------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 Note: Fitter may spread logical memories into multiple blocks to improve timing. The actual required RAM blocks can be found in the Fitter Resource Usage section.
 
@@ -1911,52 +1946,52 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +----------------------------+------------------------+
 ; Interconnect Resource Type ; Usage                  ;
 +----------------------------+------------------------+
-; Block interconnects        ; 1,610 / 94,460 ( 2 % ) ;
-; C16 interconnects          ; 23 / 3,315 ( < 1 % )   ;
-; C4 interconnects           ; 786 / 60,840 ( 1 % )   ;
-; Direct links               ; 316 / 94,460 ( < 1 % ) ;
-; Global clocks              ; 3 / 16 ( 19 % )        ;
-; Local interconnects        ; 401 / 33,216 ( 1 % )   ;
-; R24 interconnects          ; 65 / 3,091 ( 2 % )     ;
-; R4 interconnects           ; 1,060 / 81,294 ( 1 % ) ;
+; Block interconnects        ; 1,827 / 94,460 ( 2 % ) ;
+; C16 interconnects          ; 12 / 3,315 ( < 1 % )   ;
+; C4 interconnects           ; 807 / 60,840 ( 1 % )   ;
+; Direct links               ; 354 / 94,460 ( < 1 % ) ;
+; Global clocks              ; 4 / 16 ( 25 % )        ;
+; Local interconnects        ; 458 / 33,216 ( 1 % )   ;
+; R24 interconnects          ; 63 / 3,091 ( 2 % )     ;
+; R4 interconnects           ; 1,464 / 81,294 ( 2 % ) ;
 +----------------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.68) ; Number of LABs  (Total = 66) ;
+; Number of Logic Elements  (Average = 12.34) ; Number of LABs  (Total = 80) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 5                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 2                            ;
+; 1                                           ; 6                            ;
+; 2                                           ; 2                            ;
+; 3                                           ; 6                            ;
 ; 4                                           ; 2                            ;
 ; 5                                           ; 0                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 3                            ;
-; 8                                           ; 0                            ;
-; 9                                           ; 1                            ;
-; 10                                          ; 5                            ;
-; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 1                            ;
+; 9                                           ; 2                            ;
+; 10                                          ; 3                            ;
+; 11                                          ; 1                            ;
+; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 43                           ;
+; 15                                          ; 0                            ;
+; 16                                          ; 54                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 1.45) ; Number of LABs  (Total = 66) ;
+; LAB-wide Signals  (Average = 1.52) ; Number of LABs  (Total = 80) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 21                           ;
-; 1 Clock                            ; 47                           ;
-; 1 Clock enable                     ; 13                           ;
-; 1 Sync. clear                      ; 3                            ;
-; 1 Sync. load                       ; 4                            ;
-; 2 Clock enables                    ; 7                            ;
+; 1 Async. clear                     ; 25                           ;
+; 1 Clock                            ; 61                           ;
+; 1 Clock enable                     ; 23                           ;
+; 1 Sync. clear                      ; 2                            ;
+; 1 Sync. load                       ; 2                            ;
+; 2 Clock enables                    ; 8                            ;
 ; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
@@ -1964,40 +1999,40 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 17.80) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced  (Average = 17.21) ; Number of LABs  (Total = 80) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 3                            ;
-; 2                                            ; 2                            ;
+; 1                                            ; 4                            ;
+; 2                                            ; 3                            ;
 ; 3                                            ; 1                            ;
-; 4                                            ; 3                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 4                                            ; 1                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 4                            ;
 ; 7                                            ; 2                            ;
-; 8                                            ; 0                            ;
+; 8                                            ; 2                            ;
 ; 9                                            ; 0                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 2                            ;
+; 11                                           ; 1                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 2                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 3                            ;
-; 15                                           ; 4                            ;
+; 15                                           ; 3                            ;
 ; 16                                           ; 4                            ;
-; 17                                           ; 3                            ;
-; 18                                           ; 0                            ;
-; 19                                           ; 3                            ;
-; 20                                           ; 6                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 3                            ;
+; 17                                           ; 4                            ;
+; 18                                           ; 2                            ;
+; 19                                           ; 2                            ;
+; 20                                           ; 8                            ;
+; 21                                           ; 7                            ;
+; 22                                           ; 1                            ;
 ; 23                                           ; 4                            ;
-; 24                                           ; 5                            ;
-; 25                                           ; 2                            ;
+; 24                                           ; 6                            ;
+; 25                                           ; 5                            ;
 ; 26                                           ; 2                            ;
-; 27                                           ; 6                            ;
-; 28                                           ; 3                            ;
+; 27                                           ; 2                            ;
+; 28                                           ; 2                            ;
 ; 29                                           ; 1                            ;
-; 30                                           ; 0                            ;
-; 31                                           ; 0                            ;
+; 30                                           ; 1                            ;
+; 31                                           ; 1                            ;
 ; 32                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -2005,67 +2040,67 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 9.09) ; Number of LABs  (Total = 66) ;
+; Number of Signals Sourced Out  (Average = 9.13) ; Number of LABs  (Total = 80) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 5                            ;
+; 1                                               ; 6                            ;
 ; 2                                               ; 3                            ;
-; 3                                               ; 5                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 5                            ;
-; 6                                               ; 0                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 4                            ;
-; 9                                               ; 4                            ;
-; 10                                              ; 11                           ;
-; 11                                              ; 6                            ;
-; 12                                              ; 3                            ;
-; 13                                              ; 2                            ;
-; 14                                              ; 2                            ;
-; 15                                              ; 4                            ;
-; 16                                              ; 6                            ;
+; 3                                               ; 8                            ;
+; 4                                               ; 4                            ;
+; 5                                               ; 3                            ;
+; 6                                               ; 4                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 3                            ;
+; 9                                               ; 7                            ;
+; 10                                              ; 9                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 5                            ;
+; 13                                              ; 6                            ;
+; 14                                              ; 6                            ;
+; 15                                              ; 5                            ;
+; 16                                              ; 7                            ;
 ; 17                                              ; 1                            ;
-; 18                                              ; 0                            ;
-; 19                                              ; 0                            ;
-; 20                                              ; 1                            ;
+; 18                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 11.89) ; Number of LABs  (Total = 66) ;
+; Number of Distinct Inputs  (Average = 12.64) ; Number of LABs  (Total = 80) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 7                            ;
-; 3                                            ; 2                            ;
+; 2                                            ; 8                            ;
+; 3                                            ; 5                            ;
 ; 4                                            ; 2                            ;
 ; 5                                            ; 5                            ;
-; 6                                            ; 3                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 3                            ;
-; 9                                            ; 3                            ;
-; 10                                           ; 4                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 7                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 3                            ;
-; 15                                           ; 4                            ;
-; 16                                           ; 1                            ;
+; 6                                            ; 1                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 6                            ;
+; 10                                           ; 1                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 8                            ;
+; 13                                           ; 3                            ;
+; 14                                           ; 5                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 2                            ;
 ; 18                                           ; 2                            ;
-; 19                                           ; 1                            ;
-; 20                                           ; 3                            ;
-; 21                                           ; 2                            ;
-; 22                                           ; 1                            ;
+; 19                                           ; 5                            ;
+; 20                                           ; 4                            ;
+; 21                                           ; 3                            ;
+; 22                                           ; 2                            ;
 ; 23                                           ; 1                            ;
 ; 24                                           ; 0                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 0                            ;
-; 27                                           ; 0                            ;
-; 28                                           ; 0                            ;
-; 29                                           ; 4                            ;
+; 25                                           ; 0                            ;
+; 26                                           ; 1                            ;
+; 27                                           ; 1                            ;
+; 28                                           ; 2                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -2111,7 +2146,7 @@ Note: Fitter may spread logical memories into multiple blocks to improve timing.
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Thu Dec 21 14:31:14 2023
+    Info: Processing started: Fri Dec 22 13:03:44 2023
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Design1 -c Design1
 Info: Selected device EP2C35F672C6 for design "Design1"
 Info: Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
@@ -2137,6 +2172,20 @@ Info: Automatically promoted node OSC_50 (placed in PIN N2 (CLK0, LVDSCLK0p, Inp
     Info: Following destination nodes may be non-global or may not use global or regional clocks
         Info: Destination node clk_div_two:inst17|clk_int
         Info: Destination node f_div:inst1|clkout
+Info: Automatically promoted node game:GAME|state.S_Place_Figure 
+    Info: Automatically promoted destinations to use location or clock signal Global Clock
+    Info: Following destination nodes may be non-global or may not use global or regional clocks
+        Info: Destination node game:GAME|Selector17~1
+        Info: Destination node square:inst21|sel_x[0]~0
+        Info: Destination node game:GAME|Selector29~0
+        Info: Destination node game:GAME|s_x_out[0]~1
+        Info: Destination node game:GAME|Selector28~0
+        Info: Destination node game:GAME|Selector27~0
+        Info: Destination node game:GAME|Selector32~0
+        Info: Destination node game:GAME|Selector31~0
+        Info: Destination node game:GAME|Selector30~0
+        Info: Destination node square:inst21|Selector30~2
+        Info: Non-global destination nodes limited to 10 nodes
 Info: Starting register packing
 Extra Info: Performing register packing on registers with non-logic cell location assignments
 Extra Info: Completed register packing on registers with non-logic cell location assignments
@@ -2520,71 +2569,70 @@ Warning: Ignored locations or region assignments to the following nodes
     Warning: Node "TD_HS" is assigned to location or region, but does not exist in design
     Warning: Node "TD_RESET" is assigned to location or region, but does not exist in design
     Warning: Node "TD_VS" is assigned to location or region, but does not exist in design
-Info: Fitter preparation operations ending: elapsed time is 00:00:01
+Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
-Info: Estimated most critical path is register to memory delay of 21.829 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X32_Y23; Fanout = 9; REG Node = 'square:inst21|x_out[0]'
-    Info: 2: + IC(1.547 ns) + CELL(0.414 ns) = 1.961 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~1'
-    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 2.032 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~3'
-    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 2.103 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~5'
-    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 2.174 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~7'
-    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 2.245 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~9'
-    Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 2.316 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~11'
-    Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 2.387 ns; Loc. = LAB_X34_Y31; Fanout = 1; COMB Node = 'inverse_square_map:inst23|Add1~13'
-    Info: 9: + IC(0.000 ns) + CELL(0.410 ns) = 2.797 ns; Loc. = LAB_X34_Y31; Fanout = 15; COMB Node = 'inverse_square_map:inst23|Add1~14'
-    Info: 10: + IC(0.336 ns) + CELL(0.420 ns) = 3.553 ns; Loc. = LAB_X35_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[0]~0'
-    Info: 11: + IC(0.606 ns) + CELL(0.393 ns) = 4.552 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~2'
-    Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 4.623 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~4'
-    Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 4.694 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~6'
-    Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 4.765 ns; Loc. = LAB_X34_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~8'
-    Info: 15: + IC(0.000 ns) + CELL(0.410 ns) = 5.175 ns; Loc. = LAB_X34_Y31; Fanout = 4; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~9'
-    Info: 16: + IC(0.874 ns) + CELL(0.414 ns) = 6.463 ns; Loc. = LAB_X34_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[1]~1'
-    Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 6.534 ns; Loc. = LAB_X34_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[2]~3'
-    Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 6.605 ns; Loc. = LAB_X34_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[3]~5'
-    Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 6.676 ns; Loc. = LAB_X34_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[4]~7'
-    Info: 20: + IC(0.000 ns) + CELL(0.410 ns) = 7.086 ns; Loc. = LAB_X34_Y32; Fanout = 12; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[5]~8'
-    Info: 21: + IC(0.875 ns) + CELL(0.150 ns) = 8.111 ns; Loc. = LAB_X36_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[24]~56'
-    Info: 22: + IC(0.606 ns) + CELL(0.393 ns) = 9.110 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[1]~1'
-    Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 9.181 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[2]~3'
-    Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 9.252 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[3]~5'
-    Info: 25: + IC(0.000 ns) + CELL(0.071 ns) = 9.323 ns; Loc. = LAB_X35_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[4]~7'
-    Info: 26: + IC(0.000 ns) + CELL(0.071 ns) = 9.394 ns; Loc. = LAB_X35_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[5]~9'
-    Info: 27: + IC(0.000 ns) + CELL(0.410 ns) = 9.804 ns; Loc. = LAB_X35_Y32; Fanout = 13; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[6]~10'
-    Info: 28: + IC(0.606 ns) + CELL(0.420 ns) = 10.830 ns; Loc. = LAB_X38_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[30]~62'
-    Info: 29: + IC(0.857 ns) + CELL(0.414 ns) = 12.101 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[1]~1'
-    Info: 30: + IC(0.000 ns) + CELL(0.071 ns) = 12.172 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[2]~3'
-    Info: 31: + IC(0.000 ns) + CELL(0.071 ns) = 12.243 ns; Loc. = LAB_X35_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[3]~5'
-    Info: 32: + IC(0.000 ns) + CELL(0.071 ns) = 12.314 ns; Loc. = LAB_X35_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[4]~7'
-    Info: 33: + IC(0.000 ns) + CELL(0.071 ns) = 12.385 ns; Loc. = LAB_X35_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[5]~9'
-    Info: 34: + IC(0.000 ns) + CELL(0.410 ns) = 12.795 ns; Loc. = LAB_X35_Y32; Fanout = 15; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[6]~10'
-    Info: 35: + IC(0.605 ns) + CELL(0.420 ns) = 13.820 ns; Loc. = LAB_X37_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[36]~69'
-    Info: 36: + IC(0.588 ns) + CELL(0.414 ns) = 14.822 ns; Loc. = LAB_X38_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[1]~1'
-    Info: 37: + IC(0.000 ns) + CELL(0.071 ns) = 14.893 ns; Loc. = LAB_X38_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[2]~3'
-    Info: 38: + IC(0.000 ns) + CELL(0.071 ns) = 14.964 ns; Loc. = LAB_X38_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[3]~5'
-    Info: 39: + IC(0.000 ns) + CELL(0.071 ns) = 15.035 ns; Loc. = LAB_X38_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[4]~7'
-    Info: 40: + IC(0.000 ns) + CELL(0.071 ns) = 15.106 ns; Loc. = LAB_X38_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[5]~9'
-    Info: 41: + IC(0.000 ns) + CELL(0.410 ns) = 15.516 ns; Loc. = LAB_X38_Y32; Fanout = 13; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[6]~10'
-    Info: 42: + IC(0.604 ns) + CELL(0.420 ns) = 16.540 ns; Loc. = LAB_X36_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[42]~76'
-    Info: 43: + IC(0.588 ns) + CELL(0.414 ns) = 17.542 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[1]~1'
-    Info: 44: + IC(0.000 ns) + CELL(0.071 ns) = 17.613 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[2]~3'
-    Info: 45: + IC(0.000 ns) + CELL(0.071 ns) = 17.684 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[3]~5'
-    Info: 46: + IC(0.000 ns) + CELL(0.071 ns) = 17.755 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[4]~7'
-    Info: 47: + IC(0.000 ns) + CELL(0.071 ns) = 17.826 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[5]~9'
-    Info: 48: + IC(0.000 ns) + CELL(0.410 ns) = 18.236 ns; Loc. = LAB_X37_Y32; Fanout = 3; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[6]~10'
-    Info: 49: + IC(0.397 ns) + CELL(0.414 ns) = 19.047 ns; Loc. = LAB_X37_Y32; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~1'
-    Info: 50: + IC(0.000 ns) + CELL(0.071 ns) = 19.118 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~3'
-    Info: 51: + IC(0.000 ns) + CELL(0.410 ns) = 19.528 ns; Loc. = LAB_X37_Y32; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~4'
-    Info: 52: + IC(0.127 ns) + CELL(0.438 ns) = 20.093 ns; Loc. = LAB_X37_Y32; Fanout = 3; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|quotient[2]~2'
-    Info: 53: + IC(1.594 ns) + CELL(0.142 ns) = 21.829 ns; Loc. = M4K_X26_Y28; Fanout = 1; MEM Node = 'ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a1~portb_address_reg5'
-    Info: Total cell delay = 11.019 ns ( 50.48 % )
-    Info: Total interconnect delay = 10.810 ns ( 49.52 % )
+Info: Estimated most critical path is register to memory delay of 21.333 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X40_Y33; Fanout = 8; REG Node = 'square:inst21|x_out[0]'
+    Info: 2: + IC(1.705 ns) + CELL(0.414 ns) = 2.119 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~1'
+    Info: 3: + IC(0.000 ns) + CELL(0.071 ns) = 2.190 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~3'
+    Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 2.261 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~5'
+    Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 2.332 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~7'
+    Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 2.403 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~9'
+    Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 2.474 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|Add1~11'
+    Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 2.545 ns; Loc. = LAB_X55_Y31; Fanout = 1; COMB Node = 'inverse_square_map:inst23|Add1~13'
+    Info: 9: + IC(0.000 ns) + CELL(0.410 ns) = 2.955 ns; Loc. = LAB_X55_Y31; Fanout = 15; COMB Node = 'inverse_square_map:inst23|Add1~14'
+    Info: 10: + IC(0.336 ns) + CELL(0.420 ns) = 3.711 ns; Loc. = LAB_X56_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[0]~0'
+    Info: 11: + IC(0.606 ns) + CELL(0.393 ns) = 4.710 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~2'
+    Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 4.781 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~4'
+    Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 4.852 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~6'
+    Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 4.923 ns; Loc. = LAB_X55_Y31; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~8'
+    Info: 15: + IC(0.000 ns) + CELL(0.410 ns) = 5.333 ns; Loc. = LAB_X55_Y31; Fanout = 4; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|lpm_abs_kq9:my_abs_num|cs1a[1]~9'
+    Info: 16: + IC(0.889 ns) + CELL(0.414 ns) = 6.636 ns; Loc. = LAB_X56_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[1]~1'
+    Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 6.707 ns; Loc. = LAB_X56_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[2]~3'
+    Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 6.778 ns; Loc. = LAB_X56_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[3]~5'
+    Info: 19: + IC(0.000 ns) + CELL(0.071 ns) = 6.849 ns; Loc. = LAB_X56_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[4]~7'
+    Info: 20: + IC(0.000 ns) + CELL(0.410 ns) = 7.259 ns; Loc. = LAB_X56_Y34; Fanout = 12; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_4_result_int[5]~8'
+    Info: 21: + IC(0.606 ns) + CELL(0.150 ns) = 8.015 ns; Loc. = LAB_X55_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[24]~56'
+    Info: 22: + IC(0.875 ns) + CELL(0.393 ns) = 9.283 ns; Loc. = LAB_X57_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[1]~1'
+    Info: 23: + IC(0.000 ns) + CELL(0.071 ns) = 9.354 ns; Loc. = LAB_X57_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[2]~3'
+    Info: 24: + IC(0.000 ns) + CELL(0.071 ns) = 9.425 ns; Loc. = LAB_X57_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[3]~5'
+    Info: 25: + IC(0.000 ns) + CELL(0.071 ns) = 9.496 ns; Loc. = LAB_X57_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[4]~7'
+    Info: 26: + IC(0.000 ns) + CELL(0.071 ns) = 9.567 ns; Loc. = LAB_X57_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[5]~9'
+    Info: 27: + IC(0.000 ns) + CELL(0.410 ns) = 9.977 ns; Loc. = LAB_X57_Y34; Fanout = 13; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_5_result_int[6]~10'
+    Info: 28: + IC(0.605 ns) + CELL(0.420 ns) = 11.002 ns; Loc. = LAB_X55_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[31]~60'
+    Info: 29: + IC(0.857 ns) + CELL(0.414 ns) = 12.273 ns; Loc. = LAB_X57_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[2]~3'
+    Info: 30: + IC(0.000 ns) + CELL(0.071 ns) = 12.344 ns; Loc. = LAB_X57_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[3]~5'
+    Info: 31: + IC(0.000 ns) + CELL(0.071 ns) = 12.415 ns; Loc. = LAB_X57_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[4]~7'
+    Info: 32: + IC(0.000 ns) + CELL(0.071 ns) = 12.486 ns; Loc. = LAB_X57_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[5]~9'
+    Info: 33: + IC(0.000 ns) + CELL(0.410 ns) = 12.896 ns; Loc. = LAB_X57_Y34; Fanout = 15; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_6_result_int[6]~10'
+    Info: 34: + IC(0.606 ns) + CELL(0.420 ns) = 13.922 ns; Loc. = LAB_X60_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[36]~69'
+    Info: 35: + IC(0.588 ns) + CELL(0.414 ns) = 14.924 ns; Loc. = LAB_X59_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[1]~1'
+    Info: 36: + IC(0.000 ns) + CELL(0.071 ns) = 14.995 ns; Loc. = LAB_X59_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[2]~3'
+    Info: 37: + IC(0.000 ns) + CELL(0.071 ns) = 15.066 ns; Loc. = LAB_X59_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[3]~5'
+    Info: 38: + IC(0.000 ns) + CELL(0.071 ns) = 15.137 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[4]~7'
+    Info: 39: + IC(0.000 ns) + CELL(0.071 ns) = 15.208 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[5]~9'
+    Info: 40: + IC(0.000 ns) + CELL(0.410 ns) = 15.618 ns; Loc. = LAB_X59_Y34; Fanout = 13; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_7_result_int[6]~10'
+    Info: 41: + IC(0.336 ns) + CELL(0.420 ns) = 16.374 ns; Loc. = LAB_X60_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|StageOut[42]~76'
+    Info: 42: + IC(0.588 ns) + CELL(0.414 ns) = 17.376 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[1]~1'
+    Info: 43: + IC(0.000 ns) + CELL(0.071 ns) = 17.447 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[2]~3'
+    Info: 44: + IC(0.000 ns) + CELL(0.071 ns) = 17.518 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[3]~5'
+    Info: 45: + IC(0.000 ns) + CELL(0.071 ns) = 17.589 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[4]~7'
+    Info: 46: + IC(0.000 ns) + CELL(0.071 ns) = 17.660 ns; Loc. = LAB_X59_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[5]~9'
+    Info: 47: + IC(0.000 ns) + CELL(0.410 ns) = 18.070 ns; Loc. = LAB_X59_Y34; Fanout = 3; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|alt_u_div_sve:divider|add_sub_8_result_int[6]~10'
+    Info: 48: + IC(0.588 ns) + CELL(0.414 ns) = 19.072 ns; Loc. = LAB_X58_Y34; Fanout = 2; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~1'
+    Info: 49: + IC(0.000 ns) + CELL(0.071 ns) = 19.143 ns; Loc. = LAB_X58_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~3'
+    Info: 50: + IC(0.000 ns) + CELL(0.410 ns) = 19.553 ns; Loc. = LAB_X58_Y34; Fanout = 1; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|op_1~4'
+    Info: 51: + IC(0.127 ns) + CELL(0.438 ns) = 20.118 ns; Loc. = LAB_X58_Y34; Fanout = 3; COMB Node = 'inverse_square_map:inst23|lpm_divide:Div1|lpm_divide_rqo:auto_generated|abs_divider_8ag:divider|quotient[2]~2'
+    Info: 52: + IC(1.073 ns) + CELL(0.142 ns) = 21.333 ns; Loc. = M4K_X52_Y34; Fanout = 1; MEM Node = 'ram64:inst14|altsyncram:altsyncram_component|altsyncram_5h72:auto_generated|ram_block1a1~portb_address_reg5'
+    Info: Total cell delay = 10.948 ns ( 51.32 % )
+    Info: Total interconnect delay = 10.385 ns ( 48.68 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 1% of the available device resources
-    Info: Peak interconnect usage is 5% of the available device resources in the region that extends from location X22_Y12 to location X32_Y23
+    Info: Peak interconnect usage is 8% of the available device resources in the region that extends from location X44_Y24 to location X54_Y36
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -2642,8 +2690,8 @@ Warning: Found invalid Fitter assignments. See the Ignored Assignments panel in 
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 378 warnings
     Info: Peak virtual memory: 284 megabytes
-    Info: Processing ended: Thu Dec 21 14:31:21 2023
+    Info: Processing ended: Fri Dec 22 13:03:51 2023
     Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Total CPU time (on all processors): 00:00:07
 
 

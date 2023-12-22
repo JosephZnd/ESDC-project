@@ -654,10 +654,10 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 611244;
-		NUMERATOR = 727;
-		DENOMINATOR = 625000;
-		TOP_INDEX = 13;
+		ZEND = 988650;
+		NUMERATOR = 575;
+		DENOMINATOR = 988650;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 20000;
@@ -684,64 +684,8 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "address";
-		INDEX = 2;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[5]";
-		INDEX = 3;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[4]";
-		INDEX = 4;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[3]";
-		INDEX = 5;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[2]";
-		INDEX = 6;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[1]";
-		INDEX = 7;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "address[0]";
-		INDEX = 8;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
 		SIGNAL = "color";
-		INDEX = 9;
+		INDEX = 2;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -749,7 +693,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posx";
-		INDEX = 10;
+		INDEX = 3;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -757,7 +701,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posx[2]";
-		INDEX = 11;
+		INDEX = 4;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -765,7 +709,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posx[1]";
-		INDEX = 12;
+		INDEX = 5;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -773,7 +717,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posx[0]";
-		INDEX = 13;
+		INDEX = 6;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -781,7 +725,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posy";
-		INDEX = 14;
+		INDEX = 7;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -789,7 +733,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posy[2]";
-		INDEX = 15;
+		INDEX = 8;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -797,7 +741,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posy[1]";
-		INDEX = 16;
+		INDEX = 9;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -805,15 +749,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "posy[0]";
-		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "mux";
-		INDEX = 18;
+		INDEX = 10;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -821,39 +757,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "new_game";
-		INDEX = 19;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "piece";
-		INDEX = 20;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "piece[2]";
-		INDEX = 21;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "piece[1]";
-		INDEX = 22;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "piece[0]";
-		INDEX = 23;
+		INDEX = 11;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -861,7 +765,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "piece_read";
-		INDEX = 24;
+		INDEX = 12;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -869,7 +773,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "piece_read[2]";
-		INDEX = 25;
+		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -877,7 +781,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "piece_read[1]";
-		INDEX = 26;
+		INDEX = 14;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -885,6 +789,102 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 	}
 	LINE{
 		SIGNAL = "piece_read[0]";
+		INDEX = 15;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sel";
+		INDEX = 16;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_o";
+		INDEX = 17;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_o[2]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_o[1]";
+		INDEX = 19;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_o[0]";
+		INDEX = 20;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_o";
+		INDEX = 21;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_o[2]";
+		INDEX = 22;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_o[1]";
+		INDEX = 23;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_o[0]";
+		INDEX = 24;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|state";
+		INDEX = 25;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "mux";
+		INDEX = 26;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "send_rdy";
 		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
@@ -900,7 +900,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "ready_tx";
+		SIGNAL = "turn";
 		INDEX = 29;
 		FORMAT = E;
 		SCALE = 1;
@@ -908,7 +908,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "sel";
+		SIGNAL = "wen";
 		INDEX = 30;
 		FORMAT = E;
 		SCALE = 1;
@@ -916,7 +916,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "send_rdy";
+		SIGNAL = "ready_tx";
 		INDEX = 31;
 		FORMAT = E;
 		SCALE = 1;
@@ -924,15 +924,15 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "turn";
+		SIGNAL = "address";
 		INDEX = 32;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "wen";
+		SIGNAL = "address[5]";
 		INDEX = 33;
 		FORMAT = E;
 		SCALE = 1;
@@ -940,15 +940,15 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x_o";
+		SIGNAL = "address[4]";
 		INDEX = 34;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x_o[2]";
+		SIGNAL = "address[3]";
 		INDEX = 35;
 		FORMAT = E;
 		SCALE = 1;
@@ -956,7 +956,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x_o[1]";
+		SIGNAL = "address[2]";
 		INDEX = 36;
 		FORMAT = E;
 		SCALE = 1;
@@ -964,7 +964,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "x_o[0]";
+		SIGNAL = "address[1]";
 		INDEX = 37;
 		FORMAT = E;
 		SCALE = 1;
@@ -972,23 +972,23 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y_o";
+		SIGNAL = "address[0]";
 		INDEX = 38;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "y_o[2]";
-		INDEX = 39;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y_o[1]";
+		SIGNAL = "game:GAME|s_x_out";
+		INDEX = 39;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|s_x_out[2]";
 		INDEX = 40;
 		FORMAT = E;
 		SCALE = 1;
@@ -996,7 +996,7 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "y_o[0]";
+		SIGNAL = "game:GAME|s_x_out[1]";
 		INDEX = 41;
 		FORMAT = E;
 		SCALE = 1;
@@ -1004,8 +1004,464 @@ VECTOR("L:/Documentos/Github/Restored/sim_game.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "game:GAME|state";
+		SIGNAL = "game:GAME|s_x_out[0]";
 		INDEX = 42;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|s_y_out";
+		INDEX = 43;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|s_y_out[2]";
+		INDEX = 44;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|s_y_out[1]";
+		INDEX = 45;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|s_y_out[0]";
+		INDEX = 46;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selY";
+		INDEX = 47;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selY[2]";
+		INDEX = 48;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selY[1]";
+		INDEX = 49;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selY[0]";
+		INDEX = 50;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selX";
+		INDEX = 51;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selX[2]";
+		INDEX = 52;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selX[1]";
+		INDEX = 53;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|selX[0]";
+		INDEX = 54;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldY";
+		INDEX = 55;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldY[2]";
+		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldY[1]";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldY[0]";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldX";
+		INDEX = 59;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldX[2]";
+		INDEX = 60;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldX[1]";
+		INDEX = 61;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|oldX[0]";
+		INDEX = 62;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|aux_piece";
+		INDEX = 63;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|aux_piece[2]";
+		INDEX = 64;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|aux_piece[1]";
+		INDEX = 65;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|aux_piece[0]";
+		INDEX = 66;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|temp_piece";
+		INDEX = 67;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|temp_piece[2]";
+		INDEX = 68;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|temp_piece[1]";
+		INDEX = 69;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "game:GAME|temp_piece[0]";
+		INDEX = 70;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "piece";
+		INDEX = 71;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "piece[2]";
+		INDEX = 72;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "piece[1]";
+		INDEX = 73;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "piece[0]";
+		INDEX = 74;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "dt_rx";
+		INDEX = 75;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sy";
+		INDEX = 76;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sy[2]";
+		INDEX = 77;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sy[1]";
+		INDEX = 78;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sy[0]";
+		INDEX = 79;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sx";
+		INDEX = 80;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sx[2]";
+		INDEX = 81;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sx[1]";
+		INDEX = 82;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "sx[0]";
+		INDEX = 83;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "s_p";
+		INDEX = 84;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "s_p[2]";
+		INDEX = 85;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "s_p[1]";
+		INDEX = 86;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "s_p[0]";
+		INDEX = 87;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_rx";
+		INDEX = 88;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_rx[2]";
+		INDEX = 89;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_rx[1]";
+		INDEX = 90;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "y_rx[0]";
+		INDEX = 91;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_rx";
+		INDEX = 92;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_rx[2]";
+		INDEX = 93;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_rx[1]";
+		INDEX = 94;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "x_rx[0]";
+		INDEX = 95;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "f_rx";
+		INDEX = 96;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "f_rx[2]";
+		INDEX = 97;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "f_rx[1]";
+		INDEX = 98;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "f_rx[0]";
+		INDEX = 99;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

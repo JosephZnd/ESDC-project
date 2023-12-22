@@ -1,14 +1,14 @@
-Fitter Status : Successful - Thu Dec 21 14:31:21 2023
+Fitter Status : Successful - Fri Dec 22 13:03:50 2023
 Quartus II Version : 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition
 Revision Name : Design1
 Top-level Entity Name : P1_BOARD_vga
 Family : Cyclone II
 Device : EP2C35F672C6
 Timing Models : Final
-Total logic elements : 837 / 33,216 ( 3 % )
-    Total combinational functions : 770 / 33,216 ( 2 % )
-    Dedicated logic registers : 366 / 33,216 ( 1 % )
-Total registers : 366
+Total logic elements : 987 / 33,216 ( 3 % )
+    Total combinational functions : 906 / 33,216 ( 3 % )
+    Dedicated logic registers : 426 / 33,216 ( 1 % )
+Total registers : 426
 Total pins : 52 / 475 ( 11 % )
 Total virtual pins : 0
 Total memory bits : 98,496 / 483,840 ( 20 % )
