@@ -4,10 +4,10 @@ use ieee.std_logic_1164.all;
 entity protocol_rx is
 	port (
 		clk50, nrst: in std_logic;
-		RDY_RECEIVED, WH_RECEIVED, EQ_RECEIVED, SM_RECEIVED, DT_RECEIVED: out std_logic;  -- Frame received.
-		rx_data : in std_logic_vector(7 downto 0);  -- Byte received from the UART RX
-		dataH, dataT, dataU : out std_logic_vector(3 downto 0);  -- Data received if FRAME is DATA.
-		data_read,new_frame : out std_logic;  -- Flag. Active high if protocol is ready to tx (not transmiting a frame)
+		Rdy_Received, Addr_Received: out std_logic;  -- Frame received.
+		Rx_Data : in std_logic_vector(7 downto 0);  -- Byte received from the UART RX
+		Pos_X, Pos_Y, Figure : out std_logic_vector(2 downto 0);  -- Data received if FRAME is DATA.
+		Data_Read, New_Frame : out std_logic;  -- Flag. Active high if protocol is ready to tx (not transmiting a frame)
 											-- new_frame: active if a new frame is received.
 		rx_new, frame_read : in std_logic  -- Signal from the UART RX. Active if new byte has been received.
 										   -- Frame READ: frame has been read. Frame received has to be deactivated.
@@ -19,12 +19,15 @@ architecture main of protocol_rx is
 	type state_type is (pr_ini, pr_w1, pr_r1, pr_w2, pr_r2, pr_f_type, pr_s_rdy, pr_s_gr, pr_s_sm,
 	pr_s_eq, pr_w3, pr_r3, pr_w4, pr_r4, pr_w5, pr_r5, pr_s_dt );
 	 
-	 -- Definition of the diferent FRAME TYPE
 	constant RDY_TO_PLAY : std_logic_vector(7 downto 0) := x"A1";
-	constant CODE : std_logic_vector(7 downto 0) := x"A3";
 	constant WHITES : std_logic_vector(7 downto 0) := x"51";
-	constant SMALLER : std_logic_vector(7 downto 0) := x"53";
-	constant EQUAL : std_logic_vector(7 downto 0) := x"55";
+	
+	constant WHITE_PAWN : std_logic_vector(7 downto 0) := x"01";
+	constant WHITE_QUEEN : std_logic_vector(7 downto 0) := x"02";
+	constant BLACK_PAWN : std_logic_vector(7 downto 0) := x"07";
+	constant BLACK_QUEEN : std_logic_vector(7 downto 0) := x"06";
+	
+	constant ADDRESS : std_logic_vector(7 downto 0) := x"AD";
 	
 	constant FRAME_ID : std_logic_vector(7 downto 0) := x"AA";
 

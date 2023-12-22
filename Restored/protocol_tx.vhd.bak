@@ -4,7 +4,7 @@ use ieee.std_logic_1164.all;
 entity protocol_tx is
 	port (
 		clk50, nrst: in std_logic;
-		Send_Dt, Send_Rdy: in std_logic;  -- Frame to transmit.
+		Send_Dt, Send_Rdy, New_Game: in std_logic;  -- Frame to transmit.
 		Pos_X, Pos_Y : in std_logic_vector(2 downto 0);  -- Byte sent to the UART TX for transmission
 		Figure : in std_logic_vector(2 downto 0);  -- Data to trasmit if FRAME is DATA.
 		Ready_To_Tx, Send : out std_logic;
@@ -57,11 +57,20 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 					i_Pos_X <= Pos_X;
 					i_Pos_Y <= Pos_Y;
 					i_Figure <= Figure;
+				if New_Game = '1' =>
+					state <= st_pr_whites;
 				elsif Send_Rdy = '1' then
 					state <= st_pr_rdy;
 				else state <= st_pr_wait; end if;
 
-			-- Filling TX_DATA with frame ID and updating FRAME_TYPE.	
+			when st_pr_whites =>
+				ready_to_tx <= '0';
+				frame_type <= WHITES;
+				Tx_Data <= FRAME_ID;
+				state <= st_to_send_rdy;
+			
+			when st_to_send_whites => state <= st_send_whites;
+	
 			when st_pr_rdy => 
 				ready_to_tx <= '0';
 				frame_type <= RDY_TO_PLAY;
@@ -102,7 +111,7 @@ PROTOCOL_FSM : process (clk50, nrst) begin
 				
 			when st_send_y => 
 				if tx_empty = '1' then
-					Tx_Data <= "000000" & i_Pos_Y;
+					Tx_Data <= "00000" & i_Pos_Y;
 					state <= st_to_send_figure;
 				end if;
 	
